@@ -1,3 +1,13 @@
+#controle de mudancas:
+# linha 14 - add freq A2 no help
+# linha 54 - function escrito errado, dava pau
+# linha 55- o nome da funcao estava escrito errado, sem o n de weinberg
+
+#sugestoes:
+# incluir checagens se input e vetor de lenght 1
+# return com opcao de plot
+
+
 #' Simulating one generation of genotypes under Hardy-Weinberg equilibrium
 #'
 #' \code{OneGenHardyWeibergSim} creates \code{nSim} simulations of one 
