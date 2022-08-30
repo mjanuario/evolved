@@ -7,7 +7,7 @@
 #' @param nInd Integer indicating the census size of the simulated populations.
 #'  If decimals are inserted, they will be rounded.
 #' @param p Numerical between zero and one that indicates A1's allelic 
-#' frequency.
+#' frequency. A2's allelic frequency is assumed to be \code{1-p}.
 #' @param nSim Number of simulations to be made. If decimals are inserted, 
 #' they will be rounded.
 #' @return A \code{data.frame} containing the number of individuals for each 
@@ -31,21 +31,21 @@
 #' 
 #' @examples
 #' #using the defalut values (nInd = 50, p = 0.5, nSim = 100):
-#' OneGenHardyWeibergSim()
+#' OneGenHardyWeinbergSim()
 #' 
 #' #Simulating with a already fixed allelle:
-#' OneGenHardyWeibergSim(nInd = 50, p = 1)
+#' OneGenHardyWeinbergSim(nInd = 50, p = 1)
 #' 
 #' # Testing if the simulation works:
 #' A1freq <- .789 #any value could work
 #' nSimul <- 100
-#' simulations=OneGenHardyWeibergSim(nInd = nSimul, nSim = nSimul, p = A1freq)
+#' simulations=OneGenHardyWeinbergSim(nInd = nSimul, nSim = nSimul, p = A1freq)
 #' 
 #' #expected:
 #' c(A1freq^2, 2*A1freq*(1-A1freq), (1-A1freq)^2)
 #' 
 #' #simulated:
-#' apply(X = simulations, MARGIN = 2, FUN = functiosn(x){mean(x)/nSimul})
+#' apply(X = simulations, MARGIN = 2, FUN = function(x){mean(x)/nSimul})
 #' 
 OneGenHardyWeinbergSim <- function(nInd=50, p=0.5, nSim=100){
   
@@ -69,7 +69,7 @@ OneGenHardyWeinbergSim <- function(nInd=50, p=0.5, nSim=100){
     gamete_pool <- c(rep("A1", times=2*p*nInd), 
                      rep("A2", times=2*(1-p)*nInd))
     
-    #mixing gameta pool:
+    #mixing gamete pool:
     gamete_pool <- sample(gamete_pool)
     
     #creating random genotypes:
@@ -86,7 +86,7 @@ OneGenHardyWeinbergSim <- function(nInd=50, p=0.5, nSim=100){
   ########################
   
   ######## Finishing touches: naming columns...
-  if(p %in%c(0,1)){
+  if(p %in% c(0,1)){
     if(p==1){
       colnames(res) <- "A1A1"
     }else{
