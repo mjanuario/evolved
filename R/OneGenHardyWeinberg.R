@@ -73,7 +73,10 @@ OneGenHardyWeinbergSim <- function(nInd=50, p=0.5, nSim=100){
     gamete_pool <- sample(gamete_pool)
     
     #creating random genotypes:
-    genotype_random_draw <- paste0(gamete_pool[1:nInd], gamete_pool[(nInd+1):length(gamete_pool)])
+    genotype_random_draw <- paste0(
+         gamete_pool[1:nInd], 
+          gamete_pool[(nInd+1):length(gamete_pool)]
+          )
     
     #A1A2 and A2A1 are the same genotype, so let's convert this:
     genotype_random_draw[genotype_random_draw=="A2A1"] <- "A1A2"
