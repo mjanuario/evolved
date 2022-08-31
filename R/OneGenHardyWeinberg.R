@@ -4,8 +4,8 @@
 #' generation of genotypes under Hardy-Weinberg equilibrium for a 
 #' bi-allelic loci.
 #'
-#' @param nInd Integer indicating the census size of the simulated populations.
-#'  If decimals are inserted, they will be rounded.
+#' @param nInd Integer indicating the census size of the simulated populations. 
+#' If decimals are inserted, they will be rounded.
 #' @param p Numerical between zero and one that indicates A1's allelic 
 #' frequency. A2's allelic frequency is assumed to be \code{1-p}.
 #' @param nSim Number of simulations to be made. If decimals are inserted, 
@@ -75,8 +75,8 @@ OneGenHardyWeinbergSim <- function(nInd=50, p=0.5, nSim=100){
     #creating random genotypes:
     genotype_random_draw <- paste0(
          gamete_pool[1:nInd], 
-          gamete_pool[(nInd+1):length(gamete_pool)]
-          )
+         gamete_pool[(nInd+1):length(gamete_pool)]
+         )
     
     #A1A2 and A2A1 are the same genotype, so let's convert this:
     genotype_random_draw[genotype_random_draw=="A2A1"] <- "A1A2"
