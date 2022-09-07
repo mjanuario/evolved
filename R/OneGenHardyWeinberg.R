@@ -1,6 +1,6 @@
 #' Simulating one generation of genotypes under Hardy-Weinberg equilibrium
 #'
-#' \code{OneGenHardyWeibergSim} creates \code{nSim} simulations of one 
+#' \code{OneGenHardyWeinbergSim} creates \code{nSim} simulations of one 
 #' generation of genotypes under Hardy-Weinberg equilibrium for a 
 #' bi-allelic loci.
 #'
@@ -19,7 +19,7 @@
 #' 
 #' Weinberg, W. (1908). Uber den Nachweis der Vererbung beim Menschen. 
 #' Jahreshefte des Vereins für vaterlandische Naturkunde in Wurttemberg, 
-#' Stuttgart 64:369–382. [On the demonstration of inheritance in humans]. 
+#' Stuttgart 64:369–382. \[On the demonstration of inheritance in humans\]. 
 #' Translation by R. A. Jameson printed in D. L. Jameson (Ed.), (1977). 
 #' Benchmark papers in genetics, Volume 8: Evolutionary genetics (pp. 
 #' 115–125). Stroudsburg, PA: Dowden, Hutchinson & Ross.
