@@ -4,10 +4,10 @@
 \alias{WFDriftSim}
 \title{Simulating generations of genetic drift in a Wright–Fisher (WF) population}
 \usage{
-WFDriftSim(N, nGens, p0 = 0.5, nSim = 1, plot = TRUE, printData = FALSE)
+WFDriftSim(Ne, nGens, p0 = 0.5, nSim = 1, plot = TRUE, printData = FALSE)
 }
 \arguments{
-\item{N}{Number giving the effective size of the population}
+\item{Ne}{Number giving the effective population size of the population}
 
 \item{nGens}{Number of generations to be simulated.}
 
@@ -34,26 +34,31 @@ cycled and different simulation will have the same color. If
 simulation results.
 }
 \description{
-\code{WFDriftSim} simulates Wright–Fisher, diploid populations with a given
-effective size through a certain number of generations.
+\code{WFDriftSim} simulates genetic drift of diploid Wright–Fisher
+populations with a given effective population size through a certain number of
+generations.
+}
+\details{
+The effective population size (\code{Ne}) is strongly connected
+with the rate of genetic drift (for details, see Waples, 2022)
 }
 \examples{
 #Default values:
-WFDriftSim(N = 5, nGens = 30)
+WFDriftSim(Ne = 5, nGens = 30)
 
 #A population which has already fixed one of the alleles:
-WFDriftSim(N = 5, nGens = 30, p0=1)
+WFDriftSim(Ne = 5, nGens = 30, p0=1)
 
 #Many populations::
-WFDriftSim(N = 5, nGens = 30, p0=0.2, nSim=20)
+WFDriftSim(Ne = 5, nGens = 30, p0=0.2, nSim=20)
 
 ######## continuing a previous simulation:
 ngen_1stsim <- 10 # number of gens in the 1st sim:
-sim1 <- WFDriftSim(N = 5, nGens = ngen_1stsim, p0=.2, nSim=20, 
+sim1 <- WFDriftSim(Ne = 5, nGens = ngen_1stsim, p0=.2, nSim=20, 
 plot = FALSE, printData = TRUE)
 ngen_2ndsim <-15 # number of gens in the 2nd sim:
 # now, note how we assigned p0:
-sim2 <- WFDriftSim(N = 5, nGens = ngen_2ndsim, p0=sim1[,ncol(sim1)], 
+sim2 <- WFDriftSim(Ne = 5, nGens = ngen_2ndsim, p0=sim1[,ncol(sim1)], 
 plot = TRUE, nSim=20, printData = TRUE)
 
 # if we want to merge both simulations, then we have to:
@@ -68,6 +73,20 @@ colnames(sim2) <- paste0("gen", (ngen_1stsim+1):(ngen_1stsim+ngen_2ndsim))
 all_sims <- cbind(sim1, sim2)
 head(all_sims)
 
+}
+\references{
+Fisher RA (1922) On the dominance ratio. Proc. R. Soc. Edinb 42:321–341
+
+Kimura M (1955) Solution of a process of random genetic drift with a
+continuous model. PNAS–USA 41(3):144–150
+
+Tran, T. D., Hofrichter, J., & Jost, J. (2013). An introduction to the
+mathematical structure of the Wright–Fisher model of population genetics.
+Theory in Biosciences, 132(2), 73-82.
+
+Waples, R. S. (2022). What is Ne, anyway?. Journal of Heredity.
+
+Wright S (1931) Evolution in Mendelian populations. Genetics 16:97–159
 }
 \author{
 Matheus Januario, Dan Rabosky, Jennifer Auler

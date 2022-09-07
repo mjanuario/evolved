@@ -6,10 +6,10 @@ NULL
 #' Simulating generations of genetic drift in a Wright–Fisher (WF) population
 #'
 #' \code{WFDriftSim} simulates genetic drift of diploid Wright–Fisher 
-#' populations with a given effective size through a certain number of 
+#' populations with a given effective population size through a certain number of 
 #' generations.
 #'
-#' @param N Number giving the effective size of the population
+#' @param Ne Number giving the effective population size of the population
 #' @param nGens Number of generations to be simulated.
 #' @param p0 Initial frequency of a given allele. As the simulated organism is
 #' diploid, the other alleles frequency will be \code{1-(p0)}. Default value 
@@ -29,28 +29,46 @@ NULL
 #' \code{printData = TRUE}, returns a \code{data.frame} with the 
 #' simulation results.
 #' 
+#' @details The effective population size (\code{Ne}) is strongly connected 
+#' with the rate of genetic drift (for details, see Waples, 2022)
+#' 
 #' @export WFDriftSim
+#' 
+#' @references 
+#' 
+#' Fisher RA (1922) On the dominance ratio. Proc. R. Soc. Edinb 42:321–341
+#' 
+#' Kimura M (1955) Solution of a process of random genetic drift with a 
+#' continuous model. PNAS–USA 41(3):144–150
+#' 
+#' Tran, T. D., Hofrichter, J., & Jost, J. (2013). An introduction to the 
+#' mathematical structure of the Wright–Fisher model of population genetics. 
+#' Theory in Biosciences, 132(2), 73-82.
+#' 
+#' Waples, R. S. (2022). What is Ne, anyway?. Journal of Heredity.
+#' 
+#' Wright S (1931) Evolution in Mendelian populations. Genetics 16:97–159
 #' 
 #' @author Matheus Januario, Dan Rabosky, Jennifer Auler
 #' 
 #' @examples
 #' #Default values:
-#' WFDriftSim(N = 5, nGens = 30)
+#' WFDriftSim(Ne = 5, nGens = 30)
 #' 
 #' #A population which has already fixed one of the alleles:
-#' WFDriftSim(N = 5, nGens = 30, p0=1)
+#' WFDriftSim(Ne = 5, nGens = 30, p0=1)
 #' 
 #' #Many populations::
-#' WFDriftSim(N = 5, nGens = 30, p0=0.2, nSim=20)
+#' WFDriftSim(Ne = 5, nGens = 30, p0=0.2, nSim=20)
 #' 
 #' ######## continuing a previous simulation:
 #' ngen_1stsim <- 10 # number of gens in the 1st sim:
-#' sim1 <- WFDriftSim(N = 5, nGens = ngen_1stsim, p0=.2, nSim=20, 
+#' sim1 <- WFDriftSim(Ne = 5, nGens = ngen_1stsim, p0=.2, nSim=20, 
 #' plot = FALSE, printData = TRUE)
 
 #' ngen_2ndsim <-15 # number of gens in the 2nd sim:
 #' # now, note how we assigned p0:
-#' sim2 <- WFDriftSim(N = 5, nGens = ngen_2ndsim, p0=sim1[,ncol(sim1)], 
+#' sim2 <- WFDriftSim(Ne = 5, nGens = ngen_2ndsim, p0=sim1[,ncol(sim1)], 
 #' plot = TRUE, nSim=20, printData = TRUE)
 #' 
 #' # if we want to merge both simulations, then we have to:
@@ -65,7 +83,7 @@ NULL
 #' all_sims <- cbind(sim1, sim2)
 #' head(all_sims)
 #' 
-WFDriftSim=function(N, nGens, p0=0.5, nSim=1, plot=TRUE, printData=FALSE){
+WFDriftSim=function(Ne, nGens, p0=0.5, nSim=1, plot=TRUE, printData=FALSE){
   
   # checking input:
   if(!(plot | printData)){
@@ -81,14 +99,14 @@ WFDriftSim=function(N, nGens, p0=0.5, nSim=1, plot=TRUE, printData=FALSE){
   }
   
   #if(p0<0 || p0>1){stop("\"p0\" must be between zero and one")}
-  if(!(N>0)){stop("\"N\" must be an integer number larger than zero")}
+  if(!(Ne>0)){stop("\"Ne\" must be an integer larger than zero")}
   if(!(nGens>0)){stop("\"nGens\" must be an integer number larger than zero")}
 
   # start matrix with generation "zero"
   p_through_time <- matrix(p0, ncol = 1, nrow=nSim)
   
   # calculating total n allelels for diploid organism
-  n_alleles <- 2*N 
+  n_alleles <- 2*Ne
   
   for(generation in 1:nGens){
     p_through_time <- cbind(p_through_time, 
