@@ -1,3 +1,8 @@
+#' @importFrom  stats rbinom
+#' @importFrom  graphics lines
+#' @importFrom  grDevices rainbow
+NULL 
+
 #' Simulating one generation of genotypes under Hardy-Weinberg equilibrium
 #'
 #' \code{OneGenHWSim} creates \code{nSim} simulations of one 
@@ -12,11 +17,8 @@
 #' they will be rounded.
 #' @return A \code{data.frame} containing the number of individuals for each 
 #' genotype
-#' @references 
 #' 
-#' @importFrom stats rbinom
-#' @importFrom grDevices rainbow
-#' @importFrom graphics plot
+#' @references 
 #' 
 #' Hardy, G. H. (1908). Mendelian proportions in a mixed 
 #' population. Science, 28, 49–50.

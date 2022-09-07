@@ -45,7 +45,18 @@ apply(X = simulations, MARGIN = 2, FUN = function(x){mean(x)/nSimul})
 
 }
 \references{
+Hardy, G. H. (1908). Mendelian proportions in a mixed
+population. Science, 28, 49–50.
 
+Weinberg, W. (1908). Uber den Nachweis der Vererbung beim Menschen.
+Jahreshefte des Vereins fur vaterlandische Naturkunde in Wurttemberg,
+Stuttgart 64:369–382. [On the demonstration of inheritance in humans].
+Translation by R. A. Jameson printed in D. L. Jameson (Ed.), (1977).
+Benchmark papers in genetics, Volume 8: Evolutionary genetics (pp.
+115–125). Stroudsburg, PA: Dowden, Hutchinson & Ross.
+
+Mayo, O. (2008). A century of Hardy–Weinberg equilibrium. Twin Research
+and Human Genetics, 11(3), 249-256.
 }
 \author{
 Matheus Januario, Dan Rabosky, Jennifer Auler
