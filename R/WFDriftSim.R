@@ -5,8 +5,9 @@ NULL
 
 #' Simulating generations of genetic drift in a Wright–Fisher (WF) population
 #'
-#' \code{WFDriftSim} simulates Wright–Fisher, diploid populations with a given
-#'  effective size through a certain number of generations.
+#' \code{WFDriftSim} simulates genetic drift of diploid Wright–Fisher 
+#' populations with a given effective size through a certain number of 
+#' generations.
 #'
 #' @param N Number giving the effective size of the population
 #' @param nGens Number of generations to be simulated.
