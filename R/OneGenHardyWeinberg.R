@@ -6,8 +6,8 @@
 #'
 #' @param nInd Integer indicating the census size of the simulated populations. 
 #' If decimals are inserted, they will be rounded.
-#' @param p Numerical between zero and one that indicates A1's allelic 
-#' frequency. A2's allelic frequency is assumed to be \code{1-p}.
+#' @param p Numerical between zero and one that indicates A1's allele 
+#' frequency. A2's allele frequency is assumed to be \code{1-p}.
 #' @param nSim Number of simulations to be made. If decimals are inserted, 
 #' they will be rounded.
 #' @return A \code{data.frame} containing the number of individuals for each 
@@ -30,10 +30,10 @@
 #' @author Matheus Januario
 #' 
 #' @examples
-#' #using the defalut values (nInd = 50, p = 0.5, nSim = 100):
+#' #using the default values (nInd = 50, p = 0.5, nSim = 100):
 #' OneGenHardyWeinbergSim()
 #' 
-#' #Simulating with a already fixed allelle:
+#' #Simulating with a already fixed allele:
 #' OneGenHardyWeinbergSim(nInd = 50, p = 1)
 #' 
 #' # Testing if the simulation works:
