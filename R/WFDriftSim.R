@@ -43,7 +43,8 @@ NULL
 #' 
 #' Tran, T. D., Hofrichter, J., & Jost, J. (2013). An introduction to the 
 #' mathematical structure of the Wright–Fisher model of population genetics. 
-#' Theory in Biosciences, 132(2), 73-82.
+#' Theory in Biosciences, 132(2), 73-82. \[good for the historical review, 
+#' math can be challenging\]
 #' 
 #' Waples, R. S. (2022). What is Ne, anyway?. Journal of Heredity.
 #' 
