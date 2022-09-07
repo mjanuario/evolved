@@ -73,6 +73,10 @@ WFDriftSim=function(N, nGens, p0=0.5, nSim=1, plot=TRUE, printData=FALSE){
     nSim <- round(nSim, digits = 0) 
   }
   
+  if(p0<0 | p0>1){stop("\"p0\" must be between zero and one")}
+  if(!(N>0)){stop("\"N\" must be an integer number larger than zero")}
+  if(!(nGens>0)){stop("\"nGens\" must be an integer number larger than zero")}
+
   # start matrix with generation "zero"
   p_through_time <- matrix(p0, ncol = 1, nrow=nSim)
   
