@@ -1,3 +1,8 @@
+#' @importFrom  stats rbinom
+#' @importFrom  graphics lines
+#' @importFrom  grDevices rainbow
+NULL 
+
 #' Simulating generations of genetic drift in a Wright–Fisher (WF) population
 #'
 #' \code{WFDriftSim} simulates Wright–Fisher, diploid populations with a given
@@ -23,8 +28,9 @@
 #' \code{printData = TRUE}, returns a \code{data.frame} with the 
 #' simulation results.
 #' 
+#' @export WFDriftSim
 #' 
-#' @author Matheus Januario
+#' @author Matheus Januario, Dan Rabosky, Jennifer Auler
 #' 
 #' @examples
 #' #Default values:
@@ -73,7 +79,7 @@ WFDriftSim=function(N, nGens, p0=0.5, nSim=1, plot=TRUE, printData=FALSE){
     nSim <- round(nSim, digits = 0) 
   }
   
-  if(p0<0 | p0>1){stop("\"p0\" must be between zero and one")}
+  #if(p0<0 || p0>1){stop("\"p0\" must be between zero and one")}
   if(!(N>0)){stop("\"N\" must be an integer number larger than zero")}
   if(!(nGens>0)){stop("\"nGens\" must be an integer number larger than zero")}
 

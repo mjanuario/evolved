@@ -70,5 +70,5 @@ head(all_sims)
 
 }
 \author{
-Matheus Januario
+Matheus Januario, Dan Rabosky, Jennifer Auler
 }

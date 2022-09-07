@@ -1,8 +1,3 @@
-#' @importFrom  stats rbinom
-#' @importFrom  graphics lines
-#' @importFrom  grDevices rainbow
-NULL 
-
 #' Simulating one generation of genotypes under Hardy-Weinberg equilibrium
 #'
 #' \code{OneGenHWSim} creates \code{nSim} simulations of one 
@@ -17,6 +12,8 @@ NULL
 #' they will be rounded.
 #' @return A \code{data.frame} containing the number of individuals for each 
 #' genotype
+#' 
+#' @export OneGenHWSim
 #' 
 #' @references 
 #' 
@@ -36,8 +33,9 @@ NULL
 #' @author Matheus Januario, Dan Rabosky, Jennifer Auler
 #' 
 #' @examples
+#' 
 #' #using the default values (nInd = 50, p = 0.5, nSim = 100):
-#' OneGenHWSim()
+#' #OneGenHWSim()
 #' 
 #' #Simulating with a already fixed allele:
 #' OneGenHWSim(nInd = 50, p = 1)

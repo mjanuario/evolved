@@ -26,8 +26,9 @@ generation of genotypes under Hardy-Weinberg equilibrium for a
 bi-allelic loci.
 }
 \examples{
+
 #using the default values (nInd = 50, p = 0.5, nSim = 100):
-OneGenHWSim()
+#OneGenHWSim()
 
 #Simulating with a already fixed allele:
 OneGenHWSim(nInd = 50, p = 1)
