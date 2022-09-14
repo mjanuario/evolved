@@ -3,5 +3,6 @@
 # 1) make a licencee for the package
 # 2) make a description for the package
 # 3) pick package name and run available::available()
-#    also check link below for adicional naming advices
+#    also check link below for additional naming advices
 browseURL("https://r-pkgs.org/Workflow101.html#naming")
+# we chose evoled as a possible name
