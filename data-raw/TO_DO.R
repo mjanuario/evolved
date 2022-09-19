@@ -1,4 +1,7 @@
 #TO DO LIST:
 
-# 1) make a licencense for the apckage
-# 2) make a descitption for the package
+# 1) make a licencee for the package
+# 2) make a description for the package
+# 3) pick package name and run available::available()
+#    also check link below for adicional naming advices
+browseURL("https://r-pkgs.org/Workflow101.html#naming")
