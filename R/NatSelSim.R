@@ -168,4 +168,3 @@ NatSelSim <- function(w11=1, w12=1, w22=0.9, p0=0.5, NGen=10, printData=FALSE){
     return(head(gen_HW))
   }
 }
-
