@@ -1,6 +1,6 @@
 #' @importFrom  stats rbinom
 #' @importFrom  graphics lines
-#' @importFrom  grDevices rainbow
+#' @import grDevices
 NULL 
 
 #' Simulating generations of genetic drift in a Wright–Fisher (WF) population
@@ -116,14 +116,18 @@ WFDriftSim=function(Ne, nGens, p0=0.5, nSim=1, plot=TRUE, printData=FALSE){
   }
   
   if(plot){
+    dev.new()
+    time = 2:nGens
     plot(NA, xlim=c(1,nGens), ylim=c(0,1),
          ylab="Allelic frequency", xlab="Generation",frame.plot=F)
     cols=grDevices::rainbow(nSim)
-    for(i in 1:nSim){
-      graphics::lines(x = 0:nGens, y = p_through_time[i,], col=cols[i])  
+    for(j in time){
+      for(i in 1:nSim){
+        graphics::lines(x = time[1:j], y = p_through_time[i,1:j], col=cols[i])
+      }
+      Sys.sleep(0.1)
     }
-  }
-  
+  }  
   if(printData){
     # labeling output:
     rownames(p_through_time) <- paste0("sim", 1:nSim)
