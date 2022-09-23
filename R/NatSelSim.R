@@ -1,3 +1,7 @@
+#'@import graphics
+#'@importFrom utils head
+NULL
+
 #' Simulating natural selection through time in a bi-allelic gene
 #'
 #' \code{NatSelSim} simulates natural selection in a bi-allelic gene through 
@@ -9,13 +13,14 @@
 #' normalized if any genotype fitness exceeds one.
 #' @param w22 Number giving the fitness of genotype A2A2. Values will be 
 #' normalized if any genotype fitness exceeds one.
-#' @param p0 Initial (time = 0) allelic frequency of A1
-#' @param NGen Number of generation that will be simulated
+#' @param p0 Initial (time = 0) allelic frequency of A1. 
+#' A2's initial allelic frequency is \code{1-p0}.
+#' @param NGen Number of generation that will be simulated.
 #' @param printData Logical indicating whether all simulation results should be
 #' returned as a \code{data.frame}. Default value is \code{FALSE}.
 #' 
 #' @return A \code{data.frame} containing the number of individuals for each 
-#' genotype
+#' genotype.
 #' 
 #' @export NatSelSim
 #' 
@@ -35,7 +40,7 @@
 #' 
 #' # Continuing a simulation for extra time:
 #' # Run the first simulation
-#' sim1=NatSelSim(w11 = .4, w12 = .5, w22 = .4, p0 = 0.35, printData = T)
+#' sim1=NatSelSim(w11 = .4, w12 = .5, w22 = .4, p0 = 0.35, printData = TRUE)
 #' 
 #' # Then take the allelic frequency form the first sim:
 #' new_p0 <- (sim1$AA[nrow(sim1)] + sim1$Aa[nrow(sim1)]*1/2) 
@@ -48,7 +53,7 @@ NatSelSim <- function(w11=1, w12=1, w22=0.9, p0=0.5, NGen=10, printData=FALSE){
   
   #checking input:
   if(any(c(w11, w12, w22)>1)){
-    
+    #normalizing W to get relative fitness   
     warning("Absolute fitness will be transformed into relative fitness")
     
     w11 <- w11/max(c(w11, w12, w22))
@@ -61,14 +66,12 @@ NatSelSim <- function(w11=1, w12=1, w22=0.9, p0=0.5, NGen=10, printData=FALSE){
   gen_HW <- gen_HW0 
   
   #creating table that will store the simulated genot. freqs.:
-  #making a fitness vector:
-  W_gntp <- c(w11, w12, w22)
-  #normalizing W to get relative fitness: W_gntp <- W_gntp/max(W_gntp)
+  W_gntp <- c(w11, w12, w22) #making a fitness vector
   t <- 0 #vector to store time
   p_t <- p0 #vector to store p through time
-  w_t <- apply(gen_HW0 * W_gntp, 1, sum) #vector to store mean pop fitness through time
+  w_t <- apply(gen_HW0 * W_gntp, 1, sum) #vector to store mean population fitness through time
   
-  s <- abs(diff(c(w11, w22))) #calculating s h <- (-w12+1)/s #calculating h
+  s <- abs(diff(c(w11, w22))) #calculating s h <- (-w12+1)/s #calculating h (!!!)
   #####
   # Now we run the simulation in time: 
   for(gen in 1:NGen){
@@ -79,7 +82,7 @@ NatSelSim <- function(w11=1, w12=1, w22=0.9, p0=0.5, NGen=10, printData=FALSE){
     #calc mean population fitness:
     w_t <- c(w_t, round(sum(aux), digits = 15)) #get new p from normalized genotypes:
     p_sel <- p_t[length(p_t)] #p before selection
-    #apply selection to :
+    #apply selection to:
     p_gen <- ( (p_sel^2 * w11) +
                  (p_sel*(1-p_sel)*w12) ) / w_t[length(w_t)]
     #store new p:
@@ -110,7 +113,8 @@ NatSelSim <- function(w11=1, w12=1, w22=0.9, p0=0.5, NGen=10, printData=FALSE){
   #mean fitness as a function of p
   w_p <- apply(gntp_p * w_aux, 1, sum)
   #This is just an auxiliary dataframe containig a weight.
-  # Basically, it stores the "contribution" of each genotype # to "p". If this still seems too abstract, call your GSI 
+  # Basically, it stores the "contribution" of each genotype # to "p". 
+  # If this still seems too abstract, call your GSI 
   a_aux <- data.frame(W11=rep(1, times=length(p)),
   W12=rep(0.5, times=length(p)), W22=rep(0, times=length(p)))
   #Delta p as a function of p:
@@ -155,7 +159,7 @@ NatSelSim <- function(w11=1, w12=1, w22=0.9, p0=0.5, NGen=10, printData=FALSE){
        lty=6, main="Mean fitness through time")
   #Genotype frequencies through time:
   plot(x=t, y=gen_HW[,1], type="l", lwd=3, xlab="Time", 
-       frame.plot = F, main="Genotypic freqeuncy through time",
+       frame.plot = F, main="Genotypic frequency through time",
        ylab="Genotypic Frequency", ylim=c(0,1.1))
   lines(x=t, y=gen_HW[,2], col="grey60", lwd=3) 
   lines(x=t, y=gen_HW[,3], col="grey80", lwd=3, lty=2) 
