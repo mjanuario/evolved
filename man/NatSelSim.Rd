@@ -54,6 +54,9 @@ NatSelSim(w11 = .4, w12 = .5, w22 = .4, p0 = new_p0, NGen = 20)
 
 
 }
+\references{
+
+}
 \author{
 Matheus Januario, Jennifer Auler, Dan Rabosky
 }

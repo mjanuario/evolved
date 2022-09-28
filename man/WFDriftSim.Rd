@@ -4,7 +4,7 @@
 \alias{WFDriftSim}
 \title{Simulating generations of genetic drift in a Wright–Fisher (WF) population}
 \usage{
-WFDriftSim(Ne, nGens, p0 = 0.5, nSim = 1, plot = TRUE, printData = FALSE)
+WFDriftSim(Ne, nGens, p0 = 0.5, nSim = 1, plot = "animate", printData = FALSE)
 }
 \arguments{
 \item{Ne}{Number giving the effective population size of the population}
@@ -18,15 +18,17 @@ is \code{0.5}.}
 \item{nSim}{Number of simulations to be made. If decimals are inserted,
 they will be rounded. Default value is \code{1}.}
 
-\item{plot}{Logical indicating if simulations should be plotted as colored
-lines. Each color represents a different population. Default value
-is \code{TRUE}.}
+\item{plot}{Character indicating if simulations should be plotted as colored
+lines. Each color represents a different population. If
+\code{plot = "animate"} (default value) it animates each generation
+individually. If \code{plot = "static"} it plots all lines rapidly. If
+\code{plot = "none"} nothing is plotted.}
 
 \item{printData}{Logical indicating whether all simulation results should be
 returned as a \code{data.frame}. Default value is \code{FALSE}.}
 }
 \value{
-If \code{plot = TRUE}, plots the timeseries of all simulations,
+If \code{plot = "static"}, plots the timeseries of all simulations,
 with each line+color referring to a different simulation. Note that if
 many simulations (generally more than 20) are simulated, colors might be
 cycled and different simulation will have the same color. If
@@ -50,16 +52,16 @@ WFDriftSim(Ne = 5, nGens = 30)
 WFDriftSim(Ne = 5, nGens = 30, p0=1)
 
 #Many populations::
-WFDriftSim(Ne = 5, nGens = 30, p0=0.2, nSim=20)
+WFDriftSim(Ne = 5, nGens = 30, p0=0.2, nSim=10)
 
 ######## continuing a previous simulation:
 ngen_1stsim <- 10 # number of gens in the 1st sim:
-sim1 <- WFDriftSim(Ne = 5, nGens = ngen_1stsim, p0=.2, nSim=20, 
-plot = FALSE, printData = TRUE)
+sim1 <- WFDriftSim(Ne = 5, nGens = ngen_1stsim, p0=.2, nSim=10, 
+plot = "none", printData = TRUE)
 ngen_2ndsim <-15 # number of gens in the 2nd sim:
 # now, note how we assigned p0:
 sim2 <- WFDriftSim(Ne = 5, nGens = ngen_2ndsim, p0=sim1[,ncol(sim1)], 
-plot = TRUE, nSim=20, printData = TRUE)
+plot = "static", nSim=10, printData = TRUE)
 
 # if we want to merge both simulations, then we have to:
 # remove first column of 2nd sim (because it repeats
