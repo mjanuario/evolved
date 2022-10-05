@@ -1,5 +1,3 @@
-fname <- "cyt-oxidase1-mt-aligned.txt"
-
 read_aa_alignment <- function(fname){
   
   xx <- scan(fname, sep="\n", what = "character")
@@ -25,3 +23,9 @@ read_aa_alignment <- function(fname){
   
   return(seqs)
 }
+
+temp = read_aa_alignment("./data-raw/cyt-oxidase1-mt-aligned.txt")
+
+cytOxidase = data.frame(attributes(temp), sequence = temp, row.names = 1:length(temp))
+
+use_data(cytOxidase, overwrite = TRUE)
