@@ -1,0 +1,1 @@
+timeseries <- read.csv("whale_body_size.csv")
