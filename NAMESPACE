@@ -3,6 +3,7 @@
 export(NatSelSim)
 export(OneGenHWSim)
 export(WFDriftSim)
+export(plotNatSel)
 export(plotWFDrift)
 import(grDevices)
 import(graphics)

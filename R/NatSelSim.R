@@ -16,6 +16,9 @@ NULL
 #' @param p0 Initial (time = 0) allelic frequency of A1. 
 #' A2's initial allelic frequency is \code{1-p0}.
 #' @param NGen Number of generation that will be simulated.
+#' @param plot_type String indicating if plot should be "static" or animated. 
+#' The defaut, "animateall", animate all possible pannels. 
+#' Other options are "animate1", "animate3", or "animate4".
 #' @param printData Logical indicating whether all simulation results should be
 #' returned as a \code{data.frame}. Default value is \code{FALSE}.
 #' 
@@ -49,9 +52,14 @@ NULL
 #' NatSelSim(w11 = .4, w12 = .5, w22 = .4, p0 = new_p0, NGen = 20)
 #' 
 #' 
-NatSelSim <- function(w11=1, w12=1, w22=0.9, p0=0.5, NGen=10, printData=FALSE){
+NatSelSim <- function(w11=1, w12=1, w22=0.9, p0=0.5, NGen=10, plot_type = "animateall", printData=FALSE){
   
   #checking input:
+  if(length(plot_type)!=1 | class(plot_type) != "character" | any(!plot_type %in% c("animateall", "static", "animate1", "animate3", "animate4")))
+  {
+    warning("Invalid plot type. Plotting as \"animateall\"")
+  }
+  
   if(any(c(w11, w12, w22)>1)){
     #normalizing W to get relative fitness   
     warning("Absolute fitness will be transformed into relative fitness")
@@ -93,7 +101,7 @@ NatSelSim <- function(w11=1, w12=1, w22=0.9, p0=0.5, NGen=10, printData=FALSE){
     t <- c(t, gen) 
   }
 
-  plotNatSel(gen_HW = gen_HW, p_t = p_t, w_t = w_t, t = t, W_gntp = c(w11, w12, w22))
+  plotNatSel(gen_HW = gen_HW, p_t = p_t, w_t = w_t, t = t, W_gntp = c(w11, w12, w22), plot_type = plot_type)
 
   if(printData){
     return(head(gen_HW))

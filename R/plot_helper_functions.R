@@ -75,6 +75,20 @@ plotWFDrift = function(p_through_time, plot_type = plot){
 ####################################
 # w11 = .4; w12 = .5; w22 = .4; p0 = 0.35; printData = TRUE;NGen = 10
 
+#' Plot NatSelSim output
+#'
+#' @param gen_HW Dataframe with A1A1, A1A2 and A2A2 genotypic 
+#' frequencies in each generation (nrows = NGen)
+#' @param p_t Allelic frequency through time
+#' @param w_t Mean population fitness through time
+#' @param t time
+#' @param W_gntp Initial genotypic fitness
+#' @param plot_type String indicating if plot should be "static" or animated. 
+#' The defaut, "animateall", animate all possible pannels. 
+#' Other options are "animate1", "animate3", or "animate4".
+#'
+#' @return Plot of NatSelSim's output
+#' @export plotNatSel
 plotNatSel = function(gen_HW = gen_HW, p_t = p_t, w_t = w_t, t = t, W_gntp = c(w11, w12, w22), plot_type = "animateall"){
   
   if(plot_type == "animateall"){
@@ -131,6 +145,7 @@ plotNatSel = function(gen_HW = gen_HW, p_t = p_t, w_t = w_t, t = t, W_gntp = c(w
   ################# pannel 1
   #Difference in p as a function of p:
   if("animate1" %in% plot_type){
+    Sys.sleep(0.1)
     plot(x=p, y=delta_p, type="l", lwd=4, col="blue",
          ylim=c(min(c(0-(.1*max(delta_p)), delta_p)), max(c(0, delta_p))),
          xlab="p", ylab=expression(Delta * "p"),
@@ -163,19 +178,26 @@ plotNatSel = function(gen_HW = gen_HW, p_t = p_t, w_t = w_t, t = t, W_gntp = c(w
   text(x=c(p0-0.05, p_end+0.05),y=c(delta_p0, delta_p_end),
          labels=c("p0","p_end"), col="red", cex=0.7)
   }
+
+  
   ############### pannel 2
   #Mean fitness as a function of p:
+  if("animate2" %in% plot_type){Sys.sleep(0.1)}
+  
   plot(x=p, y=w_p, type="l", lwd=3, xlab="p",
        ylab="Mean population fitness", col="red",
        ylim=c(min(c(w_t, w11, w12, w22)*0.8), max(c(w_t, w11, w12, w22))),
        frame.plot = F, main="Genotype-specific fitness")
   points(x=c(0,0.5,1),
          y=c(w22, w12, w11), pch=16, col="blue", cex=1.5)
-  text(x=c(0.05,0.55,0.95),y=c(w22, w12, w11)-0.05, pch=16, col="blue", 
+  text(x=c(0.05,0.55,0.95)+0.01,y=c(w22, w12, w11)-0.02, pch=16, col="blue", 
        cex=1, labels = c("w22", "w12", "w11"), srt=-20)
+  
+  
   ############### pannel 3
   #Mean fitness as a function of time:
   if("animate3" %in% plot_type){
+    Sys.sleep(0.1)
     plot(NA, xlim=c(1,length(t)), ylim=c(range(w_t)), frame.plot = F,
          ylab="Mean population fitness", xlab="Time", col="red",
          lty=6, main="Mean fitness through time")
@@ -184,7 +206,8 @@ plotNatSel = function(gen_HW = gen_HW, p_t = p_t, w_t = w_t, t = t, W_gntp = c(w
       segments(x0 = t[(i-1)],x1 = t[i], 
                y0= w_t[(i-1)],
                y1 = w_t[i],
-               col="red")
+               col="red",
+               lty = 2)
       Sys.sleep(0.1)  
     }
     
@@ -197,16 +220,28 @@ plotNatSel = function(gen_HW = gen_HW, p_t = p_t, w_t = w_t, t = t, W_gntp = c(w
   ############### pannel 4
   #Genotype frequencies through time:
   
-  #if("animate4" %in% plot_type){
-    #animation4 code here
-  #}else{
+  if("animate4" %in% plot_type){
+    Sys.sleep(0.1)
+  par(las =1)
+  plot(NA, xlim=c(1,length(t)), xlab="Time", 
+       frame.plot = F, main="Genotypic frequency through time",
+       ylab="Genotypic Frequency", ylim=c(0,1.1))
+    for(i in 2:length(t)){
+      segments(x0 = t[i-1], x1 = t[i], y0 = gen_HW[i-1,1],y1 = gen_HW[i,1], col = "black", lwd=3, lty=2)
+      segments(x0 = t[i-1], x1 = t[i], y0 = gen_HW[i-1,2],y1 = gen_HW[i,2], col = "grey60", lwd=3, lty=2)
+      segments(x0 = t[i-1], x1 = t[i], y0 = gen_HW[i-1,3],y1 = gen_HW[i,3], col = "grey80", lwd=3, lty=2)
+      Sys.sleep(0.1)
+    }
+  mtext(text = c("A1A1", "A1A2", "A2A2"), side = 4, at = gen_HW[nrow(gen_HW),], col = c("black", "grey60", "grey80"), adj = 1, cex = 0.8)
+  }else{
+  par(las =1)
   plot(x=t, y=gen_HW[,1], type="l", lwd=3, xlab="Time", 
        frame.plot = F, main="Genotypic frequency through time",
        ylab="Genotypic Frequency", ylim=c(0,1.1))
   lines(x=t, y=gen_HW[,2], col="grey60", lwd=3) 
   lines(x=t, y=gen_HW[,3], col="grey80", lwd=3, lty=2) 
   abline(h=c(1,0), lty=3, cex=0.55)
-  #legend(x=0, y=1.1, lty = c(1,1,2), col = c("black", "grey60", "grey80"),legend=c("A1A1", "A1A2", "A2A2"), lwd = 3)
-  #}
+  mtext(text = c("A1A1", "A1A2", "A2A2"), side = 4, at = gen_HW[nrow(gen_HW),], col = c("black", "grey60", "grey80"), adj = 0, cex = 0.8)
+  }
   par(mfrow=c(1,1))
 }

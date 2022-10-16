@@ -4,7 +4,15 @@
 \alias{NatSelSim}
 \title{Simulating natural selection through time in a bi-allelic gene}
 \usage{
-NatSelSim(w11 = 1, w12 = 1, w22 = 0.9, p0 = 0.5, NGen = 10, printData = FALSE)
+NatSelSim(
+  w11 = 1,
+  w12 = 1,
+  w22 = 0.9,
+  p0 = 0.5,
+  NGen = 10,
+  plot_type = "animateall",
+  printData = FALSE
+)
 }
 \arguments{
 \item{w11}{Number giving the fitness of genotype A1A1. Values will be
@@ -20,6 +28,10 @@ normalized if any genotype fitness exceeds one.}
 A2's initial allelic frequency is \code{1-p0}.}
 
 \item{NGen}{Number of generation that will be simulated.}
+
+\item{plot_type}{String indicating if plot should be "static" or animated.
+The defaut, "animateall", animate all possible pannels.
+Other options are "animate1", "animate3", or "animate4".}
 
 \item{printData}{Logical indicating whether all simulation results should be
 returned as a \code{data.frame}. Default value is \code{FALSE}.}
