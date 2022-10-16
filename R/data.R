@@ -20,7 +20,7 @@
 #' description
 #'
 #' @format ## `cytOxidase`
-#' A \code{data.frame} with 2 colums ans 17 rows.
+#' A \code{vector} with 17 entrys
 #' \describe{
 #'   \item{names}{Organism}
 #'   \item{sequence}{Aminoacid sequence}

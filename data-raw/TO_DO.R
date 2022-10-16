@@ -8,19 +8,19 @@ browseURL("https://r-pkgs.org/Workflow101.html#naming")
 # we chose evoled as a possible name
 # 4) insert input check in all functions. 
 #In WFDriftSim line 102 throws an error.
-# 5) add histogram at the end of WFDriftSim
 # 6) coment better function NatSel
-# 7) animate natsel pannels (all, or choose one)
-### como animar: abline no p, passa abline branco no p anterior, 
-  # volta linha azul
-### separar funcões de plot em outro script
 # 8) restore old par() on exit of functions that plot.
 # Check with_par() and on.exit() function for this
 
-# jennifer's tasks: revert dataframe in ctyOx; 
+# jennifer's tasks:  
 # add other data-raw to data
-# maybe 5
-# maybe 7
+
+#######
+#DONE#
+#######
+# 5) add histogram at the end of WFDriftSim
+# 7) animate natsel pannels (all, or choose one)
+# revert dataframe in ctyOx
 
 ####### future features
 # paisagem adaptativa https://curso-genevol.shinyapps.io/superficie-adaptativa/
