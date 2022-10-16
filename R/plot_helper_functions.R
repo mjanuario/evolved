@@ -1,19 +1,28 @@
 #' @importFrom withr defer
 NULL
 
-# Ne = 5; nGens = 20; p0=0.5; nSim=100; plot = "animate"
-# p_through_time = WFDriftSim(Ne = Ne, nGens = nGens, p0=p0, nSim=nSim, plot="none", printData = TRUE)
-# 
-
 #plot = animate not working
 #old par restoration is resetting par defaut, not old par
 
-plotWFDrift = function(p_through_time, plot_type = plot, nGens = nGens, nSim = nSim){
+#' Plot WFDriftSim output
+#'
+#' @param p_through_time Matrix with nGens collums and nSim lines
+#' @param plot_type String. Options are "static" or "animate"
+#'
+#' @return A static or animated plot of populations under genetic drift through time
+#' @export plotWFDrift
+#'
+#' @examples
+#' store_p = WFDriftSim(Ne = 5, nGens = 10, p0=.2, nSim=5, plot = "none", printData = TRUE)
+#' plotWFDrift(store_p, "static")
+plotWFDrift = function(p_through_time, plot_type = plot){
   
   if(plot_type == "none")  {
     warning("plotWFDrift argument plot can only be \"static\" or \"animate\"")
     return(NULL)
   }
+  nGens = dim(p_through_time)[2]-1
+  nSim = dim(p_through_time)[1]
   
   time = 2:nGens
   cols=grDevices::rainbow(nSim)
@@ -61,3 +70,5 @@ plotWFDrift = function(p_through_time, plot_type = plot, nGens = nGens, nSim = n
     barplot(auxhist$counts, axes = TRUE, space = 0, horiz=TRUE, xlab= "Counts", ylab=NULL)
   }
 }
+
+############################

@@ -123,39 +123,7 @@ WFDriftSim=function(Ne, nGens, p0=0.5, nSim=1, plot="animate", printData=FALSE){
   }
   
   if(plot %in% c("static", "animate")){
-    dev.new()
-    time = 2:nGens
-    plot(NA, xlim=c(1,nGens), ylim=c(0,1),
-         ylab="Allelic frequency", xlab="Generation",frame.plot=F)
-    cols=grDevices::rainbow(nSim)
-    for(j in time){
-      if(plot == "animate"){
-        for(i in 1:nSim){
-          graphics::segments(x0 = time[(j-1)],x1 = time[j], 
-                             y0= p_through_time[i, (j-1)], 
-                             y1 = p_through_time[i, j],
-                             col=cols[i])
-        }
-        
-        # setting animation time:
-        if(nGens < 20){
-          animation_time = 0.1
-        }else{
-          animation_time = 1/(nGens*nSim)
-        }
-        
-        Sys.sleep(animation_time)  
-      } else if(plot=="static"){
-        for(i in 1:nSim){
-          graphics::lines(x = 0:nGens, y = p_through_time[i,], col=cols[i])  
-        }
-      }
-      
-      ############################
-      # HISTOGRAMA VAI AQUI
-      ############################
-      
-    }
+    plotWFDrift(p_through_time, plot_type = plot)
   }  
   if(printData){
     # labeling output:
