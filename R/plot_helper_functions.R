@@ -147,32 +147,40 @@ plotNatSel = function(gen_HW = gen_HW, p_t = p_t, w_t = w_t, t = t, W_gntp = c(w
   if("animate1" %in% plot_type){
     Sys.sleep(0.1)
     plot(x=p, y=delta_p, type="l", lwd=4, col="blue",
-         ylim=c(min(c(0-(.1*max(delta_p)), delta_p)), max(c(0, delta_p))),
+         ylim=c(min(c(0-(.1*max(delta_p)), delta_p)), max(c(0, 1.1*delta_p))),
          xlab="p", ylab=expression(Delta * "p"),
-         main="Adaptive landscape", frame.plot = F)
+         main="Adaptive landscape", frame.plot = F, 
+         xlim = c(-0.05, 1.05))
     abline(v=p_t[1], col="red", lty=3, lwd = 2)
     abline(h=0, col="black", lty=2)
+    
+    colss=rep(rgb(red = 1,green = 0,blue = 0, alpha = 0.15), times=length(p_t)+2)
  
     for(time in 2:length(p_t)){
       Sys.sleep(0.1)
       abline(h=0, col="black", lty=2)
-      abline(v=p_t[time], col="red", lty=3, lwd = 2)
-      abline(v=p_t[time-1], col="white", lty=1, lwd = 2)
+      abline(v=p_t[time], col=colss[time], lty=3, lwd = 2)
+      #abline(v=p_t[time-1], col="white", lty=1, lwd = 2)
       lines(x=p, y=delta_p, type="l", lwd=4, col="blue")
     }
     abline(v=p0, col="red", lty=3, lwd = 2)
-    text(x=c(p0-0.05, p_end+0.05),y=c(delta_p0, delta_p_end),
+    abline(v=p_t[length(p_t)], col="red", lty=3, lwd = 2)
+    text(x=c(p0-0.05, p_end+0.075),y=c(delta_p0, delta_p_end),
          labels=c("p0","p_end"), col="red", cex=0.7)
     
   }else{
+    
+  colss=rep(rgb(red = 1,green = 0,blue = 0, alpha = 0.15), times=length(p_t)+2)
+    
   plot(x=p, y=delta_p, type="l", lwd=4, col="blue", 
-       ylim=c(min(c(0-(.1*max(delta_p)), delta_p)), max(c(0, delta_p))), 
+       ylim=c(min(c(0-(.1*max(delta_p)), delta_p)), max(c(0, delta_p*1.1))), 
        xlab="p", ylab=expression(Delta * "p"),
        main="Adaptive landscape", frame.plot = F)
   
   #now just adding some extra info:
   # zero change in fitness line:
   abline(h=0, col="black", lty=2)
+  abline(v=p_t, col=colss, lty=2)
   #adding simulation’s initial/final allele freq 
   abline(v=c(p0, p_end), col="red", lty=3, lwd = 2)
   text(x=c(p0-0.05, p_end+0.05),y=c(delta_p0, delta_p_end),
@@ -198,7 +206,7 @@ plotNatSel = function(gen_HW = gen_HW, p_t = p_t, w_t = w_t, t = t, W_gntp = c(w
   #Mean fitness as a function of time:
   if("animate3" %in% plot_type){
     Sys.sleep(0.1)
-    plot(NA, xlim=c(1,length(t)), ylim=c(range(w_t)), frame.plot = F,
+    plot(NA, xlim=c(0,length(t)), ylim=c(range(w_t)), frame.plot = F,
          ylab="Mean population fitness", xlab="Time", col="red",
          lty=6, main="Mean fitness through time")
     
@@ -207,7 +215,7 @@ plotNatSel = function(gen_HW = gen_HW, p_t = p_t, w_t = w_t, t = t, W_gntp = c(w
                y0= w_t[(i-1)],
                y1 = w_t[i],
                col="red",
-               lty = 2)
+               lty = 2, lwd=2)
       Sys.sleep(0.1)  
     }
     
@@ -223,7 +231,7 @@ plotNatSel = function(gen_HW = gen_HW, p_t = p_t, w_t = w_t, t = t, W_gntp = c(w
   if("animate4" %in% plot_type){
     Sys.sleep(0.1)
   par(las =1)
-  plot(NA, xlim=c(1,length(t)), xlab="Time", 
+  plot(NA, xlim=c(0,length(t)), xlab="Time", 
        frame.plot = F, main="Genotypic frequency through time",
        ylab="Genotypic Frequency", ylim=c(0,1.1))
     for(i in 2:length(t)){

@@ -16,15 +16,15 @@ NULL
 #' is \code{0.5}.
 #' @param nSim Number of simulations to be made. If decimals are inserted, 
 #' they will be rounded. Default value is \code{1}.
-#' @param plot Character indicating if simulations should be plotted as colored 
+#' @param plot_type Character indicating if simulations should be plotted as colored 
 #' lines. Each color represents a different population. If 
-#' \code{plot = "animate"} (default value) it animates each generation 
-#' individually. If \code{plot = "static"} it plots all lines rapidly. If 
-#' \code{plot = "none"} nothing is plotted.
+#' \code{plot_type = "animate"} (default value) it animates each generation 
+#' individually. If \code{plot_type = "static"} it plots all lines rapidly. If 
+#' \code{plot_type = "none"} nothing is plotted.
 #' @param printData Logical indicating whether all simulation results should be 
 #' returned as a \code{data.frame}. Default value is \code{FALSE}.
 #' 
-#' @return If \code{plot = "static"}, plots the timeseries of all simulations, 
+#' @return If \code{plot_type = "static"}, plots the timeseries of all simulations, 
 #' with each line+color referring to a different simulation. Note that if 
 #' many simulations (generally more than 20) are simulated, colors might be 
 #' cycled and different simulation will have the same color. If 
@@ -67,12 +67,12 @@ NULL
 #' ######## continuing a previous simulation:
 #' ngen_1stsim <- 10 # number of gens in the 1st sim:
 #' sim1 <- WFDriftSim(Ne = 5, nGens = ngen_1stsim, p0=.2, nSim=10, 
-#' plot = "none", printData = TRUE)
+#' plot_type = "none", printData = TRUE)
 
 #' ngen_2ndsim <-15 # number of gens in the 2nd sim:
 #' # now, note how we assigned p0:
 #' sim2 <- WFDriftSim(Ne = 5, nGens = ngen_2ndsim, p0=sim1[,ncol(sim1)], 
-#' plot = "static", nSim=10, printData = TRUE)
+#' plot_type = "static", nSim=10, printData = TRUE)
 #' 
 #' # if we want to merge both simulations, then we have to:
 #' # remove first column of 2nd sim (because it repeats
@@ -86,16 +86,16 @@ NULL
 #' all_sims <- cbind(sim1, sim2)
 #' head(all_sims)
 #' 
-WFDriftSim=function(Ne, nGens, p0=0.5, nSim=1, plot="animate", printData=FALSE){
+WFDriftSim=function(Ne, nGens, p0=0.5, nSim=1, plot_type="animate", printData=FALSE){
   
   # checking input:
-  if(plot=="none" & printData==FALSE){
-    stop("if both \"plot\" and \"printData\" are false, 
+  if(plot_type=="none" & printData==FALSE){
+    stop("if both \"plot_type\" and \"printData\" are false, 
          there is nothing to be returned")
   }
   
-  if(!(plot %in% c("animate", "static", "none"))){
-    stop("\"plot\" has to be equal to \"animate\", \"static\", or  \"none\"")
+  if(!(plot_type %in% c("animate", "static", "none"))){
+    stop("\"plot_type\" has to be equal to \"animate\", \"static\", or  \"none\"")
   }
   
   if(!class(nSim) %in% c("numeric", "integer")){
@@ -122,8 +122,8 @@ WFDriftSim=function(Ne, nGens, p0=0.5, nSim=1, plot="animate", printData=FALSE){
     )
   }
   
-  if(plot %in% c("static", "animate")){
-    plotWFDrift(p_through_time, plot_type = plot)
+  if(plot_type %in% c("static", "animate")){
+    plotWFDrift(p_through_time, plot_type = plot_type)
   }  
   if(printData){
     # labeling output:
