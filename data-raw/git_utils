@@ -1,9 +1,0 @@
-Undo a merge/commit: https://www.freecodecamp.org/news/git-undo-merge-how-to-revert-the-last-merge-commit-in-git/
-
-git reset --merge HEAD~1
-
-
-pick files to not merge: https://stackoverflow.com/questions/449541/how-can-i-selectively-merge-or-pick-changes-from-another-branch-in-git
-
-git merge --no-ff --no-commit branchX
-git checkout HEAD data-raw
