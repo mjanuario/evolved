@@ -1,4 +1,4 @@
-#' @importFrom withr defer
+#' @import withr
 #' @import graphics
 NULL
 
