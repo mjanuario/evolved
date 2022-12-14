@@ -12,15 +12,15 @@ browseURL("https://r-pkgs.org/Workflow101.html#naming")
 # 8) restore old par() on exit of functions that plot.
 # Check with_par() and on.exit() function for this
 
-# jennifer's tasks:  
-# add other data-raw to data
+#Matheus tasks:
+	#document all datasets (folder R/Data.R)
+	#make the reamining functions
+
 
 #######
 #DONE#
 #######
-# 5) add histogram at the end of WFDriftSim
-# 7) animate natsel pannels (all, or choose one)
-# revert dataframe in ctyOx
+
 
 ####### future features
 # paisagem adaptativa https://curso-genevol.shinyapps.io/superficie-adaptativa/
