@@ -77,7 +77,7 @@ NatSelSim <- function(w11=1, w12=1, w22=0.9, p0=0.5, NGen=10, plot_type = "anima
   W_gntp <- c(w11, w12, w22) #making a fitness vector
   t <- 0 #vector to store time
   p_t <- p0 #vector to store p through time
-  w_t <- apply(gen_HW0 * W_gntp, 1, sum) #vector to store mean population fitness through time
+  w_t <- vector()#apply(gen_HW0 * W_gntp, 1, sum) #vector to store mean population fitness through time
   
   s <- abs(diff(c(w11, w22))) #calculating s h <- (-w12+1)/s #calculating h (!!!)
   #####
@@ -104,6 +104,6 @@ NatSelSim <- function(w11=1, w12=1, w22=0.9, p0=0.5, NGen=10, plot_type = "anima
   plotNatSel(gen_HW = gen_HW, p_t = p_t, w_t = w_t, t = t, W_gntp = c(w11, w12, w22), plot_type = plot_type)
   
   if(printData){
-    return(head(gen_HW))
+    return(gen_HW)
   }
 }

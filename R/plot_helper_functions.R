@@ -149,7 +149,7 @@ plotNatSel = function(gen_HW = gen_HW, p_t = p_t, w_t = w_t, t = t, W_gntp = c(w
     plot(x=p, y=delta_p, type="l", lwd=4, col="blue",
          ylim=c(min(c(0-(.1*max(delta_p)), delta_p)), max(c(0, 1.1*delta_p))),
          xlab="p", ylab=expression(Delta * "p"),
-         main="Adaptive landscape", frame.plot = F, 
+         main="Relative allele frequency change", frame.plot = F, 
          xlim = c(-0.05, 1.05))
     abline(v=p_t[1], col="red", lty=3, lwd = 2)
     abline(h=0, col="black", lty=2)
@@ -175,7 +175,7 @@ plotNatSel = function(gen_HW = gen_HW, p_t = p_t, w_t = w_t, t = t, W_gntp = c(w
     plot(x=p, y=delta_p, type="l", lwd=4, col="blue", 
          ylim=c(min(c(0-(.1*max(delta_p)), delta_p)), max(c(0, delta_p*1.1))), 
          xlab="p", ylab=expression(Delta * "p"),
-         main="Adaptive landscape", frame.plot = F)
+         main="Relative allele frequency change", frame.plot = F)
     
     #now just adding some extra info:
     # zero change in fitness line:
@@ -195,7 +195,7 @@ plotNatSel = function(gen_HW = gen_HW, p_t = p_t, w_t = w_t, t = t, W_gntp = c(w
   plot(x=p, y=w_p, type="l", lwd=3, xlab="p",
        ylab="Mean population fitness", col="red",
        ylim=c(min(c(w_t, w11, w12, w22)*0.8), max(c(w_t, w11, w12, w22))),
-       frame.plot = F, main="Genotype-specific fitness")
+       frame.plot = F, main="Adaptive landscape")
   points(x=c(0,0.5,1),
          y=c(w22, w12, w11), pch=16, col="blue", cex=1.5)
   text(x=c(0.05,0.55,0.95)+0.01,y=c(w22, w12, w11)-0.02, pch=16, col="blue", 
