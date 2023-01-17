@@ -26,7 +26,9 @@ A \code{data.frame} with 13 colums and 58111 rows.
 }
 }
 \source{
+\if{html}{\out{
 <??>
+}}
 }
 \usage{
 ammonoidea_fossil

@@ -26,7 +26,9 @@ A \code{data.frame} with 13 colums and 24965 rows.
 }
 }
 \source{
+\if{html}{\out{
 <??>
+}}
 }
 \usage{
 trilob_fossil

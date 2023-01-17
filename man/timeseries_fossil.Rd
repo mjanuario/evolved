@@ -19,7 +19,9 @@ A \code{data.frame} with 6 colums and 598 rows.
 }
 }
 \source{
+\if{html}{\out{
 <??>
+}}
 }
 \usage{
 timeseries_fossil

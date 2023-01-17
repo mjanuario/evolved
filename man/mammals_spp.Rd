@@ -11,7 +11,9 @@ A \code{vector} with 4099 mammal species.
 }
 }
 \source{
+\if{html}{\out{
 <??>
+}}
 }
 \usage{
 mammals_spp

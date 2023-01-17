@@ -11,7 +11,9 @@ A \code{vector} with 9993 bird species.
 }
 }
 \source{
+\if{html}{\out{
 <??>
+}}
 }
 \usage{
 birds_spp

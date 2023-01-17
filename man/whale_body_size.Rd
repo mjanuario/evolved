@@ -17,7 +17,9 @@ A \code{data.frame} with 4 colums and 75 rows.
 }
 }
 \source{
+\if{html}{\out{
 <??>
+}}
 }
 \usage{
 whale_body_size

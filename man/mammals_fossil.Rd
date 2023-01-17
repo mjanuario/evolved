@@ -26,7 +26,9 @@ A \code{data.frame} with 13 colums and 69463 rows.
 }
 }
 \source{
+\if{html}{\out{
 <??>
+}}
 }
 \usage{
 mammals_fossil
