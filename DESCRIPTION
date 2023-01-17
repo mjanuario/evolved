@@ -2,11 +2,11 @@ Package: EvolPackage
 Title: Simple simulation and data analysis code to teach evolutionary processes and macroevolution.
 Version: 0.0.0.5000
 Authors@R: 
-    c(person("Matheus", "Januario", email="januarioml.eco@gmail.com", role = c("aut", "cre"),
+    c(person("Matheus", "Januario", email="januarioml.eco@gmail.com", role = c("aut"),
            comment = c(ORCID = "000-0002-6480-7095")),
-           "Jennifer", "Auler", email="auler.jennifer@gmail.com", role = c("aut", "cre"),
+      person("Jennifer", "Auler", email="auler.jennifer@gmail.com", role = c("aut", "cre"),
            comment = c(ORCID = "0000-0001-7576-9058")),
-           "Daniel", "Rabosky", email="drabosky@umich.edu", role = c("aut", "cre")))
+      person("Daniel", "Rabosky", email="drabosky@umich.edu", role = c("aut")))
 Description: What the package does (one paragraph).
 License: GPL (>= 3)
 Encoding: UTF-8
