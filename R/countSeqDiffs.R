@@ -29,7 +29,7 @@ NULL
 #' 
 countSeqDiffs <- function(x, taxon1, taxon2){
   if(class(x) != "ProteinSet"){
-    stop("object \"x\" must be from \"ProteinSet\" class")
+    stop("object \"x\" must be from \"ProteinSeq\" class")
   }
   
   if(sum(c(taxon1, taxon2) %in% names(x))<2){
