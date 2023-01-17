@@ -5,8 +5,8 @@ NULL
 
 #' Simulating generations of genetic drift in a Wright–Fisher (WF) population
 #'
-#' \code{cytOxidase} is a set of protein sequences from the GENE cytochrome 
-#' oxidase SUBUNIT 1 gene. This mitochondrial gene, often known as CO1 
+#' \code{cytOxidase} is a set of homologous protein sequences from the GENE 
+#' cytochrome oxidase SUBUNIT 1 gene. This mitochondrial gene, often known as CO1 
 #' (“see-oh-one”),  plays a key role in cellular respiration. C01 contains 
 #' approximately 513 amino acids and has been used by previous studies for 
 #' reconstructing phylogenetic trees and estimating divergence times in 
