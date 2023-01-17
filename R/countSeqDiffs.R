@@ -28,7 +28,7 @@ NULL
 #' countSeqDiffs(cytOxidase, "chimpanzee", "cnidaria")
 #' 
 countSeqDiffs <- function(x, taxon1, taxon2){
-  if(class(x) != "ProteinSet"){
+  if(class(x) != "ProteinSeq"){
     stop("object \"x\" must be from \"ProteinSeq\" class")
   }
   
