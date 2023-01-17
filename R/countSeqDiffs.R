@@ -1,4 +1,4 @@
-#' @importFrom   base unlist
+#' @importFrom  base unlist
 #' @importFrom  base strsplit
 NULL 
 
@@ -9,9 +9,9 @@ NULL
 #' @param x A "ProteinSet" object containing proteins from \code{taxon1} 
 #' and \code{taxon2}.
 #' @param taxon1 A character giving the common name of the first species that 
-#' will be compared
+#' will be compared. Must be a name present in \code{x}.
 #' @param taxon2 A character giving the common name of the second species that 
-#' will be compared
+#' will be compared. Must be a name present in \code{x}.
 #' 
 #' @return A integer giving the number of protein differences between 
 #' \code{taxon1} and \code{taxon2}.
@@ -44,7 +44,7 @@ countSeqDiffs <- function(x, taxon1, taxon2){
     stop("\"taxon2\" must be a character")
   }
   
-  x1 <- base::unlist(base::strsplit(x[taxon1], split=""))
-  x2 <- base::unlist(base::strsplit(x[taxon2], split=""))
+  x1 <- unlist(strsplit(x[taxon1], split=""))
+  x2 <- unlist(strsplit(x[taxon2], split=""))
   return(sum(x1 != x2))
 }

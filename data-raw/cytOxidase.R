@@ -24,7 +24,8 @@ read_aa_alignment <- function(fname){
   return(seqs)
 }
 
-fname = "./data-raw/cyt-oxidase1-mt-aligned.txt"
+fname = "./data-raw/cytOxidase.txt"
 cytOxidase = read_aa_alignment(fname)
+class(cytOxidase) = "ProteinSeq"
 
 use_data(cytOxidase, overwrite = TRUE)
