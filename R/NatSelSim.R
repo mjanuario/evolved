@@ -55,7 +55,7 @@ NULL
 NatSelSim <- function(w11=1, w12=1, w22=0.9, p0=0.5, NGen=10, plot_type = "animateall", printData=FALSE){
   
   #checking input:
-  if(length(plot_type)!=1 | class(plot_type) != "character" | any(!plot_type %in% c("animateall", "static", "animate1", "animate3", "animate4")))
+  if(length(plot_type)!=1 | !inherits(x = plot_type, what = "character") | any(!plot_type %in% c("animateall", "static", "animate1", "animate3", "animate4")))
   {
     warning("Invalid plot type. Plotting as \"animateall\"")
   }

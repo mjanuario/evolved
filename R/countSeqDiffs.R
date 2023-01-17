@@ -1,7 +1,3 @@
-#' @importFrom  base unlist
-#' @importFrom  base strsplit
-NULL 
-
 #' Counting protein sequence differences
 #'
 #' \code{countSeqDiffs} counts the number of protein differences among two sequences of proteins within the same "ProteinSet" object.
@@ -28,21 +24,11 @@ NULL
 #' countSeqDiffs(cytOxidase, "chimpanzee", "cnidaria")
 #' 
 countSeqDiffs <- function(x, taxon1, taxon2){
-  if(class(x) != "ProteinSeq"){
-    stop("object \"x\" must be from \"ProteinSeq\" class")
-  }
   
   if(sum(c(taxon1, taxon2) %in% names(x))<2){
     stop("Both \"taxon1\" and \"taxon2\" must be in \"x\"")
   }
   
-  if(class(taxon1)!="character"){
-    stop("\"taxon1\" must be a character")
-  }
-  
-  if(class(taxon2)!="character"){
-    stop("\"taxon2\" must be a character")
-  }
   
   x1 <- unlist(strsplit(x[taxon1], split=""))
   x2 <- unlist(strsplit(x[taxon2], split=""))
