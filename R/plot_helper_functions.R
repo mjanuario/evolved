@@ -1,4 +1,3 @@
-#' @import withr
 #' @import graphics
 NULL
 
@@ -30,7 +29,7 @@ plotWFDrift = function(p_through_time, plot_type = plot){
   
   dev.new()
   opar =  par(mar = (c(5, 4, 4, 0) + 0.1))
-  defer(par(opar))
+  #defer(par(opar))
   layout(matrix(c(1,2), ncol = 2), widths=c(8, 2))
   
   plot(NA, xlim=c(0,nGens), ylim=c(0,1),
