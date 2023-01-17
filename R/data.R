@@ -17,15 +17,27 @@
 
 #' Cytocrome Oxidase sequences
 #'
-#' description
+#' \code{cytOxidase} is a set of homologous protein sequences from the GENE 
+#' cytochrome oxidase SUBUNIT 1 gene. This mitochondrial gene, often known as CO1
+#' (“see-oh-one”),  plays a key role in cellular respiration. C01 contains 
+#' approximately 513 amino acids and has been used by previous studies for 
+#' reconstructing phylogenetic trees and estimating divergence times in 
+#' Metazoaria by assuming a molecular clock. Its 5′ partition is used for the 
+#' ‘Barcoding of Life’ initiative, for instance. 
+#' 
+#' @details The object is structured as a named list of 17 different animal 
+#' species, with each individual list component being a sequence of 513 
+#' proteins. 
 #'
 #' @format ## `cytOxidase`
-#' A \code{vector} with 17 entrys
+#' A \code{vector} with 17 entries, each representing a different animal species
 #' \describe{
 #'   \item{names}{Organism}
-#'   \item{sequence}{Aminoacid sequence}
+#'   \item{sequence}{Aminoacid sequence of length 513}
 #' }
-#' @source <??>
+#' 
+#' @source This sequence was originally downloaded from genebank and later 
+#' curated by Daniel Rabosky.
 "cytOxidase"
 
 #########################################################
