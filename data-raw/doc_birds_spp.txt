@@ -21,6 +21,6 @@ Actual file donwloaded from https://vertlife.org/data/
 birds_spp
 }
 \description{
-A vector containing the names of all extant bird species, following Jetz et al (2012) taxonomy
+A vector containing the names of all extant brid species, following Jetz et al (2012) taxonomy
 }
 \keyword{datasets}

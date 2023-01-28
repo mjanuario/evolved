@@ -9,16 +9,16 @@
 
 A \code{data.frame} with 6 colums and 598 rows.
 \describe{
-\item{clade}{clade}
-\item{source}{source}
-\item{stem_age}{}
-\item{rel_time}{}
-\item{time_ma}{time in million year}
-\item{richness}{species richness}
+\item{clade}{clade} Timeseries clade. 
+\item{source}{source} Primary source of the timeseries
+\item{stem_age}{Stem age} Stem age of clade
+\item{rel_time}{Relative time} Geological time (in Million years ago relative to present)
+\item{time_ma}{Time} Geological time in million years since clade stem age
+\item{richness}{species richness} Number of species at given geological time
 }
 }
 }
-\source{
+\source{ Data originally compiled from many primary sources. Organized, curated by, and downloaded from, Rabosky & Benson (2021)
 \if{html}{\out{
 <??>
 }}
@@ -27,6 +27,11 @@ A \code{data.frame} with 6 colums and 598 rows.
 timeseries_fossil
 }
 \description{
-description
+Timesereis containing values of clade diveristy for many clades of organisms (note some clades are nested within other clades in the dataset). Legend: anth = Anthozoa (Cnidaria); art = Articulata (Crinoidea, Echinodermata); biv = Bivalvia (Mollusca); bryo = Bryozoa (	Lophotrochozoa, Ectoprocta); ceph = Cephalopoda (Mollusca); chon = Chondrocytes (Chordata); crin = Crinoidae (Echinodermata); dinosauria = Dinosauria (Chordata); ech = Echinoidea (Echinodermata); foram = Foraminifera (Retaria); gast = Gastropoda (Mollusca); graptoloids = Graptolites (Graptolithina); ling = Ligulata (Brachiopoda); ostr = Ostracoda (Crustacea, Arthropoda); tril = Trilobita (Arthropoda)
+
+
+References:
+
+Rabosky, D. L., & Benson, R. B. (2021). Ecological and biogeographic drivers of biodiversity cannot be resolved using clade age-richness data. Nature Communications, 12(1), 2945.
 }
 \keyword{datasets}

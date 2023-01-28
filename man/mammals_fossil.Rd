@@ -3,7 +3,7 @@
 \docType{data}
 \name{mammals_fossil}
 \alias{mammals_fossil}
-\title{Occurrence of mammals fossils}
+\title{Occurrences of fossil mammals}
 \format{
 \subsection{\code{mammals_fossil}}{
 
@@ -17,15 +17,17 @@ A \code{data.frame} with 13 colums and 69463 rows.
 \item{species}{species}
 \item{early_interval}{earlier known geological period of ocurence}
 \item{late_interval}{later known geological period of ocurence}
-\item{max_ma}{maximum known ocurence in million years}
-\item{min_ma}{minimun known ocurence in million years}
-\item{midpoint}{midpoint}
-\item{lng}{longitude}
-\item{lat}{latitude}
+\item{max_ma}{ocurrence's oldest time boundary in million years}
+\item{min_ma}{ocurrence's newest time boundary in million years}
+\item{midpoint}{midpoint between max_ma and min_ma}
+\item{lng}{longitude of place where occurrence was found}
+\item{lat}{latitude of place where occurrence was found}
 }
 }
 }
-\source{
+\source{The Paleobiology Database (donwloaded on 2022-03-11)
+
+Data URL: "http://paleobiodb.org/data1.2/occs/list.csv?datainfo&rowcount&base_name=Mammalia&show=full,classext,genus,subgenus,acconly,ident,img,etbasis,strat,lith,env,timebins,timecompare,resgroup,ref,ent,entname,crmod"
 \if{html}{\out{
 <??>
 }}
@@ -34,6 +36,6 @@ A \code{data.frame} with 13 colums and 69463 rows.
 mammals_fossil
 }
 \description{
-description
+A data frame contaning many mammal fossil occurrences from different moments of the geological past. Much information (i.e., extra columns) was removed from the original datset to make it more compact, but it can be accessed by the data URL.
 }
 \keyword{datasets}

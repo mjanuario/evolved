@@ -13,7 +13,6 @@ browseURL("https://r-pkgs.org/Workflow101.html#naming")
 # Check with_par() and on.exit() function for this
 
 #Matheus tasks:
-	#document all datasets (folder R/Data.R)
 	#make the reamining functions
 
 
