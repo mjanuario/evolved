@@ -2,11 +2,11 @@
 NULL
 
 #plot = animate not working
-#old par restoration is resetting par defaut, not old par
+#old par restoration is resetting par default, not old par
 
 #' Plot WFDriftSim output
 #'
-#' @param p_through_time Matrix with nGens collums and nSim lines
+#' @param p_through_time Matrix with nGens columns and nSim lines
 #' @param plot_type String. Options are "static" or "animate"
 #'
 #' @return A static or animated plot of populations under genetic drift through time
@@ -83,7 +83,7 @@ plotWFDrift = function(p_through_time, plot_type = plot){
 #' @param t time
 #' @param W_gntp Initial genotypic fitness
 #' @param plot_type String indicating if plot should be "static" or animated. 
-#' The defaut, "animateall", animate all possible pannels. 
+#' The default, "animateall", animate all possible panels. 
 #' Other options are "animate1", "animate3", or "animate4".
 #'
 #' @return Plot of NatSelSim's output

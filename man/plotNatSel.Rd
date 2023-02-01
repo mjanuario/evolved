@@ -26,7 +26,7 @@ frequencies in each generation (nrows = NGen)}
 \item{W_gntp}{Initial genotypic fitness}
 
 \item{plot_type}{String indicating if plot should be "static" or animated.
-The defaut, "animateall", animate all possible pannels.
+The default, "animateall", animate all possible panels.
 Other options are "animate1", "animate3", or "animate4".}
 }
 \value{

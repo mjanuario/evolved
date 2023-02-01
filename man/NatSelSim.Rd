@@ -30,7 +30,7 @@ A2's initial allelic frequency is \code{1-p0}.}
 \item{NGen}{Number of generation that will be simulated.}
 
 \item{plot_type}{String indicating if plot should be "static" or animated.
-The defaut, "animateall", animate all possible pannels.
+The default, "animateall", animate all possible panels.
 Other options are "animate1", "animate3", or "animate4".}
 
 \item{printData}{Logical indicating whether all simulation results should be

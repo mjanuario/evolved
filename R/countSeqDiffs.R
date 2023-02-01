@@ -1,8 +1,8 @@
 #' Counting protein sequence differences
 #'
-#' \code{countSeqDiffs} counts the number of protein differences among two sequences of proteins within the same "ProteinSet" object.
+#' \code{countSeqDiffs} counts the number of protein differences among two sequences of proteins within the same "ProteinSeq" object.
 #'
-#' @param x A "ProteinSet" object containing proteins from \code{taxon1} 
+#' @param x A "ProteinSeq" object containing proteins from \code{taxon1} 
 #' and \code{taxon2}.
 #' @param taxon1 A character giving the common name of the first species that 
 #' will be compared. Must be a name present in \code{x}.

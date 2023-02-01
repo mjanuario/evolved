@@ -7,7 +7,7 @@
 plotWFDrift(p_through_time, plot_type = plot)
 }
 \arguments{
-\item{p_through_time}{Matrix with nGens collums and nSim lines}
+\item{p_through_time}{Matrix with nGens columns and nSim lines}
 
 \item{plot_type}{String. Options are "static" or "animate"}
 }

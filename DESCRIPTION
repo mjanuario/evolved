@@ -1,5 +1,5 @@
 Package: EvolPackage
-Title: Simple simulation and data analysis code to teach evolutionary processes and macroevolution.
+Title: Simple simulation and data analysis code to teach evolutionary processes and macroevolution
 Version: 0.0.0.5000
 Authors@R: 
     c(person("Matheus", "Januario", email="januarioml.eco@gmail.com", role = c("aut"),

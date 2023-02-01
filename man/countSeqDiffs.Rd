@@ -7,7 +7,7 @@
 countSeqDiffs(x, taxon1, taxon2)
 }
 \arguments{
-\item{x}{A "ProteinSet" object containing proteins from \code{taxon1}
+\item{x}{A "ProteinSeq" object containing proteins from \code{taxon1}
 and \code{taxon2}.}
 
 \item{taxon1}{A character giving the common name of the first species that
@@ -21,7 +21,7 @@ A integer giving the number of protein differences between
 \code{taxon1} and \code{taxon2}.
 }
 \description{
-\code{countSeqDiffs} counts the number of protein differences among two sequences of proteins within the same "ProteinSet" object.
+\code{countSeqDiffs} counts the number of protein differences among two sequences of proteins within the same "ProteinSeq" object.
 }
 \examples{
 countSeqDiffs(cytOxidase, "human", "chimpanzee")
