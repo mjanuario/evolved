@@ -5,23 +5,18 @@
 \alias{mammals_spp}
 \title{Mammals species list}
 \format{
-\subsection{\code{mammals_spp}}{
-
-A \code{vector} with 4099 mammal species, taken originally from Upham et al (2019)
+A \code{vector} containing the names of almost all (i.e., 4099) extant mammal species, following Upham et al (2019) taxonomy.
 }
-}
-\source{ Original: Upham, N. S., Esselstyn, J. A., & Jetz, W. (2019). Inferring the mammal tree: species-level sets of phylogenies for questions in ecology, evolution, and conservation. PLoS biology, 17(12), e3000494.
-
-Actual file donwloaded from https://vertlife.org/data/
-\if{html}{\out{
-<??>
-}}
+\source{
+Actual file downloaded from https://vertlife.org/data/
 }
 \usage{
 mammals_spp
 }
 \description{
-A vector containing the names of all extant mammal species, following Upham et al (2019) taxonomy
+Mammals species list
 }
+\references{
+Upham, N. S., Esselstyn, J. A., & Jetz, W. (2019). Inferring the mammal tree: species-level sets of phylogenies for questions in ecology, evolution, and conservation. PLoS biology, 17(12), e3000494.
 }
 \keyword{datasets}

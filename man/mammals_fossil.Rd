@@ -3,39 +3,35 @@
 \docType{data}
 \name{mammals_fossil}
 \alias{mammals_fossil}
-\title{Occurrences of fossil mammals}
+\title{Occurrences of mammal fossils}
 \format{
-\subsection{\code{mammals_fossil}}{
-
-A \code{data.frame} with 13 colums and 69463 rows.
+A \code{data.frame} containing 69463 rows and 13 columns
 \describe{
-\item{phylum}{phylum}
-\item{class}{class}
-\item{order}{order}
-\item{family}{family}
-\item{genus}{genus}
-\item{species}{species}
-\item{early_interval}{earlier known geological period of ocurence}
-\item{late_interval}{later known geological period of ocurence}
-\item{max_ma}{ocurrence's oldest time boundary in million years}
-\item{min_ma}{ocurrence's newest time boundary in million years}
-\item{midpoint}{midpoint between max_ma and min_ma}
-\item{lng}{longitude of place where occurrence was found}
-\item{lat}{latitude of place where occurrence was found}
+\item{phylum}{Organism phylum}
+\item{class}{Organism taxonomic class}
+\item{order}{Organism taxonomic order}
+\item{family}{Organism taxonomic family}
+\item{genus}{Organism genus}
+\item{species}{Organism specific name}
+\item{early_interval}{Earlier known geological period of occurrence}
+\item{late_interval}{Later known geological period of occurrence}
+\item{max_ma}{Occurrence's oldest time boundary in million years}
+\item{min_ma}{Occurrence's newest time boundary in million years}
+\item{midpoint}{Midpoint between max_ma and min_ma}
+\item{lng}{Longitude of place where occurrence was found}
+\item{lat}{Latitude of place where occurrence was found}
 }
 }
-}
-\source{The Paleobiology Database (donwloaded on 2022-03-11)
-
+\source{
+The Paleobiology Database (downloaded on 2022-03-11)
 Data URL: "http://paleobiodb.org/data1.2/occs/list.csv?datainfo&rowcount&base_name=Mammalia&show=full,classext,genus,subgenus,acconly,ident,img,etbasis,strat,lith,env,timebins,timecompare,resgroup,ref,ent,entname,crmod"
-\if{html}{\out{
-<??>
-}}
 }
 \usage{
 mammals_fossil
 }
 \description{
-A data frame contaning many mammal fossil occurrences from different moments of the geological past. Much information (i.e., extra columns) was removed from the original datset to make it more compact, but it can be accessed by the data URL.
+Many mammal fossil occurrences from different moments of the geological
+past. Much information (i.e., extra columns) was removed from the original
+dataset to make it more compact, but it can be fully accessed by the data URL.
 }
 \keyword{datasets}

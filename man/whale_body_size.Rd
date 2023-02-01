@@ -5,30 +5,26 @@
 \alias{whale_body_size}
 \title{Whale body size}
 \format{
-\subsection{\code{whale_body_size}}{
-
-A \code{data.frame} with 4 colums and 75 rows.
+A \code{data.frame} with 75 rows and 4 columns.
 \describe{
-\item{species}{species}
-\item{log_mass}{log of body mass (grams)}
-\item{S}{species-specific speciation rate}
-\item{color}{suggested color to be used for the tip's clade}
+\item{species}{Whale species}
+\item{log_mass}{Log of body mass (grams)}
+\item{S}{Species-specific speciation rate}
+\item{color}{Suggested color to be used for the tip's clade}
 }
 }
-}
-\source{ Compilation of many primary sources (see description).
-\if{html}{\out{
-<??>
-}}
+\source{
+Compilation of many primary sources (see description).
 }
 \usage{
 whale_body_size
 }
 \description{
-Species follow taxonomy from Steeman et al (2009). Species-specific speciation rates from Rabosky 2014 & Rabosky et al, 2014. Mass data from PanTheria (Jones et al, 2009).
-
-References:
-
+Data on the body size of many cetacean species. Species follow taxonomy
+from Steeman et al (2009). Species-specific speciation rates from Rabosky
+2014 & Rabosky et al, 2014. Mass data from PanTHERIA (Jones et al, 2009).
+}
+\references{
 Jones, K. E., Bielby, J., Cardillo, M., Fritz, S. A., O'Dell, J., Orme, C. D. L., ... & Purvis, A. (2009). PanTHERIA: a species‐level database of life history, ecology, and geography of extant and recently extinct mammals: Ecological Archives E090‐184. Ecology, 90(9), 2648-2648.
 
 Rabosky, D. L. (2014). Automatic detection of key innovations, rate shifts, and diversity-dependence on phylogenetic trees. PloS one, 9(2), e89543.

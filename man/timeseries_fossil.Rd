@@ -5,33 +5,45 @@
 \alias{timeseries_fossil}
 \title{Fossil timeseries}
 \format{
-\subsection{\code{timeseries_fossil}}{
-
-A \code{data.frame} with 6 colums and 598 rows.
+A \code{data.frame} with 598 rows and 6 columns.
 \describe{
-\item{clade}{clade} Timeseries clade. 
-\item{source}{source} Primary source of the timeseries
-\item{stem_age}{Stem age} Stem age of clade
-\item{rel_time}{Relative time} Geological time (in Million years ago relative to present)
-\item{time_ma}{Time} Geological time in million years since clade stem age
-\item{richness}{species richness} Number of species at given geological time
+\item{clade}{Timeseries clade}
+\item{source}{Primary source of the timeseries}
+\item{stem_age}{Stem age of clade}
+\item{rel_time}{Geological relative time (in Million years ago relative to present)}
+\item{time_ma}{Geological time in million years since clade stem age}
+\item{richness}{Number of species at given geological time}
 }
 }
-}
-\source{ Data originally compiled from many primary sources. Organized, curated by, and downloaded from, Rabosky & Benson (2021)
-\if{html}{\out{
-<??>
-}}
+\source{
+Data originally compiled from many primary sources. Organized, curated by, and downloaded from, Rabosky & Benson (2021)
 }
 \usage{
 timeseries_fossil
 }
 \description{
-Timesereis containing values of clade diveristy for many clades of organisms (note some clades are nested within other clades in the dataset). Legend: anth = Anthozoa (Cnidaria); art = Articulata (Crinoidea, Echinodermata); biv = Bivalvia (Mollusca); bryo = Bryozoa (	Lophotrochozoa, Ectoprocta); ceph = Cephalopoda (Mollusca); chon = Chondrocytes (Chordata); crin = Crinoidae (Echinodermata); dinosauria = Dinosauria (Chordata); ech = Echinoidea (Echinodermata); foram = Foraminifera (Retaria); gast = Gastropoda (Mollusca); graptoloids = Graptolites (Graptolithina); ling = Ligulata (Brachiopoda); ostr = Ostracoda (Crustacea, Arthropoda); tril = Trilobita (Arthropoda)
-
-
-References:
-
+Values of clade diversity for many clades of organisms (note some clades
+are nested within other clades in the dataset).
+}
+\details{
+Legend:
+anth = Anthozoa (Cnidaria);
+art = Articulata (Crinoidea, Echinodermata);
+biv = Bivalvia (Mollusca);
+bryo = Bryozoa (Lophotrochozoa, Ectoprocta);
+ceph = Cephalopoda (Mollusca);
+chon = Chondrocytes (Chordata);
+crin = Crinoidae (Echinodermata);
+dinosauria = Dinosauria (Chordata);
+ech = Echinoidea (Echinodermata);
+foram = Foraminifera (Retaria);
+gast = Gastropoda (Mollusca);
+graptoloids = Graptolites (Graptolithina);
+ling = Ligulata (Brachiopoda);
+ostr = Ostracoda (Crustacea, Arthropoda);
+tril = Trilobita (Arthropoda).
+}
+\references{
 Rabosky, D. L., & Benson, R. B. (2021). Ecological and biogeographic drivers of biodiversity cannot be resolved using clade age-richness data. Nature Communications, 12(1), 2945.
 }
 \keyword{datasets}

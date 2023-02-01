@@ -5,22 +5,18 @@
 \alias{birds_spp}
 \title{Birds species list}
 \format{
-\subsection{\code{birds_spp}}{
-
-A \code{vector} with 9993 bird species, taken originally from Jetz et al (2012)
+A \code{vector} containing the names of almost all (i.e., 9993) extant bird species, following Jetz et al. (2012) taxonomy.
 }
-}
-\source{ Original: Jetz, W., Thomas, G. H., Joy, J. B., Hartmann, K., & Mooers, A. O. (2012). The global diversity of birds in space and time. Nature, 491(7424), 444-448.
-
-Actual file donwloaded from https://vertlife.org/data/
-\if{html}{\out{
-<??>
-}}
+\source{
+Actual file downloaded from https://vertlife.org/data/
 }
 \usage{
 birds_spp
 }
 \description{
-A vector containing the names of all extant bird species, following Jetz et al (2012) taxonomy
+Birds species list
+}
+\references{
+Jetz, W., Thomas, G. H., Joy, J. B., Hartmann, K., & Mooers, A. O. (2012). The global diversity of birds in space and time. Nature, 491(7424), 444-448.
 }
 \keyword{datasets}
