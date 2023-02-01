@@ -4,6 +4,7 @@
 ^LICENSE\.md$
 ^cran-comments\.md$
 ^data-raw$
+^R_raw$
 ^pkgdown$
 ^_pkgdown\.yml$
 ^\.github$
