@@ -14,6 +14,7 @@ browseURL("https://r-pkgs.org/Workflow101.html#naming")
 
 #Matheus tasks:
 	#make the reamining functions
+	#add function references
 
 
 #######
