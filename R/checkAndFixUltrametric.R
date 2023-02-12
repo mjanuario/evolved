@@ -1,10 +1,13 @@
+#' @importFrom ape vcv.phylo
+#' @importFrom ape is.ultrametric 
+NULL
+
 #' Find and fix small rounding errors in ultrametric trees
 #'
 #' \code{checkAndFixUltrametric} finds and correct small numerical errors that 
 #' might appear in ultrametric trees that where created through simulations. 
-#' This function should never be used as a formal statistical method to
-#'  make a tree ultrametric, as it was designed just to correct small rouding 
-#'  errors.
+#' This function should never be used as a formal statistical method to make a 
+#' tree ultrametric, as it was designed just to correct small rounding errors.
 #'
 #' @param phy A \code{phylo} object, following terminology from package 
 #' \code{ape} in which function will operate.
@@ -30,9 +33,9 @@
 #' set.seed(1)
 #' phy <- simulateTree(pars = c(S, E), max.taxa = 6)
 #' phy$edge.length[1] <- phy$edge.length[1]+0.1
-#' is.ultrametric(phy)
+#' ape::is.ultrametric(phy)
 #' phy <- checkAndFixUltrametric(phy)
-#' is.ultrametric(phy)
+#' ape::is.ultrametric(phy)
 #' 
 checkAndFixUltrametric <- function(phy){
   

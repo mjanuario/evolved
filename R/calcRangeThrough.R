@@ -1,16 +1,19 @@
-#' Calculating paleo diversity curves using the Range Through method
+#' @importFrom stats aggregate
+NULL
+#' Calculate paleo diversity curves using the Range Through method
 #'
 #' \code{calcRangeThrough} calculates richness through time using the method of
 #'  Range Through (ADD REFERENCE).
 #'
-#' @param data A \code{data.frame} containing fossil data on the age (early and 
-#' late bounds of rock layer, respectively labeled as \code{max_ma} and 
-#' \code{min_ma}) and the taxonomic level asked in \code{tax_lvl}.
+#' @param data A \code{data.frame} containing the columns: \code{max_ma}, \code{min_ma}
+#' and  the name provided in \code{tax_lvl}. \code{max_ma} and \code{min_ma} are 
+#' respectively the early and late bounds of rock layer's age. \code{tax_lvl} column 
+#' is the taxonomic level of the data. Any additional columns are ignored.
 #' @param tax_lvl A \code{character} giving the taxonomic in which calculations 
 #' will be based on (default value is \code{"species"}). This must refer to the 
 #' column names in \code{data}.
 #' @return A \code{data.frame} containing the diversity (column \code{div}) of 
-#' the chosen taxonomic level, through time - with time moments being the 
+#' the chosen taxonomic level through time. Time moments are the 
 #' layer boundaries given in \code{data}.
 #' 
 #' @export calcRangeThrough
@@ -47,7 +50,7 @@ calcRangeThrough=function(data, tax_lvl="species"){
   
   #getting unique bounds:
   unq_bnd=sort(unique(c(data$max_ma, data$min_ma)))
-  unq_bnd=unq_bnd[!unq_bnd==0]
+  unq_bnd=unq_bnd[unq_bnd!=0]
   
   res=data.frame()
   for(i in 1:length(unq_bnd)){

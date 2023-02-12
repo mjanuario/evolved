@@ -1,18 +1,21 @@
+#' @importFrom ape branching.times
+NULL
 #' Make a lineage trough time (LTT) plot
 #'
 #' \code{lttPlot} plots the lineage trough time (LTT) of a \code{phylo} object.
 #' It also adds a reference line connecting the edges of the graph.
 #'
 #' @param phy A \code{phylo} object, as specific by the \code{ape} package.
-#' @param lwd 	Line width.
+#' @param lwd Line width.
 #' @param col Line color.
 #' @param  PLOT A \code{logical} indicating with calculations should be plotted.
-#'  If false, function returns a list of the calculated points.
+#'  If \code{FALSE}, function returns a list of the calculated points.
 #' @param rel_time A \code{logical} indicating if time should be calculated in 
-#' absolute scale. If \code{FALSE}, plots relative time since \code{phy}'s 
+#' absolute scale. If \code{FALSE} (default), plots relative time since \code{phy}'s 
 #' crown age.
 #' @param add A \code{logical} indicating if plot should be added to 
-#' pre-existing plot.
+#' pre-existing plot. Default is \code{FALSE}.
+#' 
 #' @return If \code{PLOT = FALSE}, a list the richness of each point in time, 
 #' and \code{phy}'s crown age.
 #' 
@@ -32,10 +35,11 @@
 #' set.seed(1)
 #' phy <- simulateTree(pars = c(S, E), max.taxa = 20)
 #' lttPlot(phy)
+#' lttPlot(phy, PLOT = FALSE)
 #' 
 lttPlot <- function(phy, lwd=1, col="red", PLOT = T, rel_time = F, add = F){
   
-  bt <- ape::branching.times(phy)
+  bt <- branching.times(phy)
   
   if (rel_time){
     bt <- bt / max(bt)

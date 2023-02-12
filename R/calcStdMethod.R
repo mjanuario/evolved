@@ -1,23 +1,26 @@
-#' Calculating paleo diversity curves using the Range Through method
+#' @importFrom stats aggregate
+NULL
+#' Calculate paleo diversity curves using the standard method
 #'
 #' \code{calcRangeThrough} calculates richness through time using the 
 #' standard method (ADD REFERENCE).
 #'
-#' @param data A \code{data.frame} containing fossil data on the age (early and 
-#' late bounds of rock layer, respectively labeled as \code{max_ma} and 
-#' \code{min_ma}) and the taxonomic level asked in \code{tax_lv}.
-#' @param tax_lvl A \code{character} giving the taxonomic in which 
-#' calculations will be based on (default value is \code{"species"}). This 
-#' must refer to the column names in \code{data}.
+#' @param data A \code{data.frame} containing the columns: \code{max_ma}, \code{min_ma}
+#' and  the name provided in \code{tax_lvl}. \code{max_ma} and \code{min_ma} are 
+#' respectively the early and late bounds of rock layer's age. \code{tax_lvl} column 
+#' is the taxonomic level of the data. Any additional columns are ignored.
+#' @param tax_lv A \code{character} giving the taxonomic in which calculations 
+#' will be based on (default value is \code{"species"}). This must refer to the 
+#' column names in \code{data}.
 #' @param bin_reso A \code{numeric} assigning the resolution (length) of the 
 #' time bin to consider in calculations. Default value is \code{1} (which in 
 #' most cases - e.g. those following the paleoBiology Database default 
 #' timescale - will equate to one million years)
 #' @return A \code{data.frame} containing the diversity (column \code{div}) of 
 #' the chosen taxonomic level, through time - with time moments being a 
-#' sequence of aritrary numbers based on \code{bin_reso}
+#' sequence of arbitrary numbers based on \code{bin_reso}
 #' 
-#' @export calcRangeThrough
+#' @export calcStdMethod
 #' 
 #' @references 
 #' 
@@ -33,10 +36,10 @@
 #'      xlab = "Time (Mya)", ylab = "Richness", 
 #'      xlim=rev(range(div$age)))
 #' 
-#' # Now msa eplot, but using a different bin resolution:
+#' # Now same plot, but using a different bin resolution:
 #' data("trilob_fossil")
-#' div <- calcStdMethod(trilob_fossil, bin_reso = 0.1)
-#' plot(x=div$age, y=div$div, type="l", 
+#' div2 <- calcStdMethod(trilob_fossil, bin_reso = 3)
+#' plot(x=div2$age, y=div2$div, type="l", 
 #'      xlab = "Time (Mya)", ylab = "Richness", 
 #'      xlim=rev(range(div$age)))
 #' 

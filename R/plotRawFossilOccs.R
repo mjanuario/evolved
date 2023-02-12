@@ -1,3 +1,5 @@
+#' @importFrom stats aggregate
+NULL
 #' Calculating paleo diversity curves using the Range Through method
 #'
 #' \code{plotRawFossilOccs} calculates and plots the early and late boundaries 
@@ -21,9 +23,9 @@
 #' to return.
 #' @return A \code{data.frame} containing the diversity (column \code{div}) of 
 #' the chosen taxonomic level, through time - with time moments being a 
-#' sequence of aritrary numbers based on \code{bin_reso}
+#' sequence of arbitrary numbers based on \code{bin_reso}
 #' 
-#' @export calcRangeThrough
+#' @export plotRawFossilOccs
 #' 
 #' @references 
 #' 

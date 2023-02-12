@@ -1,8 +1,12 @@
+#' @importFrom stats runif
+#' @importFrom stats rgeom
+NULL
 #' Simulating diversity through birth-death processes
 #'
 #' \code{simulateBirthDeath} calculates the number of species at a certain 
-#' point int time (\code{t}).
+#' point in time.
 #'
+#' @param t Point in time which diversity will be simulated.
 #' @param S A numeric representing the per-capita speciation rate (in number 
 #' of events per lineage per million years). Must be larger than \code{E}.
 #' @param E A numeric representing the per-capita extinction rate (in number 
@@ -12,11 +16,13 @@
 #' @param K A numeric representing the extinction fraction (i.e., 
 #' \code{K} = \code{E} / \code{S}). Must be either zero or a positive 
 #' which is number smaller than one.
+#' 
 #' @details The function only accepts as inputs \code{S} and \code{E}, or
 #'  \code{K} and \code{R}.
+#'  
 #' @return A \code{data.frame} containing the diversity (column \code{div}) of 
 #' the chosen taxonomic level, through time - with time moments being a 
-#' sequence of aritrary numbers based on \code{bin_reso}
+#' sequence of arbitrary numbers based on \code{bin_reso}.
 #' 
 #' @export simulateBirthDeathRich
 #' 
@@ -28,26 +34,21 @@
 #' @author Matheus Januario, Daniel Rabosky, Jennifer Auler
 #' 
 #' @examples
-#' 
-#running a single simulation:
+#' # running a single simulation:
 #' SS <- 0.40
 #' EE <- 0.09
 #' tt <- 10 #in Mya
 #' simulateBirthDeathRich(t = tt, S = SS, E = EE)
 #' 
 #' #running many simulations and graphing results:
-#' nsim=1000
-#' res=vector()
+#' nsim <- 1000
+#' res <- vector()
 #' for(i in 1:nsim){
-#'   
-#'   res=c(res, 
-#'   simulateBirthDeathRich(t = tt, S = SS, E = EE)
-#'   )
-#'   
+#'   res <- c(res, 
+#'   simulateBirthDeathRich(t = tt, S = SS, E = EE))
 #' }
 #' plot(table(res)/length(res),
 #'      xlab="Richness", ylab="Probability")
-#' 
 simulateBirthDeathRich=function(t, S=NULL, E=NULL, K=NULL, R=NULL){
   
   #checking if input it correct:
@@ -74,8 +75,7 @@ simulateBirthDeathRich=function(t, S=NULL, E=NULL, K=NULL, R=NULL){
   }
   # and if K is in the right interval:
   if((K<0) | (K>=1)){
-    stop("\"K\" must be either zero or a positive 
-#' which is number smaller than one.")
+    stop("\"K\" must be either zero or a positive which is number smaller than one.")
   }
   
   #From Raup (1985)

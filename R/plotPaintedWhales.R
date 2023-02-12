@@ -1,12 +1,16 @@
+#' @importFrom phytools paintSubTree
+#' @importFrom phytools plotSimmap
+NULL
 #' Plotting the whale phylogeny and coloring its clades
 #'
 #' \code{plotPaintedWhales} plots the phylogeny from Steeman et al (2011), coloring the Dolphins (Delphinidae), porpoises (Phocoenidae), the Mysticetes, the baleen whales (Balaenopteridae), and the Beaked whales (Ziphiidae).
 #'
-#'#' @param phy A \code{phylo} object, that must be the same as the \code{BAMMtools::whales} bject
-#' @param show.legend Logical indicating if clade elgend should be shown.
-#' @param .. other arguments to be passed to \code{phytools::plotSimmap}
+#' @param phy A \code{phylo} object, that must be the same as the 
+#' \code{BAMMtools::whales} object
+#' @param show.legend Logical indicating if clade legend should be shown.
+#' @param ... other arguments to be passed to \code{phytools::plotSimmap}
 #' 
-#' @details see help page from \code{phytools::plotSimmap}
+#' @seealso help page from \code{phytools::plotSimmap}
 #' 
 #' @return A colored phylogeny plot.
 #' 
@@ -30,14 +34,14 @@ plotPaintedWhales<-function(phy, show.legend=TRUE, direction="rightwards", ...){
   #  stop("your inputted phylo is not the whale phylogeny from the \"BAMMtools\" package")
   #}
   
-  painted<-phytools::paintSubTree(phy,89,"Other mysticetes","1")
-  painted<-phytools::paintSubTree(painted,109,"Beaked whales", "0")
-  painted<-phytools::paintSubTree(painted,134,"Belugas and narwhals","0")
-  painted<-phytools::paintSubTree(painted,135,"Porpoises")
-  painted<-phytools::paintSubTree(painted,94,"Baleen whales",)
-  painted<-phytools::paintSubTree(painted,140,"Dolphins")
+  painted<-paintSubTree(phy,89,"Other mysticetes","1")
+  painted<-paintSubTree(painted,109,"Beaked whales", "0")
+  painted<-paintSubTree(painted,134,"Belugas and narwhals","0")
+  painted<-paintSubTree(painted,135,"Porpoises")
+  painted<-paintSubTree(painted,94,"Baleen whales",)
+  painted<-paintSubTree(painted,140,"Dolphins")
   
-  phytools::plotSimmap(painted,lwd=3)
+  plotSimmap(painted,lwd=3, ...)
   
   if(show.legend){
     if(direction=="rightwards"){

@@ -13,9 +13,15 @@ browseURL("https://r-pkgs.org/Workflow101.html#naming")
 # Check with_par() and on.exit() function for this
 
 #Matheus tasks:
-	#make the reamining functions
+	#make the remaining functions
 	#add function references
 
+# prox reu:
+# documentação do plotRawFassilOccs 
+# exemplo plot painted whales e documentar "direction"
+# pq simulatetree não funciona internamente
+# colocar funções de diversidade juntas?
+# importFrom e n ::
 
 #######
 #DONE#

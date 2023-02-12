@@ -1,3 +1,6 @@
+#' @importFrom diversitree tree.bd
+NULL
+
 #' Simulating a phylogenetic trees through the birth-death process
 #'
 #' \code{simulateTree} uses a birth-death process to simulate a phylogenetic 
@@ -9,9 +12,10 @@
 #' (first slot) and extinction (second slot) rates, respectively. Should follow 
 #' any formats stated in the function \code{tree.bd} from the 
 #' \code{diversitree} package.
-#' @param max_taxa 	Maximum number of taxa to include in the tree. If 
+#' @param max.taxa Maximum number of taxa to include in the tree. If 
 #' \code{Inf}, then the tree will be evolved until \code{max.t} time has passed.
-#' @param max.t	Maximum length to evolve the phylogeny over. If equal to 
+#' @param min.taxa Minimum number of taxa to include in the tree.
+#' @param max.t Maximum length to evolve the phylogeny over. If equal to 
 #' \code{Inf} (the default value), then the tree will evolve until 
 #' \code{max.taxa} extant taxa are present.
 #' @param include.extinct A \code{logical} indicating if extinct taxa should 
@@ -46,15 +50,14 @@
 #' E <- 0
 #' set.seed(1)
 #' phy <- simulateTree(pars = c(S, E), max.taxa = 6)
-#' plot.phylo(phy)
-#' axisPhylo()
-#' 
-simulateTree <- function(pars, max.taxa = Inf, max.t=Inf, min.taxa = 2, include.extinct=F){
+#' ape::plot.phylo(phy)
+#' ape::axisPhylo()
+simulateTree <- function(pars, max.taxa = Inf, max.t=Inf, min.taxa = 2, include.extinct=FALSE){
   
   badcount <- 0;
   while (1){
     
-    tree <- diversitree::tree.bd(pars, max.taxa=max.taxa, max.t=max.t, 
+    tree <- tree.bd(pars, max.taxa=max.taxa, max.t=max.t, 
                                  include.extinct=include.extinct);
     if (!is.null(tree)){
       if (length(tree$tip.label) >= min.taxa){

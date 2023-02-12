@@ -1,6 +1,6 @@
 #' Estimate speciation assuming a pure-birth process
 #'
-#' \code{estimateSpeciation} Estimates the speciation rate asusming a 
+#' \code{estimateSpeciation} Estimates the speciation rate assuming a 
 #' constant-rate, pure-birth model.
 #'
 #' @param phy A \code{phylo} object, following terminology from package 
