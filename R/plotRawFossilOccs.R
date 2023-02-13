@@ -11,12 +11,16 @@ NULL
 #' @param tax_lvl A \code{character} giving the taxonomic in which 
 #' calculations will be based on, which must refer to the column names in 
 #' \code{data}. If \code{NULL} (default value), the function plots every 
-#' individual occurrence in \code{data}.
+#' individual occurrences in \code{data}.
 #' @param sort \code{logical} indicating if taxa should be sorted by their 
-#' \code{max_ma} values (defalut value is \code{TRUE}). Otherwise (i..e, if 
-#' \code{FALSE}), function will follow the order of taxa.
-#' inputted in \code{data}
-#' @param use_midpoint \code{logical} indicating if MUST DO
+#' \code{max_ma} values (default value is \code{TRUE}). Otherwise (i.e., if 
+#' \code{FALSE}), function will follow the order of taxa (or occurrences) 
+#' inputted in \code{data}.
+#' @param use_midpoint \code{logical} indicating if function should use 
+#' occurrence midpoints (between \code{max_ma} and \code{min_ma}) as "true" 
+#' occurrence temporal boundaries, a method commonly employed in paleobiology 
+#' to remove noise related to extremely coarse temporla resolution due to 
+#' stratification.
 #' @param return_ranges \code{logical} indicating if ranges calculated by 
 #' function should be return as a \code{data.frame}. If \code{tax_lvl} is 
 #' \code{NULL}, the function don't calculate ranges and so it has nothing 
