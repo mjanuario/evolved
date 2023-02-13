@@ -8,6 +8,8 @@ NULL
 #' @param phy A \code{phylo} object, that must be the same as the 
 #' \code{BAMMtools::whales} object
 #' @param show.legend Logical indicating if clade legend should be shown.
+#' @param direction Phlyogeny plotting direction. Shuould be set to "rightwards" 
+#'  (the default) or "leftwards"
 #' @param ... other arguments to be passed to \code{phytools::plotSimmap}
 #' 
 #' @seealso help page from \code{phytools::plotSimmap}
