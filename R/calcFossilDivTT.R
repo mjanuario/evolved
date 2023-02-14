@@ -23,8 +23,12 @@ NULL
 #' timescale - will equate to one million years)
 #' 
 #' @return A \code{data.frame} containing the diversity (column \code{div}) of 
-#' the chosen taxonomic level through time. Time moments are the 
-#' layer boundaries given in \code{data}.
+#' the chosen taxonomic level through time, with calculation based on 
+#' \code{method}. If \code{"method = rangethrough"}, the time moments are the 
+#' layer boundaries given in \code{data}. 
+#' If \code{"method = stdmethod"}, the time moments are evenly-space bins  with 
+#' length equal to \code{bin_reso}, starting at the earliest bound in the 
+#' dataset.
 #' 
 #' @export calcFossilDivTT
 #' 

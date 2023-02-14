@@ -1,5 +1,6 @@
 #' @importFrom phytools paintSubTree
 #' @importFrom phytools plotSimmap
+#' @importFrom utils data
 NULL
 #' Plotting the whale phylogeny and coloring its clades
 #'
@@ -28,9 +29,8 @@ NULL
 plotPaintedWhales<-function(show.legend=TRUE, direction="rightwards", ...){
   
   data("whale_phylo")
-  phy <- whale_phylo 
   
-  painted<-paintSubTree(phy,89,"Other mysticetes","1")
+  painted<-paintSubTree(whale_phylo,89,"Other mysticetes","1")
   painted<-paintSubTree(painted,109,"Beaked whales", "0")
   painted<-paintSubTree(painted,134,"Belugas and narwhals","0")
   painted<-paintSubTree(painted,135,"Porpoises")
