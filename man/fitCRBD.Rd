@@ -2,7 +2,7 @@
 % Please edit documentation in R/fitCRBD.R
 \name{fitCRBD}
 \alias{fitCRBD}
-\title{Fitting a constant-rate birth-death process to a phylogeny}
+\title{Fit a constant-rate birth-death process to a phylogeny}
 \usage{
 fitCRBD(phy, nopt = 5, lmin = 0.001, lmax = 5, MAXBAD = 200)
 }
@@ -12,12 +12,12 @@ fitCRBD(phy, nopt = 5, lmin = 0.001, lmax = 5, MAXBAD = 200)
 
 \item{nopt}{Number of optimizations that will be tried by function.}
 
-\item{lmin}{Lower bound for optimization. Default value is 0.001.}
+\item{lmin}{Lower bound for optimization. Default value is \code{0.001}.}
 
-\item{lmax}{Upper bound for optimization. Default value is 5.}
+\item{lmax}{Upper bound for optimization. Default value is \code{5}.}
 
 \item{MAXBAD}{Maximum number of unsuccessful optimization attempts. Default
-value is 200}
+value is \code{200}.}
 }
 \value{
 A \code{numeric} with the best estimates of speciation \code{S}
@@ -38,7 +38,7 @@ see help page from \code{diversitree::make.bd} and
 S <- 0.1
 E <- 0.1
 set.seed(1)
-phy <- simulateTree(pars = c(S, E), max.taxa = 30)
+phy <- simulateTree(pars = c(S, E), max.taxa = 30, max.t = 8)
 fitCRBD(phy)
 
 }

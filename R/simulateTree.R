@@ -16,8 +16,8 @@ NULL
 #' \code{Inf}, then the tree will be evolved until \code{max.t} time has passed.
 #' @param min.taxa Minimum number of taxa to include in the tree.
 #' @param max.t Maximum length to evolve the phylogeny over. If equal to 
-#' \code{Inf} (the default value), then the tree will evolve until 
-#' \code{max.taxa} extant taxa are present.
+#' \code{Inf}, then the tree will evolve until \code{max.taxa} 
+#' extant taxa are present.
 #' @param include.extinct A \code{logical} indicating if extinct taxa should 
 #' be included in the final phylogeny.
 #' 

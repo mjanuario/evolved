@@ -16,7 +16,7 @@
 #' S <- 1
 #' E <- 0
 #' set.seed(1)
-#' phy <- simulateTree(pars = c(S, E), max.taxa = 6)
+#' phy <- simulateTree(pars = c(S, E), max.taxa = 6, max.t = 5)
 #' estimateSpeciation(phy)
 #' 
 estimateSpeciation <- function(phy){

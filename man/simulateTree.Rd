@@ -22,8 +22,8 @@ any formats stated in the function \code{tree.bd} from the
 \code{Inf}, then the tree will be evolved until \code{max.t} time has passed.}
 
 \item{max.t}{Maximum length to evolve the phylogeny over. If equal to
-\code{Inf} (the default value), then the tree will evolve until
-\code{max.taxa} extant taxa are present.}
+\code{Inf}, then the tree will evolve until \code{max.taxa}
+extant taxa are present.}
 
 \item{min.taxa}{Minimum number of taxa to include in the tree.}
 

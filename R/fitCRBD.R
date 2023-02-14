@@ -1,4 +1,7 @@
-#' Fitting a constant-rate birth-death process to a phylogeny
+#' @importFrom stats optim
+#' @importFrom diversitree argnames
+NULL
+#' Fit a constant-rate birth-death process to a phylogeny
 #'
 #' \code{fitCRBD} fits a constant-rate birth-death process to a phylogeny in the
 #'  format of \code{ape} package's \code{phylo} object. Optimization is based on
@@ -8,10 +11,10 @@
 #' @param phy A \code{phylo} object, following terminology from package 
 #' \code{ape}, in which function will operate.
 #' @param nopt Number of optimizations that will be tried by function.
-#' @param lmin Lower bound for optimization. Default value is 0.001.
-#' @param lmax Upper bound for optimization. Default value is 5.
+#' @param lmin Lower bound for optimization. Default value is \code{0.001}.
+#' @param lmax Upper bound for optimization. Default value is \code{5}.
 #' @param MAXBAD Maximum number of unsuccessful optimization attempts. Default 
-#' value is 200
+#' value is \code{200}.
 #' 
 #' @details see help page from \code{diversitree::make.bd} and 
 #' \code{stats::optim}
@@ -19,7 +22,7 @@
 #' @return A \code{numeric} with the best estimates of speciation \code{S} 
 #' and extinction \code{E} rates.
 #' 
-#' @export simulateTree
+#' @export fitCRBD
 #' 
 #' @references 
 #' 
@@ -43,7 +46,7 @@
 #' S <- 0.1
 #' E <- 0.1
 #' set.seed(1)
-#' phy <- simulateTree(pars = c(S, E), max.taxa = 30)
+#' phy <- simulateTree(pars = c(S, E), max.taxa = 30, max.t = 8)
 #' fitCRBD(phy)
 #' 
 fitCRBD <- function(phy, nopt=5, lmin=0.001, lmax=5.0, MAXBAD = 200){
@@ -63,13 +66,13 @@ fitCRBD <- function(phy, nopt=5, lmin=0.001, lmax=5.0, MAXBAD = 200){
     
     badcount <- 0
     
-    resx <- try(stats::optim(c(lam, E) ,fx, method='L-BFGS-B', control=list(maxit=1000, fnscale=-1), lower=lmin, upper=lmax), silent=T)
+    resx <- try(optim(c(lam, E) ,fx, method='L-BFGS-B', control=list(maxit=1000, fnscale=-1), lower=lmin, upper=lmax), silent=T)
     while (class(resx) == 'try-error'){
       
       lam <- runif(1, 0, 0.5)	
       E <- lam * runif(1, 0, 1)
       
-      resx <- try(stats::optim(c(lam, E) , fx, method='L-BFGS-B', control=list(maxit=1000, fnscale=-1), lower=lmin, upper=lmax), silent=T);
+      resx <- try(optim(c(lam, E) , fx, method='L-BFGS-B', control=list(maxit=1000, fnscale=-1), lower=lmin, upper=lmax), silent=T);
       
       badcount <- badcount + 1;
       if (badcount > MAXBAD){
@@ -88,7 +91,7 @@ fitCRBD <- function(phy, nopt=5, lmin=0.001, lmax=5.0, MAXBAD = 200){
   }
   
   fres <- list(pars=best$par, loglik=best$value)
-  fres$AIC <- -2*fres$loglik + 2*length(diversitree::argnames(fx))
+  fres$AIC <- -2*fres$loglik + 2*length(argnames(fx))
   fres$counts <- best$counts
   #fres$like_function <- fx
   fres$convergence <- best$convergence
