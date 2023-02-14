@@ -2,7 +2,7 @@
 % Please edit documentation in R/plotRawFossilOccs.R
 \name{plotRawFossilOccs}
 \alias{plotRawFossilOccs}
-\title{Calculating paleo diversity curves using the Range Through method}
+\title{Plot a literal interpretation of a fossil record}
 \usage{
 plotRawFossilOccs(
   data,
@@ -20,14 +20,18 @@ late bounds of rock layer, respectively labeled as \code{max_ma} and
 \item{tax_lvl}{A \code{character} giving the taxonomic in which
 calculations will be based on, which must refer to the column names in
 \code{data}. If \code{NULL} (default value), the function plots every
-individual occurrence in \code{data}.}
+individual occurrences in \code{data}.}
 
 \item{sort}{\code{logical} indicating if taxa should be sorted by their
-\code{max_ma} values (defalut value is \code{TRUE}). Otherwise (i..e, if
-\code{FALSE}), function will follow the order of taxa.
-inputted in \code{data}}
+\code{max_ma} values (default value is \code{TRUE}). Otherwise (i.e., if
+\code{FALSE}), function will follow the order of taxa (or occurrences)
+inputted in \code{data}.}
 
-\item{use_midpoint}{\code{logical} indicating if MUST DO}
+\item{use_midpoint}{\code{logical} indicating if function should use
+occurrence midpoints (between \code{max_ma} and \code{min_ma}) as \code{TRUE}
+occurrence temporal boundaries, a method commonly employed in paleobiology
+to remove noise related to extremely coarse temporla resolution due to
+stratification.}
 
 \item{return_ranges}{\code{logical} indicating if ranges calculated by
 function should be return as a \code{data.frame}. If \code{tax_lvl} is
@@ -41,7 +45,7 @@ sequence of arbitrary numbers based on \code{bin_reso}
 }
 \description{
 \code{plotRawFossilOccs} calculates and plots the early and late boundaries
-associated with each taxa in A dataset.
+associated with each taxa in a dataset.
 }
 \examples{
 

@@ -4,12 +4,9 @@
 \alias{plotPaintedWhales}
 \title{Plotting the whale phylogeny and coloring its clades}
 \usage{
-plotPaintedWhales(phy, show.legend = TRUE, direction = "rightwards", ...)
+plotPaintedWhales(show.legend = TRUE, direction = "rightwards", ...)
 }
 \arguments{
-\item{phy}{A \code{phylo} object, that must be the same as the
-\code{BAMMtools::whales} object}
-
 \item{show.legend}{Logical indicating if clade legend should be shown.}
 
 \item{direction}{Phlyogeny plotting direction. Shuould be set to "rightwards"
@@ -22,6 +19,10 @@ A colored phylogeny plot.
 }
 \description{
 \code{plotPaintedWhales} plots the phylogeny from Steeman et al (2011), coloring the Dolphins (Delphinidae), porpoises (Phocoenidae), the Mysticetes, the baleen whales (Balaenopteridae), and the Beaked whales (Ziphiidae).
+}
+\examples{
+plotPaintedWhales()
+
 }
 \references{
 Steeman, M. E., Hebsgaard, M. B., Fordyce, R. E., Ho, S. Y., Rabosky, D. L., Nielsen, R., ... & Willerslev, E. (2009). Radiation of extant cetaceans driven by restructuring of the oceans. Systematic biology, 58(6), 573-585.

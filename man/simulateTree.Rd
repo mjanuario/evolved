@@ -7,7 +7,7 @@
 simulateTree(
   pars,
   max.taxa = Inf,
-  max.t = Inf,
+  max.t,
   min.taxa = 2,
   include.extinct = FALSE
 )
@@ -47,9 +47,16 @@ see help page from \code{diversitree::tree.bd}
 S <- 1
 E <- 0
 set.seed(1)
-phy <- simulateTree(pars = c(S, E), max.taxa = 6)
+phy <- simulateTree(pars = c(S, E), max.taxa = 6, max.t=Inf)
 ape::plot.phylo(phy)
 ape::axisPhylo()
+
+# alternatively, we can stop the simulation using time:
+set.seed(42)
+phy2 <- simulateTree(pars = c(S, E), max.t=7)
+ape::plot.phylo(phy2)
+ape::axisPhylo()
+
 }
 \references{
 Paradis, E. (2012). Analysis of Phylogenetics and Evolution with R (Vol. 2).
