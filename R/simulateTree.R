@@ -49,10 +49,21 @@ NULL
 #' S <- 1
 #' E <- 0
 #' set.seed(1)
-#' phy <- simulateTree(pars = c(S, E), max.taxa = 6)
+#' phy <- simulateTree(pars = c(S, E), max.taxa = 6, max.t=Inf)
 #' ape::plot.phylo(phy)
 #' ape::axisPhylo()
-simulateTree <- function(pars, max.taxa = Inf, max.t=Inf, min.taxa = 2, include.extinct=FALSE){
+#' 
+#' # alternatively, we can stop the simulation using time:
+#' set.seed(42)
+#' phy2 <- simulateTree(pars = c(S, E), max.t=7)
+#' ape::plot.phylo(phy2)
+#' ape::axisPhylo()
+#' 
+simulateTree <- function(pars, max.taxa = Inf, max.t, min.taxa = 2, include.extinct=FALSE){
+  
+  if(sum(is.infinite(c(max.t,max.taxa)))==2){
+    stop("If \"max.taxa\" and \"max.t\" are infinite, the simulation will never stop")
+  }
   
   badcount <- 0;
   while (1){
