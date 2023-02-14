@@ -4,9 +4,6 @@ NULL
 #' Plotting the whale phylogeny and coloring its clades
 #'
 #' \code{plotPaintedWhales} plots the phylogeny from Steeman et al (2011), coloring the Dolphins (Delphinidae), porpoises (Phocoenidae), the Mysticetes, the baleen whales (Balaenopteridae), and the Beaked whales (Ziphiidae).
-#'
-#' @param phy A \code{phylo} object, that must be the same as the 
-#' \code{BAMMtools::whales} object
 #' @param show.legend Logical indicating if clade legend should be shown.
 #' @param direction Phlyogeny plotting direction. Shuould be set to "rightwards" 
 #'  (the default) or "leftwards"
@@ -28,13 +25,10 @@ NULL
 #' @examples
 #' 
 #' 
-plotPaintedWhales<-function(phy, show.legend=TRUE, direction="rightwards", ...){
+plotPaintedWhales<-function(show.legend=TRUE, direction="rightwards", ...){
   
-  #
-  #data(BAMMtools::whales)
-  #if(all.equal(phy,whales)){
-  #  stop("your inputted phylo is not the whale phylogeny from the \"BAMMtools\" package")
-  #}
+  data("whale_phylo")
+  phy <- whale_phylo 
   
   painted<-paintSubTree(phy,89,"Other mysticetes","1")
   painted<-paintSubTree(painted,109,"Beaked whales", "0")
