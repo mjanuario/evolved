@@ -23,6 +23,12 @@ browseURL("https://r-pkgs.org/Workflow101.html#naming")
 # colocar funções de diversidade juntas?
 # importFrom e n ::
 
+#' @return A \code{data.frame} containing the diversity (column \code{div}) of 
+#' the chosen taxonomic level through time. Time moments are the 
+#' layer boundaries given in \code{data}.
+#' 
+#' @export calcFossilDivTT
+
 #######
 #DONE#
 #######

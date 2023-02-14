@@ -10,17 +10,18 @@ NULL
 #' \code{min_ma} are respectively the early and late bounds of rock layer's age. 
 #' \code{tax_lvl} column is the taxonomic level of the data. Any additional 
 #' columns are ignored.
-#' @param method A character string setting the method which should be used. 
+#' @param method A \code{character} string setting the method which should be used. 
 #' Could be either \code{"rangethrough"} or \code{"stdmethod"}, which will 
 #' respectively calculate diversity using the range through or the standard 
 #' methods (Foote & Miller, 2007)
-#' @param tax_lvl A \code{character} giving the taxonomic in which calculations 
-#' will be based on (default value is \code{"species"}). This must refer to the 
-#' column names in \code{data}.
+#' @param tax_lvl A \code{character} giving the taxonomic in which
+#'  calculations will be based on (default value is \code{"species"}). 
+#'  This must refer to the column names in \code{data}.
 #' @param bin_reso A \code{numeric} assigning the resolution (length) of the 
 #' time bin to consider in calculations. Default value is \code{1} (which in 
 #' most cases - e.g. those following the paleoBiology Database default 
 #' timescale - will equate to one million years)
+#' 
 #' @return A \code{data.frame} containing the diversity (column \code{div}) of 
 #' the chosen taxonomic level through time. Time moments are the 
 #' layer boundaries given in \code{data}.
@@ -36,24 +37,24 @@ NULL
 #' 
 #' @examples
 #' 
-# Loading data
+#' # Loading data
 #' data("trilob_fossil")
 #' 
 #' # Using function:
 #' div1 <- calcFossilDivTT(trilob_fossil, method = "stdmethod")
 #' div2 <- calcFossilDivTT(trilob_fossil, method = "stdmethod", bin_reso = 10)
 #' 
-#' # Comparing differen bins sizes in the standard method
+#' # Comparing different bins sizes in the standard method
 #' plot(x=div1$age, y=div1$div, type="l", 
 #'      xlab = "Time (Mya)", ylab = "Richness", 
-#'      xlim=rev(range(div$age)), col="red") 
-#' lines(x=div2$age, y=div2$div, col="orange")
+#'      xlim=rev(range(div1$age)), col="red") 
+#' lines(x=div2$age, y=div2$div, col="blue")
 #' 
 #' # Comparing different methods:
 #' div3 <- calcFossilDivTT(trilob_fossil, method = "rangethrough")
 #' plot(x=div1$age, y=div1$div, type="l", 
 #'      xlab = "Time (Mya)", ylab = "Richness", 
-#'      xlim=rev(range(div$age)), col="red") 
+#'      xlim=rev(range(div1$age)), col="red") 
 #' lines(x=div3$age, y=div3$div, col="blue")
 #' 
 calcFossilDivTT=function(data, tax_lvl="species", method="rangethrough", bin_reso=1){
