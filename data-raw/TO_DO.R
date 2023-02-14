@@ -1,33 +1,17 @@
 #TO DO LIST:
 
-# 1) make a licencee for the package
-# 2) make a description for the package
-# 3) pick package name and run available::available()
+# 1) make a description for the package
+# 2) pick package name and run available::available()
 #    also check link below for additional naming advices
 browseURL("https://r-pkgs.org/Workflow101.html#naming")
 # we chose evoled as a possible name
-# 4) insert input check in all functions. 
+# 3) insert input check in all functions. 
 #In WFDriftSim line 102 throws an error.
-# 6) coment better function NatSel
-# 8) restore old par() on exit of functions that plot.
+# 4) coment better function NatSel
+# 5) restore old par() on exit of functions that plot.
 # Check with_par() and on.exit() function for this
+# make sure wahle_phylo can be used internally by plotColoredWhales()
 
-#Matheus tasks:
-	#make the remaining functions
-	#add function references
-
-# prox reu:
-# documentação do plotRawFassilOccs 
-# exemplo plot painted whales e documentar "direction"
-# pq simulatetree não funciona internamente
-# colocar funções de diversidade juntas?
-# importFrom e n ::
-
-#' @return A \code{data.frame} containing the diversity (column \code{div}) of 
-#' the chosen taxonomic level through time. Time moments are the 
-#' layer boundaries given in \code{data}.
-#' 
-#' @export calcFossilDivTT
 
 #######
 #DONE#
