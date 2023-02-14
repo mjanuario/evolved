@@ -1,9 +1,9 @@
 #' @importFrom stats aggregate
 NULL
-#' Calculating paleo diversity curves using the Range Through method
+#' Plot a literal interpretation of a fossil record
 #'
 #' \code{plotRawFossilOccs} calculates and plots the early and late boundaries 
-#' associated with each taxa in A dataset.
+#' associated with each taxa in a dataset.
 #'
 #' @param data A \code{data.frame} containing fossil data on the age (early and 
 #' late bounds of rock layer, respectively labeled as \code{max_ma} and 
@@ -17,7 +17,7 @@ NULL
 #' \code{FALSE}), function will follow the order of taxa (or occurrences) 
 #' inputted in \code{data}.
 #' @param use_midpoint \code{logical} indicating if function should use 
-#' occurrence midpoints (between \code{max_ma} and \code{min_ma}) as "true" 
+#' occurrence midpoints (between \code{max_ma} and \code{min_ma}) as \code{TRUE} 
 #' occurrence temporal boundaries, a method commonly employed in paleobiology 
 #' to remove noise related to extremely coarse temporla resolution due to 
 #' stratification.
