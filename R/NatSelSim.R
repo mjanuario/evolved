@@ -60,6 +60,14 @@ NatSelSim <- function(w11=1, w12=1, w22=0.9, p0=0.5, NGen=10, plot_type = "anima
     warning("Invalid plot type. Plotting as \"animateall\"")
   }
   
+  if(any(c(w11, w12, w22)<00)){
+    stop("All fitness must be positive or zero")
+  }
+  
+  if(sum(c(w11, w12, w22))==0){
+    stop("At least one fitness should be a positive number")
+  }
+  
   if(any(c(w11, w12, w22)>1)){
     #normalizing W to get relative fitness   
     warning("Absolute fitness will be transformed into relative fitness")
