@@ -11,7 +11,7 @@ browseURL("https://r-pkgs.org/Workflow101.html#naming")
 # 5) restore old par() on exit of functions that plot.
 # Check with_par() and on.exit() function for this
 # make sure wahle_phylo can be used internally by plotColoredWhales()
-
+# NatSelSim() is not plotting when one of the fitnesses is equal to zero
 
 #######
 #DONE#
