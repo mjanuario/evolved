@@ -143,10 +143,17 @@ plotNatSel = function(gen_HW = gen_HW, p_t = p_t, w_t = w_t, t = t, W_gntp = c(w
   
   ################# pannel 1
   #Difference in p as a function of p:
+  
+  # delta_p produces a NaN if any fitness is zero.
+  # We remove NaN from delta_p and corresponding p to prevent error
+    p_no_nan = p[!is.nan(delta_p)]
+    delta_p_no_nan = delta_p[!is.nan(delta_p)]
+  
   if("animate1" %in% plot_type){
+    
     Sys.sleep(0.1)
-    plot(x=p, y=delta_p, type="l", lwd=4, col="blue",
-         ylim=c(min(c(0-(.1*max(delta_p)), delta_p)), max(c(0, 1.1*delta_p))),
+    plot(x=p_no_nan, y=delta_p_no_nan, type="l", lwd=4, col="blue",
+         ylim=c(min(c(0-(.1*max(delta_p_no_nan)), delta_p_no_nan)), max(c(0, 1.1*delta_p_no_nan))),
          xlab="p", ylab=expression(Delta * "p"),
          main="Relative allele frequency change", frame.plot = F, 
          xlim = c(-0.05, 1.05))
@@ -218,8 +225,8 @@ plotNatSel = function(gen_HW = gen_HW, p_t = p_t, w_t = w_t, t = t, W_gntp = c(w
       Sys.sleep(0.1)  
     }
     
-  }else{
-    plot(x=t, y=w_t, type="l", lwd=3, frame.plot = F,
+  }else{ 
+    plot(x=t[-1], y=w_t, type="l", lwd=3, frame.plot = F,
          ylab="Mean population fitness", xlab="Time", col="red",
          lty=6, main="Mean fitness through time")
   }

@@ -9,9 +9,8 @@ browseURL("https://r-pkgs.org/Workflow101.html#naming")
 #In WFDriftSim line 102 throws an error.
 # 4) coment better function NatSel
 # 5) restore old par() on exit of functions that plot.
-# Check with_par() and on.exit() function for this
-# make sure wahle_phylo can be used internally by plotColoredWhales()
-# NatSelSim() is not plotting when one of the fitnesses is equal to zero
+#### Check with_par() and on.exit() function for this
+# Use pkg::func instead of importFrom
 
 #######
 #DONE#
