@@ -10,8 +10,9 @@ browseURL("https://r-pkgs.org/Workflow101.html#naming")
 # 4) coment better function NatSel
 # 5) restore old par() on exit of functions that plot.
 #### Check with_par() and on.exit() function for this
-# Use pkg::func instead of importFrom
-
+# 6) Use pkg::func instead of importFrom
+# Create functions read.proteinSeq() and as.proteinSeq(). Need it for phylogenies too?
+ 
 #######
 #DONE#
 #######
