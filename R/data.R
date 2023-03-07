@@ -1,8 +1,6 @@
-#' Whale body size
+#' Whale body size and speciation rates
 #'
-#' Data on the body size of many cetacean species. Species follow taxonomy 
-#' from Steeman et al (2009). Species-specific speciation rates from Rabosky 
-#' 2014 & Rabosky et al, 2014. Mass data from PanTHERIA (Jones et al, 2009).
+#' Data on the body size of many cetacean species and species-specific speciation rates. 
 #'
 #' @format
 #' A \code{data.frame} with 75 rows and 4 columns. 
@@ -13,6 +11,11 @@
 #'   \item{color}{Suggested color to be used for the tip's clade}
 #' }
 #' @source Compilation of many primary sources (see description).
+#' 
+#' @details 
+#' Species follow taxonomy from Steeman et al (2009). 
+#' Species-specific speciation rates from Rabosky 2014 & Rabosky 
+#' et al, 2014. Mass data from PanTHERIA (Jones et al, 2009).
 #' 
 #' @references 
 #'  Jones, K. E., Bielby, J., Cardillo, M., Fritz, S. A., O'Dell, J., Orme, C. D. L., ... & Purvis, A. (2009). PanTHERIA: a species‐level database of life history, ecology, and geography of extant and recently extinct mammals: Ecological Archives E090‐184. Ecology, 90(9), 2648-2648.
