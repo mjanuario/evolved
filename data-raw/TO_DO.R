@@ -12,8 +12,7 @@ browseURL("https://r-pkgs.org/Workflow101.html#naming")
 #### Check with_par() and on.exit() function for this
 # 6) Use pkg::func instead of importFrom
 # Create functions read.proteinSeq() and as.proteinSeq(). Need it for phylogenies too?
- 
-#######
+
 #DONE#
 #######
 
