@@ -1,17 +1,18 @@
-#TO DO LIST:
+# TO DO LIST:
  
-# 1) make a description for the package
+# 1) make a description for the package. pasta principal > description - TWISTER
 # 2) pick package name and run available::available()
 #    also check link below for additional naming advices
-browseURL("https://r-pkgs.org/Workflow101.html#naming")
+browseURL("https://r-pkgs.org/Workflow101.html#naming") # - DAN
 # we chose evoled as a possible name
-# 3) insert input check in all functions. 
+# 3) insert input check in all functions. - TWISTER
 #In WFDriftSim line 102 throws an error.
-# 4) restore old par() on exit of functions that plot.
+# 4) restore old par() on exit of functions that plot. - JENN
 #### Check with_par() and on.exit() function for this
-# 5) Use pkg::func instead of importFrom
-# 6) Create functions read.proteinSeq() and as.proteinSeq(). Need it for phylogenies too?
-# 7) Check helps for references
+# 5) Use pkg::func instead of importFrom - JENN
+# 6) Create functions read.proteinSeq() and as.proteinSeq(). plot.proteinseq() aminoacid alingment - TWISTER
+# 7) Check helps for references - JENN will list
+# 8) first draft of paper - TWISTER
  
 #DONE#
 #######
