@@ -7,11 +7,11 @@ browseURL("https://r-pkgs.org/Workflow101.html#naming")
 # we chose evoled as a possible name
 # 3) insert input check in all functions. 
 #In WFDriftSim line 102 throws an error.
-# 4) coment better function NatSel
-# 5) restore old par() on exit of functions that plot.
+# 4) restore old par() on exit of functions that plot.
 #### Check with_par() and on.exit() function for this
-# 6) Use pkg::func instead of importFrom
-# Create functions read.proteinSeq() and as.proteinSeq(). Need it for phylogenies too?
+# 5) Use pkg::func instead of importFrom
+# 6) Create functions read.proteinSeq() and as.proteinSeq(). Need it for phylogenies too?
+# 7) Check helps for references
  
 #DONE#
 #######
