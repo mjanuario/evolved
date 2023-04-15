@@ -3,7 +3,7 @@
 \docType{data}
 \name{data_whales}
 \alias{data_whales}
-\title{Whales body size and speciation rates}
+\title{Whale body size and speciation rates}
 \format{
 A \code{data.frame} with 75 rows and 4 columns.
 \describe{

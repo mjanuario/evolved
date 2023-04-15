@@ -1,5 +1,4 @@
 #'@import graphics
-#'@importFrom utils head
 NULL
 
 #' Simulating natural selection through time in a bi-allelic gene

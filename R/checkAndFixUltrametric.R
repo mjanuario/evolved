@@ -1,7 +1,3 @@
-#' @importFrom ape vcv.phylo
-#' @importFrom ape is.ultrametric 
-NULL
-
 #' Find and fix small rounding errors in ultrametric trees
 #'
 #' \code{checkAndFixUltrametric} finds and correct small numerical errors that 
@@ -39,15 +35,15 @@ NULL
 #' 
 checkAndFixUltrametric <- function(phy){
   
-  if (!is.ultrametric(phy)){
+  if (!ape::is.ultrametric(phy)){
     
-    vv <- vcv.phylo(phy)
+    vv <- ape::vcv.phylo(phy)
     dx <- diag(vv)
     mxx <- max(dx) - dx
     for (i in 1:length(mxx)){
       phy$edge.length[phy$edge[,2] == i] <- phy$edge.length[phy$edge[,2] == i] + mxx[i]
     }
-    if (!is.ultrametric(phy)){
+    if (!ape::is.ultrametric(phy)){
       stop("Ultrametric fix failed\n")
     }	
   }

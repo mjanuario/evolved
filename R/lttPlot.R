@@ -1,5 +1,3 @@
-#' @importFrom ape branching.times
-NULL
 #' Make a lineage trough time (LTT) plot
 #'
 #' \code{lttPlot} plots the lineage trough time (LTT) of a \code{phylo} object.
@@ -39,7 +37,7 @@ NULL
 #' 
 lttPlot <- function(phy, lwd=1, col="red", PLOT = T, rel_time = F, add = F){
   
-  bt <- branching.times(phy)
+  bt <- ape::branching.times(phy)
   
   if (rel_time){
     bt <- bt / max(bt)

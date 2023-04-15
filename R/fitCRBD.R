@@ -1,6 +1,3 @@
-#' @importFrom stats optim
-#' @importFrom diversitree argnames
-NULL
 #' Fit a constant-rate birth-death process to a phylogeny
 #'
 #' \code{fitCRBD} fits a constant-rate birth-death process to a phylogeny in the
@@ -66,13 +63,13 @@ fitCRBD <- function(phy, nopt=5, lmin=0.001, lmax=5.0, MAXBAD = 200){
     
     badcount <- 0
     
-    resx <- try(optim(c(lam, E) ,fx, method='L-BFGS-B', control=list(maxit=1000, fnscale=-1), lower=lmin, upper=lmax), silent=T)
+    resx <- try(stats::optim(c(lam, E) ,fx, method='L-BFGS-B', control=list(maxit=1000, fnscale=-1), lower=lmin, upper=lmax), silent=T)
     while (class(resx) == 'try-error'){
       
       lam <- runif(1, 0, 0.5)	
       E <- lam * runif(1, 0, 1)
       
-      resx <- try(optim(c(lam, E) , fx, method='L-BFGS-B', control=list(maxit=1000, fnscale=-1), lower=lmin, upper=lmax), silent=T);
+      resx <- try(stats::optim(c(lam, E) , fx, method='L-BFGS-B', control=list(maxit=1000, fnscale=-1), lower=lmin, upper=lmax), silent=T);
       
       badcount <- badcount + 1;
       if (badcount > MAXBAD){
@@ -91,7 +88,7 @@ fitCRBD <- function(phy, nopt=5, lmin=0.001, lmax=5.0, MAXBAD = 200){
   }
   
   fres <- list(pars=best$par, loglik=best$value)
-  fres$AIC <- -2*fres$loglik + 2*length(argnames(fx))
+  fres$AIC <- -2*fres$loglik + 2*length(diversitree::argnames(fx))
   fres$counts <- best$counts
   #fres$like_function <- fx
   fres$convergence <- best$convergence

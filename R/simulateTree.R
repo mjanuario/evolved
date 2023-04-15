@@ -1,6 +1,3 @@
-#' @importFrom diversitree tree.bd
-NULL
-
 #' Simulating a phylogenetic trees through the birth-death process
 #'
 #' \code{simulateTree} uses a birth-death process to simulate a phylogenetic 
@@ -68,7 +65,7 @@ simulateTree <- function(pars, max.taxa = Inf, max.t, min.taxa = 2, include.exti
   badcount <- 0;
   while (1){
     
-    tree <- tree.bd(pars, max.taxa=max.taxa, max.t=max.t, 
+    tree <- diversitree::tree.bd(pars, max.taxa=max.taxa, max.t=max.t, 
                                  include.extinct=include.extinct);
     if (!is.null(tree)){
       if (length(tree$tip.label) >= min.taxa){
