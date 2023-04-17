@@ -28,10 +28,10 @@ individual occurrences in \code{data}.}
 inputted in \code{data}.}
 
 \item{use_midpoint}{\code{logical} indicating if function should use
-occurrence midpoints (between \code{max_ma} and \code{min_ma}) as \code{TRUE}
+occurrence midpoints (between \code{max_ma} and \code{min_ma}) as
 occurrence temporal boundaries, a method commonly employed in paleobiology
-to remove noise related to extremely coarse temporla resolution due to
-stratification.}
+to remove noise related to extremely coarse temporal resolution due to
+stratification. This argument is only used if a \code{tax_lvl} is provided.}
 
 \item{return_ranges}{\code{logical} indicating if ranges calculated by
 function should be return as a \code{data.frame}. If \code{tax_lvl} is

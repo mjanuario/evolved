@@ -28,7 +28,7 @@ the chosen taxonomic level, through time - with time moments being a
 sequence of arbitrary numbers based on \code{bin_reso}.
 }
 \description{
-\code{simulateBirthDeath} calculates the number of species at a certain
+\code{simulateBirthDeathRich} calculates the number of species at a certain
 point in time.
 }
 \details{

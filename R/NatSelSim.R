@@ -15,9 +15,9 @@ NULL
 #' @param p0 Initial (time = 0) allelic frequency of A1. 
 #' A2's initial allelic frequency is \code{1-p0}.
 #' @param NGen Number of generation that will be simulated.
-#' @param plot_type String indicating if plot should be "static" or animated. 
+#' @param plot_type String indicating if plot should be animated. 
 #' The default, "animateall", animate all possible panels. 
-#' Other options are "animate1", "animate3", or "animate4".
+#' Other options are "static", "animate1", "animate3", or "animate4".
 #' @param printData Logical indicating whether all simulation results should be
 #' returned as a \code{data.frame}. Default value is \code{FALSE}.
 #' 

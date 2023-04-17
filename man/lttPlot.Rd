@@ -2,12 +2,12 @@
 % Please edit documentation in R/lttPlot.R
 \name{lttPlot}
 \alias{lttPlot}
-\title{Make a lineage trough time (LTT) plot}
+\title{Make a lineage through time (LTT) plot}
 \usage{
 lttPlot(phy, lwd = 1, col = "red", PLOT = T, rel_time = F, add = F)
 }
 \arguments{
-\item{phy}{A \code{phylo} object, as specific by the \code{ape} package.}
+\item{phy}{A \code{phylo} object, as specified by the \code{ape} package.}
 
 \item{lwd}{Line width.}
 
@@ -28,7 +28,7 @@ If \code{PLOT = FALSE}, a list the richness of each point in time,
 and \code{phy}'s crown age.
 }
 \description{
-\code{lttPlot} plots the lineage trough time (LTT) of a \code{phylo} object.
+\code{lttPlot} plots the lineage through time (LTT) of a \code{phylo} object.
 It also adds a reference line connecting the edges of the graph.
 }
 \examples{

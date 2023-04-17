@@ -10,8 +10,9 @@
 #' frequency. A2's allele frequency is assumed to be \code{1-p}.
 #' @param nSim Number of simulations to be made. If decimals are inserted, 
 #' they will be rounded.
+#' 
 #' @return A \code{data.frame} containing the number of individuals for each 
-#' genotype
+#' genotype.
 #' 
 #' @export OneGenHWSim
 #' 

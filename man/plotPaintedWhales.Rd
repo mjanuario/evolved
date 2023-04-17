@@ -9,8 +9,8 @@ plotPaintedWhales(show.legend = TRUE, direction = "rightwards", ...)
 \arguments{
 \item{show.legend}{Logical indicating if clade legend should be shown.}
 
-\item{direction}{Phlyogeny plotting direction. Shuould be set to "rightwards"
-(the default) or "leftwards"}
+\item{direction}{Phylogeny plotting direction. Should be set to "rightwards"
+(the default) or "leftwards".}
 
 \item{...}{other arguments to be passed to \code{phytools::plotSimmap}}
 }

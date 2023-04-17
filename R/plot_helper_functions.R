@@ -1,7 +1,6 @@
 #' @import graphics
 NULL
 
-#plot = animate not working
 #old par restoration is resetting par default, not old par
 
 #' Plot WFDriftSim output
@@ -69,6 +68,7 @@ plotWFDrift = function(p_through_time, plot_type = plot){
     auxhist = hist(p_through_time[,nGens+1], breaks = seq(0,1, by=0.05), plot = FALSE)
     barplot(auxhist$counts, axes = TRUE, space = 0, horiz=TRUE, xlab= "Counts", ylab=NULL, border = NA, col = "black")
   }
+  par(mfrow = c(1,1), mar = c(5, 4, 4, 2) + 0.1)
 }
 
 ####################################
@@ -82,9 +82,9 @@ plotWFDrift = function(p_through_time, plot_type = plot){
 #' @param w_t Mean population fitness through time
 #' @param t time
 #' @param W_gntp Initial genotypic fitness
-#' @param plot_type String indicating if plot should be "static" or animated. 
+#' @param plot_type String indicating if plot should be animated. 
 #' The default, "animateall", animate all possible panels. 
-#' Other options are "animate1", "animate3", or "animate4".
+#' Other options are "static", "animate1", "animate3", or "animate4".
 #'
 #' @return Plot of NatSelSim's output
 #' @export plotNatSel

@@ -18,7 +18,7 @@ they will be rounded.}
 }
 \value{
 A \code{data.frame} containing the number of individuals for each
-genotype
+genotype.
 }
 \description{
 \code{OneGenHWSim} creates \code{nSim} simulations of one

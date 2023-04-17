@@ -14,7 +14,7 @@ A \code{data.frame} with 75 rows and 4 columns.
 }
 }
 \source{
-Compilation of many primary sources (see description).
+Compilation of many primary sources (see details).
 }
 \usage{
 data_whales

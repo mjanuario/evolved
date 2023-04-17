@@ -10,7 +10,7 @@
 #'   \item{S}{Species-specific speciation rate}
 #'   \item{color}{Suggested color to be used for the tip's clade}
 #' }
-#' @source Compilation of many primary sources (see description).
+#' @source Compilation of many primary sources (see details).
 #' 
 #' @details 
 #' Species follow taxonomy from Steeman et al (2009). 
@@ -238,7 +238,7 @@
 #' ostr = Ostracoda (Crustacea, Arthropoda); 
 #' tril = Trilobita (Arthropoda).
 #' 
-#' @source Data originally compiled from many primary sources. Organized, curated by, and downloaded from, Rabosky & Benson (2021)
+#' @source Data originally compiled from many primary sources. Organized, curated by, and downloaded from, Rabosky & Benson (2021).
 #' 
 #' @references 
 #' Rabosky, D. L., & Benson, R. B. (2021). Ecological and biogeographic drivers of biodiversity cannot be resolved using clade age-richness data. Nature Communications, 12(1), 2945.

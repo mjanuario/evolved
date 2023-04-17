@@ -17,10 +17,10 @@ NULL
 #' \code{FALSE}), function will follow the order of taxa (or occurrences) 
 #' inputted in \code{data}.
 #' @param use_midpoint \code{logical} indicating if function should use 
-#' occurrence midpoints (between \code{max_ma} and \code{min_ma}) as \code{TRUE} 
+#' occurrence midpoints (between \code{max_ma} and \code{min_ma}) as 
 #' occurrence temporal boundaries, a method commonly employed in paleobiology 
-#' to remove noise related to extremely coarse temporla resolution due to 
-#' stratification.
+#' to remove noise related to extremely coarse temporal resolution due to 
+#' stratification. This argument is only used if a \code{tax_lvl} is provided.
 #' @param return_ranges \code{logical} indicating if ranges calculated by 
 #' function should be return as a \code{data.frame}. If \code{tax_lvl} is 
 #' \code{NULL}, the function don't calculate ranges and so it has nothing 
@@ -49,7 +49,7 @@ plotRawFossilOccs <- function(data, tax_lvl=NULL, sort=TRUE, use_midpoint=TRUE, 
   title="Occurrence"
   
   if(is.null(tax_lvl) & use_midpoint){
-    message(" if tax_lvl is not supplied, argument use_midpoint will be set to FALSE")
+    message("If tax_lvl is not supplied, argument use_midpoint will be set to FALSE")
     use_midpoint=FALSE
   }
   

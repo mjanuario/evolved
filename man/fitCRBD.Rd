@@ -29,10 +29,6 @@ format of \code{ape} package's \code{phylo} object. Optimization is based on
 likelihood functions made with \code{diversitree}. This function is
 basically a wrapper for the \code{diversitree}'s \code{make.bd} function.
 }
-\details{
-see help page from \code{diversitree::make.bd} and
-\code{stats::optim}
-}
 \examples{
 
 S <- 0.1
@@ -55,6 +51,10 @@ R Packag. ver, 9-2.
 
 FitzJohn, R. G. (2012). Diversitree: comparative phylogenetic analyses of
 diversification in R. Methods in Ecology and Evolution, 3(6), 1084-1092.
+}
+\seealso{
+see help page from \code{diversitree::make.bd} and
+\code{stats::optim}
 }
 \author{
 Daniel Rabosky, Matheus Januario, Jennifer Auler

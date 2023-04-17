@@ -3,7 +3,7 @@
 NULL
 #' Simulating diversity through birth-death processes
 #'
-#' \code{simulateBirthDeath} calculates the number of species at a certain 
+#' \code{simulateBirthDeathRich} calculates the number of species at a certain 
 #' point in time.
 #'
 #' @param t Point in time which diversity will be simulated.

@@ -1,15 +1,15 @@
-#' Make a lineage trough time (LTT) plot
+#' Make a lineage through time (LTT) plot
 #'
-#' \code{lttPlot} plots the lineage trough time (LTT) of a \code{phylo} object.
+#' \code{lttPlot} plots the lineage through time (LTT) of a \code{phylo} object.
 #' It also adds a reference line connecting the edges of the graph.
 #'
-#' @param phy A \code{phylo} object, as specific by the \code{ape} package.
+#' @param phy A \code{phylo} object, as specified by the \code{ape} package.
 #' @param lwd Line width.
 #' @param col Line color.
 #' @param  PLOT A \code{logical} indicating with calculations should be plotted.
 #'  If \code{FALSE}, function returns a list of the calculated points.
 #' @param rel_time A \code{logical} indicating if time should be calculated in 
-#' absolute scale. If \code{FALSE} (default), plots relative time since \code{phy}'s 
+#' absolute scale. If \code{FALSE} (default), plots relative time since \code{phy}'s
 #' crown age.
 #' @param add A \code{logical} indicating if plot should be added to 
 #' pre-existing plot. Default is \code{FALSE}.

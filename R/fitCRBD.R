@@ -13,7 +13,7 @@
 #' @param MAXBAD Maximum number of unsuccessful optimization attempts. Default 
 #' value is \code{200}.
 #' 
-#' @details see help page from \code{diversitree::make.bd} and 
+#' @seealso see help page from \code{diversitree::make.bd} and 
 #' \code{stats::optim}
 #' 
 #' @return A \code{numeric} with the best estimates of speciation \code{S} 

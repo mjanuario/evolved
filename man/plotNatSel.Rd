@@ -25,9 +25,9 @@ frequencies in each generation (nrows = NGen)}
 
 \item{W_gntp}{Initial genotypic fitness}
 
-\item{plot_type}{String indicating if plot should be "static" or animated.
+\item{plot_type}{String indicating if plot should be animated.
 The default, "animateall", animate all possible panels.
-Other options are "animate1", "animate3", or "animate4".}
+Other options are "static", "animate1", "animate3", or "animate4".}
 }
 \value{
 Plot of NatSelSim's output

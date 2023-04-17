@@ -35,12 +35,12 @@ individually. If \code{plot_type = "static"} it plots all lines rapidly. If
 returned as a \code{data.frame}. Default value is \code{FALSE}.}
 }
 \value{
-If \code{plot_type = "static"}, plots the timeseries of all simulations,
-with each line+color referring to a different simulation. Note that if
-many simulations (generally more than 20) are simulated, colors might be
-cycled and different simulation will have the same color. If
-\code{printData = TRUE}, returns a \code{data.frame} with the
-simulation results.
+If \code{plot_type = "static"} or \code{"animate"}, plots the
+timeseries of all simulations, with each line+color referring to a
+different simulation. Note that if many simulations (generally more
+than 20) are simulated, colors might be cycled and different simulation
+will have the same color. If \code{printData = TRUE}, returns a
+\code{data.frame} with the simulation results.
 }
 \description{
 \code{WFDriftSim} simulates genetic drift of diploid Wright–Fisher
@@ -49,7 +49,7 @@ generations.
 }
 \details{
 The effective population size (\code{Ne}) is strongly connected
-with the rate of genetic drift (for details, see Waples, 2022)
+with the rate of genetic drift (for details, see Waples, 2022).
 }
 \examples{
 #Default values:

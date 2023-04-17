@@ -16,7 +16,7 @@ A \code{data.frame} with 598 rows and 6 columns.
 }
 }
 \source{
-Data originally compiled from many primary sources. Organized, curated by, and downloaded from, Rabosky & Benson (2021)
+Data originally compiled from many primary sources. Organized, curated by, and downloaded from, Rabosky & Benson (2021).
 }
 \usage{
 timeseries_fossil
