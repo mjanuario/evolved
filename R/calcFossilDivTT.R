@@ -63,6 +63,19 @@ NULL
 #' 
 calcFossilDivTT=function(data, tax_lvl="species", method="rangethrough", bin_reso=1){
   
+  ############################################
+  # check the classes of inputs and stop if any was inputted wrongly;
+  ref_classes = c("data.frame", "character", "character",  "numeric")
+  input_names = names(unlist(formals(calcFossilDivTT)))
+  input_list = list(data, tax_lvl, method, bin_reso)
+  input_classes = unlist(lapply(input_list, class))
+  
+  if(any(! ref_classes == input_classes)){
+    stop(paste0(input_names[which.min(ref_classes != input_classes)], " has the wrong object class. Please check the documentation of this function by typing: \n ??calcFossilDivTT"))
+  }
+  # end of checking inputs
+  ############################################
+  
   if(tax_lvl %in% colnames(data)){
     
     aux1=aggregate(data$max_ma, by=list(data[,tax_lvl]), max, na.rm=T)

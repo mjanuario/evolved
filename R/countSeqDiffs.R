@@ -29,7 +29,6 @@ countSeqDiffs <- function(x, taxon1, taxon2){
     stop("Both \"taxon1\" and \"taxon2\" must be in \"x\"")
   }
   
-  
   x1 <- unlist(strsplit(x[taxon1], split=""))
   x2 <- unlist(strsplit(x[taxon2], split=""))
   return(sum(x1 != x2))

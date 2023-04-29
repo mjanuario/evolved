@@ -1,3 +1,5 @@
+#' @importFrom ape is.binary.phylo
+NULL
 #' Estimate speciation assuming a pure-birth process
 #'
 #' \code{estimateSpeciation} Estimates the speciation rate assuming a 
@@ -20,5 +22,10 @@
 #' estimateSpeciation(phy)
 #' 
 estimateSpeciation <- function(phy){
+  
+  if(!ape::is.binary.phylo(phy)){
+    stop("phy is not a binary phylogeny")
+  }
+  
   return((length(phy$tip.label)-2) / sum(phy$edge.length))
 }

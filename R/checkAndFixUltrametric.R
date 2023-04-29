@@ -1,3 +1,5 @@
+#' @importFrom ape is.binary.phylo
+NULL
 #' Find and fix small rounding errors in ultrametric trees
 #'
 #' \code{checkAndFixUltrametric} finds and correct small numerical errors that 
@@ -34,6 +36,10 @@
 #' ape::is.ultrametric(phy)
 #' 
 checkAndFixUltrametric <- function(phy){
+  
+  if(!ape::is.binary.phylo(phy)){
+    stop("phy is not a binary phylogeny")
+  }
   
   if (!ape::is.ultrametric(phy)){
     

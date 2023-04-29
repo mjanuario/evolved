@@ -1,3 +1,5 @@
+#' @importFrom ape is.binary.phylo
+NULL
 #' Fit a constant-rate birth-death process to a phylogeny
 #'
 #' \code{fitCRBD} fits a constant-rate birth-death process to a phylogeny in the
@@ -47,6 +49,24 @@
 #' fitCRBD(phy)
 #' 
 fitCRBD <- function(phy, nopt=5, lmin=0.001, lmax=5.0, MAXBAD = 200){
+  
+  ############################################
+  # check the classes of inputs and stop if any was inputted wrongly:
+  
+  if(!ape::is.binary.phylo(phy)){
+    stop("phy is not a binary phylogeny")
+  }
+  
+  ref_classes = c("numeric","numeric","numeric","numeric")
+  input_names = names(unlist(formals(fitCRBD)))[-1]
+  input_list = list(nopt, lmin, lmax, MAXBAD)
+  input_classes = unlist(lapply(input_list, class))
+  
+  if(any(! input_classes== ref_classes)){
+    stop(paste0(input_names[which.min(ref_classes != input_classes)], " has the wrong object class. Please check the documentation of this function by typing: \n ??fitCRBD"))
+  }
+  # end of checking inputs
+  ############################################
   
   if (length(phy$tip.label) < 3){
     pars <- c(0.0001,0)
