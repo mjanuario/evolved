@@ -25,6 +25,14 @@
 #' 
 countSeqDiffs <- function(x, taxon1, taxon2){
   
+  if(!is.proteinSeq(x)){
+    stop("x must be an object of the class proteinSeq. Fro details, see: \n ??proteinSeq")
+  }
+  
+  if(any(!c(is.character(taxon1), is.character(taxon1)))){
+    stop("Both \"taxon1\" and \"taxon2\" must be character vectors")
+  }
+  
   if(sum(c(taxon1, taxon2) %in% names(x))<2){
     stop("Both \"taxon1\" and \"taxon2\" must be in \"x\"")
   }

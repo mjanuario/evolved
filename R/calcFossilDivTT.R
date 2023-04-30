@@ -71,7 +71,11 @@ calcFossilDivTT=function(data, tax_lvl="species", method="rangethrough", bin_res
   input_classes = unlist(lapply(input_list, class))
   
   if(any(! ref_classes == input_classes)){
-    stop(paste0(input_names[which.min(ref_classes != input_classes)], " has the wrong object class. Please check the documentation of this function by typing: \n ??calcFossilDivTT"))
+    stop(paste0("\n", input_names[which(input_classes != ref_classes)], " has the wrong object class. Please check the documentation of this function by typing: \n ??calcFossilDivTT"))
+  }
+  
+  if(!(bin_reso>0)){
+    stop("bin_reso should be laregr than zero")
   }
   # end of checking inputs
   ############################################

@@ -4,7 +4,7 @@ NULL
 #' Simulating diversity through birth-death processes
 #'
 #' \code{simulateBirthDeathRich} calculates the number of species at a certain 
-#' point in time.
+#' point in time, following a birth-death process.
 #'
 #' @param t Point in time which diversity will be simulated.
 #' @param S A numeric representing the per-capita speciation rate (in number 
@@ -50,6 +50,10 @@ NULL
 #' plot(table(res)/length(res),
 #'      xlab="Richness", ylab="Probability")
 simulateBirthDeathRich=function(t, S=NULL, E=NULL, K=NULL, R=NULL){
+  
+  if(!(is.numeric(t) | t>0)){
+    stop("t must be a number larger than zero")
+  }
   
   #checking if input it correct:
   test1 = sum(unlist(lapply(list(S, E), is.null))) == 2 

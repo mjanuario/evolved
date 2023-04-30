@@ -30,9 +30,6 @@ NULL
 #' \code{w22}) is larger than one, fitness is interpreted as absolute fitness 
 #' and values are re-normalized.
 #' 
-#' @references 
-#' 
-#' 
 #' @author Matheus Januario, Jennifer Auler, Dan Rabosky
 #' 
 #' @examples

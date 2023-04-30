@@ -4,11 +4,10 @@
 # 2) pick package name and run available::available()
 #    also check link below for additional naming advices
 browseURL("https://r-pkgs.org/Workflow101.html#naming") # - DAN
-# 3) insert input check in all functions. - TWISTER
-#In WFDriftSim line 102 throws an error.
+#In WFDriftSim line 102 throws an error - TWISTER COULD NOT FIND THE ERROR
 # 4) restore old par() on exit of functions that plot. - JENN
 #### Check with_par() and on.exit() function for this
-# 6) Create functions read.proteinSeq() is.proteinSeq() and as.proteinSeq(). plot.proteinseq() aminoacid alingment - and then check inputs in function countSeqDiffs() TWISTER
+# 6) Create functions to proteinSeq(): DONE for head.tail. summary. print. is. BUT WHY MAKE THE read. as. plot. VERSIONS? Dont know even if doing them makes sense - maybe we have to talk?
 
 # 7) Check helps - JENN will list
 
@@ -29,6 +28,7 @@ browseURL("https://r-pkgs.org/Workflow101.html#naming") # - DAN
 #DONE#
 #######
 
+# 3) insert input check in all functions. - TWISTER
 # 5) Use pkg::func instead of importFrom - JENN
 # 7) check helps
 # 8) first draft of paper - TWISTER

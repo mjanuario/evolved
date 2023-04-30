@@ -88,6 +88,19 @@ NULL
 #' 
 WFDriftSim=function(Ne, nGens, p0=0.5, nSim=1, plot_type="animate", printData=FALSE){
   
+  ############################################
+  # check the classes of inputs and stop if any was inputted wrongly;
+  ref_classes = c("numeric", "numeric", "numeric", "numeric", "character", "logical")
+  input_names = names(unlist(formals(WFDriftSim)))
+  input_list = list(Ne, nGens, p0, nSim, plot_type, printData)
+  input_classes = unlist(lapply(input_list, class))
+  
+  if(any(! ref_classes == input_classes)){
+    stop(paste0("\n \n ", input_names[which(input_classes != ref_classes)], " has the wrong object class. Please check the documentation of this function by typing: \n \n ??WFDriftSim"))
+  }
+  # end of checking inputs
+  ############################################
+  
   # checking input:
   if(plot_type=="none" & printData==FALSE){
     stop("if both \"plot_type\" and \"printData\" are false, 

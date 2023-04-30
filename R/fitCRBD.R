@@ -63,8 +63,13 @@ fitCRBD <- function(phy, nopt=5, lmin=0.001, lmax=5.0, MAXBAD = 200){
   input_classes = unlist(lapply(input_list, class))
   
   if(any(! input_classes== ref_classes)){
-    stop(paste0(input_names[which.min(ref_classes != input_classes)], " has the wrong object class. Please check the documentation of this function by typing: \n ??fitCRBD"))
+    stop(paste0("\n \n", input_names[which(input_classes != ref_classes)], " has the wrong object class. Please check the documentation of this function by typing: \n \n ??fitCRBD"))
   }
+  
+  if(any(!input_list>0)){
+    stop(paste0("\n \n", input_names[input_list>0], " should be larger than zero"))
+  }
+  
   # end of checking inputs
   ############################################
   

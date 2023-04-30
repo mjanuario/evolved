@@ -37,6 +37,25 @@
 #' 
 lttPlot <- function(phy, lwd=1, col="red", PLOT = T, rel_time = F, add = F){
   
+  ############################################
+  # check the classes of inputs and stop if any was inputted wrongly:
+  
+  if(!ape::is.binary.phylo(phy)){
+    stop("phy is not a binary phylogeny")
+  }
+  
+  ref_classes = c("numeric","character","logical","logical", "logical")
+  input_names = names(unlist(formals(lttPlot)))[-1]
+  input_list = list(lwd, col, PLOT, rel_time, add)
+  input_classes = unlist(lapply(input_list, class))
+  
+  if(any(! input_classes== ref_classes)){
+    stop(paste0("\n", input_names[which(input_classes != ref_classes)], " has the wrong object class. Please check the documentation of this function by typing: \n \n ??lttPlot"))
+  }
+  # end of checking inputs
+  ############################################
+  
+  
   bt <- ape::branching.times(phy)
   
   if (rel_time){

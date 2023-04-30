@@ -46,6 +46,20 @@ NULL
 #' 
 plotRawFossilOccs <- function(data, tax_lvl=NULL, sort=TRUE, use_midpoint=TRUE, return_ranges=FALSE){
   
+  ############################################
+  # check the classes of inputs and stop if any was inputted wrongly;
+  ref_classes = c("data.frame", "logical", "logical",  "logical")
+  input_names = names(unlist(formals(plotRawFossilOccs)))[-2]
+  input_list = list(data, sort, use_midpoint, return_ranges)
+  input_classes = unlist(lapply(input_list, class))
+  
+  if(any(! ref_classes == input_classes)){
+    stop(paste0("\n \n ", input_names[which(input_classes != ref_classes)], " has the wrong object class. Please check the documentation of this function by typing: \n \n ??plotRawFossilOccs"))
+  }
+  # end of checking inputs
+  ############################################
+  
+  
   title="Occurrence"
   
   if(is.null(tax_lvl) & use_midpoint){

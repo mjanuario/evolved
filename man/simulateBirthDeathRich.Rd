@@ -29,7 +29,7 @@ sequence of arbitrary numbers based on \code{bin_reso}.
 }
 \description{
 \code{simulateBirthDeathRich} calculates the number of species at a certain
-point in time.
+point in time, following a birth-death process.
 }
 \details{
 The function only accepts as inputs \code{S} and \code{E}, or
