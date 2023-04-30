@@ -58,6 +58,19 @@
 #' 
 simulateTree <- function(pars, max.taxa = Inf, max.t, min.taxa = 2, include.extinct=FALSE){
   
+  ############################################
+  # check the classes of inputs and stop if any was inputted wrongly;
+  ref_classes = c("numeric", "numeric", "numeric",  "numeric", "logical")
+  input_names = names(unlist(formals(simulateTree)))
+  input_list = list(pars, max.taxa, max.t, min.taxa, include.extinct)
+  input_classes = unlist(lapply(input_list, class))
+  
+  if(any(! ref_classes == input_classes)){
+    stop(paste0("\n \n ", input_names[which(input_classes != ref_classes)], " has the wrong object class. Please check the documentation of this function by typing: \n \n ??simulateTree"))
+  }
+  # end of checking inputs
+  ############################################
+  
   if(sum(is.infinite(c(max.t,max.taxa)))==2){
     stop("If \"max.taxa\" and \"max.t\" are infinite, the simulation will never stop")
   }

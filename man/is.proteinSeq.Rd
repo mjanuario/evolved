@@ -17,8 +17,6 @@ The \code{proteinSeq} class is an input for the functions \code{countSeqDiffs} a
 data("cytOxidase")
 is.proteinSeq(cytOxidase)
 
-is.proteinSeq(cytOxidase)
-
 summary.proteinSeq(cytOxidase)
 
 head.proteinSeq(cytOxidase)
