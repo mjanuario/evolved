@@ -7,7 +7,7 @@ browseURL("https://r-pkgs.org/Workflow101.html#naming") # - DAN
 #In WFDriftSim line 102 throws an error - TWISTER COULD NOT FIND THE ERROR
 # 4) restore old par() on exit of functions that plot. - JENN
 #### Check with_par() and on.exit() function for this
-# 6) Create functions to proteinSeq(): DONE for head.tail. summary. print. is. BUT WHY MAKE THE read. as. plot. VERSIONS? Dont know even if doing them makes sense - maybe we have to talk?
+# 6) Create functions to proteinSeq(): DONE for head.tail. summary. print. is. BUT WHY MAKE THE read. as. plot. VERSIONS? Dont know even if doing them makes sense - maybe we have to talk? /// I think the main function we have to do is as. the others are not so important.
 
 # 7) Check helps - JENN will list
 
