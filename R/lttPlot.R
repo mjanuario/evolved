@@ -75,12 +75,10 @@ lttPlot <- function(phy, lwd=1, col="red", PLOT = T, rel_time = F, add = F){
   }
   
   if (!add){
-    
-    ########################
-    # atencao, Jennifer: se possivel mantenhas os par etc pq meu orientaodr 
-    # gosta deles
-    ########################
-    
+
+    #saving par
+    opar = par(no.readonly = TRUE)
+        
     plot.new()
     par(mar=c(4,4,1,1))
     plot.window(xlim=c(0, xm), ylim=c(0,ym))
@@ -95,4 +93,5 @@ lttPlot <- function(phy, lwd=1, col="red", PLOT = T, rel_time = F, add = F){
   segments(x0=st, x1 = c(st[-1], age), y0 = ll, y1=ll, lwd=lwd, col=col)
   segments(x0=st[-1], x1 = st[-1], y0=ll[-length(ll)], y1=ll[-1], lwd=lwd, col=col)
   
+  par(opar)
 }

@@ -59,6 +59,7 @@ plotRawFossilOccs <- function(data, tax_lvl=NULL, sort=TRUE, use_midpoint=TRUE, 
   # end of checking inputs
   ############################################
   
+  opar = par(no.readonly = TRUE)
   
   title="Occurrence"
   
@@ -121,4 +122,5 @@ plotRawFossilOccs <- function(data, tax_lvl=NULL, sort=TRUE, use_midpoint=TRUE, 
     }
     return(data)
   }
+  par(opar)
 }

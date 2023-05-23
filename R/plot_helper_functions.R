@@ -1,8 +1,6 @@
 #' @import graphics
 NULL
 
-#old par restoration is resetting par default, not old par
-
 #' Plot WFDriftSim output
 #'
 #' @param p_through_time Matrix with nGens columns and nSim lines
@@ -15,7 +13,7 @@ NULL
 #' store_p = WFDriftSim(Ne = 5, nGens = 10, p0=.2, nSim=5, plot = "none", printData = TRUE)
 #' plotWFDrift(store_p, "static")
 plotWFDrift = function(p_through_time, plot_type = plot){
-  
+
   if(plot_type == "none")  {
     warning("plotWFDrift argument plot can only be \"static\" or \"animate\"")
     return(NULL)
@@ -27,8 +25,9 @@ plotWFDrift = function(p_through_time, plot_type = plot){
   cols=grDevices::rainbow(nSim)
   
   dev.new()
-  opar =  par(mar = (c(5, 4, 4, 0) + 0.1))
-  #defer(par(opar))
+  opar =  par(no.readonly = TRUE)
+  par(mar = (c(5, 4, 4, 0) + 0.1))
+
   layout(matrix(c(1,2), ncol = 2), widths=c(8, 2))
   
   plot(NA, xlim=c(0,nGens), ylim=c(0,1),
@@ -68,7 +67,7 @@ plotWFDrift = function(p_through_time, plot_type = plot){
     auxhist = hist(p_through_time[,nGens+1], breaks = seq(0,1, by=0.05), plot = FALSE)
     barplot(auxhist$counts, axes = TRUE, space = 0, horiz=TRUE, xlab= "Counts", ylab=NULL, border = NA, col = "black")
   }
-  par(mfrow = c(1,1), mar = c(5, 4, 4, 2) + 0.1)
+  par(opar)
 }
 
 ####################################
@@ -137,7 +136,7 @@ plotNatSel = function(gen_HW = gen_HW, p_t = p_t, w_t = w_t, t = t, W_gntp = c(w
   ######################
   #Plotting all panels##
   ######################
-  
+  opar = par(no.readonly = TRUE)
   dev.new()
   par(mfrow=c(2,2))
   
@@ -257,6 +256,6 @@ plotNatSel = function(gen_HW = gen_HW, p_t = p_t, w_t = w_t, t = t, W_gntp = c(w
     abline(h=c(1,0), lty=3, cex=0.55)
     mtext(text = c("A1A1", "A1A2", "A2A2"), side = 4, at = gen_HW[nrow(gen_HW),], col = c("black", "grey60", "grey80"), adj = 0, cex = 0.8)
   }
-  par(mfrow=c(1,1))
+  par(opar)
 }
 
