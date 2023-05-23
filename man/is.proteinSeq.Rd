@@ -2,15 +2,27 @@
 % Please edit documentation in R/proteinSeq.R
 \name{is.proteinSeq}
 \alias{is.proteinSeq}
+\alias{print.proteinSeq}
+\alias{summary.proteinSeq}
+\alias{head.proteinSeq}
+\alias{tail.proteinSeq}
 \title{Details, generics, and methods for the \code{proteinSeq} class}
 \usage{
 is.proteinSeq(x)
+
+\method{print}{proteinSeq}(x)
+
+\method{summary}{proteinSeq}(x)
+
+\method{head}{proteinSeq}(x, n = 6)
+
+\method{tail}{proteinSeq}(x, n = 6)
 }
 \arguments{
 \item{x}{an object of the class \code{proteinSeq}}
 }
 \description{
-The \code{proteinSeq} class is an input for the functions \code{countSeqDiffs} and \code{is.proteinSeq}. It consists of a character vector. Each entry in this vector represents the amino acid (the protein components coded by a gene) sequence, for a given alligned protein sequence. The object must be a character, named vector, with the names tipically corresponding to the species (name could be scientific or common name) from which every sequence came. The characters within the vector must correspond to valid amino acid symbols (i.e. capitalized letters or deltion "_" symbols).
+The \code{proteinSeq} class is an input for the functions \code{countSeqDiffs} and \code{is.proteinSeq}. It consists of a character vector. Each entry in this vector represents the aminoacid (the protein components coded by a gene) sequence, for a given aligned protein sequence. The object must be a character, named vector, with the names typically corresponding to the species (name could be scientific or common name) from which every sequence came. The characters within the vector must correspond to valid aminoacid symbols (i.e. capitalized letters or deltion "_" symbols).
 }
 \examples{
 

@@ -6,6 +6,8 @@
 #' 
 #' @author Daniel Rabosky, Matheus Januario, Jennifer Auler
 #' 
+#' @export is.proteinSeq 
+#' 
 #' @examples
 #' 
 #' data("cytOxidase")
@@ -41,6 +43,8 @@ is.proteinSeq=function(x){
   
 }
 
+#' @rdname is.proteinSeq
+#' @export print.proteinSeq
 print.proteinSeq=function(x){
   
   if (!is.proteinSeq(x)) {
@@ -50,10 +54,14 @@ print.proteinSeq=function(x){
   cat(paste0("\n", length(x), " amino acid sequences, each with length ", length(unlist(strsplit(x[1], "")))))
 }
 
+#' @rdname is.proteinSeq
+#' @export summary.proteinSeq
 summary.proteinSeq=function(x){
   print.proteinSeq(x)
 }
 
+#' @rdname is.proteinSeq
+#' @export head.proteinSeq
 head.proteinSeq=function(x, n=6){
   
   if (!is.proteinSeq(x)) {
@@ -73,6 +81,8 @@ head.proteinSeq=function(x, n=6){
   return(res)
 }
 
+#' @rdname is.proteinSeq
+#' @export tail.proteinSeq
 tail.proteinSeq=function(x, n=6){
   
   if (!is.proteinSeq(x)) {
