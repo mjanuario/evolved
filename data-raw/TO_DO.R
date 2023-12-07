@@ -1,6 +1,6 @@
 # TO DO LIST:
  
-# 1) make a description for the package. pasta principal > description - TWISTER did first version, let see what if dan bring s new input before sending this to "done"
+
 # 2) pick package name and run available::available()
 #    also check link below for additional naming advices
 browseURL("https://r-pkgs.org/Workflow101.html#naming") # - DAN
@@ -27,6 +27,7 @@ browseURL("https://r-pkgs.org/Workflow101.html#naming") # - DAN
 #DONE#
 #######
 
+# 1) make a description for the package. pasta principal > description - TWISTER did first version, let see what if dan bring s new input before sending this to "done"
 # 3) insert input check in all functions. - TWISTER
 # 4) restore old par() on exit of functions that plot. - JENN
 # 5) Use pkg::func instead of importFrom - JENN
