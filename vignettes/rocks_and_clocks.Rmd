@@ -1,0 +1,117 @@
+---
+title: "Clocks and Rocks"
+author: "Matheus Januario"
+date: "Dec/2023"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{population_genetics}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r}
+library(EvolPackage)
+```
+
+# The fossil record:
+
+Here we will use data on fossilized organism, which we call "fossil occurrences". the data was originally obtained from the Paleobiology database, a free-to-use resource that is the standard repository for such data and which has been used by hundreds or thousands of scientific research articles to study the history and dynamics of biodiversity in Deep Time.
+
+```{r}
+data("mammals_fossil")
+head(mammals_fossil)
+```
+
+Students can use functions in the package to calculate the diversity of a certain taxonomic rank, and plot it throught time. 
+
+To make it more fun, we will compare tow different taxoomic levels, and will plot them in a relative, log scale:
+
+```{r}
+spDTT = calcFossilDivTT(mammals_fossil, tax_lvl = "species")
+genusDTT = calcFossilDivTT(mammals_fossil, tax_lvl = "genus")
+famDTT = calcFossilDivTT(mammals_fossil, tax_lvl = "family")
+
+# And to allow comparisons, we will use relative richness:
+plot(x=genusDTT$age, xlim = rev(range(genusDTT$age)),
+     y=log(genusDTT$div)-log(max(genusDTT$div)), 
+     xlab="Time (Million years ago)",
+     ylab="Log relative diversity",
+     type="l", col="blue", ylim=c(-7,0))
+
+lines(x=famDTT$age,
+     y=log(famDTT$div)-log(max(famDTT$div)), 
+     col="red")
+
+lines(x=spDTT$age,
+     y=log(spDTT$div)-log(max(spDTT$div)), 
+     col="black")
+```
+
+But fossils are not the only way to explore the timescale of evolution. Below, we are going to show how some functions thta use this type of datat work.
+
+# Comparing moelcular patterns
+
+With other functions, students can also explore molecular sequences and compare species.
+
+First we load the dataset of protein sequences from the cytochrome oxidase 1 gene. This gene, often known as `CO1`, is a mitochondrial gene that plays a key role in cellular respiration (e.g., the primary aerobic pathway to energy ( ATP ) generation). `CO1` contains approximately 513 amino acids and has been used by previous studies for reconstructing phylogenetic trees and estimating divergence times between taxa by assuming a molecular clock:
+
+```{r}
+data(cytOxidase)
+
+summary(cytOxidase)
+
+head(cytOxidase)
+```
+
+We can compare two sequences in terms AA difference number. For instance if we want to compare a species of snake with one species of bird, we type:
+
+```{r}
+countSeqDiffs(cytOxidase, "snake", "bird")
+```
+
+And to calculate the proportion of differences, we type:
+
+```{r}
+countSeqDiffs(cytOxidase, "snake", "bird")/nchar(cytOxidase["snake"])
+```
+
+We can also quickly visualize the sequences by directly handling all elements in this object:
+
+```{r}
+# A species list:
+focal_spp = c("snake", "bird", "cnidaria")
+ids=match(names(cytOxidase), focal_spp)
+
+# a set of colors:
+cols= c("dodgerblue2", "#E31A1C", "green4",
+  "#6A3D9A", "#FF7F00", "black", "gold1",
+  "skyblue2", "#FB9A99", "palegreen2",
+  "#CAB2D6", "#FDBF6F", "gray70", "khaki2",
+  "maroon", "orchid1", "deeppink1", "blue1", "steelblue4",
+  "darkturquoise", "green1", "yellow4", "yellow3",
+  "darkorange4", "brown")
+
+# A list of amino acids:
+AAs = c("-", "R", "W", "I", "F", "S", "T", "N", "H", "K", "D", "G", "L", "Y", "V", "M", "A", "E", "P", "Q", "C", "X", "B")
+
+# ploting:
+plot(NA, xlim = c(-50,513), ylim = c(0.5,0.5+length(focal_spp)), yaxt="n",
+     frame.plot = F, xlab="Amino Acid sites", ylab="Species")
+text(x = rep(-40, times=length(focal_spp)),
+     1:length(focal_spp), labels = focal_spp)
+
+for(i in 1:length(focal_spp)){
+  chars = unlist(strsplit(cytOxidase[focal_spp[i]], ""))
+  
+  for(s in 1:513){
+    polygon(
+      x = c(s-0.5, s+0.5, s+0.5, s-0.5),
+      y = c(i-0.5, i-0.5, i+0.5, i+0.5),
+      col = cols[match(chars[s], AAs)], border = NA
+        )  
+  }
+}
+```
+
+And using patterns of molecular divergence, as well as fossil occurrences, we can build and, specially, date, molecular phylogenies.
+
