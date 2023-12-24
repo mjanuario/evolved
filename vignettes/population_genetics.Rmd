@@ -11,9 +11,9 @@ vignette: >
 
 # Hardy-Weinberg equilibrium
 
-The Hardy-Weinberg equilibrium (HWE) is a deterministic model for the maintenance of allele-level biodiversity. However, stochastic thinking is already well-stablished as an important aspect of studying evolutionary biology - and so there are clear advanatgaes in introducing this kind of thinking to students.
+The Hardy-Weinberg equilibrium (HWE) is a deterministic model for the maintenance of allele-level biodiversity. However, stochastic thinking is already well-established as an important aspect of studying evolutionary biology - and so there are clear advantages in introducing this kind of thinking to students.
 
-However, typical HWE equations or study material related to it do not address stochastic variation comming from finite numbers of individuals. The function `OneGenHWSim()` addresses this issue. With it, students can graph and explore stochasticity under HWE:
+However, typical HWE equations or study material related to it do not address stochastic variation coming from finite numbers of individuals. The function `OneGenHWSim()` addresses this issue. With it, students can graph and explore stochasticity under HWE:
 
 ```{r}
 nsims = 1000
@@ -44,7 +44,7 @@ drifting = WFDriftSim(Ne = 10, nGens = 100, p0 = .5, nSim = 1000, printData = T,
 head(drifting)
 ```
 
-The argument `printData = T` creates and object that can also be handled as it was "data", as so students can use it to calculate drift processes, for instance, the amount of time needed until fixation:
+The argument `printData = T` creates an object that can also be handled as it was "data", so students can use it to calculate drift processes, for instance, the amount of time needed until fixation:
 
 ```{r}
 fixchecker <- function(x){
@@ -62,19 +62,19 @@ Or other types of manipulations or measurements.
 
 # Natural selection
 
-Just like the prefiously mentioned functions, `NatSelSim()` can generate objects that can be handled by students as if they were "data". 
+Just like the previously mentioned functions, `NatSelSim()` can generate objects that can be handled by students as if they were "data". 
 
 ```{r}
 selected = NatSelSim(w11 = .2, w12 = .3, w22 = .1,
             NGen = 20, printData = T)
 ```
 
-Note that by default the function provides 4 animated plots, but this can be changed using the argument `plot_type` (see function hep for details).
+Note that by default the function provides 4 animated plots, but this can be changed using the argument `plot_type` (see function help for details).
 
 Now, we can ask: Assuming we simulated the dynamics for enough time, which genotype in the simulation above reached its equilibrium frequency faster?
 
 ```{r}
-# a numeric tolerance to accept some frequcny as close enough to equilibrium
+# a numeric tolerance to accept some frequency as close enough to equilibrium
 tol = 0.0001 
 
 aux = abs(apply(selected, 2, diff))
@@ -83,7 +83,7 @@ aux = abs(apply(selected, 2, diff))
 apply(aux>tol, 2, which.min)
 ```
 
-Students can manipulate the objects freely, and thus educators can alow them to use simulations to explore relevant scenarios in an investigative manner (see types of inquiries in Banchi & Bell, 2008)
+Students can manipulate the objects freely, and thus educators can allow them to use simulations to explore relevant scenarios in an investigative manner (see types of inquiries in Banchi & Bell, 2008)
 
 # References:
 
