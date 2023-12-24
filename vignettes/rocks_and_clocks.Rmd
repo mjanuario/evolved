@@ -47,6 +47,33 @@ lines(x=spDTT$age,
      col="black")
 ```
 
+We can also visualize fossil records by running:
+
+```{r}
+# Family-level:
+plotRawFossilOccs(mammals_fossil, tax_lvl = "family")
+
+# Genus level:
+plotRawFossilOccs(mammals_fossil, tax_lvl = "genus")
+
+# Species level:
+plotRawFossilOccs(mammals_fossil, tax_lvl = "species")
+```
+
+Are they different? hwo could we test? Hint: look at the column names of the fossil object:
+
+```{r}
+colnames(mammals_fossil)
+```
+
+Results fomr this dataset can also be compared wht other fossil records:
+
+```{r}
+data("trilob_fossil")
+data("ammonoidea_fossil")
+data("dinos_fossil")
+```
+
 But fossils are not the only way to explore the timescale of evolution. Below, we are going to show how some functions thta use this type of datat work.
 
 # Comparing moelcular patterns
