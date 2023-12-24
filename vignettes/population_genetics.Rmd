@@ -9,6 +9,10 @@ vignette: >
   %\VignetteEncoding{UTF-8}
 ---
 
+```{r}
+library(EvolPackage)
+```
+
 # Hardy-Weinberg equilibrium
 
 The Hardy-Weinberg equilibrium (HWE) is a deterministic model for the maintenance of allele-level biodiversity. However, stochastic thinking is already well-established as an important aspect of studying evolutionary biology - and so there are clear advantages in introducing this kind of thinking to students.
