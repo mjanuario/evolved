@@ -2,7 +2,7 @@ Package: EvolPackage
 Title: Simple Simulation and Data Analysis Code to Teach Evolutionary Processes and Macroevolution
 Version: 0.0.0.5000
 Authors@R: 
-    c(person("Matheus", "Januario", email="januarioml.eco@gmail.com", role = c("aut"),
+    c(person("Matheus", "Januario", email="januarioml.eco@gmail.com", role = c("aut", "cph"),
            comment = c(ORCID = "0000-0002-6480-7095")),
       person("Jennifer", "Auler", email="auler.jennifer@gmail.com", role = c("aut", "cre"),
            comment = c(ORCID = "0000-0001-7576-9058")),
