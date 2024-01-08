@@ -89,6 +89,21 @@ OneGenHWSim <- function(nInd=50, p=0.5, nSim=100){
     #tabulating genotypes:
     tab_genRdmDraw <- table(genotype_random_draw)
     
+    # in case one  genotype is not sampled:
+    if(sum(names(tab_genRdmDraw) %in% genotypes)<3){
+      
+      #find which is missing
+      missing_gntp <- genotypes[!genotypes %in% names(tab_genRdmDraw)]
+      
+      # create aux vector with zeros:
+      fixer <- rep(0, times=length(missing_gntp))
+      names(fixer)= missing_gntp
+      
+      #mix it with previous sampling result
+      tab_genRdmDraw <- c(tab_genRdmDraw, fixer)
+    }
+    
+    #append sampling results to resulting dataset:
     res <- rbind(res, tab_genRdmDraw)  
   }
   ########################
