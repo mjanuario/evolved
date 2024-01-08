@@ -4,7 +4,7 @@ author: "Matheus Januario"
 date: "Dec/2023"
 output: rmarkdown::html_vignette
 vignette: >
-  %\VignetteIndexEntry{population_genetics}
+  %\VignetteIndexEntry{Clocks_and_Rocks}
   %\VignetteEngine{knitr::rmarkdown}
   %\VignetteEncoding{UTF-8}
 ---
@@ -22,9 +22,9 @@ data("mammals_fossil")
 head(mammals_fossil)
 ```
 
-Students can use functions in the package to calculate the diversity of a certain taxonomic rank, and plot it throught time. 
+Students can use functions in the package to calculate the diversity of a certain taxonomic rank, and plot it through time. 
 
-To make it more fun, we will compare tow different taxoomic levels, and will plot them in a relative, log scale:
+To make it more fun, we will compare tow different taxonomic levels, and will plot them in a relative, log scale:
 
 ```{r}
 spDTT = calcFossilDivTT(mammals_fossil, tax_lvl = "species")
@@ -47,6 +47,7 @@ lines(x=spDTT$age,
      col="black")
 ```
 
+<<<<<<< HEAD
 We can also visualize fossil records by running:
 
 ```{r}
@@ -112,13 +113,13 @@ for(i in 1:length(clades)){
 
 Students can explore this other dataset, and compare it with the previously dicussed ones. They can compare richness thourhg time, calculate statistics related to richness change. Explore factors (e.g. mass extinction) thta might have affected some clades, amongst other learning problems.
 
-But fossils are not the only way to explore the timescale of evolution. Below, we are going to show how some functions thta use this type of datat work.
+But fossils are not the only way to explore the timescale of evolution. Below, we are going to show how some functions that use this type of data work.
 
-# Comparing moelcular patterns
+# Comparing molecular patterns
 
 With other functions, students can also explore molecular sequences and compare species.
 
-First we load the dataset of protein sequences from the cytochrome oxidase 1 gene. This gene, often known as `CO1`, is a mitochondrial gene that plays a key role in cellular respiration (e.g., the primary aerobic pathway to energy ( ATP ) generation). `CO1` contains approximately 513 amino acids and has been used by previous studies for reconstructing phylogenetic trees and estimating divergence times between taxa by assuming a molecular clock:
+First we load the dataset of protein sequences from the cytochrome oxidase 1 gene. This gene, often known as `CO1`, is a mitochondrial gene that plays a key role in cellular respiration (e.g., the primary aerobic pathway to energy ( ATP ) generation). `CO1` contains approximately 513 aminoacids (AA) and has been used by previous studies for reconstructing phylogenetic trees and estimating divergence times between taxa by assuming a molecular clock:
 
 ```{r}
 data(cytOxidase)
