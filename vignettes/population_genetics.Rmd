@@ -19,7 +19,7 @@ The Hardy-Weinberg equilibrium (HWE) is a deterministic model for the maintenanc
 
 However, typical HWE equations or study material related to it do not address stochastic variation coming from finite numbers of individuals. The function `OneGenHWSim()` addresses this issue. With it, students can graph and explore stochasticity under HWE:
 
-```{r}
+```{r warning=FALSE}
 nsims = 1000
 sims <- OneGenHWSim(nInd = 57, p = .2, nSim = nsims)
 
