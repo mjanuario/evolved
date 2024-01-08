@@ -51,7 +51,7 @@
 #' CO1 (“see-oh-one”),  plays a key role in cellular respiration. C01 contains 
 #' approximately 513 aminoacids and has been used by previous studies for 
 #' reconstructing phylogenetic trees and estimating divergence times in 
-#' Metazoaria by assuming a molecular clock. Its 5′ partition is used for the 
+#' Metazoaria by assuming a molecular clock. Its 5' partition is used for the 
 #' ‘Barcoding of Life’ initiative, for instance. 
 #' 
 #' @details The object of class "ProteinSeq" is structured as a named 
