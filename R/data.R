@@ -67,7 +67,7 @@
 #' }
 #' 
 #' @source This sequence was originally downloaded from genebank and later 
-#' curated by Daniel Rabosky.
+#' curated and aligned by Daniel Rabosky.
 "cytOxidase"
 
 #########################################################
