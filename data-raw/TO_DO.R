@@ -20,6 +20,7 @@ browseURL("https://r-pkgs.org/Workflow101.html#naming") # - DAN
 # - countSeqDiffs - no need
 # - cytOxidase - OK
 
+
 # 3) create a readme
 
 # 4) TO DO for cran release:
@@ -30,6 +31,7 @@ browseURL("https://r-pkgs.org/Workflow101.html#naming") # - DAN
 # Check licensing of included files
 # Review https://github.com/DavisVaughan/extrachecks 
  
+
 #5) plot cytOxidase
 
 #DONE#
