@@ -34,8 +34,8 @@ NULL
 #' 
 #' @examples
 #' 
-#' #using the default values (w11=1, w12=1, w22=0.9, p0=0.5, NGen=10):
-#' NatSelSim()
+#' #using the default values (w11=1, w12=1, w22=0.9, p0=0.5, NGen=10)
+#' \dontrun{NatSelSim()}
 #' 
 #' # Continuing a simulation for extra time:
 #' # Run the first simulation
@@ -45,7 +45,7 @@ NULL
 #' new_p0 <- (sim1$AA[nrow(sim1)] + sim1$Aa[nrow(sim1)]*1/2) 
 #' # and use as p0 for a second one:
 #' 
-#' NatSelSim(w11 = .4, w12 = .5, w22 = .4, p0 = new_p0, NGen = 20)
+#' NatSelSim(w11 = .4, w12 = .5, w22 = .4, p0 = new_p0, NGen = 10, plot_type = "static")
 #' 
 #' 
 NatSelSim <- function(w11=1, w12=1, w22=0.9, p0=0.5, NGen=10, plot_type = "animateall", printData=FALSE){
