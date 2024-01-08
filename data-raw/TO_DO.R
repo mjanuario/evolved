@@ -3,8 +3,9 @@
 # 1) pick package name and run available::available()
 #    also check link below for additional naming advices
 browseURL("https://r-pkgs.org/Workflow101.html#naming") # - DAN
+#evolEd
 
-# 7) List of things to do in helps
+# 2) List of things to do in helps
 
 ### ammonoidea_fossil; mammals_fossil; dinos_fossil; trilob_fossil - do we know which coord system is used in lng and lat?
 ### NatSelSim - explain what are the plot pannels. Add references
@@ -16,29 +17,20 @@ browseURL("https://r-pkgs.org/Workflow101.html#naming") # - DAN
 # Functions lacking references:
 # - NatSelSim
 # - estimateSpeciation
-# - countSeqDiffs
-# - cytOxidase
+# - countSeqDiffs - no need
+# - cytOxidase - OK
 
-#8) create a readme
+# 3) create a readme
 
-# 9) TO DO for cran release:
+# 4) TO DO for cran release:
 # usethis::use_news_md()
 # usethis::use_cran_comments()
 # Update (aspirational) install instructions in README
-# Proofread Title: and Description:
 # Check that all exported functions have @returns and @examples
-# Check that Authors@R: includes a copyright holder (role ‘cph’)
 # Check licensing of included files
 # Review https://github.com/DavisVaughan/extrachecks 
  
-# 10) delete r_raw
-
-#11) checking PDF version of manual ... [11s] WARNING
-# LaTeX errors when creating PDF version.
-# This typically indicates Rd problems.
-# LaTeX errors found:
-#   ! LaTeX Error: Unicode character ′ (U+2032)
-# not set up for use with LaTeX.
+#5) plot cytOxidase
 
 #DONE#
 #######
@@ -55,3 +47,4 @@ browseURL("https://r-pkgs.org/Workflow101.html#naming") # - DAN
 # paisagem adaptativa https://curso-genevol.shinyapps.io/superficie-adaptativa/
 # aminoacid aligment graphic. eg: https://www.researchgate.net/publication/335267481/figure/fig1/AS:793957495734277@1566305626899/Multiple-sequence-alignment-of-the-conserved-Dof-domains-of-24-DzDofs-A-Sequence.jpg
 # 6) Create functions to proteinSeq(): DONE for head.tail. summary. print. is. BUT WHY MAKE THE read. as. plot. VERSIONS? Dont know even if doing them makes sense - maybe we have to talk? /// I think the main function we have to do is as. the others are not so important.
+# 10) delete r_raw
