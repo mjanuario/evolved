@@ -56,7 +56,8 @@ and values are re-normalized.
 
 # Continuing a simulation for extra time:
 # Run the first simulation
-sim1=NatSelSim(w11 = .4, w12 = .5, w22 = .4, p0 = 0.35, NGen = 5, plot_type = "static", printData = TRUE)
+sim1=NatSelSim(w11 = .4, w12 = .5, w22 = .4, p0 = 0.35, 
+NGen = 5, plot_type = "static", printData = TRUE)
 
 # Then take the allelic frequency form the first sim:
 new_p0 <- (sim1$AA[nrow(sim1)] + sim1$Aa[nrow(sim1)]*1/2) 
