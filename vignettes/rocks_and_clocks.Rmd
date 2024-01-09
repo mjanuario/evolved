@@ -144,39 +144,7 @@ countSeqDiffs(cytOxidase, "snake", "bird")/nchar(cytOxidase["snake"])
 We can also quickly visualize the sequences by directly handling all elements in this object:
 
 ```{r}
-# A species list:
-focal_spp = c("snake", "bird", "cnidaria")
-ids=match(names(cytOxidase), focal_spp)
-
-# a set of colors:
-cols= c("dodgerblue2", "#E31A1C", "green4",
-  "#6A3D9A", "#FF7F00", "black", "gold1",
-  "skyblue2", "#FB9A99", "palegreen2",
-  "#CAB2D6", "#FDBF6F", "gray70", "khaki2",
-  "maroon", "orchid1", "deeppink1", "blue1", "steelblue4",
-  "darkturquoise", "green1", "yellow4", "yellow3",
-  "darkorange4", "brown")
-
-# A list of amino acids:
-AAs = c("-", "R", "W", "I", "F", "S", "T", "N", "H", "K", "D", "G", "L", "Y", "V", "M", "A", "E", "P", "Q", "C", "X", "B")
-
-# ploting:
-plot(NA, xlim = c(-50,513), ylim = c(0.5,0.5+length(focal_spp)), yaxt="n",
-     frame.plot = F, xlab="Amino Acid sites", ylab="Species")
-text(x = rep(-40, times=length(focal_spp)),
-     1:length(focal_spp), labels = focal_spp)
-
-for(i in 1:length(focal_spp)){
-  chars = unlist(strsplit(cytOxidase[focal_spp[i]], ""))
-  
-  for(s in 1:513){
-    polygon(
-      x = c(s-0.5, s+0.5, s+0.5, s-0.5),
-      y = c(i-0.5, i-0.5, i+0.5, i+0.5),
-      col = cols[match(chars[s], AAs)], border = NA
-        )  
-  }
-}
+plotProteinSeq(cytOxidase, c("snake", "bird", "cnidaria"))
 ```
 
 And using patterns of molecular divergence, as well as fossil occurrences, we can build and, specially, date, molecular phylogenies.
