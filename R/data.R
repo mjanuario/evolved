@@ -66,8 +66,8 @@
 #'   \item{sequence}{Aminoacid sequence of length 513}
 #' }
 #' 
-#' @source This sequence was originally downloaded from genebank and later 
-#' curated and aligned by Daniel Rabosky.
+#' @source Amino acid sequences were originally downloaded from genebank and later 
+#' curated and aligned by Daniel L. Rabosky.
 "cytOxidase"
 
 #########################################################
@@ -117,8 +117,8 @@
 #'   \item{max_ma}{Occurrence's oldest time boundary in million years}
 #'   \item{min_ma}{Occurrence's newest time boundary in million years}
 #'   \item{midpoint}{Midpoint between max_ma and min_ma}
-#'   \item{lng}{Longitude of place where occurrence was found}
-#'   \item{lat}{Latitude of place where occurrence was found}
+#'   \item{lng}{Longitude of place where occurrence was found. Follows decimal degree format.}
+#'   \item{lat}{Latitude of place where occurrence was found. Follows decimal degree format.}
 #' }
 #' 
 #' @source The Paleobiology Database (downloaded on 2022-03-11)
@@ -145,8 +145,8 @@
 #'   \item{max_ma}{Occurrence's oldest time boundary in million years}
 #'   \item{min_ma}{Occurrence's newest time boundary in million years}
 #'   \item{midpoint}{Midpoint between max_ma and min_ma}
-#'   \item{lng}{Longitude of place where occurrence was found}
-#'   \item{lat}{Latitude of place where occurrence was found}
+#'   \item{lng}{Longitude of place where occurrence was found. Follows decimal degree format.}
+#'   \item{lat}{Latitude of place where occurrence was found. Follows decimal degree format.}
 #' }
 #' @source The Paleobiology Database (downloaded on 2022-03-11)
 #' Data URL: "http://paleobiodb.org/data1.2/occs/list.csv?datainfo&rowcount&base_name=Mammalia&show=full,classext,genus,subgenus,acconly,ident,img,etbasis,strat,lith,env,timebins,timecompare,resgroup,ref,ent,entname,crmod"
@@ -170,8 +170,8 @@
 #'   \item{max_ma}{Occurrence's oldest time boundary in million years}
 #'   \item{min_ma}{Occurrence's newest time boundary in million years}
 #'   \item{midpoint}{Midpoint between max_ma and min_ma}
-#'   \item{lng}{Longitude of place where occurrence was found}
-#'   \item{lat}{Latitude of place where occurrence was found}
+#'   \item{lng}{Longitude of place where occurrence was found. Follows decimal degree format.}
+#'   \item{lat}{Latitude of place where occurrence was found. Follows decimal degree format.}
 #' }
 #' @source The Paleobiology Database (downloaded on 2022-03-11)
 #' Data URL: "http://paleobiodb.org/data1.2/occs/list.csv?datainfo&rowcount&base_name=Dinosauria&show=full,classext,genus,subgenus,acconly,ident,img,etbasis,strat,lith,env,timebins,timecompare,resgroup,ref,ent,entname,crmod"
@@ -198,8 +198,8 @@
 #'   \item{max_ma}{Occurrence's oldest time boundary in million years}
 #'   \item{min_ma}{Occurrence's newest time boundary in million years}
 #'   \item{midpoint}{Midpoint between max_ma and min_ma}
-#'   \item{lng}{Longitude of place where occurrence was found}
-#'   \item{lat}{Latitude of place where occurrence was found}
+#'   \item{lng}{Longitude of place where occurrence was found. Follows decimal degree format.}
+#'   \item{lat}{Latitude of place where occurrence was found. Follows decimal degree format.}
 #' }
 #' @source The Paleobiology Database (downloaded on 2022-03-11)
 #' Data URL: "http://paleobiodb.org/data1.2/occs/list.csv?datainfo&rowcount&base_name=Trilobita&show=full,classext,genus,subgenus,acconly,ident,img,etbasis,strat,lith,env,timebins,timecompare,resgroup,ref,ent,entname,crmod"
