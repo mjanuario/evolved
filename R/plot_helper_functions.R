@@ -85,7 +85,8 @@ plotWFDrift = function(p_through_time, plot_type = plot){
 #' The default, "animateall", animate all possible panels. 
 #' Other options are "static", "animate1", "animate3", or "animate4".
 #'
-#' @return Plot of NatSelSim's output
+#' @return Plot of NatSelSim's output (see \code{NatSelSim}'s help page for 
+#' details).
 #' @export plotNatSel
 plotNatSel = function(gen_HW = gen_HW, p_t = p_t, w_t = w_t, t = t, W_gntp = c(w11, w12, w22), plot_type = "animateall"){
   
