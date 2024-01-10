@@ -43,7 +43,7 @@ Plots a pile of the max-min temporal ranges of the chosen
 \code{tax_lvl}. This usually will be stratigraphic ranges for occurrences
 (so there is no attempt to estimate "true" ranges), and if
 \code{tax_lvl = NULL} (the default), occurrences are drawn as ranges of
-stratigraphic resolution (= the fosisl dating imprecision). If
+stratigraphic resolution (= the fossil dating imprecision). If
 \code{return_ranges = TRUE}, it returns a \code{data.frame} containing the
 diversity (column \code{div}) of the chosen taxonomic level, through time.
 }

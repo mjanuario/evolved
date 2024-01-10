@@ -33,7 +33,7 @@ NULL
 #'   28(11), 1536-1537.
 #'   
 #'  FitzJohn, R. G. (2010). Analysing diversification with diversitree. 
-#'   R Packag. ver, 9-2.
+#'   R Package. ver, 9-2.
 #'   
 #'  FitzJohn, R. G. (2012). Diversitree: comparative phylogenetic analyses of 
 #'  diversification in R. Methods in Ecology and Evolution, 3(6), 1084-1092.

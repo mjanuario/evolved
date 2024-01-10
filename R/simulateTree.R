@@ -2,7 +2,7 @@
 #'
 #' \code{simulateTree} uses a birth-death process to simulate a phylogenetic 
 #' tree, following the format of \code{ape} package's \code{phylo} object. The 
-#' function is basically a wraper for the \code{diversitree}'s \code{tree.bd} 
+#' function is basically a wrapper for the \code{diversitree}'s \code{tree.bd} 
 #' function.
 #'
 #' @param pars \code{numeric} vector with the simulation parameters: speciation 

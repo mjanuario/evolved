@@ -3,12 +3,12 @@
 \docType{data}
 \name{timeseries_fossil}
 \alias{timeseries_fossil}
-\title{Fossil timeseries}
+\title{Fossil Time series}
 \format{
 A \code{data.frame} with 598 rows and 6 columns.
 \describe{
-\item{clade}{Timeseries clade}
-\item{source}{Primary source of the timeseries}
+\item{clade}{Time series clade}
+\item{source}{Primary source of the Time series}
 \item{stem_age}{Stem age of clade}
 \item{rel_time}{Geological relative time (in Million years ago relative to present)}
 \item{time_ma}{Geological time in million years since clade stem age}
@@ -33,7 +33,7 @@ biv = Bivalvia (Mollusca);
 bryo = Bryozoa (Lophotrochozoa, Ectoprocta);
 ceph = Cephalopoda (Mollusca);
 chon = Chondrocytes (Chordata);
-crin = Crinoidae (Echinodermata);
+crin = Crinoidea (Echinodermata);
 dinosauria = Dinosauria (Chordata);
 ech = Echinoidea (Echinodermata);
 foram = Foraminifera (Retaria);

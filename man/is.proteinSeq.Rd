@@ -24,7 +24,7 @@ is.proteinSeq(x)
 \item{n}{number of aminoacids to be shown}
 }
 \description{
-The \code{proteinSeq} class is an input for the functions \code{countSeqDiffs} and \code{is.proteinSeq}. It consists of a character vector. Each entry in this vector represents the aminoacid (the protein components coded by a gene) sequence, for a given aligned protein sequence. The object must be a character, named vector, with the names typically corresponding to the species (name could be scientific or common name) from which every sequence came. The characters within the vector must correspond to valid aminoacid symbols (i.e. capitalized letters or deltion "_" symbols).
+The \code{proteinSeq} class is an input for the functions \code{countSeqDiffs} and \code{is.proteinSeq}. It consists of a character vector. Each entry in this vector represents the aminoacid (the protein components coded by a gene) sequence, for a given aligned protein sequence. The object must be a character, named vector, with the names typically corresponding to the species (name could be scientific or common name) from which every sequence came. The characters within the vector must correspond to valid aminoacid symbols (i.e. capitalized letters or deletion "_" symbols).
 }
 \examples{
 

@@ -19,7 +19,7 @@ NULL
 #'  This must refer to the column names in \code{data}.
 #' @param bin_reso A \code{numeric} assigning the resolution (length) of the 
 #' time bin to consider in calculations. Default value is \code{1} (which in 
-#' most cases - e.g. those following the paleoBiology Database default 
+#' most cases - e.g. those following the Paleobiology Database default 
 #' timescale - will equate to one million years)
 #' 
 #' @return A \code{data.frame} containing the diversity (column \code{div}) of 

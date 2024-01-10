@@ -52,7 +52,7 @@ To figure this out students can use the pure-birth (="Yule") model, which predic
 whalerate = estimateSpeciation(whale_phylo)
 ```
 
-Because we know whale originated ~36 million years ago, we can simulate many alternative diversification scenarios, following the parameters we eestimated:
+Because we know whale originated ~36 million years ago, we can simulate many alternative diversification scenarios, following the parameters we estimated:
 
 ```{r}
 sims=vector()
@@ -80,7 +80,7 @@ for(i in 1:100){
 ape::ltt.lines(whale_phylo, col="black")
 ```
 
-So the empirical phylogeny is very different fomr the simulated. What hypotheses can students make to explain this discrepancy?
+So the empirical phylogeny is very different from the simulated. What hypotheses can students make to explain this discrepancy?
 
 Maybe is because the Yule model is too simplistic (i.e., model has no extinction at all)? We can test this, for instance by replacing the `estimateSpeciation()` function by the`fitCRBD()`, and then re-do our simulations, with an extra layer of complexity.
 

@@ -15,7 +15,7 @@ plotPaintedWhales(show.legend = TRUE, direction = "rightwards", ...)
 \item{...}{other arguments to be passed to \code{phytools::plotSimmap}}
 }
 \value{
-The whale phylogeny, with brnanch lengths being colored by a major
+The whale phylogeny, with branch lengths being colored by a major
 whale taxonomic group.
 }
 \description{
