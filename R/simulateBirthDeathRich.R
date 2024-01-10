@@ -1,12 +1,12 @@
 #' @importFrom stats runif
 #' @importFrom stats rgeom
 NULL
-#' Simulating diversity through birth-death processes
+#' Simulating richness through birth-death processes
 #'
 #' \code{simulateBirthDeathRich} calculates the number of species at a certain 
 #' point in time, following a birth-death process.
 #'
-#' @param t Point in time which diversity will be simulated.
+#' @param t Point in time which richness will be simulated.
 #' @param S A numeric representing the per-capita speciation rate (in number 
 #' of events per lineage per million years). Must be larger than \code{E}.
 #' @param E A numeric representing the per-capita extinction rate (in number 
@@ -20,9 +20,7 @@ NULL
 #' @details The function only accepts as inputs \code{S} and \code{E}, or
 #'  \code{K} and \code{R}.
 #'  
-#' @return A \code{data.frame} containing the diversity (column \code{div}) of 
-#' the chosen taxonomic level, through time - with time moments being a 
-#' sequence of arbitrary numbers based on \code{bin_reso}.
+#' @return The number of simulated species (i.e., the richness).
 #' 
 #' @export simulateBirthDeathRich
 #' 
@@ -73,7 +71,7 @@ simulateBirthDeathRich=function(t, S=NULL, E=NULL, K=NULL, R=NULL){
     E=S-R  
   }
   
-  #only calculates diversity if R is positive:
+  #only calculates richness if R is positive:
   if(!S>E){
     stop("\"S\" has to be larger than \"E\" (or, \"R\" has to be positive")
   }

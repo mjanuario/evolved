@@ -12,6 +12,8 @@ NULL
 #' 
 #' @export estimateSpeciation
 #' 
+#' @references Yule G.U. 1925. A mathematical theory of evolution, based on the conclusions of Dr. JC Willis, FRS. Philosophical Transactions of the Royal Society of London. Series B, Containing Papers of a Biological Character. 213:21–87.
+#' 
 #' @author Daniel Rabosky, Matheus Januario, Jennifer Auler
 #' 
 #' @examples

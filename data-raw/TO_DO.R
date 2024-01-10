@@ -7,17 +7,10 @@ browseURL("https://r-pkgs.org/Workflow101.html#naming") # - DAN
 
 # 2) List of things to do in helps
 
-### ammonoidea_fossil; mammals_fossil; dinos_fossil; trilob_fossil - do we know which coord system is used in lng and lat?
-### NatSelSim - explain what are the plot pannels. Add references
-### lltPlot - argument description of "rel_time" seams counter intuitive. Default should de TRUE; explain what is plotted, I didn't understand what is the red line.
-### plotRawFossilOccs uses calcFossilDivTT machinary? If so, is more explict to use the function directly, and also gives flexibility towards the method. But, if we choose to not change the code, we should fix the return session, as there is no bin_reso argument.
-### simulateBirthDeathRich is the used name to function, but we reffer to it as diversity, and the file name is simulateBirthDeath. Could this function be vectorized? Also fix return session.
 ### general note: check if all plot funtions describe what is plotted
 
 # Functions lacking references:
 # - NatSelSim
-# - estimateSpeciation
-# - countSeqDiffs - no need
 # - cytOxidase - OK
 
 
@@ -31,9 +24,6 @@ browseURL("https://r-pkgs.org/Workflow101.html#naming") # - DAN
 # Check licensing of included files
 # Review https://github.com/DavisVaughan/extrachecks 
  
-
-#5) plot cytOxidase
-
 #DONE#
 #######
 
