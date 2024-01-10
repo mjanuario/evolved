@@ -100,7 +100,7 @@ head(timeseries_fossil)
 
 It contains many fossil datasets:
 
-```{r}
+```{r eval=FALSE, include=TRUE}
 clades = unique(timeseries_fossil$clade)
 par(mfrow=c(5,3))
 for(i in 1:length(clades)){
