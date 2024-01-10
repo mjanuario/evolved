@@ -18,8 +18,8 @@ A \code{data.frame} containing 15527 rows and 13 columns
 \item{max_ma}{Occurrence's oldest time boundary in million years}
 \item{min_ma}{Occurrence's newest time boundary in million years}
 \item{midpoint}{Midpoint between max_ma and min_ma}
-\item{lng}{Longitude of place where occurrence was found}
-\item{lat}{Latitude of place where occurrence was found}
+\item{lng}{Longitude of place where occurrence was found. Follows decimal degree format.}
+\item{lat}{Latitude of place where occurrence was found. Follows decimal degree format.}
 }
 }
 \source{

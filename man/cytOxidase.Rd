@@ -13,8 +13,8 @@ a different animal species
 }
 }
 \source{
-This sequence was originally downloaded from genebank and later
-curated and aligned by Daniel Rabosky.
+Amino acid sequences were originally downloaded from genebank and later
+curated and aligned by Daniel L. Rabosky.
 }
 \usage{
 cytOxidase

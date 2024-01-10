@@ -30,7 +30,8 @@ The default, "animateall", animate all possible panels.
 Other options are "static", "animate1", "animate3", or "animate4".}
 }
 \value{
-Plot of NatSelSim's output
+Plot of NatSelSim's output (see \code{NatSelSim}'s help page for
+details).
 }
 \description{
 Plot NatSelSim output

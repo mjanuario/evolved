@@ -4,7 +4,7 @@
 \alias{lttPlot}
 \title{Make a lineage through time (LTT) plot}
 \usage{
-lttPlot(phy, lwd = 1, col = "red", PLOT = T, rel_time = F, add = F)
+lttPlot(phy, lwd = 1, col = "red", plot = T, rel_time = F, add = F)
 }
 \arguments{
 \item{phy}{A \code{phylo} object, as specified by the \code{ape} package.}
@@ -13,19 +13,21 @@ lttPlot(phy, lwd = 1, col = "red", PLOT = T, rel_time = F, add = F)
 
 \item{col}{Line color.}
 
-\item{PLOT}{A \code{logical} indicating with calculations should be plotted.
+\item{plot}{A \code{logical} indicating with calculations should be plotted.
 If \code{FALSE}, function returns a list of the calculated points.}
 
-\item{rel_time}{A \code{logical} indicating if time should be calculated in
-absolute scale. If \code{FALSE} (default), plots relative time since \code{phy}'s
-crown age.}
+\item{rel_time}{A \code{logical} indicating how the time scale should be
+shown. If \code{FALSE} (default), plots the absolute time since \code{phy}'s
+crown age. If  \code{TRUE}, plots time as a relative proportion between
+crown age and furthest tip from root.}
 
 \item{add}{A \code{logical} indicating if plot should be added to
 pre-existing plot. Default is \code{FALSE}.}
 }
 \value{
-If \code{PLOT = FALSE}, a list the richness of each point in time,
-and \code{phy}'s crown age.
+Plots the sum of alive lineages per point in time, and adds a red
+line as a reference of expectation under pure birth. If \code{plot = FALSE},
+a list the richness of each point in time, and \code{phy}'s crown age.
 }
 \description{
 \code{lttPlot} plots the lineage through time (LTT) of a \code{phylo} object.
@@ -38,7 +40,7 @@ E <- 0
 set.seed(1)
 phy <- simulateTree(pars = c(S, E), max.taxa = 20, max.t = 5)
 lttPlot(phy)
-lttPlot(phy, PLOT = FALSE)
+lttPlot(phy, plot = FALSE)
 
 }
 \references{

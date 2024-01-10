@@ -30,15 +30,24 @@ A2's initial allelic frequency is \code{1-p0}.}
 \item{NGen}{Number of generation that will be simulated.}
 
 \item{plot_type}{String indicating if plot should be animated.
-The default, "animateall", animate all possible panels.
-Other options are "static", "animate1", "animate3", or "animate4".}
+The default, "animateall" animate all possible panels.
+Other options are "static" (no animation), "animate1", "animate3", or
+"animate4". Users can animate each panel individually (using
+\code{plot_type = "animateX"}, with X being the panel which one wants to
+animate (so options are  "animate1",  "animate3",  and "animate4"
+(see return for more info).}
 
-\item{printData}{Logical indicating whether all simulation results should be
-returned as a \code{data.frame}. Default value is \code{FALSE}.}
+\item{printData}{Logical indicating whether all
+simulation results should be returned as a \code{data.frame}. Default value
+is \code{FALSE}.}
 }
 \value{
-A \code{data.frame} containing the number of individuals for each
-genotype.
+If \code{printData = TRUE}, it returns a \code{data.frame}
+containing the number of individuals for each genotype through time. The
+plots done by the function shows (1) Allele frequency change through time.
+(2) The adaptive landscape (which remains static during the whole simulation,
+so can't be animated), (3) Time series of mean population fitness,
+and (4) Time series of genotypic population frequencies.
 }
 \description{
 \code{NatSelSim} simulates natural selection in a bi-allelic gene through
