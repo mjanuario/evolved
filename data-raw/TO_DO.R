@@ -7,7 +7,7 @@ browseURL("https://r-pkgs.org/Workflow101.html#naming") # - DAN
 
 # 2) List of things to do in helps
 
-### general note: check if all plot funtions describe what is plotted
+### general note: check if all plot functions describe what is plotted
 
 # Functions lacking references:
 # - NatSelSim
@@ -24,19 +24,8 @@ browseURL("https://r-pkgs.org/Workflow101.html#naming") # - DAN
 # Check licensing of included files
 # Review https://github.com/DavisVaughan/extrachecks 
  
+# 5) fix error "figure margins are too large" in clocks and rocks vignette. I've 
+# silenced the code chunk to pass all checks. (eval=FALSE)
+
 #DONE#
 #######
-
-# 1) make a description for the package. pasta principal > description - TWISTER did first version, let see what if dan bring s new input before sending this to "done"
-# 3) insert input check in all functions. - TWISTER
-# 4) restore old par() on exit of functions that plot. - JENN
-# 5) Use pkg::func instead of importFrom - JENN
-# 7) check helps
-# 8) first draft of paper - TWISTER
-#In WFDriftSim line 102 throws an error - TWISTER COULD NOT FIND THE ERROR
-# Plotpaintedwhales clades name are a bit big. OK
-####### future features
-# paisagem adaptativa https://curso-genevol.shinyapps.io/superficie-adaptativa/
-# aminoacid aligment graphic. eg: https://www.researchgate.net/publication/335267481/figure/fig1/AS:793957495734277@1566305626899/Multiple-sequence-alignment-of-the-conserved-Dof-domains-of-24-DzDofs-A-Sequence.jpg
-# 6) Create functions to proteinSeq(): DONE for head.tail. summary. print. is. BUT WHY MAKE THE read. as. plot. VERSIONS? Dont know even if doing them makes sense - maybe we have to talk? /// I think the main function we have to do is as. the others are not so important.
-# 10) delete r_raw
