@@ -21,7 +21,8 @@ NULL
 #' "animate4". Users can animate each panel individually (using 
 #' \code{plot_type = "animateX"}, with X being the panel which one wants to 
 #' animate (so options are  "animate1",  "animate3",  and "animate4" 
-#' (see return for more info). @param printData Logical indicating whether all 
+#' (see return for more info). 
+#' @param printData Logical indicating whether all 
 #' simulation results should be returned as a \code{data.frame}. Default value 
 #' is \code{FALSE}.
 #' 
