@@ -4,7 +4,7 @@ author: "Matheus Januario"
 date: "Dec/2023"
 output: rmarkdown::html_vignette
 vignette: >
-  %\VignetteIndexEntry{Clocks_and_Rocks}
+  %\VignetteIndexEntry{Clocks and Rocks}
   %\VignetteEngine{knitr::rmarkdown}
   %\VignetteEncoding{UTF-8}
 ---
@@ -47,7 +47,6 @@ lines(x=spDTT$age,
      col="black")
 ```
 
-<<<<<<< HEAD
 We can also visualize fossil records by running:
 
 ```{r}
@@ -111,7 +110,7 @@ for(i in 1:length(clades)){
 }
 ```
 
-Students can explore this other dataset, and compare it with the previously dicussed ones. They can compare richness thourhg time, calculate statistics related to richness change. Explore factors (e.g. mass extinction) thta might have affected some clades, amongst other learning problems.
+Students can explore this other dataset, and compare it with the previously discussed ones. They can compare richness thought time, calculate statistics related to richness change. Explore factors (e.g. mass extinction) that might have affected some clades, among other learning problems.
 
 But fossils are not the only way to explore the timescale of evolution. Below, we are going to show how some functions that use this type of data work.
 

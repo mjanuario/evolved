@@ -4,7 +4,7 @@ author: "Matheus Januario"
 date: "Dec/2023"
 output: rmarkdown::html_vignette
 vignette: >
-  %\VignetteIndexEntry{population_genetics}
+  %\VignetteIndexEntry{Phylogenies and diversification}
   %\VignetteEngine{knitr::rmarkdown}
   %\VignetteEncoding{UTF-8}
 ---
