@@ -19,12 +19,13 @@ library(EvolPackage)
 ```
 
 # Hardy-Weinberg equilibrium
+\
 
 The Hardy-Weinberg equilibrium (HWE) is a deterministic model for the maintenance of allele-level biodiversity. However, stochastic thinking is already well-established as an important aspect of studying evolutionary biology - and so there are clear advantages in introducing this kind of thinking to students.
 
 However, typical HWE equations or study material related to it do not address stochastic variation coming from finite numbers of individuals. The function `OneGenHWSim()` addresses this issue. With it, students can graph and explore stochasticity under HWE:
 
-```{r warning=FALSE}
+```{r warning=FALSE,fig.height=5, fig.width=6}
 nsims = 1000
 sims <- OneGenHWSim(nInd = 57, p = .2, nSim = nsims)
 
@@ -43,7 +44,10 @@ head(sims)
 
 With this type of object, students can also simulate closed populations of a specific size, thus for instance testing (using e.g. chi-square tests) actual hypotheses about HWE adequacy to explain a certain genotypic frequency.
 
+\
+\
 # Genetic drift
+\
 
 Students can also simulate genetic drift in Wright-Fisher populations, by using the function `WFDriftSim()`
 
@@ -56,7 +60,7 @@ drifting[1:6, 1:11]
 
 The argument `printData = T` creates an object that can also be handled as it was "data", so students can use it to calculate drift processes, for instance, the amount of time needed until fixation:
 
-```{r}
+```{r,fig.height=5, fig.width=6}
 fixchecker <- function(x){
   res = suppressWarnings(
       min(which(x %in% 0:1), na.rm = T)
@@ -70,11 +74,14 @@ hist(x = apply(X = drifting, MARGIN = 1, fixchecker),
 
 Or other types of manipulations or measurements.
 
+\
+\
 # Natural selection
+\
 
 Just like the previously mentioned functions, `NatSelSim()` can generate objects that can be handled by students as if they were "data". 
 
-```{r}
+```{r,fig.height=5, fig.width=6}
 selected = NatSelSim(w11 = .2, w12 = .3, w22 = .1,
             nGen = 20, printData = T, plot_type = "static")
 ```
