@@ -12,6 +12,7 @@ browseURL("https://r-pkgs.org/Workflow101.html#naming") # - DAN
 # Functions lacking references:
 # - NatSelSim
 # - cytOxidase - OK
+# plotRawFossilOccs
 
 
 # 3) create a readme
