@@ -15,7 +15,8 @@ plotPaintedWhales(show.legend = TRUE, direction = "rightwards", ...)
 \item{...}{other arguments to be passed to \code{phytools::plotSimmap}}
 }
 \value{
-A colored phylogeny plot.
+The whale phylogeny, with brnanch lengths being colored by a major
+whale taxonomic group.
 }
 \description{
 \code{plotPaintedWhales} plots the phylogeny from Steeman et al (2011), coloring the Dolphins (Delphinidae), porpoises (Phocoenidae), the Mysticetes, the baleen whales (Balaenopteridae), and the Beaked whales (Ziphiidae).
