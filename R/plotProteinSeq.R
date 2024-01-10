@@ -20,7 +20,7 @@
 #' 
 plotProteinSeq=function(x, taxonToPlot){
   # A species list:
-  ids=match(names(cytOxidase), taxonToPlot)
+  ids=match(names(x), taxonToPlot)
   
   # a set of colors:
   cols= c("dodgerblue2", "#E31A1C", "green4",
@@ -41,7 +41,7 @@ plotProteinSeq=function(x, taxonToPlot){
        1:length(taxonToPlot), labels = taxonToPlot)
   
   for(i in 1:length(taxonToPlot)){
-    chars = unlist(strsplit(cytOxidase[taxonToPlot[i]], ""))
+    chars = unlist(strsplit(x[taxonToPlot[i]], ""))
     
     for(s in 1:513){
       polygon(
