@@ -23,8 +23,8 @@ A \code{data.frame} containing 69463 rows and 13 columns
 }
 }
 \source{
-The Paleobiology Database (downloaded on 2022-03-11)
-Data URL: "http://paleobiodb.org/data1.2/occs/list.csv?datainfo&rowcount&base_name=Mammalia&show=full,classext,genus,subgenus,acconly,ident,img,etbasis,strat,lith,env,timebins,timecompare,resgroup,ref,ent,entname,crmod"
+The Paleobiology Database (downloaded on 2022-03-11). \cr
+Data URL: \url{http://paleobiodb.org/data1.2/occs/list.csv?datainfo&rowcount&base_name=Mammalia&show=full,classext,genus,subgenus,acconly,ident,img,etbasis,strat,lith,env,timebins,timecompare,resgroup,ref,ent,entname,crmod} \cr
 }
 \usage{
 mammals_fossil

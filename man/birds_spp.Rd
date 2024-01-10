@@ -8,7 +8,7 @@
 A \code{vector} containing the names of almost all (i.e., 9993) extant bird species, following Jetz et al. (2012) taxonomy.
 }
 \source{
-Actual file downloaded from https://vertlife.org/data/
+Actual file downloaded from \url{https://vertlife.org/data/}
 }
 \usage{
 birds_spp

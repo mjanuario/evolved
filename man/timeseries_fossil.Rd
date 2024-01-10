@@ -26,22 +26,22 @@ Values of clade diversity for many clades of organisms (note some clades
 are nested within other clades in the dataset).
 }
 \details{
-Legend:
-anth = Anthozoa (Cnidaria);
-art = Articulata (Crinoidea, Echinodermata);
-biv = Bivalvia (Mollusca);
-bryo = Bryozoa (Lophotrochozoa, Ectoprocta);
-ceph = Cephalopoda (Mollusca);
-chon = Chondrocytes (Chordata);
-crin = Crinoidea (Echinodermata);
-dinosauria = Dinosauria (Chordata);
-ech = Echinoidea (Echinodermata);
-foram = Foraminifera (Retaria);
-gast = Gastropoda (Mollusca);
-graptoloids = Graptolites (Graptolithina);
-ling = Ligulata (Brachiopoda);
-ostr = Ostracoda (Crustacea, Arthropoda);
-tril = Trilobita (Arthropoda).
+Legend: \cr
+anth = Anthozoa (Cnidaria); \cr
+art = Articulata (Crinoidea, Echinodermata); \cr
+biv = Bivalvia (Mollusca); \cr
+bryo = Bryozoa (Lophotrochozoa, Ectoprocta); \cr
+ceph = Cephalopoda (Mollusca); \cr
+chon = Chondrocytes (Chordata); \cr
+crin = Crinoidea (Echinodermata); \cr
+dinosauria = Dinosauria (Chordata); \cr
+ech = Echinoidea (Echinodermata); \cr
+foram = Foraminifera (Retaria); \cr
+gast = Gastropoda (Mollusca); \cr
+graptoloids = Graptolites (Graptolithina); \cr
+ling = Ligulata (Brachiopoda); \cr
+ostr = Ostracoda (Crustacea, Arthropoda); \cr
+tril = Trilobita (Arthropoda). \cr
 }
 \references{
 Rabosky, D. L., & Benson, R. B. (2021). Ecological and biogeographic drivers of biodiversity cannot be resolved using clade age-richness data. Nature Communications, 12(1), 2945.

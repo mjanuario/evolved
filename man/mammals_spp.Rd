@@ -8,7 +8,7 @@
 A \code{vector} containing the names of almost all (i.e., 4099) extant mammal species, following Upham et al (2019) taxonomy.
 }
 \source{
-Actual file downloaded from https://vertlife.org/data/
+Actual file downloaded from \url{https://vertlife.org/data/}
 }
 \usage{
 mammals_spp

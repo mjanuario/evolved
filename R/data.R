@@ -77,7 +77,7 @@
 #' @format
 #' A \code{vector} containing the names of almost all (i.e., 9993) extant bird species, following Jetz et al. (2012) taxonomy.
 #' 
-#' @source Actual file downloaded from https://vertlife.org/data/
+#' @source Actual file downloaded from \url{https://vertlife.org/data/}
 #' 
 #' @references 
 #' Jetz, W., Thomas, G. H., Joy, J. B., Hartmann, K., & Mooers, A. O. (2012). The global diversity of birds in space and time. Nature, 491(7424), 444-448.
@@ -88,7 +88,7 @@
 #' @format
 #' A \code{vector} containing the names of almost all (i.e., 4099) extant mammal species, following Upham et al (2019) taxonomy.
 #' 
-#' @source Actual file downloaded from https://vertlife.org/data/
+#' @source Actual file downloaded from \url{https://vertlife.org/data/}
 #' 
 #' @references 
 #' Upham, N. S., Esselstyn, J. A., & Jetz, W. (2019). Inferring the mammal tree: species-level sets of phylogenies for questions in ecology, evolution, and conservation. PLoS biology, 17(12), e3000494.
@@ -121,8 +121,8 @@
 #'   \item{lat}{Latitude of place where occurrence was found. Follows decimal degree format.}
 #' }
 #' 
-#' @source The Paleobiology Database (downloaded on 2022-03-11)
-#' Data URL: "http://paleobiodb.org/data1.2/occs/list.csv?datainfo&rowcount&base_name=Ammonoidea&show=full,classext,genus,subgenus,acconly,ident,img,etbasis,strat,lith,env,timebins,timecompare,resgroup,ref,ent,entname,crmod"
+#' @source The Paleobiology Database (downloaded on 2022-03-11). \cr 
+#' Data URL: \url{http://paleobiodb.org/data1.2/occs/list.csv?datainfo&rowcount&base_name=Ammonoidea&show=full,classext,genus,subgenus,acconly,ident,img,etbasis,strat,lith,env,timebins,timecompare,resgroup,ref,ent,entname,crmod} \cr
 "ammonoidea_fossil"
 
 #' Occurrences of mammal fossils
@@ -148,8 +148,8 @@
 #'   \item{lng}{Longitude of place where occurrence was found. Follows decimal degree format.}
 #'   \item{lat}{Latitude of place where occurrence was found. Follows decimal degree format.}
 #' }
-#' @source The Paleobiology Database (downloaded on 2022-03-11)
-#' Data URL: "http://paleobiodb.org/data1.2/occs/list.csv?datainfo&rowcount&base_name=Mammalia&show=full,classext,genus,subgenus,acconly,ident,img,etbasis,strat,lith,env,timebins,timecompare,resgroup,ref,ent,entname,crmod"
+#' @source The Paleobiology Database (downloaded on 2022-03-11). \cr 
+#' Data URL: \url{http://paleobiodb.org/data1.2/occs/list.csv?datainfo&rowcount&base_name=Mammalia&show=full,classext,genus,subgenus,acconly,ident,img,etbasis,strat,lith,env,timebins,timecompare,resgroup,ref,ent,entname,crmod} \cr
 "mammals_fossil"
 
 #' Occurrence of dinosaur fossils
@@ -173,8 +173,8 @@
 #'   \item{lng}{Longitude of place where occurrence was found. Follows decimal degree format.}
 #'   \item{lat}{Latitude of place where occurrence was found. Follows decimal degree format.}
 #' }
-#' @source The Paleobiology Database (downloaded on 2022-03-11)
-#' Data URL: "http://paleobiodb.org/data1.2/occs/list.csv?datainfo&rowcount&base_name=Dinosauria&show=full,classext,genus,subgenus,acconly,ident,img,etbasis,strat,lith,env,timebins,timecompare,resgroup,ref,ent,entname,crmod"
+#' @source The Paleobiology Database (downloaded on 2022-03-11). \cr
+#' Data URL: \url{http://paleobiodb.org/data1.2/occs/list.csv?datainfo&rowcount&base_name=Dinosauria&show=full,classext,genus,subgenus,acconly,ident,img,etbasis,strat,lith,env,timebins,timecompare,resgroup,ref,ent,entname,crmod} \cr
 "dinos_fossil"
 
 #' Occurrence of trilobite fossils
@@ -201,8 +201,8 @@
 #'   \item{lng}{Longitude of place where occurrence was found. Follows decimal degree format.}
 #'   \item{lat}{Latitude of place where occurrence was found. Follows decimal degree format.}
 #' }
-#' @source The Paleobiology Database (downloaded on 2022-03-11)
-#' Data URL: "http://paleobiodb.org/data1.2/occs/list.csv?datainfo&rowcount&base_name=Trilobita&show=full,classext,genus,subgenus,acconly,ident,img,etbasis,strat,lith,env,timebins,timecompare,resgroup,ref,ent,entname,crmod"
+#' @source The Paleobiology Database (downloaded on 2022-03-11). \cr 
+#' Data URL: \url{http://paleobiodb.org/data1.2/occs/list.csv?datainfo&rowcount&base_name=Trilobita&show=full,classext,genus,subgenus,acconly,ident,img,etbasis,strat,lith,env,timebins,timecompare,resgroup,ref,ent,entname,crmod} \cr
 "trilob_fossil"
 
 #' Fossil Time series
@@ -221,22 +221,23 @@
 #'   \item{richness}{Number of species at given geological time}
 #' }
 #' 
-#' @details Legend: 
-#' anth = Anthozoa (Cnidaria); 
-#' art = Articulata (Crinoidea, Echinodermata); 
-#' biv = Bivalvia (Mollusca); 
-#' bryo = Bryozoa (Lophotrochozoa, Ectoprocta); 
-#' ceph = Cephalopoda (Mollusca); 
-#' chon = Chondrocytes (Chordata); 
-#' crin = Crinoidea (Echinodermata); 
-#' dinosauria = Dinosauria (Chordata); 
-#' ech = Echinoidea (Echinodermata); 
-#' foram = Foraminifera (Retaria); 
-#' gast = Gastropoda (Mollusca); 
-#' graptoloids = Graptolites (Graptolithina); 
-#' ling = Ligulata (Brachiopoda); 
-#' ostr = Ostracoda (Crustacea, Arthropoda); 
-#' tril = Trilobita (Arthropoda).
+#' @details Legend: \cr
+#' anth = Anthozoa (Cnidaria); \cr
+#' art = Articulata (Crinoidea, Echinodermata); \cr 
+#' biv = Bivalvia (Mollusca); \cr 
+#' bryo = Bryozoa (Lophotrochozoa, Ectoprocta); \cr 
+#' ceph = Cephalopoda (Mollusca); \cr 
+#' chon = Chondrocytes (Chordata); \cr 
+#' crin = Crinoidea (Echinodermata); \cr 
+#' dinosauria = Dinosauria (Chordata); \cr 
+#' ech = Echinoidea (Echinodermata); \cr 
+#' foram = Foraminifera (Retaria); \cr 
+#' gast = Gastropoda (Mollusca); \cr 
+#' graptoloids = Graptolites (Graptolithina); \cr 
+#' ling = Ligulata (Brachiopoda); \cr 
+#' ostr = Ostracoda (Crustacea, Arthropoda); \cr 
+#' tril = Trilobita (Arthropoda). \cr
+#' 
 #' 
 #' @source Data originally compiled from many primary sources. Organized, curated by, and downloaded from, Rabosky & Benson (2021).
 #' 
