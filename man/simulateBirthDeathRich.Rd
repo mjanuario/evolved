@@ -41,9 +41,9 @@ tt <- 10 #in Mya
 simulateBirthDeathRich(t = tt, S = SS, E = EE)
 
 #running many simulations and graphing results:
-nsim <- 1000
+nSim <- 1000
 res <- vector()
-for(i in 1:nsim){
+for(i in 1:nSim){
   res <- c(res, 
   simulateBirthDeathRich(t = tt, S = SS, E = EE))
 }

@@ -27,7 +27,7 @@ browseURL("https://r-pkgs.org/Workflow101.html#naming") # - DAN
 # 5) fix error "figure margins are too large" in clocks and rocks vignette. I've 
 # silenced the code chunk to pass all checks. (eval=FALSE)
 
-#6) consistency check of arguments used across several functions (e.g. nGen, Ngens, NGens)
+#6) consistency check of arguments used across several functions (e.g. nGen, Ngens, NGens). nGen and nSim ok
 
 # 7) create at least 1 testhat check per funcion, even 
 
