@@ -1,6 +1,6 @@
 #' Make a lineage through time (LTT) plot
 #'
-#' \code{lttplot} plots the lineage through time (LTT) of a \code{phylo} object.
+#' \code{lttPlot} plots the lineage through time (LTT) of a \code{phylo} object.
 #' It also adds a reference line connecting the edges of the graph.
 #'
 #' @param phy A \code{phylo} object, as specified by the \code{ape} package.
@@ -19,7 +19,7 @@
 #' line as a reference of expectation under pure birth. If \code{plot = FALSE}, 
 #' a list the richness of each point in time, and \code{phy}'s crown age.
 #' 
-#' @export lttplot
+#' @export lttPlot
 #' 
 #' @references 
 #' 
@@ -34,10 +34,10 @@
 #' E <- 0
 #' set.seed(1)
 #' phy <- simulateTree(pars = c(S, E), max.taxa = 20, max.t = 5)
-#' lttplot(phy)
-#' lttplot(phy, plot = FALSE)
+#' lttPlot(phy)
+#' lttPlot(phy, plot = FALSE)
 #' 
-lttplot <- function(phy, lwd=1, col="red", plot = T, rel_time = F, add = F){
+lttPlot <- function(phy, lwd=1, col="red", plot = T, rel_time = F, add = F){
   
   ############################################
   # check the classes of inputs and stop if any was inputted wrongly:
@@ -47,12 +47,12 @@ lttplot <- function(phy, lwd=1, col="red", plot = T, rel_time = F, add = F){
   }
   
   ref_classes = c("numeric","character","logical","logical", "logical")
-  input_names = names(unlist(formals(lttplot)))[-1]
+  input_names = names(unlist(formals(lttPlot)))[-1]
   input_list = list(lwd, col, plot, rel_time, add)
   input_classes = unlist(lapply(input_list, class))
   
   if(any(! input_classes== ref_classes)){
-    stop(paste0("\n", input_names[which(input_classes != ref_classes)], " has the wrong object class. Please check the documentation of this function by typing: \n \n ??lttplot"))
+    stop(paste0("\n", input_names[which(input_classes != ref_classes)], " has the wrong object class. Please check the documentation of this function by typing: \n \n ??lttPlot"))
   }
   # end of checking inputs
   ############################################
