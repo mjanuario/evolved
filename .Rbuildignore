@@ -9,5 +9,5 @@
 ^_pkgdown\.yml$
 ^\.github$
 ^revdep$
-^/.Rd2pdf10004
-^/.Rd2pdf6808
+^\.Rd2pdf10004$
+^\.Rd2pdf6808$
