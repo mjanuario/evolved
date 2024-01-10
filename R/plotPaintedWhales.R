@@ -10,7 +10,7 @@ NULL
 #' 
 #' @seealso help page from \code{phytools::plotSimmap}
 #' 
-#' @return The whale phylogeny, with brnanch lengths being colored by a major 
+#' @return The whale phylogeny, with branch lengths being colored by a major 
 #' whale taxonomic group.
 #' 
 #' @export plotPaintedWhales
