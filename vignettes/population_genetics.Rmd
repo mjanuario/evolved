@@ -48,7 +48,7 @@ With this type of object, students can also simulate closed populations of a spe
 Students can also simulate genetic drift in Wright-Fisher populations, by using the function `WFDriftSim()`
 
 ```{r}
-drifting = WFDriftSim(Ne = 10, nGens = 100, p0 = .5, nSim = 1000, printData = T, plot_type = "static")
+drifting = WFDriftSim(Ne = 10, nGen = 100, p0 = .5, nSim = 1000, printData = T, plot_type = "static")
 
 #View the first 10 generation of a few simulations.
 drifting[1:6, 1:11]
@@ -76,7 +76,7 @@ Just like the previously mentioned functions, `NatSelSim()` can generate objects
 
 ```{r}
 selected = NatSelSim(w11 = .2, w12 = .3, w22 = .1,
-            NGen = 20, printData = T, plot_type = "static")
+            nGen = 20, printData = T, plot_type = "static")
 ```
 
 Note that by default the function provides 4 animated plots, but this can be changed using the argument `plot_type` (see function help for details).

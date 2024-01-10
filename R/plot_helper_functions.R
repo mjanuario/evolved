@@ -3,14 +3,14 @@ NULL
 
 #' Plot WFDriftSim output
 #'
-#' @param p_through_time Matrix with nGens columns and nSim lines
+#' @param p_through_time Matrix with nGen columns and nSim lines
 #' @param plot_type String. Options are "static" or "animate"
 #'
 #' @return A static or animated plot of populations under genetic drift through time
 #' @export plotWFDrift
 #'
 #' @examples
-#' store_p = WFDriftSim(Ne = 5, nGens = 10, p0=.2, nSim=5, plot = "none", printData = TRUE)
+#' store_p = WFDriftSim(Ne = 5, nGen = 10, p0=.2, nSim=5, plot = "none", printData = TRUE)
 #' plotWFDrift(store_p, "static")
 plotWFDrift = function(p_through_time, plot_type = plot){
 
@@ -18,10 +18,10 @@ plotWFDrift = function(p_through_time, plot_type = plot){
     warning("plotWFDrift argument plot can only be \"static\" or \"animate\"")
     return(NULL)
   }
-  nGens = dim(p_through_time)[2]-1
+  nGen = dim(p_through_time)[2]-1
   nSim = dim(p_through_time)[1]
   
-  time = 1:((nGens)+1)
+  time = 1:((nGen)+1)
   cols=grDevices::rainbow(nSim)
   
   dev.new()
@@ -30,13 +30,13 @@ plotWFDrift = function(p_through_time, plot_type = plot){
 
   layout(matrix(c(1,2), ncol = 2), widths=c(8, 2))
   
-  plot(NA, xlim=c(0,nGens), ylim=c(0,1),
+  plot(NA, xlim=c(0,nGen), ylim=c(0,1),
        ylab="Allelic frequency", xlab="Generation",frame.plot=F)
   
   if(plot_type == "animate"){
     
     # setting animation time:
-    if(nGens < 20&nSim < 20){
+    if(nGen < 20&nSim < 20){
       animation_time = 0.1
     }else{
       animation_time = 0.05
@@ -53,18 +53,18 @@ plotWFDrift = function(p_through_time, plot_type = plot){
     }
     Sys.sleep(1)
     par(mar = c(5, 0, 4, 2) + 0.1)
-    auxhist = hist(p_through_time[,nGens+1], breaks = seq(0,1, by=0.05), plot = FALSE)
+    auxhist = hist(p_through_time[,nGen+1], breaks = seq(0,1, by=0.05), plot = FALSE)
     barplot(auxhist$counts, axes = TRUE, space = 0, horiz=TRUE, xlab= "Counts", ylab=NULL, border = NA, col = "black")
     #dev.off()
   } 
   
   if(plot_type=="static"){
     for(i in 1:nSim){
-      graphics::lines(x = 0:(nGens), y = p_through_time[i,], col=cols[i])
+      graphics::lines(x = 0:(nGen), y = p_through_time[i,], col=cols[i])
     }
     #hist
     par(mar = c(5, 0, 4, 2) + 0.1)
-    auxhist = hist(p_through_time[,nGens+1], breaks = seq(0,1, by=0.05), plot = FALSE)
+    auxhist = hist(p_through_time[,nGen+1], breaks = seq(0,1, by=0.05), plot = FALSE)
     barplot(auxhist$counts, axes = TRUE, space = 0, horiz=TRUE, xlab= "Counts", ylab=NULL, border = NA, col = "black")
   }
   par(opar)

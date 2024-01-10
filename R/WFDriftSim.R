@@ -10,7 +10,7 @@ NULL
 #' generations.
 #'
 #' @param Ne Number giving the effective population size of the population
-#' @param nGens Number of generations to be simulated.
+#' @param nGen Number of generations to be simulated.
 #' @param p0 Initial frequency of a given allele. As the simulated organism is
 #' diploid, the other alleles frequency will be \code{1-(p0)}. Default value 
 #' is \code{0.5}.
@@ -56,22 +56,22 @@ NULL
 #' 
 #' @examples
 #' #Default values:
-#' WFDriftSim(Ne = 5, nGens = 30)
+#' WFDriftSim(Ne = 5, nGen = 30)
 #' 
 #' #A population which has already fixed one of the alleles:
-#' WFDriftSim(Ne = 5, nGens = 30, p0=1)
+#' WFDriftSim(Ne = 5, nGen = 30, p0=1)
 #' 
 #' #Many populations::
-#' WFDriftSim(Ne = 5, nGens = 30, p0=0.2, nSim=10)
+#' WFDriftSim(Ne = 5, nGen = 30, p0=0.2, nSim=10)
 #' 
 #' ######## continuing a previous simulation:
 #' ngen_1stsim <- 10 # number of gens in the 1st sim:
-#' sim1 <- WFDriftSim(Ne = 5, nGens = ngen_1stsim, p0=.2, nSim=10, 
+#' sim1 <- WFDriftSim(Ne = 5, nGen = ngen_1stsim, p0=.2, nSim=10, 
 #' plot_type = "none", printData = TRUE)
 
 #' ngen_2ndsim <-15 # number of gens in the 2nd sim:
 #' # now, note how we assigned p0:
-#' sim2 <- WFDriftSim(Ne = 5, nGens = ngen_2ndsim, p0=sim1[,ncol(sim1)], 
+#' sim2 <- WFDriftSim(Ne = 5, nGen = ngen_2ndsim, p0=sim1[,ncol(sim1)], 
 #' plot_type = "static", nSim=10, printData = TRUE)
 #' 
 #' # if we want to merge both simulations, then we have to:
@@ -86,13 +86,13 @@ NULL
 #' all_sims <- cbind(sim1, sim2)
 #' head(all_sims)
 #' 
-WFDriftSim=function(Ne, nGens, p0=0.5, nSim=1, plot_type="animate", printData=FALSE){
+WFDriftSim=function(Ne, nGen, p0=0.5, nSim=1, plot_type="animate", printData=FALSE){
   
   ############################################
   # check the classes of inputs and stop if any was inputted wrongly;
   ref_classes = c("numeric", "numeric", "numeric", "numeric", "character", "logical")
   input_names = names(unlist(formals(WFDriftSim)))
-  input_list = list(Ne, nGens, p0, nSim, plot_type, printData)
+  input_list = list(Ne, nGen, p0, nSim, plot_type, printData)
   input_classes = unlist(lapply(input_list, class))
   
   if(any(! ref_classes == input_classes)){
@@ -120,15 +120,15 @@ WFDriftSim=function(Ne, nGens, p0=0.5, nSim=1, plot_type="animate", printData=FA
   
   #if(p0<0 || p0>1){stop("\"p0\" must be between zero and one")}
   if(!(Ne>0)){stop("\"Ne\" must be an integer larger than zero")}
-  if(!(nGens>0)){stop("\"nGens\" must be an integer number larger than zero")}
+  if(!(nGen>0)){stop("\"nGen\" must be an integer number larger than zero")}
   
   # start matrix with generation "zero"
   p_through_time <- matrix(p0, ncol = 1, nrow=nSim)
   
-  # calculating total n allelels for diploid organism
+  # calculating total n alleles for diploid organism
   n_alleles <- 2*Ne
   
-  for(generation in 1:nGens){
+  for(generation in 1:nGen){
     p_through_time <- cbind(p_through_time, 
                             stats::rbinom(n = nSim, size = n_alleles, 
                                           prob = p_through_time[,generation]) / n_alleles
@@ -141,7 +141,7 @@ WFDriftSim=function(Ne, nGens, p0=0.5, nSim=1, plot_type="animate", printData=FA
   if(printData){
     # labeling output:
     rownames(p_through_time) <- paste0("sim", 1:nSim)
-    colnames(p_through_time) <- paste0("gen", 0:nGens)
+    colnames(p_through_time) <- paste0("gen", 0:nGen)
     
     # returning
     return(p_through_time)

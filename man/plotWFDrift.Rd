@@ -7,7 +7,7 @@
 plotWFDrift(p_through_time, plot_type = plot)
 }
 \arguments{
-\item{p_through_time}{Matrix with nGens columns and nSim lines}
+\item{p_through_time}{Matrix with nGen columns and nSim lines}
 
 \item{plot_type}{String. Options are "static" or "animate"}
 }
@@ -18,6 +18,6 @@ A static or animated plot of populations under genetic drift through time
 Plot WFDriftSim output
 }
 \examples{
-store_p = WFDriftSim(Ne = 5, nGens = 10, p0=.2, nSim=5, plot = "none", printData = TRUE)
+store_p = WFDriftSim(Ne = 5, nGen = 10, p0=.2, nSim=5, plot = "none", printData = TRUE)
 plotWFDrift(store_p, "static")
 }

@@ -6,7 +6,7 @@
 \usage{
 WFDriftSim(
   Ne,
-  nGens,
+  nGen,
   p0 = 0.5,
   nSim = 1,
   plot_type = "animate",
@@ -16,7 +16,7 @@ WFDriftSim(
 \arguments{
 \item{Ne}{Number giving the effective population size of the population}
 
-\item{nGens}{Number of generations to be simulated.}
+\item{nGen}{Number of generations to be simulated.}
 
 \item{p0}{Initial frequency of a given allele. As the simulated organism is
 diploid, the other alleles frequency will be \code{1-(p0)}. Default value
@@ -53,21 +53,21 @@ with the rate of genetic drift (for details, see Waples, 2022).
 }
 \examples{
 #Default values:
-WFDriftSim(Ne = 5, nGens = 30)
+WFDriftSim(Ne = 5, nGen = 30)
 
 #A population which has already fixed one of the alleles:
-WFDriftSim(Ne = 5, nGens = 30, p0=1)
+WFDriftSim(Ne = 5, nGen = 30, p0=1)
 
 #Many populations::
-WFDriftSim(Ne = 5, nGens = 30, p0=0.2, nSim=10)
+WFDriftSim(Ne = 5, nGen = 30, p0=0.2, nSim=10)
 
 ######## continuing a previous simulation:
 ngen_1stsim <- 10 # number of gens in the 1st sim:
-sim1 <- WFDriftSim(Ne = 5, nGens = ngen_1stsim, p0=.2, nSim=10, 
+sim1 <- WFDriftSim(Ne = 5, nGen = ngen_1stsim, p0=.2, nSim=10, 
 plot_type = "none", printData = TRUE)
 ngen_2ndsim <-15 # number of gens in the 2nd sim:
 # now, note how we assigned p0:
-sim2 <- WFDriftSim(Ne = 5, nGens = ngen_2ndsim, p0=sim1[,ncol(sim1)], 
+sim2 <- WFDriftSim(Ne = 5, nGen = ngen_2ndsim, p0=sim1[,ncol(sim1)], 
 plot_type = "static", nSim=10, printData = TRUE)
 
 # if we want to merge both simulations, then we have to:
