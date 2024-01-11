@@ -15,11 +15,11 @@ browseURL("https://r-pkgs.org/Workflow101.html#naming") # - DAN
 # plotRawFossilOccs
 
 
-# 3) create a readme
+# 3) create a readme - Jenn created a sckeleton
 
 # 4) TO DO for cran release:
-# usethis::use_news_md()
-# usethis::use_cran_comments()
+# usethis::use_news_md() ok
+# usethis::use_cran_comments() (ok but to again in submition)
 # Update (aspirational) install instructions in README
 # Check that all exported functions have @returns and @examples
 # Check licensing of included files
