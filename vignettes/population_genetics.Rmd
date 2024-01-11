@@ -18,14 +18,13 @@ options(rmarkdown.html_vignette.check_title = FALSE)
 library(EvolPackage)
 ```
 
-# Hardy-Weinberg equilibrium
-\
+## Hardy-Weinberg equilibrium
 
 The Hardy-Weinberg equilibrium (HWE) is a deterministic model for the maintenance of allele-level biodiversity. However, stochastic thinking is already well-established as an important aspect of studying evolutionary biology - and so there are clear advantages in introducing this kind of thinking to students.
 
 However, typical HWE equations or study material related to it do not address stochastic variation coming from finite numbers of individuals. The function `OneGenHWSim()` addresses this issue. With it, students can graph and explore stochasticity under HWE:
 
-```{r warning=FALSE,fig.height=5, fig.width=6}
+```{r fig.height=5, fig.width=6, fig.align='center'}
 nsims = 1000
 sims <- OneGenHWSim(nInd = 57, p = .2, nSim = nsims)
 
@@ -44,15 +43,13 @@ head(sims)
 
 With this type of object, students can also simulate closed populations of a specific size, thus for instance testing (using e.g. chi-square tests) actual hypotheses about HWE adequacy to explain a certain genotypic frequency.
 
-\
-\
-# Genetic drift
-\
+## Genetic drift
 
 Students can also simulate genetic drift in Wright-Fisher populations, by using the function `WFDriftSim()`
 
 ```{r}
-drifting = WFDriftSim(Ne = 10, nGen = 100, p0 = .5, nSim = 1000, printData = T, plot_type = "static")
+drifting = WFDriftSim(Ne = 10, nGen = 100, p0 = .5, nSim = 1000, 
+                      printData = T, plot_type = "static")
 
 #View the first 10 generation of a few simulations.
 drifting[1:6, 1:11]
@@ -60,7 +57,7 @@ drifting[1:6, 1:11]
 
 The argument `printData = T` creates an object that can also be handled as it was "data", so students can use it to calculate drift processes, for instance, the amount of time needed until fixation:
 
-```{r,fig.height=5, fig.width=6}
+```{r,fig.height=5, fig.width=6, fig.align='center'}
 fixchecker <- function(x){
   res = suppressWarnings(
       min(which(x %in% 0:1), na.rm = T)
@@ -69,19 +66,16 @@ fixchecker <- function(x){
 }
 
 hist(x = apply(X = drifting, MARGIN = 1, fixchecker),
-     main="time until fixation", xlab = "Fixation time")
+     main="Time until fixation", xlab = "Fixation time")
 ```
 
 Or other types of manipulations or measurements.
 
-\
-\
-# Natural selection
-\
+## Natural selection
 
 Just like the previously mentioned functions, `NatSelSim()` can generate objects that can be handled by students as if they were "data". 
 
-```{r,fig.height=5, fig.width=6}
+```{r,fig.height=5, fig.width=6, fig.align='center'}
 selected = NatSelSim(w11 = .2, w12 = .3, w22 = .1,
             nGen = 20, printData = T, plot_type = "static")
 ```
@@ -102,6 +96,6 @@ apply(aux>tol, 2, which.min)
 
 Students can manipulate the objects freely, and thus educators can allow them to use simulations to explore relevant scenarios in an investigative manner (see types of inquiries in Banchi & Bell, 2008)
 
-# References:
+## References:
 
 Banchi, H., & Bell, R. (2008). The many levels of inquiry. Science and children, 46(2), 26.

@@ -13,8 +13,7 @@ vignette: >
 library(EvolPackage)
 ```
 
-# The fossil record:
-\
+## The fossil record:
 
 Here we will use data on fossilized organism, which we call "fossil occurrences". the data was originally obtained from the Paleobiology database, a free-to-use resource that is the standard repository for such data and which has been used by hundreds or thousands of scientific research articles to study the history and dynamics of biodiversity in Deep Time.
 
@@ -27,7 +26,7 @@ Students can use functions in the package to calculate the diversity of a certai
 
 To make it more fun, we will compare tow different taxonomic levels, and will plot them in a relative, log scale:
 
-```{r,fig.height=5, fig.width=6}
+```{r,fig.height=5, fig.width=6, , fig.align='center'}
 spDTT = calcFossilDivTT(mammals_fossil, tax_lvl = "species")
 genusDTT = calcFossilDivTT(mammals_fossil, tax_lvl = "genus")
 famDTT = calcFossilDivTT(mammals_fossil, tax_lvl = "family")
@@ -50,7 +49,7 @@ lines(x=spDTT$age,
 
 We can also visualize fossil records by running:
 
-```{r,fig.height=5, fig.width=6}
+```{r,fig.height=5, fig.width=6, , fig.align='center'}
 # Family-level:
 plotRawFossilOccs(mammals_fossil, tax_lvl = "family")
 
@@ -101,7 +100,7 @@ head(timeseries_fossil)
 
 It contains many fossil datasets, and we will only plot the first 4 of them
 
-```{r eval=FALSE, include=TRUE,fig.height=5, fig.width=6}
+```{r fig.height=5, fig.width=6, , fig.align='center'}
 clades = unique(timeseries_fossil$clade)[1:4]
 
 cols= c("#ffd353", "#ef8737", "#bb292c", "#62205f")
@@ -120,10 +119,7 @@ Students can explore this other dataset, and compare it with the previously disc
 
 But fossils are not the only way to explore the timescale of evolution. Below, we are going to show how some functions that use this type of data work.
 
-\
-\
-# Comparing molecular patterns
-\
+## Comparing molecular patterns
 
 With other functions, students can also explore molecular sequences and compare species.
 
@@ -151,7 +147,7 @@ countSeqDiffs(cytOxidase, "snake", "bird")/nchar(cytOxidase["snake"])
 
 We can also quickly visualize the sequences by directly handling all elements in this object:
 
-```{r,fig.height=5, fig.width=6}
+```{r,fig.height=5, fig.width=6, , fig.align='center'}
 plotProteinSeq(cytOxidase, c("snake", "bird", "cnidaria"))
 ```
 
