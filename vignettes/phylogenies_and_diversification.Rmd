@@ -14,8 +14,7 @@ library(EvolPackage)
 library(ape)
 ```
 
-# Molecular phylogenies:
-\
+## Molecular phylogenies:
 
 Using data on molecular variation of multiple species, we can build and date a molecular phylogeny. For instance, we can  look at the whale phylogeny:
 
@@ -25,32 +24,28 @@ data("whale_phylo")
 
 We can check the "plain" phylogeny:
 
-```{r,fig.height=5, fig.width=6}
-plot(whale_phylo)
+```{r,fig.height=5, fig.width=6, fig.align='center'}
+plot(whale_phylo,cex = 0.5)
 axisPhylo()
 ```
 
 But for this particular phylogeny, we can also visualize some subclades:
 
-```{r,fig.height=5, fig.width=6}
+```{r,fig.height=5, fig.width=6, fig.align='center'}
 plotPaintedWhales()
 ```
 
 Now we will visualize lineage-through-time (LTT) plots for this phylogenetic tree. The LTT plots contain a lot of information about phylogenetic tree structure, for instance they tell a lot about the shape of trees produced by different speciation and extinction rates.
 
-```{r,fig.height=5, fig.width=6}
+```{r,fig.height=5, fig.width=6, fig.align='center'}
 lttPlot(whale_phylo)
 ```
 
 Ok, but how does this plot stores info about the phylogeny?
 
-\
-\
-# Diversification
-\
+## Diversification
 
 To figure this out students can use the pure-birth (="Yule") model, which predicts that the same rate can generate a very large number of species. To show this first we estimate the speciation (i.e., the birth rate)
-
 
 ```{r}
 whalerate = estimateSpeciation(whale_phylo)
@@ -58,7 +53,7 @@ whalerate = estimateSpeciation(whale_phylo)
 
 Because we know whale originated ~36 million years ago, we can simulate many alternative diversification scenarios, following the parameters we estimated:
 
-```{r,fig.height=5, fig.width=6}
+```{r,fig.height=5, fig.width=6, fig.align='center'}
 sims=vector()
 
 for(i in 1:10000){
@@ -68,10 +63,9 @@ for(i in 1:10000){
 hist(sims, breaks = 100)
 ```
 
-
 Now we know that the Yule model can generate many species. Let's check the LTT's that this model can generate:
 
-```{r,fig.height=5, fig.width=6}
+```{r,fig.height=5, fig.width=6, fig.align='center'}
 t = simulateTree(c(whalerate, 0), max.taxa = 40, max.t = Inf)
 ape::ltt.plot(t, col="white", ylim=c(0,87))
 
@@ -88,3 +82,5 @@ So the empirical phylogeny is very different from the simulated. What hypotheses
 
 Maybe is because the Yule model is too simplistic (i.e., model has no extinction at all)? We can test this, for instance by replacing the `estimateSpeciation()` function by the`fitCRBD()`, and then re-do our simulations, with an extra layer of complexity.
 
+\
+\
