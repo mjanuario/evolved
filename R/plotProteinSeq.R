@@ -35,9 +35,11 @@ plotProteinSeq=function(x, taxonToPlot){
   AAs = c("-", "R", "W", "I", "F", "S", "T", "N", "H", "K", "D", "G", "L", "Y", "V", "M", "A", "E", "P", "Q", "C", "X", "B")
   
   # ploting:
-  plot(NA, xlim = c(-50,513), ylim = c(0.5,0.5+length(taxonToPlot)), yaxt="n",
+  par(mar = c(5.1, 4.1, 4.1, .5))
+  
+  plot(NA, xlim = c(-60,513), ylim = c(0.5,0.5+length(taxonToPlot)), yaxt="n",
        frame.plot = F, xlab="Amino Acid sites", ylab="Species")
-  text(x = rep(-40, times=length(taxonToPlot)),
+  text(x = rep(-40, times=length(taxonToPlot)), cex=.7,
        1:length(taxonToPlot), labels = taxonToPlot)
   
   for(i in 1:length(taxonToPlot)){
