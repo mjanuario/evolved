@@ -59,9 +59,6 @@ plotRawFossilOccs(ammonoidea_fossil, tax_lvl = "species")
 plotRawFossilOccs(ammonoidea_fossil, tax_lvl = "genus")
 
 }
-\references{
-ADD REFERENCE
-}
 \author{
 Matheus Januario, Jennifer Auler
 }
