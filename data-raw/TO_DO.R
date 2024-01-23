@@ -29,8 +29,6 @@ browseURL("https://r-pkgs.org/Workflow101.html#naming") # - DAN
 # explain what this means ## AA Aa aa 
 ## 20 18 18
 
-#clocks and rocks
-# plotProteinSeq "cnidaria" is partially blank. Also should ajust par in function to be able to see the longest clade
 
 #phylos
 # plot(whale_phylo,cex = 0.5) ajust par to be able to see text and eliminate exceding white space.
