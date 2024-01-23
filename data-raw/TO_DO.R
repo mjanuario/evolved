@@ -29,7 +29,6 @@ browseURL("https://r-pkgs.org/Workflow101.html#naming") # - DAN
 
 
 #phylos
-# plot(whale_phylo,cex = 0.5) ajust par to be able to see text and eliminate exceding white space.
 # plotPaintedWhales() plot
 
 
