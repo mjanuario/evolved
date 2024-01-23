@@ -76,6 +76,11 @@ NatSelSim(w11 = .4, w12 = .5, w22 = .4, p0 = new_p0, nGen = 5, plot_type = "stat
 
 
 }
+\references{
+Fisher, R. A. (1930). The Fundamental Theorem of Natural Selection. In: The genetical theory of natural selection. The Clarendon Press
+
+Plutynski, A. (2006). What was Fisher’s fundamental theorem of natural selection and what was it for?. Studies in History and Philosophy of Science Part C: Studies in History and Philosophy of Biological and Biomedical Sciences, 37(1), 59-82.
+}
 \author{
 Matheus Januario, Jennifer Auler, Dan Rabosky
 }
