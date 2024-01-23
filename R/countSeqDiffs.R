@@ -25,7 +25,7 @@
 #' 
 countSeqDiffs <- function(x, taxon1, taxon2){
   
-  if(!is.proteinSeq(x)){
+  if(!is.ProteinSeq(x)){
     stop("x must be an object of the class proteinSeq. Fro details, see: \n ??proteinSeq")
   }
   
