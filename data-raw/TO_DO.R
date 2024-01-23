@@ -26,8 +26,6 @@ browseURL("https://r-pkgs.org/Workflow101.html#naming") # - DAN
 # pop gen:
 #   WFDriftSim plot
 # NatSelSim plot
-# explain what this means ## AA Aa aa 
-## 20 18 18
 
 
 #phylos

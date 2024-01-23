@@ -94,7 +94,7 @@ aux = abs(apply(selected, 2, diff))
 apply(aux>tol, 2, which.min)
 ```
 
-Students can manipulate the objects freely, and thus educators can allow them to use simulations to explore relevant scenarios in an investigative manner (see types of inquiries in Banchi & Bell, 2008)
+In the above result, we are tabulating the number of dominant homozygotes ("AA"), hetrozygotes ("Aa"), and recessive homozygotes ("aa"). Students can manipulate the objects freely, and thus educators can allow them to use simulations to explore relevant scenarios in an investigative manner (see types of inquiries in Banchi & Bell, 2008)
 
 ## References:
 
