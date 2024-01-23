@@ -35,10 +35,6 @@ NULL
 #' 
 #' @export plotRawFossilOccs
 #' 
-#' @references 
-#' 
-#' ADD REFERENCE
-#' 
 #' @author Matheus Januario, Jennifer Auler
 #' 
 #' @examples

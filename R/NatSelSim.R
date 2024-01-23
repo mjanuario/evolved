@@ -39,6 +39,12 @@ NULL
 #' \code{w22}) is larger than one, fitness is interpreted as absolute fitness 
 #' and values are re-normalized.
 #' 
+#' @references 
+#' 
+#' Fisher, R. A. (1930). The Fundamental Theorem of Natural Selection. In: The genetical theory of natural selection. The Clarendon Press
+#' 
+#' Plutynski, A. (2006). What was Fisher’s fundamental theorem of natural selection and what was it for?. Studies in History and Philosophy of Science Part C: Studies in History and Philosophy of Biological and Biomedical Sciences, 37(1), 59-82.
+#' 
 #' @author Matheus Januario, Jennifer Auler, Dan Rabosky
 #' 
 #' @examples

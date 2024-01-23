@@ -1,18 +1,18 @@
 # TO DO LIST:
  
-# 1) pick package name and run available::available()
+# 1) pick package name:
+
+# name will be > EvolVEd <
+
+#run available::available()
+#works for "EvolVEd"
+
 #    also check link below for additional naming advices
 browseURL("https://r-pkgs.org/Workflow101.html#naming") # - DAN
-#evolEd
+# EvolVEd
 
-# 2) List of things to do in helps
-
-### general note: check if all plot functions describe what is plotted
-
-# Functions lacking references:
+# 2) Functions lacking references:
 # - NatSelSim
-# - cytOxidase - OK
-# plotRawFossilOccs
 
 
 # 3) create a readme - Jenn created a sckeleton
