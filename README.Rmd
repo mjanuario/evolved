@@ -22,7 +22,7 @@ The goal of evolved is to ...
 
 ## Installation
 
-You can install the development version of EvolPackage from [GitHub](https://github.com/) with:
+You can install the development version of evolved from [GitHub](https://github.com/) with:
 
 ``` r
 # install.packages("devtools")
