@@ -13,12 +13,12 @@ knitr::opts_chunk$set(
 )
 ```
 
-# EvolPackage
+# evolved
 
 <!-- badges: start -->
 <!-- badges: end -->
 
-The goal of EvolPackage is to ...
+The goal of evolved is to ...
 
 ## Installation
 
@@ -34,7 +34,7 @@ devtools::install_github("Auler-J/evol_package")
 This is a basic example which shows you how to solve a common problem:
 
 ```{r example}
-library(EvolPackage)
+library(evolved)
 ## basic example code
 ```
 

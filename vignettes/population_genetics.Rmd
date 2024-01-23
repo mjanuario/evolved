@@ -15,7 +15,7 @@ options(rmarkdown.html_vignette.check_title = FALSE)
 
 
 ```{r}
-library(EvolPackage)
+library(evolved)
 ```
 
 ## Hardy-Weinberg equilibrium
