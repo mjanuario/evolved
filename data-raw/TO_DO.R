@@ -11,10 +11,6 @@
 browseURL("https://r-pkgs.org/Workflow101.html#naming") # - DAN
 # EvolVEd
 
-# 2) Functions lacking references:
-# - NatSelSim
-
-
 # 3) create a readme - Jenn created a sckeleton
 
 # 4) TO DO for cran release:
@@ -34,7 +30,6 @@ browseURL("https://r-pkgs.org/Workflow101.html#naming") # - DAN
 ## 20 18 18
 
 #clocks and rocks
-# head(cytOxidase) excedes output chunk
 # plotProteinSeq "cnidaria" is partially blank. Also should ajust par in function to be able to see the longest clade
 
 #phylos
