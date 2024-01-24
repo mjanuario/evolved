@@ -47,7 +47,7 @@ With this type of object, students can also simulate closed populations of a spe
 
 Students can also simulate genetic drift in Wright-Fisher populations, by using the function `WFDriftSim()`
 
-```{r}
+```{r fig.height=5, fig.width=6, fig.align='center'}
 drifting = WFDriftSim(Ne = 10, n.gen = 100, p0 = .5, n.sim = 1000, 
                         print.data = T, plot.type = "static", knitr = TRUE)
 
