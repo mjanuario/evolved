@@ -16,7 +16,7 @@ plotNatSel(
 }
 \arguments{
 \item{gen.HW}{Dataframe with A1A1, A1A2 and A2A2 genotypic
-frequencies in each generation (nrows = n.gen)}
+frequencies in each generation (nrows = NGen)}
 
 \item{p.t}{Allelic frequency through time}
 
