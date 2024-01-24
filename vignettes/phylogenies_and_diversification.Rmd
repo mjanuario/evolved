@@ -38,7 +38,7 @@ plotPaintedWhales(knitr = TRUE)
 Now we will visualize lineage-through-time (LTT) plots for this phylogenetic tree. The LTT plots contain a lot of information about phylogenetic tree structure, for instance they tell a lot about the shape of trees produced by different speciation and extinction rates.
 
 ```{r,fig.height=5, fig.width=6, fig.align='center'}
-lttPlot(whale_phylo)
+lttPlot(whale_phylo, knitr = T)
 ```
 
 Ok, but how does this plot stores info about the phylogeny?
