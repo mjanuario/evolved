@@ -34,18 +34,6 @@ users. Functions use examples are provided in the vignettes.
 
 <html>
 <head>
-<style>
-  table {
-    width: 100%;
-    border-collapse: collapse;
-    margin-top: 20px;
-  }
-&#10;  th, td {
-    border: 1px solid black;
-    padding: 8px;
-    text-align: left;
-  }
-</style>
 </head>
 <body>
 <table>
