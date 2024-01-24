@@ -3,7 +3,7 @@ NULL
 
 #' Plot WFDriftSim output
 #'
-#' @param p.through.time Matrix with nGen columns and nSim lines
+#' @param p.through.time Matrix with n.gen columns and n.sim lines
 #' @param plot.type String. Options are "static" or "animate"
 #' @param knitr Logical indicating if plot is intended to show up in RMarkdown files made by the \code{Knitr} R package.
 #'
@@ -11,7 +11,7 @@ NULL
 #' @export plotWFDrift
 #'
 #' @examples
-#' store_p = WFDriftSim(Ne = 5, nGen = 10, p0=.2, nSim=5, plot = "none", printData = TRUE)
+#' store_p = WFDriftSim(Ne = 5, n.gen = 10, p0=.2, n.sim=5, plot = "none", print.data = TRUE)
 #' plotWFDrift(store_p, "static")
 plotWFDrift = function(p.through.time, plot.type = plot, knitr = FALSE){
 
