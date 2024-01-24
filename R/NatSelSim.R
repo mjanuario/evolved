@@ -122,7 +122,7 @@ NatSelSim <- function(w11=1, w12=1, w22=0.9, p0=0.5, n.gen=10, plot.type = "anim
     t <- c(t, gen) 
   }
   
-  plotNatSel(gen_HW = gen_HW, p_t = p_t, w_t = w_t, t = t, W_gntp = c(w11, w12, w22), plot.type = plot.type, knitr = knitr)
+  plotNatSel(gen.HW = gen_HW, p.t = p_t, w.t = w_t, t = t, W.gntp = c(w11, w12, w22), plot.type = plot.type, knitr = knitr)
   
   if(print.data){
     return(gen_HW)
