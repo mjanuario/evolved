@@ -25,6 +25,8 @@ NULL
 #' function should be return as a \code{data.frame}. If \code{tax_lvl} is 
 #' \code{NULL}, the function don't calculate ranges and so it has nothing 
 #' to return.
+#' @param knitr Logical indicating if plot is intended to show up in RMarkdown files made by the \code{Knitr} R package.
+#' 
 #' @return Plots a pile of the max-min temporal ranges of the chosen 
 #' \code{tax_lvl}. This usually will be stratigraphic ranges for occurrences 
 #' (so there is no attempt to estimate "true" ranges), and if 
@@ -44,7 +46,7 @@ NULL
 #' plotRawFossilOccs(ammonoidea_fossil, tax_lvl = "species")
 #' plotRawFossilOccs(ammonoidea_fossil, tax_lvl = "genus")
 #' 
-plotRawFossilOccs <- function(data, tax_lvl=NULL, sort=TRUE, use_midpoint=TRUE, return_ranges=FALSE){
+plotRawFossilOccs <- function(data, tax_lvl=NULL, sort=TRUE, use_midpoint=TRUE, return_ranges=FALSE, knitr = FALSE){
   
   ############################################
   # check the classes of inputs and stop if any was inputted wrongly;
@@ -60,7 +62,10 @@ plotRawFossilOccs <- function(data, tax_lvl=NULL, sort=TRUE, use_midpoint=TRUE, 
   ############################################
   
   opar = par(no.readonly = TRUE)
-  
+  if(!knitr){
+    dev.new()
+  }
+
   title="Occurrence"
   
   if(is.null(tax_lvl) & use_midpoint){

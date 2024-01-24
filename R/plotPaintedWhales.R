@@ -5,7 +5,7 @@ NULL
 #' \code{plotPaintedWhales} plots the phylogeny from Steeman et al (2011), coloring the Dolphins (Delphinidae), porpoises (Phocoenidae), the Mysticetes, the baleen whales (Balaenopteridae), and the Beaked whales (Ziphiidae).
 #' @param show.legend Logical indicating if clade legend should be shown.
 #' @param direction Phylogeny plotting direction. Should be set to "rightwards"
-#' @param knitr Logical indicating if plot is intented to show up in
+#' @param knitr Logical indicating if plot is intended to show up in RMarkdown files made by the \code{Knitr} R package.
 #'  (the default) or "leftwards".
 #' @param ... other arguments to be passed to \code{phytools::plotSimmap}
 #' 

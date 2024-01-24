@@ -5,6 +5,7 @@ NULL
 #'
 #' @param p_through_time Matrix with nGen columns and nSim lines
 #' @param plot_type String. Options are "static" or "animate"
+#' @param knitr Logical indicating if plot is intended to show up in RMarkdown files made by the \code{Knitr} R package.
 #'
 #' @return A static or animated plot of populations under genetic drift through time
 #' @export plotWFDrift
@@ -12,7 +13,7 @@ NULL
 #' @examples
 #' store_p = WFDriftSim(Ne = 5, nGen = 10, p0=.2, nSim=5, plot = "none", printData = TRUE)
 #' plotWFDrift(store_p, "static")
-plotWFDrift = function(p_through_time, plot_type = plot){
+plotWFDrift = function(p_through_time, plot_type = plot, knitr = FALSE){
 
   if(plot_type == "none")  {
     warning("plotWFDrift argument plot can only be \"static\" or \"animate\"")
@@ -24,8 +25,10 @@ plotWFDrift = function(p_through_time, plot_type = plot){
   time = 1:((nGen)+1)
   cols=grDevices::rainbow(nSim)
   
-  dev.new()
   opar =  par(no.readonly = TRUE)
+  if(!knitr){
+    dev.new()
+  }
   par(mar = (c(5, 4, 4, 0) + 0.1))
 
   layout(matrix(c(1,2), ncol = 2), widths=c(8, 2))
@@ -81,14 +84,13 @@ plotWFDrift = function(p_through_time, plot_type = plot){
 #' @param w_t Mean population fitness through time
 #' @param t time
 #' @param W_gntp Initial genotypic fitness
-#' @param plot_type String indicating if plot should be animated. 
-#' The default, "animateall", animate all possible panels. 
-#' Other options are "static", "animate1", "animate3", or "animate4".
+#' @param plot_type String indicating if plot should be animated. The default, "animateall", animate all possible panels. Other options are "static", "animate1", "animate3", or "animate4".
+#' @param knitr Logical indicating if plot is intended to show up in RMarkdown files made by the \code{Knitr} R package.
 #'
 #' @return Plot of NatSelSim's output (see \code{NatSelSim}'s help page for 
 #' details).
 #' @export plotNatSel
-plotNatSel = function(gen_HW = gen_HW, p_t = p_t, w_t = w_t, t = t, W_gntp = c(w11, w12, w22), plot_type = "animateall"){
+plotNatSel = function(gen_HW = gen_HW, p_t = p_t, w_t = w_t, t = t, W_gntp = c(w11, w12, w22), plot_type = "animateall", knitr = FALSE){
   
   if(plot_type == "animateall"){
     plot_type = c("animate1", "animate2", "animate3", "animate4")
@@ -138,7 +140,9 @@ plotNatSel = function(gen_HW = gen_HW, p_t = p_t, w_t = w_t, t = t, W_gntp = c(w
   #Plotting all panels##
   ######################
   opar = par(no.readonly = TRUE)
-  dev.new()
+  if(!knitr){
+    dev.new()
+  }
   par(mfrow=c(2,2))
   
   ################# pannel 1

@@ -6,6 +6,7 @@
 #' @param x A "ProteinSeq" object containing proteins from \code{taxon1} 
 #' and \code{taxon2}.
 #' @param taxonToPlot A character vector providing the common name of the species that will be plotted. Must be a name present in \code{x}.
+#' @param knitr Logical indicating if plot is intended to show up in RMarkdown files made by the \code{Knitr} R package.
 #' 
 #' @return A draw of the protein sequence(s) provided. Colors refer to 
 #' specific amino acids ("R", "W", "I", "F", "S", "T", "N", "H", "K", "D", "G", "L", "Y", "V", "M", "A", "E", "P", "Q", "C")", "gaps/space in the sequence ("-"), ambiguous amino acid ("B" - often representing either asparagine ("N") or aspartic acid ("D")), or another marker for  ambiguous amino acid ("X").
@@ -18,7 +19,7 @@
 #' data(cytOxidase)
 #' plotProteinSeq(cytOxidase, c("human", "chimpanzee", "cnidaria"))
 #' 
-plotProteinSeq=function(x, taxonToPlot){
+plot.ProteinSeq=function(x, taxonToPlot, knitr = FALSE){
   # A species list:
   ids=match(names(x), taxonToPlot)
   
@@ -36,7 +37,9 @@ plotProteinSeq=function(x, taxonToPlot){
   
   # ploting:
   par(mar = c(5.1, 4.1, 4.1, .5))
-  
+  if(!knitr){
+    dev.new()
+  }
   plot(NA, xlim = c(-60,513), ylim = c(0.5,0.5+length(taxonToPlot)), yaxt="n",
        frame.plot = F, xlab="Amino Acid sites", ylab="Species")
   text(x = rep(-40, times=length(taxonToPlot)), cex=.7,
