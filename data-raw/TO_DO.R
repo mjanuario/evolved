@@ -17,9 +17,6 @@
 #phylos
 # plotPaintedWhales() plot
 
-
-#6) consistency check of arguments used across several functions (e.g. nGen, Ngens, NGens). nGen and nSim ok
-
 # 7) create at least 1 testhat check per funcion, even 
 
 #DONE#
