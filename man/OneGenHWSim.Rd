@@ -4,16 +4,16 @@
 \alias{OneGenHWSim}
 \title{Simulating one generation of genotypes under Hardy-Weinberg equilibrium}
 \usage{
-OneGenHWSim(nInd = 50, p = 0.5, nSim = 100)
+OneGenHWSim(n.ind = 50, p = 0.5, n.sim = 100)
 }
 \arguments{
-\item{nInd}{Integer indicating the census size of the simulated populations.
+\item{n.ind}{Integer indicating the census size of the simulated populations.
 If decimals are inserted, they will be rounded.}
 
 \item{p}{Numerical between zero and one that indicates A1's allele
 frequency. A2's allele frequency is assumed to be \code{1-p}.}
 
-\item{nSim}{Number of simulations to be made. If decimals are inserted,
+\item{n.sim}{Number of simulations to be made. If decimals are inserted,
 they will be rounded.}
 }
 \value{
@@ -21,28 +21,28 @@ A \code{data.frame} containing the number of individuals for each
 genotype.
 }
 \description{
-\code{OneGenHWSim} creates \code{nSim} simulations of one
+\code{OneGenHWSim} creates \code{n.sim} simulations of one
 generation of genotypes under Hardy-Weinberg equilibrium for a
 bi-allelic loci.
 }
 \examples{
 
-#using the default values (nInd = 50, p = 0.5, nSim = 100):
+#using the default values (n.ind = 50, p = 0.5, n.sim = 100):
 #OneGenHWSim()
 
 #Simulating with a already fixed allele:
-OneGenHWSim(nInd = 50, p = 1)
+OneGenHWSim(n.ind = 50, p = 1)
 
 # Testing if the simulation works:
 A1freq <- .789 #any value could work
-nSimul <- 100
-simulations <- OneGenHWSim(nInd = nSimul, nSim = nSimul, p = A1freq)
+n.simul <- 100
+simulations <- OneGenHWSim(n.ind = n.simul, n.sim = n.simul, p = A1freq)
 
 #expected:
 c(A1freq^2, 2*A1freq*(1-A1freq), (1-A1freq)^2)
 
 #simulated:
-apply(X = simulations, MARGIN = 2, FUN = function(x){mean(x)/nSimul})
+apply(X = simulations, MARGIN = 2, FUN = function(x){mean(x)/n.simul})
 
 }
 \references{

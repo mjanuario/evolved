@@ -4,19 +4,19 @@
 \alias{fitCRBD}
 \title{Fit a constant-rate birth-death process to a phylogeny}
 \usage{
-fitCRBD(phy, nopt = 5, lmin = 0.001, lmax = 5, MAXBAD = 200)
+fitCRBD(phy, n.opt = 5, l.min = 0.001, l.max = 5, max.bad = 200)
 }
 \arguments{
 \item{phy}{A \code{phylo} object, following terminology from package
 \code{ape}, in which function will operate.}
 
-\item{nopt}{Number of optimizations that will be tried by function.}
+\item{n.opt}{Number of optimizations that will be tried by function.}
 
-\item{lmin}{Lower bound for optimization. Default value is \code{0.001}.}
+\item{l.min}{Lower bound for optimization. Default value is \code{0.001}.}
 
-\item{lmax}{Upper bound for optimization. Default value is \code{5}.}
+\item{l.max}{Upper bound for optimization. Default value is \code{5}.}
 
-\item{MAXBAD}{Maximum number of unsuccessful optimization attempts. Default
+\item{max.bad}{Maximum number of unsuccessful optimization attempts. Default
 value is \code{200}.}
 }
 \value{

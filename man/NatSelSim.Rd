@@ -9,9 +9,9 @@ NatSelSim(
   w12 = 1,
   w22 = 0.9,
   p0 = 0.5,
-  nGen = 10,
-  plot_type = "animateall",
-  printData = FALSE,
+  n.gen = 10,
+  plot.type = "animateall",
+  print.data = FALSE,
   knitr = TRUE
 )
 }
@@ -28,24 +28,24 @@ normalized if any genotype fitness exceeds one.}
 \item{p0}{Initial (time = 0) allelic frequency of A1.
 A2's initial allelic frequency is \code{1-p0}.}
 
-\item{nGen}{Number of generation that will be simulated.}
+\item{n.gen}{Number of generation that will be simulated.}
 
-\item{plot_type}{String indicating if plot should be animated.
+\item{plot.type}{String indicating if plot should be animated.
 The default, "animateall" animate all possible panels.
 Other options are "static" (no animation), "animate1", "animate3", or
 "animate4". Users can animate each panel individually (using
-\code{plot_type = "animateX"}, with X being the panel which one wants to
+\code{plot.type = "animateX"}, with X being the panel which one wants to
 animate (so options are  "animate1",  "animate3",  and "animate4"
 (see return for more info).}
 
-\item{printData}{Logical indicating whether all
+\item{print.data}{Logical indicating whether all
 simulation results should be returned as a \code{data.frame}. Default value
 is \code{FALSE}.}
 
 \item{knitr}{Logical indicating if plot is intended to show up in RMarkdown files made by the \code{Knitr} R package.}
 }
 \value{
-If \code{printData = TRUE}, it returns a \code{data.frame}
+If \code{print.data = TRUE}, it returns a \code{data.frame}
 containing the number of individuals for each genotype through time. The
 plots done by the function shows (1) Allele frequency change through time.
 (2) The adaptive landscape (which remains static during the whole simulation,
@@ -54,7 +54,7 @@ and (4) Time series of genotypic population frequencies.
 }
 \description{
 \code{NatSelSim} simulates natural selection in a bi-allelic gene through
-\code{nGen} generations.
+\code{n.gen} generations.
 }
 \details{
 If any value of fitness (i.e., \code{w11}, \code{w12},
@@ -63,19 +63,19 @@ and values are re-normalized.
 }
 \examples{
 
-#using the default values (w11=1, w12=1, w22=0.9, p0=0.5, nGen=10)
+#using the default values (w11=1, w12=1, w22=0.9, p0=0.5, n.gen=10)
 \dontrun{NatSelSim()}
 
 # Continuing a simulation for extra time:
 # Run the first simulation
 sim1=NatSelSim(w11 = .4, w12 = .5, w22 = .4, p0 = 0.35, 
-nGen = 5, plot_type = "static", printData = TRUE)
+n.gen = 5, plot.type = "static", print.data = TRUE)
 
 # Then take the allelic frequency form the first sim:
 new_p0 <- (sim1$AA[nrow(sim1)] + sim1$Aa[nrow(sim1)]*1/2) 
 # and use as p0 for a second one:
 
-NatSelSim(w11 = .4, w12 = .5, w22 = .4, p0 = new_p0, nGen = 5, plot_type = "static")
+NatSelSim(w11 = .4, w12 = .5, w22 = .4, p0 = new_p0, n.gen = 5, plot.type = "static")
 
 
 }

@@ -5,28 +5,28 @@
 \title{Plot NatSelSim output}
 \usage{
 plotNatSel(
-  gen_HW = gen_HW,
-  p_t = p_t,
-  w_t = w_t,
+  gen.HW = gen.HW,
+  p.t = p.t,
+  w.t = w.t,
   t = t,
-  W_gntp = c(w11, w12, w22),
-  plot_type = "animateall",
+  W.gntp = c(w11, w12, w22),
+  plot.type = "animateall",
   knitr = FALSE
 )
 }
 \arguments{
-\item{gen_HW}{Dataframe with A1A1, A1A2 and A2A2 genotypic
-frequencies in each generation (nrows = NGen)}
+\item{gen.HW}{Dataframe with A1A1, A1A2 and A2A2 genotypic
+frequencies in each generation (nrows = n.gen)}
 
-\item{p_t}{Allelic frequency through time}
+\item{p.t}{Allelic frequency through time}
 
-\item{w_t}{Mean population fitness through time}
+\item{w.t}{Mean population fitness through time}
 
 \item{t}{time}
 
-\item{W_gntp}{Initial genotypic fitness}
+\item{W.gntp}{Initial genotypic fitness}
 
-\item{plot_type}{String indicating if plot should be animated. The default, "animateall", animate all possible panels. Other options are "static", "animate1", "animate3", or "animate4".}
+\item{plot.type}{String indicating if plot should be animated. The default, "animateall", animate all possible panels. Other options are "static", "animate1", "animate3", or "animate4".}
 
 \item{knitr}{Logical indicating if plot is intended to show up in RMarkdown files made by the \code{Knitr} R package.}
 }

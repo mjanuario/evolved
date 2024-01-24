@@ -6,43 +6,43 @@
 \usage{
 WFDriftSim(
   Ne,
-  nGen,
+  n.gen,
   p0 = 0.5,
-  nSim = 1,
-  plot_type = "animate",
-  printData = FALSE,
+  n.sim = 1,
+  plot.type = "animate",
+  print.data = FALSE,
   knitr = FALSE
 )
 }
 \arguments{
 \item{Ne}{Number giving the effective population size of the population}
 
-\item{nGen}{Number of generations to be simulated.}
+\item{n.gen}{Number of generations to be simulated.}
 
 \item{p0}{Initial frequency of a given allele. As the simulated organism is
 diploid, the other alleles frequency will be \code{1-(p0)}. Default value
 is \code{0.5}.}
 
-\item{nSim}{Number of simulations to be made. If decimals are inserted,
+\item{n.sim}{Number of simulations to be made. If decimals are inserted,
 they will be rounded. Default value is \code{1}.}
 
-\item{plot_type}{Character indicating if simulations should be plotted as colored
+\item{plot.type}{Character indicating if simulations should be plotted as colored
 lines. Each color represents a different population. If
-\code{plot_type = "animate"} (default value) it animates each generation
-individually. If \code{plot_type = "static"} it plots all lines rapidly. If
-\code{plot_type = "none"} nothing is plotted.}
+\code{plot.type = "animate"} (default value) it animates each generation
+individually. If \code{plot.type = "static"} it plots all lines rapidly. If
+\code{plot.type = "none"} nothing is plotted.}
 
-\item{printData}{Logical indicating whether all simulation results should be
+\item{print.data}{Logical indicating whether all simulation results should be
 returned as a \code{data.frame}. Default value is \code{FALSE}.}
 
 \item{knitr}{Logical indicating if plot is intended to show up in RMarkdown files made by the \code{Knitr} R package.}
 }
 \value{
-If \code{plot_type = "static"} or \code{"animate"}, plots the
+If \code{plot.type = "static"} or \code{"animate"}, plots the
 timeseries of all simulations, with each line+color referring to a
 different simulation. Note that if many simulations (generally more
 than 20) are simulated, colors might be cycled and different simulation
-will have the same color. If \code{printData = TRUE}, returns a
+will have the same color. If \code{print.data = TRUE}, returns a
 \code{data.frame} with the simulation results.
 }
 \description{
@@ -56,22 +56,22 @@ with the rate of genetic drift (for details, see Waples, 2022).
 }
 \examples{
 #Default values:
-WFDriftSim(Ne = 5, nGen = 30)
+WFDriftSim(Ne = 5, n.gen = 30)
 
 #A population which has already fixed one of the alleles:
-WFDriftSim(Ne = 5, nGen = 30, p0=1)
+WFDriftSim(Ne = 5, n.gen = 30, p0=1)
 
 #Many populations::
-WFDriftSim(Ne = 5, nGen = 30, p0=0.2, nSim=10)
+WFDriftSim(Ne = 5, n.gen = 30, p0=0.2, n.sim=10)
 
 ######## continuing a previous simulation:
-ngen_1stsim <- 10 # number of gens in the 1st sim:
-sim1 <- WFDriftSim(Ne = 5, nGen = ngen_1stsim, p0=.2, nSim=10, 
-plot_type = "none", printData = TRUE)
-ngen_2ndsim <-15 # number of gens in the 2nd sim:
+n.gen_1stsim <- 10 # number of gens in the 1st sim:
+sim1 <- WFDriftSim(Ne = 5, n.gen = n.gen_1stsim, p0=.2, n.sim=10, 
+plot.type = "none", print.data = TRUE)
+n.gen_2ndsim <-15 # number of gens in the 2nd sim:
 # now, note how we assigned p0:
-sim2 <- WFDriftSim(Ne = 5, nGen = ngen_2ndsim, p0=sim1[,ncol(sim1)], 
-plot_type = "static", nSim=10, printData = TRUE)
+sim2 <- WFDriftSim(Ne = 5, n.gen = n.gen_2ndsim, p0=sim1[,ncol(sim1)], 
+plot.type = "static", n.sim=10, print.data = TRUE)
 
 # if we want to merge both simulations, then we have to:
 # remove first column of 2nd sim (because it repeats
@@ -79,7 +79,7 @@ plot_type = "static", nSim=10, printData = TRUE)
 sim2 <- sim2[,-1]
 
 # re-name 2nd sim columns:
-colnames(sim2) <- paste0("gen", (ngen_1stsim+1):(ngen_1stsim+ngen_2ndsim))
+colnames(sim2) <- paste0("gen", (n.gen_1stsim+1):(n.gen_1stsim+n.gen_2ndsim))
 
 #finally, merging both rounds of simulations:
 all_sims <- cbind(sim1, sim2)

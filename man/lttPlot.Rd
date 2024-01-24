@@ -4,7 +4,15 @@
 \alias{lttPlot}
 \title{Make a lineage through time (LTT) plot}
 \usage{
-lttPlot(phy, lwd = 1, col = "red", plot = T, rel_time = F, add = F)
+lttPlot(
+  phy,
+  lwd = 1,
+  col = "red",
+  plot = T,
+  rel.time = F,
+  add = F,
+  knitr = FALSE
+)
 }
 \arguments{
 \item{phy}{A \code{phylo} object, as specified by the \code{ape} package.}
@@ -16,13 +24,15 @@ lttPlot(phy, lwd = 1, col = "red", plot = T, rel_time = F, add = F)
 \item{plot}{A \code{logical} indicating with calculations should be plotted.
 If \code{FALSE}, function returns a list of the calculated points.}
 
-\item{rel_time}{A \code{logical} indicating how the time scale should be
+\item{rel.time}{A \code{logical} indicating how the time scale should be
 shown. If \code{FALSE} (default), plots the absolute time since \code{phy}'s
 crown age. If  \code{TRUE}, plots time as a relative proportion between
 crown age and furthest tip from root.}
 
 \item{add}{A \code{logical} indicating if plot should be added to
 pre-existing plot. Default is \code{FALSE}.}
+
+\item{knitr}{Logical indicating if plot is intended to show up in RMarkdown files made by the \code{Knitr} R package.}
 }
 \value{
 Plots the sum of alive lineages per point in time, and adds a red

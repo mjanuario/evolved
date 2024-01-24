@@ -6,19 +6,19 @@
 \usage{
 calcFossilDivTT(
   data,
-  tax_lvl = "species",
+  tax.lvl = "species",
   method = "rangethrough",
-  bin_reso = 1
+  bin.reso = 1
 )
 }
 \arguments{
 \item{data}{A \code{data.frame} containing the columns: \code{max_ma},
-\code{min_ma} and  the name provided in \code{tax_lvl}. \code{max_ma} and
+\code{min_ma} and  the name provided in \code{tax.lvl}. \code{max_ma} and
 \code{min_ma} are respectively the early and late bounds of rock layer's age.
-\code{tax_lvl} column is the taxonomic level of the data. Any additional
+\code{tax.lvl} column is the taxonomic level of the data. Any additional
 columns are ignored.}
 
-\item{tax_lvl}{A \code{character} giving the taxonomic in which
+\item{tax.lvl}{A \code{character} giving the taxonomic in which
 calculations will be based on (default value is \code{"species"}).
 This must refer to the column names in \code{data}.}
 
@@ -27,7 +27,7 @@ Could be either \code{"rangethrough"} or \code{"stdmethod"}, which will
 respectively calculate diversity using the range through or the standard
 methods (Foote & Miller, 2007)}
 
-\item{bin_reso}{A \code{numeric} assigning the resolution (length) of the
+\item{bin.reso}{A \code{numeric} assigning the resolution (length) of the
 time bin to consider in calculations. Default value is \code{1} (which in
 most cases - e.g. those following the Paleobiology Database default
 timescale - will equate to one million years)}
@@ -38,7 +38,7 @@ the chosen taxonomic level through time, with calculation based on
 \code{method}. If \code{"method = rangethrough"}, the time moments are the
 layer boundaries given in \code{data}.
 If \code{"method = stdmethod"}, the time moments are evenly-space bins  with
-length equal to \code{bin_reso}, starting at the earliest bound in the
+length equal to \code{bin.reso}, starting at the earliest bound in the
 dataset.
 }
 \description{
@@ -52,7 +52,7 @@ data("trilob_fossil")
 
 # Using function:
 div1 <- calcFossilDivTT(trilob_fossil, method = "stdmethod")
-div2 <- calcFossilDivTT(trilob_fossil, method = "stdmethod", bin_reso = 10)
+div2 <- calcFossilDivTT(trilob_fossil, method = "stdmethod", bin.reso = 10)
 
 # Comparing different bins sizes in the standard method
 plot(x=div1$age, y=div1$div, type="l", 

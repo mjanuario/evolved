@@ -6,10 +6,10 @@
 \usage{
 plotRawFossilOccs(
   data,
-  tax_lvl = NULL,
+  tax.lvl = NULL,
   sort = TRUE,
-  use_midpoint = TRUE,
-  return_ranges = FALSE,
+  use.midpoint = TRUE,
+  return.ranges = FALSE,
   knitr = FALSE
 )
 }
@@ -18,7 +18,7 @@ plotRawFossilOccs(
 late bounds of rock layer, respectively labeled as \code{max_ma} and
 \code{min_ma}) and the taxonomic level asked in \code{tax_lv}.}
 
-\item{tax_lvl}{A \code{character} giving the taxonomic in which
+\item{tax.lvl}{A \code{character} giving the taxonomic in which
 calculations will be based on, which must refer to the column names in
 \code{data}. If \code{NULL} (default value), the function plots every
 individual occurrences in \code{data}.}
@@ -28,14 +28,14 @@ individual occurrences in \code{data}.}
 \code{FALSE}), function will follow the order of taxa (or occurrences)
 inputted in \code{data}.}
 
-\item{use_midpoint}{\code{logical} indicating if function should use
+\item{use.midpoint}{\code{logical} indicating if function should use
 occurrence midpoints (between \code{max_ma} and \code{min_ma}) as
 occurrence temporal boundaries, a method commonly employed in paleobiology
 to remove noise related to extremely coarse temporal resolution due to
-stratification. This argument is only used if a \code{tax_lvl} is provided.}
+stratification. This argument is only used if a \code{tax.lvl} is provided.}
 
-\item{return_ranges}{\code{logical} indicating if ranges calculated by
-function should be return as a \code{data.frame}. If \code{tax_lvl} is
+\item{return.ranges}{\code{logical} indicating if ranges calculated by
+function should be return as a \code{data.frame}. If \code{tax.lvl} is
 \code{NULL}, the function don't calculate ranges and so it has nothing
 to return.}
 
@@ -43,11 +43,11 @@ to return.}
 }
 \value{
 Plots a pile of the max-min temporal ranges of the chosen
-\code{tax_lvl}. This usually will be stratigraphic ranges for occurrences
+\code{tax.lvl}. This usually will be stratigraphic ranges for occurrences
 (so there is no attempt to estimate "true" ranges), and if
-\code{tax_lvl = NULL} (the default), occurrences are drawn as ranges of
+\code{tax.lvl = NULL} (the default), occurrences are drawn as ranges of
 stratigraphic resolution (= the fossil dating imprecision). If
-\code{return_ranges = TRUE}, it returns a \code{data.frame} containing the
+\code{return.ranges = TRUE}, it returns a \code{data.frame} containing the
 diversity (column \code{div}) of the chosen taxonomic level, through time.
 }
 \description{
@@ -58,8 +58,8 @@ associated with each taxa in a dataset.
 
 data("ammonoidea_fossil")
 par(mfrow=c(1,2))
-plotRawFossilOccs(ammonoidea_fossil, tax_lvl = "species")
-plotRawFossilOccs(ammonoidea_fossil, tax_lvl = "genus")
+plotRawFossilOccs(ammonoidea_fossil, tax.lvl = "species")
+plotRawFossilOccs(ammonoidea_fossil, tax.lvl = "genus")
 
 }
 \author{

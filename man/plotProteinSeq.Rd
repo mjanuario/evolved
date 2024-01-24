@@ -4,13 +4,13 @@
 \alias{plotProteinSeq}
 \title{Plot protein sequence(s)}
 \usage{
-plotProteinSeq(x, taxonToPlot, knitr = FALSE)
+plotProteinSeq(x, taxon.to.plot, knitr = FALSE)
 }
 \arguments{
 \item{x}{A "ProteinSeq" object containing proteins from \code{taxon1}
 and \code{taxon2}.}
 
-\item{taxonToPlot}{A character vector providing the common name of the species that will be plotted. Must be a name present in \code{x}.}
+\item{taxon.to.plot}{A character vector providing the common name of the species that will be plotted. Must be a name present in \code{x}.}
 
 \item{knitr}{Logical indicating if plot is intended to show up in RMarkdown files made by the \code{Knitr} R package.}
 }
