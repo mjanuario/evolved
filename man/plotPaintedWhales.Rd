@@ -4,7 +4,12 @@
 \alias{plotPaintedWhales}
 \title{Plotting the whale phylogeny and coloring its clades}
 \usage{
-plotPaintedWhales(show.legend = TRUE, direction = "rightwards", ...)
+plotPaintedWhales(
+  show.legend = TRUE,
+  direction = "rightwards",
+  knitr = FALSE,
+  ...
+)
 }
 \arguments{
 \item{show.legend}{Logical indicating if clade legend should be shown.}

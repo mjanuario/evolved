@@ -31,8 +31,8 @@ axisPhylo()
 
 But for this particular phylogeny, we can also visualize some subclades:
 
-```{r,fig.height=5, fig.width=6, fig.align='center'}
-plotPaintedWhales()
+```{r fig.height=15, fig.width=6, fig.align='center'}
+plotPaintedWhales(knitr = TRUE)
 ```
 
 Now we will visualize lineage-through-time (LTT) plots for this phylogenetic tree. The LTT plots contain a lot of information about phylogenetic tree structure, for instance they tell a lot about the shape of trees produced by different speciation and extinction rates.
