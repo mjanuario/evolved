@@ -19,7 +19,7 @@
 #' data(cytOxidase)
 #' plotProteinSeq(cytOxidase, c("human", "chimpanzee", "cnidaria"))
 #' 
-plot.ProteinSeq=function(x, taxonToPlot, knitr = FALSE){
+plotProteinSeq=function(x, taxonToPlot, knitr = FALSE){
   # A species list:
   ids=match(names(x), taxonToPlot)
   
