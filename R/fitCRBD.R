@@ -9,10 +9,10 @@ NULL
 #'
 #' @param phy A \code{phylo} object, following terminology from package 
 #' \code{ape}, in which function will operate.
-#' @param nopt Number of optimizations that will be tried by function.
-#' @param lmin Lower bound for optimization. Default value is \code{0.001}.
-#' @param lmax Upper bound for optimization. Default value is \code{5}.
-#' @param MAXBAD Maximum number of unsuccessful optimization attempts. Default 
+#' @param n.opt Number of optimizations that will be tried by function.
+#' @param l.min Lower bound for optimization. Default value is \code{0.001}.
+#' @param l.max Upper bound for optimization. Default value is \code{5}.
+#' @param max.bad Maximum number of unsuccessful optimization attempts. Default 
 #' value is \code{200}.
 #' 
 #' @seealso see help page from \code{diversitree::make.bd} and 
@@ -48,7 +48,7 @@ NULL
 #' phy <- simulateTree(pars = c(S, E), max.taxa = 30, max.t = 8)
 #' fitCRBD(phy)
 #' 
-fitCRBD <- function(phy, nopt=5, lmin=0.001, lmax=5.0, MAXBAD = 200){
+fitCRBD <- function(phy, n.opt=5, l.min=0.001, l.max=5.0, max.bad = 200){
   
   ############################################
   # check the classes of inputs and stop if any was inputted wrongly:
@@ -59,7 +59,7 @@ fitCRBD <- function(phy, nopt=5, lmin=0.001, lmax=5.0, MAXBAD = 200){
   
   ref_classes = c("numeric","numeric","numeric","numeric")
   input_names = names(unlist(formals(fitCRBD)))[-1]
-  input_list = list(nopt, lmin, lmax, MAXBAD)
+  input_list = list(n.opt, l.min, l.max, max.bad)
   input_classes = unlist(lapply(input_list, class))
   
   if(any(! input_classes== ref_classes)){
@@ -81,23 +81,23 @@ fitCRBD <- function(phy, nopt=5, lmin=0.001, lmax=5.0, MAXBAD = 200){
   
   fx <- diversitree::make.bd(phy)
   
-  for (i in 1:nopt){
+  for (i in 1:n.opt){
     
     lam <- runif(1, 0, 0.5)	
     E <- lam * runif(1, 0, 1)
     
     badcount <- 0
     
-    resx <- try(stats::optim(c(lam, E) ,fx, method='L-BFGS-B', control=list(maxit=1000, fnscale=-1), lower=lmin, upper=lmax), silent=T)
+    resx <- try(stats::optim(c(lam, E) ,fx, method='L-BFGS-B', control=list(maxit=1000, fnscale=-1), lower=l.min, upper=l.max), silent=T)
     while (class(resx) == 'try-error'){
       
       lam <- runif(1, 0, 0.5)	
       E <- lam * runif(1, 0, 1)
       
-      resx <- try(stats::optim(c(lam, E) , fx, method='L-BFGS-B', control=list(maxit=1000, fnscale=-1), lower=lmin, upper=lmax), silent=T);
+      resx <- try(stats::optim(c(lam, E) , fx, method='L-BFGS-B', control=list(maxit=1000, fnscale=-1), lower=l.min, upper=l.max), silent=T);
       
       badcount <- badcount + 1;
-      if (badcount > MAXBAD){
+      if (badcount > max.bad){
         stop("Too many fails in fitDiversitree\n")
       }
     }

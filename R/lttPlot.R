@@ -8,12 +8,13 @@
 #' @param col Line color.
 #' @param  plot A \code{logical} indicating with calculations should be plotted.
 #'  If \code{FALSE}, function returns a list of the calculated points.
-#' @param rel_time A \code{logical} indicating how the time scale should be 
+#' @param rel.time A \code{logical} indicating how the time scale should be 
 #' shown. If \code{FALSE} (default), plots the absolute time since \code{phy}'s
 #' crown age. If  \code{TRUE}, plots time as a relative proportion between 
 #' crown age and furthest tip from root.
 #' @param add A \code{logical} indicating if plot should be added to 
 #' pre-existing plot. Default is \code{FALSE}.
+#' @param knitr Logical indicating if plot is intended to show up in RMarkdown files made by the \code{Knitr} R package.
 #' 
 #' @return Plots the sum of alive lineages per point in time, and adds a red 
 #' line as a reference of expectation under pure birth. If \code{plot = FALSE}, 
@@ -37,7 +38,7 @@
 #' lttPlot(phy)
 #' lttPlot(phy, plot = FALSE)
 #' 
-lttPlot <- function(phy, lwd=1, col="red", plot = T, rel_time = F, add = F){
+lttPlot <- function(phy, lwd=1, col="red", plot = T, rel.time = F, add = F, knitr = FALSE){
   
   ############################################
   # check the classes of inputs and stop if any was inputted wrongly:
@@ -48,7 +49,7 @@ lttPlot <- function(phy, lwd=1, col="red", plot = T, rel_time = F, add = F){
   
   ref_classes = c("numeric","character","logical","logical", "logical")
   input_names = names(unlist(formals(lttPlot)))[-1]
-  input_list = list(lwd, col, plot, rel_time, add)
+  input_list = list(lwd, col, plot, rel.time, add)
   input_classes = unlist(lapply(input_list, class))
   
   if(any(! input_classes== ref_classes)){
@@ -60,7 +61,7 @@ lttPlot <- function(phy, lwd=1, col="red", plot = T, rel_time = F, add = F){
   
   bt <- ape::branching.times(phy)
   
-  if (rel_time){
+  if (rel.time){
     bt <- bt / max(bt)
   }
   
@@ -80,7 +81,9 @@ lttPlot <- function(phy, lwd=1, col="red", plot = T, rel_time = F, add = F){
 
     #saving par
     opar = par(no.readonly = TRUE)
-        
+    if(!knitr){
+      dev.new()
+    }
     plot.new()
     par(mar=c(4,4,1,1))
     plot.window(xlim=c(0, xm), ylim=c(0,ym))

@@ -27,9 +27,9 @@ Students can use functions in the package to calculate the diversity of a certai
 To make it more fun, we will compare tow different taxonomic levels, and will plot them in a relative, log scale:
 
 ```{r,fig.height=5, fig.width=6, , fig.align='center'}
-spDTT = calcFossilDivTT(mammals_fossil, tax_lvl = "species")
-genusDTT = calcFossilDivTT(mammals_fossil, tax_lvl = "genus")
-famDTT = calcFossilDivTT(mammals_fossil, tax_lvl = "family")
+spDTT = calcFossilDivTT(mammals_fossil, tax.lvl = "species")
+genusDTT = calcFossilDivTT(mammals_fossil, tax.lvl = "genus")
+famDTT = calcFossilDivTT(mammals_fossil, tax.lvl = "family")
 
 # And to allow comparisons, we will use relative richness:
 plot(x=genusDTT$age, xlim = rev(range(genusDTT$age)),
@@ -51,13 +51,13 @@ We can also visualize fossil records by running:
 
 ```{r,fig.height=5, fig.width=6, , fig.align='center'}
 # Family-level:
-plotRawFossilOccs(mammals_fossil, tax_lvl = "family", knitr = TRUE)
+plotRawFossilOccs(mammals_fossil, tax.lvl = "family", knitr = TRUE)
 
 # Genus level:
-plotRawFossilOccs(mammals_fossil, tax_lvl = "genus", knitr = TRUE)
+plotRawFossilOccs(mammals_fossil, tax.lvl = "genus", knitr = TRUE)
 
 # Species level:
-plotRawFossilOccs(mammals_fossil, tax_lvl = "species", knitr = TRUE)
+plotRawFossilOccs(mammals_fossil, tax.lvl = "species", knitr = TRUE)
 ```
 
 Are they different? how could we test? Hint: look at the column names of the fossil object:

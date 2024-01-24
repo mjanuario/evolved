@@ -1,14 +1,14 @@
 #' Simulating one generation of genotypes under Hardy-Weinberg equilibrium
 #'
-#' \code{OneGenHWSim} creates \code{nSim} simulations of one 
+#' \code{OneGenHWSim} creates \code{n.sim} simulations of one 
 #' generation of genotypes under Hardy-Weinberg equilibrium for a 
 #' bi-allelic loci.
 #'
-#' @param nInd Integer indicating the census size of the simulated populations. 
+#' @param n.ind Integer indicating the census size of the simulated populations. 
 #' If decimals are inserted, they will be rounded.
 #' @param p Numerical between zero and one that indicates A1's allele 
 #' frequency. A2's allele frequency is assumed to be \code{1-p}.
-#' @param nSim Number of simulations to be made. If decimals are inserted, 
+#' @param n.sim Number of simulations to be made. If decimals are inserted, 
 #' they will be rounded.
 #' 
 #' @return A \code{data.frame} containing the number of individuals for each 
@@ -35,29 +35,29 @@
 #' 
 #' @examples
 #' 
-#' #using the default values (nInd = 50, p = 0.5, nSim = 100):
+#' #using the default values (n.ind = 50, p = 0.5, n.sim = 100):
 #' #OneGenHWSim()
 #' 
 #' #Simulating with a already fixed allele:
-#' OneGenHWSim(nInd = 50, p = 1)
+#' OneGenHWSim(n.ind = 50, p = 1)
 #' 
 #' # Testing if the simulation works:
 #' A1freq <- .789 #any value could work
-#' nSimul <- 100
-#' simulations <- OneGenHWSim(nInd = nSimul, nSim = nSimul, p = A1freq)
+#' n.simul <- 100
+#' simulations <- OneGenHWSim(n.ind = n.simul, n.sim = n.simul, p = A1freq)
 #' 
 #' #expected:
 #' c(A1freq^2, 2*A1freq*(1-A1freq), (1-A1freq)^2)
 #' 
 #' #simulated:
-#' apply(X = simulations, MARGIN = 2, FUN = function(x){mean(x)/nSimul})
+#' apply(X = simulations, MARGIN = 2, FUN = function(x){mean(x)/n.simul})
 #' 
-OneGenHWSim <- function(nInd=50, p=0.5, nSim=100){
+OneGenHWSim <- function(n.ind=50, p=0.5, n.sim=100){
   
   ######## Checking input:
-  if(!(nInd>0)){stop("\"nInd\" must be an integer number larger than zero")}
+  if(!(n.ind>0)){stop("\"n.ind\" must be an integer number larger than zero")}
   if(p<0 | p>1){stop("\"p\" must be between zero and one")}
-  if(!(nSim>0)){stop("\"nSim\" must be an integer number larger than zero")}
+  if(!(n.sim>0)){stop("\"n.sim\" must be an integer number larger than zero")}
   ########################  
   
   # Vector of genotypes:
@@ -68,19 +68,19 @@ OneGenHWSim <- function(nInd=50, p=0.5, nSim=100){
   
   ######## Simulation:
   res <- data.frame()
-  for(i in 1:nSim){
+  for(i in 1:n.sim){
     
     #creating gamete pool:
-    gamete_pool <- c(rep("A1", times=2*p*nInd), 
-                     rep("A2", times=2*(1-p)*nInd))
+    gamete_pool <- c(rep("A1", times=2*p*n.ind), 
+                     rep("A2", times=2*(1-p)*n.ind))
     
     #mixing gamete pool:
     gamete_pool <- sample(gamete_pool)
     
     #creating random genotypes:
     genotype_random_draw <- paste0(
-         gamete_pool[1:nInd], 
-         gamete_pool[(nInd+1):length(gamete_pool)]
+         gamete_pool[1:n.ind], 
+         gamete_pool[(n.ind+1):length(gamete_pool)]
          )
     
     #A1A2 and A2A1 are the same genotype, so let's convert this:
@@ -119,7 +119,7 @@ OneGenHWSim <- function(nInd=50, p=0.5, nSim=100){
     colnames(res) <- genotypes
   }
   # ...and rows:
-  rownames(res) <- paste0("sim_", 1:nSim)
+  rownames(res) <- paste0("sim_", 1:n.sim)
   ########################
   
   return(res)

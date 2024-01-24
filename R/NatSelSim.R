@@ -4,7 +4,7 @@ NULL
 #' Simulating natural selection through time in a bi-allelic gene
 #'
 #' \code{NatSelSim} simulates natural selection in a bi-allelic gene through 
-#' \code{nGen} generations.
+#' \code{n.gen} generations.
 #'
 #' @param w11 Number giving the fitness of genotype A1A1. Values will be 
 #' normalized if any genotype fitness exceeds one.
@@ -14,20 +14,20 @@ NULL
 #' normalized if any genotype fitness exceeds one.
 #' @param p0 Initial (time = 0) allelic frequency of A1. 
 #' A2's initial allelic frequency is \code{1-p0}.
-#' @param nGen Number of generation that will be simulated.
-#' @param plot_type String indicating if plot should be animated. 
+#' @param n.gen Number of generation that will be simulated.
+#' @param plot.type String indicating if plot should be animated. 
 #' The default, "animateall" animate all possible panels. 
 #' Other options are "static" (no animation), "animate1", "animate3", or 
 #' "animate4". Users can animate each panel individually (using 
-#' \code{plot_type = "animateX"}, with X being the panel which one wants to 
+#' \code{plot.type = "animateX"}, with X being the panel which one wants to 
 #' animate (so options are  "animate1",  "animate3",  and "animate4" 
 #' (see return for more info). 
-#' @param printData Logical indicating whether all 
+#' @param print.data Logical indicating whether all 
 #' simulation results should be returned as a \code{data.frame}. Default value
 #' is \code{FALSE}.
 #' @param knitr Logical indicating if plot is intended to show up in RMarkdown files made by the \code{Knitr} R package.
 #' 
-#' @return If \code{printData = TRUE}, it returns a \code{data.frame} 
+#' @return If \code{print.data = TRUE}, it returns a \code{data.frame} 
 #' containing the number of individuals for each genotype through time. The 
 #' plots done by the function shows (1) Allele frequency change through time. 
 #' (2) The adaptive landscape (which remains static during the whole simulation, 
@@ -50,25 +50,25 @@ NULL
 #' 
 #' @examples
 #' 
-#' #using the default values (w11=1, w12=1, w22=0.9, p0=0.5, nGen=10)
+#' #using the default values (w11=1, w12=1, w22=0.9, p0=0.5, n.gen=10)
 #' \dontrun{NatSelSim()}
 #' 
 #' # Continuing a simulation for extra time:
 #' # Run the first simulation
 #' sim1=NatSelSim(w11 = .4, w12 = .5, w22 = .4, p0 = 0.35, 
-#' nGen = 5, plot_type = "static", printData = TRUE)
+#' n.gen = 5, plot.type = "static", print.data = TRUE)
 #' 
 #' # Then take the allelic frequency form the first sim:
 #' new_p0 <- (sim1$AA[nrow(sim1)] + sim1$Aa[nrow(sim1)]*1/2) 
 #' # and use as p0 for a second one:
 #' 
-#' NatSelSim(w11 = .4, w12 = .5, w22 = .4, p0 = new_p0, nGen = 5, plot_type = "static")
+#' NatSelSim(w11 = .4, w12 = .5, w22 = .4, p0 = new_p0, n.gen = 5, plot.type = "static")
 #' 
 #' 
-NatSelSim <- function(w11=1, w12=1, w22=0.9, p0=0.5, nGen=10, plot_type = "animateall", printData=FALSE, knitr = TRUE){
+NatSelSim <- function(w11=1, w12=1, w22=0.9, p0=0.5, n.gen=10, plot.type = "animateall", print.data=FALSE, knitr = TRUE){
   
   #checking input:
-  if(length(plot_type)!=1 | !inherits(x = plot_type, what = "character") | any(!plot_type %in% c("animateall", "static", "animate1", "animate3", "animate4")))
+  if(length(plot.type)!=1 | !inherits(x = plot.type, what = "character") | any(!plot.type %in% c("animateall", "static", "animate1", "animate3", "animate4")))
   {
     warning("Invalid plot type. Plotting as \"animateall\"")
   }
@@ -103,7 +103,7 @@ NatSelSim <- function(w11=1, w12=1, w22=0.9, p0=0.5, nGen=10, plot_type = "anima
   s <- abs(diff(c(w11, w22))) #calculating s h <- (-w12+1)/s #calculating h (!!!)
   #####
   # Now we run the simulation in time: 
-  for(gen in 1:nGen){
+  for(gen in 1:n.gen){
     #multiply genotype frequencies by genotype relat. fitness:
     aux <- gen_HW[gen,] * W_gntp
     #normalize frequencies and store new genot. freq.
@@ -122,9 +122,9 @@ NatSelSim <- function(w11=1, w12=1, w22=0.9, p0=0.5, nGen=10, plot_type = "anima
     t <- c(t, gen) 
   }
   
-  plotNatSel(gen_HW = gen_HW, p_t = p_t, w_t = w_t, t = t, W_gntp = c(w11, w12, w22), plot_type = plot_type, knitr = knitr)
+  plotNatSel(gen_HW = gen_HW, p_t = p_t, w_t = w_t, t = t, W_gntp = c(w11, w12, w22), plot.type = plot.type, knitr = knitr)
   
-  if(printData){
+  if(print.data){
     return(gen_HW)
   }
 }

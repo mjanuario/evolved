@@ -5,7 +5,7 @@
 #'
 #' @param x A "ProteinSeq" object containing proteins from \code{taxon1} 
 #' and \code{taxon2}.
-#' @param taxonToPlot A character vector providing the common name of the species that will be plotted. Must be a name present in \code{x}.
+#' @param taxon.to.plot A character vector providing the common name of the species that will be plotted. Must be a name present in \code{x}.
 #' @param knitr Logical indicating if plot is intended to show up in RMarkdown files made by the \code{Knitr} R package.
 #' 
 #' @return A draw of the protein sequence(s) provided. Colors refer to 
@@ -19,9 +19,9 @@
 #' data(cytOxidase)
 #' plotProteinSeq(cytOxidase, c("human", "chimpanzee", "cnidaria"))
 #' 
-plotProteinSeq=function(x, taxonToPlot, knitr = FALSE){
+plotProteinSeq=function(x, taxon.to.plot, knitr = FALSE){
   # A species list:
-  ids=match(names(x), taxonToPlot)
+  ids=match(names(x), taxon.to.plot)
   
   # a set of colors:
   cols= c("dodgerblue2", "#E31A1C", "green4",
@@ -40,13 +40,13 @@ plotProteinSeq=function(x, taxonToPlot, knitr = FALSE){
   if(!knitr){
     dev.new()
   }
-  plot(NA, xlim = c(-60,513), ylim = c(0.5,0.5+length(taxonToPlot)), yaxt="n",
+  plot(NA, xlim = c(-60,513), ylim = c(0.5,0.5+length(taxon.to.plot)), yaxt="n",
        frame.plot = F, xlab="Amino Acid sites", ylab="Species")
-  text(x = rep(-40, times=length(taxonToPlot)), cex=.7,
-       1:length(taxonToPlot), labels = taxonToPlot)
+  text(x = rep(-40, times=length(taxon.to.plot)), cex=.7,
+       1:length(taxon.to.plot), labels = taxon.to.plot)
   
-  for(i in 1:length(taxonToPlot)){
-    chars = unlist(strsplit(x[taxonToPlot[i]], ""))
+  for(i in 1:length(taxon.to.plot)){
+    chars = unlist(strsplit(x[taxon.to.plot[i]], ""))
     
     for(s in 1:513){
       polygon(

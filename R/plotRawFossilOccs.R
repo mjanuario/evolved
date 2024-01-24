@@ -8,7 +8,7 @@ NULL
 #' @param data A \code{data.frame} containing fossil data on the age (early and 
 #' late bounds of rock layer, respectively labeled as \code{max_ma} and 
 #' \code{min_ma}) and the taxonomic level asked in \code{tax_lv}.
-#' @param tax_lvl A \code{character} giving the taxonomic in which 
+#' @param tax.lvl A \code{character} giving the taxonomic in which 
 #' calculations will be based on, which must refer to the column names in 
 #' \code{data}. If \code{NULL} (default value), the function plots every 
 #' individual occurrences in \code{data}.
@@ -16,23 +16,23 @@ NULL
 #' \code{max_ma} values (default value is \code{TRUE}). Otherwise (i.e., if 
 #' \code{FALSE}), function will follow the order of taxa (or occurrences) 
 #' inputted in \code{data}.
-#' @param use_midpoint \code{logical} indicating if function should use 
+#' @param use.midpoint \code{logical} indicating if function should use 
 #' occurrence midpoints (between \code{max_ma} and \code{min_ma}) as 
 #' occurrence temporal boundaries, a method commonly employed in paleobiology 
 #' to remove noise related to extremely coarse temporal resolution due to 
-#' stratification. This argument is only used if a \code{tax_lvl} is provided.
-#' @param return_ranges \code{logical} indicating if ranges calculated by 
-#' function should be return as a \code{data.frame}. If \code{tax_lvl} is 
+#' stratification. This argument is only used if a \code{tax.lvl} is provided.
+#' @param return.ranges \code{logical} indicating if ranges calculated by 
+#' function should be return as a \code{data.frame}. If \code{tax.lvl} is 
 #' \code{NULL}, the function don't calculate ranges and so it has nothing 
 #' to return.
 #' @param knitr Logical indicating if plot is intended to show up in RMarkdown files made by the \code{Knitr} R package.
 #' 
 #' @return Plots a pile of the max-min temporal ranges of the chosen 
-#' \code{tax_lvl}. This usually will be stratigraphic ranges for occurrences 
+#' \code{tax.lvl}. This usually will be stratigraphic ranges for occurrences 
 #' (so there is no attempt to estimate "true" ranges), and if 
-#' \code{tax_lvl = NULL} (the default), occurrences are drawn as ranges of 
+#' \code{tax.lvl = NULL} (the default), occurrences are drawn as ranges of 
 #' stratigraphic resolution (= the fossil dating imprecision). If 
-#' \code{return_ranges = TRUE}, it returns a \code{data.frame} containing the 
+#' \code{return.ranges = TRUE}, it returns a \code{data.frame} containing the 
 #' diversity (column \code{div}) of the chosen taxonomic level, through time.
 #' 
 #' @export plotRawFossilOccs
@@ -43,16 +43,16 @@ NULL
 #' 
 #' data("ammonoidea_fossil")
 #' par(mfrow=c(1,2))
-#' plotRawFossilOccs(ammonoidea_fossil, tax_lvl = "species")
-#' plotRawFossilOccs(ammonoidea_fossil, tax_lvl = "genus")
+#' plotRawFossilOccs(ammonoidea_fossil, tax.lvl = "species")
+#' plotRawFossilOccs(ammonoidea_fossil, tax.lvl = "genus")
 #' 
-plotRawFossilOccs <- function(data, tax_lvl=NULL, sort=TRUE, use_midpoint=TRUE, return_ranges=FALSE, knitr = FALSE){
+plotRawFossilOccs <- function(data, tax.lvl=NULL, sort=TRUE, use.midpoint=TRUE, return.ranges=FALSE, knitr = FALSE){
   
   ############################################
   # check the classes of inputs and stop if any was inputted wrongly;
   ref_classes = c("data.frame", "logical", "logical",  "logical")
   input_names = names(unlist(formals(plotRawFossilOccs)))[-2]
-  input_list = list(data, sort, use_midpoint, return_ranges)
+  input_list = list(data, sort, use.midpoint, return.ranges)
   input_classes = unlist(lapply(input_list, class))
   
   if(any(! ref_classes == input_classes)){
@@ -68,30 +68,30 @@ plotRawFossilOccs <- function(data, tax_lvl=NULL, sort=TRUE, use_midpoint=TRUE, 
 
   title="Occurrence"
   
-  if(is.null(tax_lvl) & use_midpoint){
-    message("If tax_lvl is not supplied, argument use_midpoint will be set to FALSE")
-    use_midpoint=FALSE
+  if(is.null(tax.lvl) & use.midpoint){
+    message("If tax.lvl is not supplied, argument use.midpoint will be set to FALSE")
+    use.midpoint=FALSE
   }
   
-  if(!is.null(tax_lvl)){
-    if(tax_lvl %in% colnames(data)){
+  if(!is.null(tax.lvl)){
+    if(tax.lvl %in% colnames(data)){
       
-      title = tax_lvl
+      title = tax.lvl
       
-      if(use_midpoint){
+      if(use.midpoint){
         
         data$midpoint = (data$max_ma-data$min_ma)/2 + data$min_ma
         
-        aux1=aggregate(data$midpoint, by=list(data[,tax_lvl]), max, na.rm=T)
+        aux1=aggregate(data$midpoint, by=list(data[,tax.lvl]), max, na.rm=T)
         colnames(aux1)=c("taxon", "max_ma")
         
-        aux2=aggregate(data$midpoint, by=list(data[,tax_lvl]), min, na.rm=T)
+        aux2=aggregate(data$midpoint, by=list(data[,tax.lvl]), min, na.rm=T)
         colnames(aux2)=c("taxon", "min_ma") 
       }else{
-        aux1=aggregate(data$max_ma, by=list(data[,tax_lvl]), max, na.rm=T)
+        aux1=aggregate(data$max_ma, by=list(data[,tax.lvl]), max, na.rm=T)
         colnames(aux1)=c("taxon", "max_ma")
         
-        aux2=aggregate(data$min_ma, by=list(data[,tax_lvl]), min, na.rm=T)
+        aux2=aggregate(data$min_ma, by=list(data[,tax.lvl]), min, na.rm=T)
         colnames(aux2)=c("taxon", "min_ma") 
       }
       
@@ -106,10 +106,10 @@ plotRawFossilOccs <- function(data, tax_lvl=NULL, sort=TRUE, use_midpoint=TRUE, 
   }
   
   
-  if(is.null(tax_lvl)){
+  if(is.null(tax.lvl)){
     ylab_text="Fossil occurrences"  
   }else{
-    ylab_text=paste0(tax_lvl, " temporal ranges")
+    ylab_text=paste0(tax.lvl, " temporal ranges")
   }
   
   plot(NA, 
@@ -121,9 +121,9 @@ plotRawFossilOccs <- function(data, tax_lvl=NULL, sort=TRUE, use_midpoint=TRUE, 
   segments(x0 = data$max_ma, y0 = 1:nrow(data),
            x1 = data$min_ma, y1 = 1:nrow(data))
   
-  if(return_ranges){
-    if(is.null(tax_lvl)){
-      stop("no range is calculated if \"tax_lvl\" is NULL")
+  if(return.ranges){
+    if(is.null(tax.lvl)){
+      stop("no range is calculated if \"tax.lvl\" is NULL")
     }
     return(data)
   }

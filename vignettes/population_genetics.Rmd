@@ -26,7 +26,7 @@ However, typical HWE equations or study material related to it do not address st
 
 ```{r fig.height=5, fig.width=6, fig.align='center'}
 nsims = 1000
-sims <- OneGenHWSim(nInd = 57, p = .2, nSim = nsims)
+sims <- OneGenHWSim(n.ind = 57, p = .2, n.sim = nsims)
 
 boxplot(sims, frame.plot=F,
         ylab="Number of individuals", xlab="Genotype")
@@ -48,8 +48,8 @@ With this type of object, students can also simulate closed populations of a spe
 Students can also simulate genetic drift in Wright-Fisher populations, by using the function `WFDriftSim()`
 
 ```{r}
-drifting = WFDriftSim(Ne = 10, nGen = 100, p0 = .5, nSim = 1000, 
-                        printData = T, plot_type = "static", knitr = TRUE)
+drifting = WFDriftSim(Ne = 10, n.gen = 100, p0 = .5, n.sim = 1000, 
+                        print.data = T, plot.type = "static", knitr = TRUE)
 
 #View the first 10 generation of a few simulations.
 drifting[1:6, 1:11]
@@ -77,7 +77,7 @@ Just like the previously mentioned functions, `NatSelSim()` can generate objects
 
 ```{r,fig.height=5, fig.width=6, fig.align='center'}
 selected = NatSelSim(w11 = .2, w12 = .3, w22 = .1,
-            nGen = 20, printData = T, plot_type = "static", knitr= TRUE)
+            n.gen = 20, print.data = T, plot.type = "static", knitr= TRUE)
 ```
 
 Note that by default the function provides 4 animated plots, but this can be changed using the argument `plot_type` (see function help for details).
