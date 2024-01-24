@@ -11,7 +11,8 @@ NatSelSim(
   p0 = 0.5,
   nGen = 10,
   plot_type = "animateall",
-  printData = FALSE
+  printData = FALSE,
+  knitr = TRUE
 )
 }
 \arguments{
@@ -40,6 +41,8 @@ animate (so options are  "animate1",  "animate3",  and "animate4"
 \item{printData}{Logical indicating whether all
 simulation results should be returned as a \code{data.frame}. Default value
 is \code{FALSE}.}
+
+\item{knitr}{Logical indicating if plot is intended to show up in RMarkdown files made by the \code{Knitr} R package.}
 }
 \value{
 If \code{printData = TRUE}, it returns a \code{data.frame}

@@ -14,7 +14,9 @@ plotPaintedWhales(
 \arguments{
 \item{show.legend}{Logical indicating if clade legend should be shown.}
 
-\item{direction}{Phylogeny plotting direction. Should be set to "rightwards"
+\item{direction}{Phylogeny plotting direction. Should be set to "rightwards"}
+
+\item{knitr}{Logical indicating if plot is intended to show up in RMarkdown files made by the \code{Knitr} R package.
 (the default) or "leftwards".}
 
 \item{...}{other arguments to be passed to \code{phytools::plotSimmap}}

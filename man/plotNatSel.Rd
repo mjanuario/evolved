@@ -10,7 +10,8 @@ plotNatSel(
   w_t = w_t,
   t = t,
   W_gntp = c(w11, w12, w22),
-  plot_type = "animateall"
+  plot_type = "animateall",
+  knitr = FALSE
 )
 }
 \arguments{
@@ -25,9 +26,9 @@ frequencies in each generation (nrows = NGen)}
 
 \item{W_gntp}{Initial genotypic fitness}
 
-\item{plot_type}{String indicating if plot should be animated.
-The default, "animateall", animate all possible panels.
-Other options are "static", "animate1", "animate3", or "animate4".}
+\item{plot_type}{String indicating if plot should be animated. The default, "animateall", animate all possible panels. Other options are "static", "animate1", "animate3", or "animate4".}
+
+\item{knitr}{Logical indicating if plot is intended to show up in RMarkdown files made by the \code{Knitr} R package.}
 }
 \value{
 Plot of NatSelSim's output (see \code{NatSelSim}'s help page for

@@ -4,12 +4,14 @@
 \alias{plotWFDrift}
 \title{Plot WFDriftSim output}
 \usage{
-plotWFDrift(p_through_time, plot_type = plot)
+plotWFDrift(p_through_time, plot_type = plot, knitr = FALSE)
 }
 \arguments{
 \item{p_through_time}{Matrix with nGen columns and nSim lines}
 
 \item{plot_type}{String. Options are "static" or "animate"}
+
+\item{knitr}{Logical indicating if plot is intended to show up in RMarkdown files made by the \code{Knitr} R package.}
 }
 \value{
 A static or animated plot of populations under genetic drift through time
