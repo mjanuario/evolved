@@ -49,7 +49,7 @@ Students can also simulate genetic drift in Wright-Fisher populations, by using 
 
 ```{r}
 drifting = WFDriftSim(Ne = 10, nGen = 100, p0 = .5, nSim = 1000, 
-                      printData = T, plot_type = "static")
+                        printData = T, plot_type = "static", knitr = TRUE)
 
 #View the first 10 generation of a few simulations.
 drifting[1:6, 1:11]
@@ -77,7 +77,7 @@ Just like the previously mentioned functions, `NatSelSim()` can generate objects
 
 ```{r,fig.height=5, fig.width=6, fig.align='center'}
 selected = NatSelSim(w11 = .2, w12 = .3, w22 = .1,
-            nGen = 20, printData = T, plot_type = "static")
+            nGen = 20, printData = T, plot_type = "static", knitr= TRUE)
 ```
 
 Note that by default the function provides 4 animated plots, but this can be changed using the argument `plot_type` (see function help for details).

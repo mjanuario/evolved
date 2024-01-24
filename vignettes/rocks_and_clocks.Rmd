@@ -51,13 +51,13 @@ We can also visualize fossil records by running:
 
 ```{r,fig.height=5, fig.width=6, , fig.align='center'}
 # Family-level:
-plotRawFossilOccs(mammals_fossil, tax_lvl = "family")
+plotRawFossilOccs(mammals_fossil, tax_lvl = "family", knitr = TRUE)
 
 # Genus level:
-plotRawFossilOccs(mammals_fossil, tax_lvl = "genus")
+plotRawFossilOccs(mammals_fossil, tax_lvl = "genus", knitr = TRUE)
 
 # Species level:
-plotRawFossilOccs(mammals_fossil, tax_lvl = "species")
+plotRawFossilOccs(mammals_fossil, tax_lvl = "species", knitr = TRUE)
 ```
 
 Are they different? how could we test? Hint: look at the column names of the fossil object:
@@ -148,7 +148,7 @@ countSeqDiffs(cytOxidase, "snake", "bird")/nchar(cytOxidase["snake"])
 We can also quickly visualize the sequences by directly handling all elements in this object:
 
 ```{r,fig.height=5, fig.width=6, , fig.align='center'}
-plotProteinSeq(cytOxidase, c("snake", "bird", "cnidaria"))
+plotProteinSeq(cytOxidase, c("snake", "bird", "cnidaria"), knitr = TRUE)
 ```
 
 And using patterns of molecular divergence, as well as fossil occurrences, we can build and, specially, date, molecular phylogenies.
