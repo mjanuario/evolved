@@ -23,8 +23,9 @@ NULL
 #' animate (so options are  "animate1",  "animate3",  and "animate4" 
 #' (see return for more info). 
 #' @param printData Logical indicating whether all 
-#' simulation results should be returned as a \code{data.frame}. Default value 
+#' simulation results should be returned as a \code{data.frame}. Default value
 #' is \code{FALSE}.
+#' @param knitr Logical indicating if plot is intended to show up in RMarkdown files made by the \code{Knitr} R package.
 #' 
 #' @return If \code{printData = TRUE}, it returns a \code{data.frame} 
 #' containing the number of individuals for each genotype through time. The 
@@ -64,7 +65,7 @@ NULL
 #' NatSelSim(w11 = .4, w12 = .5, w22 = .4, p0 = new_p0, nGen = 5, plot_type = "static")
 #' 
 #' 
-NatSelSim <- function(w11=1, w12=1, w22=0.9, p0=0.5, nGen=10, plot_type = "animateall", printData=FALSE){
+NatSelSim <- function(w11=1, w12=1, w22=0.9, p0=0.5, nGen=10, plot_type = "animateall", printData=FALSE, knitr = TRUE){
   
   #checking input:
   if(length(plot_type)!=1 | !inherits(x = plot_type, what = "character") | any(!plot_type %in% c("animateall", "static", "animate1", "animate3", "animate4")))
@@ -121,7 +122,7 @@ NatSelSim <- function(w11=1, w12=1, w22=0.9, p0=0.5, nGen=10, plot_type = "anima
     t <- c(t, gen) 
   }
   
-  plotNatSel(gen_HW = gen_HW, p_t = p_t, w_t = w_t, t = t, W_gntp = c(w11, w12, w22), plot_type = plot_type)
+  plotNatSel(gen_HW = gen_HW, p_t = p_t, w_t = w_t, t = t, W_gntp = c(w11, w12, w22), plot_type = plot_type, knitr = knitr)
   
   if(printData){
     return(gen_HW)

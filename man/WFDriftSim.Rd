@@ -10,7 +10,8 @@ WFDriftSim(
   p0 = 0.5,
   nSim = 1,
   plot_type = "animate",
-  printData = FALSE
+  printData = FALSE,
+  knitr = FALSE
 )
 }
 \arguments{
@@ -33,6 +34,8 @@ individually. If \code{plot_type = "static"} it plots all lines rapidly. If
 
 \item{printData}{Logical indicating whether all simulation results should be
 returned as a \code{data.frame}. Default value is \code{FALSE}.}
+
+\item{knitr}{Logical indicating if plot is intended to show up in RMarkdown files made by the \code{Knitr} R package.}
 }
 \value{
 If \code{plot_type = "static"} or \code{"animate"}, plots the

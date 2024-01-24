@@ -23,6 +23,7 @@ NULL
 #' \code{plot_type = "none"} nothing is plotted.
 #' @param printData Logical indicating whether all simulation results should be 
 #' returned as a \code{data.frame}. Default value is \code{FALSE}.
+#' @param knitr Logical indicating if plot is intended to show up in RMarkdown files made by the \code{Knitr} R package.
 #' 
 #' @return If \code{plot_type = "static"} or \code{"animate"}, plots the
 #' timeseries of all simulations, with each line+color referring to a 
@@ -86,7 +87,7 @@ NULL
 #' all_sims <- cbind(sim1, sim2)
 #' head(all_sims)
 #' 
-WFDriftSim=function(Ne, nGen, p0=0.5, nSim=1, plot_type="animate", printData=FALSE){
+WFDriftSim=function(Ne, nGen, p0=0.5, nSim=1, plot_type="animate", printData=FALSE, knitr = FALSE){
   
   ############################################
   # check the classes of inputs and stop if any was inputted wrongly;
@@ -136,7 +137,7 @@ WFDriftSim=function(Ne, nGen, p0=0.5, nSim=1, plot_type="animate", printData=FAL
   }
   
   if(plot_type %in% c("static", "animate")){
-    plotWFDrift(p_through_time, plot_type = plot_type)
+    plotWFDrift(p_through_time, plot_type = plot_type, knitr = knitr)
   }  
   if(printData){
     # labeling output:
