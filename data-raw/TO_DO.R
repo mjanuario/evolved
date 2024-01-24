@@ -1,18 +1,5 @@
 # TO DO LIST:
  
-# 1) pick package name:
-
-# name will be > EvolVEd <
-
-#run available::available()
-#works for "EvolVEd"
-
-#    also check link below for additional naming advices
-browseURL("https://r-pkgs.org/Workflow101.html#naming") # - DAN
-# EvolVEd
-
-# 3) create a readme - Jenn created a sckeleton
-
 # 4) TO DO for cran release:
 # usethis::use_news_md() ok
 # usethis::use_cran_comments() (ok but to again in submition)
@@ -26,7 +13,6 @@ browseURL("https://r-pkgs.org/Workflow101.html#naming") # - DAN
 # pop gen:
 #   WFDriftSim plot
 # NatSelSim plot
-
 
 #phylos
 # plotPaintedWhales() plot

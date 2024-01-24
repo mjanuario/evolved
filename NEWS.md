@@ -1,3 +1,3 @@
-# EvolPackage (development version)
+# evolved (development version)
 
 * Initial CRAN submission.

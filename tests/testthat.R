@@ -7,6 +7,6 @@
 # * https://testthat.r-lib.org/reference/test_package.html#special-files
 
 library(testthat)
-library(EvolPackage)
+library(evolved)
 
-test_check("EvolPackage")
+test_check("evolved")
