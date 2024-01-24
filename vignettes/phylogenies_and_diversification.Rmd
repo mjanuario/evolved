@@ -25,7 +25,7 @@ data("whale_phylo")
 We can check the "plain" phylogeny:
 
 ```{r,fig.height=15, fig.width=6, fig.align='center'}
-plot(whale_phylo, cex = 0.4)
+plot(whale_phylo, cex = 0.6)
 axisPhylo()
 ```
 
