@@ -7,10 +7,9 @@
 #' 
 #' @author Daniel Rabosky, Matheus Januario, Jennifer Auler
 #' 
-#' @export is.ProteinSeq 
+#' @export is.ProteinSeq
 #' 
 #' @examples
-#' 
 #' data("cytOxidase")
 #' is.ProteinSeq(cytOxidase)
 #' 
