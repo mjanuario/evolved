@@ -1,23 +1,30 @@
-#' Details, generics, and methods for the \code{proteinSeq} class
+#' Details, generics, and methods for the \code{ProteinSeq} class
 #' 
-#' @description The \code{proteinSeq} class is an input for the functions \code{countSeqDiffs} and \code{is.ProteinSeq}. It consists of a character vector. Each entry in this vector represents the aminoacid (the protein components coded by a gene) sequence, for a given aligned protein sequence. The object must be a character, named vector, with the names typically corresponding to the species (name could be scientific or common name) from which every sequence came. The characters within the vector must correspond to valid aminoacid symbols (i.e. capitalized letters or deletion "_" symbols).
+#' @description The \code{ProteinSeq} class is an input for the functions \code{countSeqDiffs} and \code{is.ProteinSeq}. It consists of a character vector. Each entry in this vector represents the aminoacid (the protein components coded by a gene) sequence, for a given aligned protein sequence. The object must be a character, named vector, with the names typically corresponding to the species (name could be scientific or common name) from which every sequence came. The characters within the vector must correspond to valid aminoacid symbols (i.e. capitalized letters or deletion "_" symbols). Particularly, the following symbols relate to amino acids: \code{"A", "C", "D", "E", "F", "G", "H", "I", "K", "L", "M", "N", "P", "Q", "R", "S", "T", "V", "W", "Y"}.
 #' 
-#' @param x an object of the class \code{proteinSeq}
+#' Importantly, the symbol \code{"_"} means an indel (insertion or deletion), and the symbols \code{"X", "B", "Z", "J"} should be considered as ambiguous site readings.
+#' 
+#' @param x an object of the class \code{ProteinSeq}
 #' @param n number of aminoacids to be shown
 #' 
 #' @author Daniel Rabosky, Matheus Januario, Jennifer Auler
 #' 
-#' @export is.ProteinSeq
+#' @name ProteinSeq
 #' 
-#' @examples
-#' data("cytOxidase")
-#' is.ProteinSeq(cytOxidase)
+#' @importFrom graphics plot par
+#' @importFrom utils head tail
 #' 
-#' summary.ProteinSeq(cytOxidase)
+NULL
+
+#' @rdname ProteinSeq
 #' 
-#' head.ProteinSeq(cytOxidase)
+#' @details \code{is.ProteinSeq} A \code{ProteinSeq} must be a list containing 
+#' multiple vectors made of characters (usually letters that code to Amino Acids, 
+#' deletions, etc). All of these must have the correct length (i.e. same as all 
+#' the others) and their relative positions should match (i.e., the object must 
+#' contain _alligned_ Amino acide sequences).
 #' 
-#' tail.ProteinSeq(cytOxidase)
+#' @export
 #' 
 is.ProteinSeq=function(x){
   
@@ -43,29 +50,44 @@ is.ProteinSeq=function(x){
   
 }
 
-#' @rdname is.ProteinSeq
-#' @export print.ProteinSeq
+#' @rdname ProteinSeq
+#' 
+#' @details \code{print.ProteinSeq} Prints a brief summary of a 
+#' \code{print.ProteinSeq}. Particularly,  it prints the number of sequences and 
+#' the length of the alignment. See more details of the format in 
+#' \code{??ProteinSeq}.
+#' 
+#' @export
+
 print.ProteinSeq=function(x){
   
   if (!is.ProteinSeq(x)) {
-    stop("Invalid proteinSeq object, type in the console: \n \n ??proteinSeq")
+    stop("Invalid ProteinSeq object, type in the console: \n \n ??ProteinSeq")
   }
   
   cat(paste0("\n", length(x), " amino acid sequences, each with length ", length(unlist(strsplit(x[1], "")))))
 }
 
-#' @rdname is.ProteinSeq
-#' @export summary.ProteinSeq
+#' @rdname ProteinSeq
+#' 
+#' @details Same as \code{print.ProteinSeq}.
+#' 
+#' @export
+
 summary.ProteinSeq=function(x){
   print.ProteinSeq(x)
 }
 
-#' @rdname is.ProteinSeq
-#' @export head.ProteinSeq
+#' @rdname ProteinSeq
+#' 
+#' @details Shows the first \code{n} elements of a \code{ProteinSeq} object.
+#' 
+#' @export
+
 head.ProteinSeq=function(x, n=20){
   
   if (!is.ProteinSeq(x)) {
-    stop("Invalid proteinSeq object, type in the console: \n \n ??proteinSeq")
+    stop("Invalid ProteinSeq object, type in the console: \n \n ??ProteinSeq")
   }
   
   n=min(n, length(x))
@@ -81,12 +103,15 @@ head.ProteinSeq=function(x, n=20){
   return(res)
 }
 
-#' @rdname is.ProteinSeq
-#' @export tail.ProteinSeq
+#' @rdname ProteinSeq
+#' 
+#' @details Shows the last \code{n} elements of a \code{ProteinSeq} object.
+#' 
+#' @export
 tail.ProteinSeq=function(x, n=6){
   
   if (!is.ProteinSeq(x)) {
-    stop("Invalid proteinSeq object, type in the console: \n \n ??proteinSeq")
+    stop("Invalid ProteinSeq object, type in the console: \n \n ??ProteinSeq")
   }
   
   res=list()
