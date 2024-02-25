@@ -6,6 +6,7 @@
 #' 
 #' @param x an object of the class \code{ProteinSeq}
 #' @param n number of aminoacids to be shown
+#' @param ... arguments to be passed to or from other methods.
 #' 
 #' @author Daniel Rabosky, Matheus Januario, Jennifer Auler
 #' 
@@ -17,6 +18,8 @@
 NULL
 
 #' @rdname ProteinSeq
+#' 
+#' @param x an object
 #' 
 #' @details \code{is.ProteinSeq} A \code{ProteinSeq} must be a list containing 
 #' multiple vectors made of characters (usually letters that code to Amino Acids, 
@@ -52,6 +55,9 @@ is.ProteinSeq=function(x){
 
 #' @rdname ProteinSeq
 #' 
+#' @param x an object of the class \code{ProteinSeq}
+#' @param ... arguments to be passed to or from other methods.
+#' 
 #' @details \code{print.ProteinSeq} Prints a brief summary of a 
 #' \code{print.ProteinSeq}. Particularly,  it prints the number of sequences and 
 #' the length of the alignment. See more details of the format in 
@@ -59,7 +65,7 @@ is.ProteinSeq=function(x){
 #' 
 #' @export
 
-print.ProteinSeq=function(xx, ...){
+print.ProteinSeq=function(x, ...){
   
   if (!is.ProteinSeq(x)) {
     stop("Invalid ProteinSeq object, type in the console: \n \n ??ProteinSeq")
@@ -70,15 +76,21 @@ print.ProteinSeq=function(xx, ...){
 
 #' @rdname ProteinSeq
 #' 
+#' @param object an object of the class \code{ProteinSeq}
+#' 
 #' @details Same as \code{print.ProteinSeq}.
 #' 
 #' @export
 
-summary.ProteinSeq=function(xx, ...){
-  print.ProteinSeq(x)
+summary.ProteinSeq=function(object, ...){
+  print.ProteinSeq(object)
 }
 
 #' @rdname ProteinSeq
+#' 
+#' @param x an object of the class \code{ProteinSeq}
+#' @param n number of aminoacids to be shown
+#' @param ... arguments to be passed to or from other methods.
 #' 
 #' @details Shows the first \code{n} elements of a \code{ProteinSeq} object.
 #' 
@@ -105,10 +117,14 @@ head.ProteinSeq=function(x, n=20, ...){
 
 #' @rdname ProteinSeq
 #' 
+#' @param x an object of the class \code{ProteinSeq}
+#' @param n number of aminoacids to be shown
+#' @param ... arguments to be passed to or from other methods.
+#' 
 #' @details Shows the last \code{n} elements of a \code{ProteinSeq} object.
 #' 
 #' @export
-tail.ProteinSeq=function(x, n=6, ...){
+tail.ProteinSeq=function(x, n=20, ...){
   
   if (!is.ProteinSeq(x)) {
     stop("Invalid ProteinSeq object, type in the console: \n \n ??ProteinSeq")
