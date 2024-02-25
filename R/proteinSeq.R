@@ -59,7 +59,7 @@ is.ProteinSeq=function(x){
 #' 
 #' @export
 
-print.ProteinSeq=function(x){
+print.ProteinSeq=function(xx, ...){
   
   if (!is.ProteinSeq(x)) {
     stop("Invalid ProteinSeq object, type in the console: \n \n ??ProteinSeq")
@@ -74,7 +74,7 @@ print.ProteinSeq=function(x){
 #' 
 #' @export
 
-summary.ProteinSeq=function(x){
+summary.ProteinSeq=function(xx, ...){
   print.ProteinSeq(x)
 }
 
@@ -84,7 +84,7 @@ summary.ProteinSeq=function(x){
 #' 
 #' @export
 
-head.ProteinSeq=function(x, n=20){
+head.ProteinSeq=function(x, n=20, ...){
   
   if (!is.ProteinSeq(x)) {
     stop("Invalid ProteinSeq object, type in the console: \n \n ??ProteinSeq")
@@ -108,7 +108,7 @@ head.ProteinSeq=function(x, n=20){
 #' @details Shows the last \code{n} elements of a \code{ProteinSeq} object.
 #' 
 #' @export
-tail.ProteinSeq=function(x, n=6){
+tail.ProteinSeq=function(x, n=6, ...){
   
   if (!is.ProteinSeq(x)) {
     stop("Invalid ProteinSeq object, type in the console: \n \n ??ProteinSeq")

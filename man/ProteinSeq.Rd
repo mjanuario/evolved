@@ -11,16 +11,20 @@
 \usage{
 is.ProteinSeq(x)
 
-\method{print}{ProteinSeq}(x)
+\method{print}{ProteinSeq}(x, ...)
 
-\method{summary}{ProteinSeq}(x)
+\method{summary}{ProteinSeq}(object, ...)
 
-\method{head}{ProteinSeq}(x, n = 20)
+\method{head}{ProteinSeq}(x, n = 20, ...)
 
-\method{tail}{ProteinSeq}(x, n = 6)
+\method{tail}{ProteinSeq}(x, n = 20, ...)
 }
 \arguments{
 \item{x}{an object of the class \code{ProteinSeq}}
+
+\item{...}{arguments to be passed to or from other methods.}
+
+\item{object}{an object of the class \code{ProteinSeq}}
 
 \item{n}{number of aminoacids to be shown}
 }
