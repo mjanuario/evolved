@@ -122,7 +122,7 @@
 #' }
 #' 
 #' @source The Paleobiology Database (downloaded on 2022-03-11). \cr 
-#' Data URL: \url{http://paleobiodb.org/data1.2/occs/list.csv?datainfo&rowcount&base_name=Ammonoidea&show=full,classext,genus,subgenus,acconly,ident,img,etbasis,strat,lith,env,timebins,timecompare,resgroup,ref,ent,entname,crmod} \cr
+#' Data URL: http://paleobiodb.org/data1.2/occs/list.csv?datainfo&rowcount&base_name=Ammonoidea&show=full,classext,genus,subgenus,acconly,ident,img,etbasis,strat,lith,env,timebins,timecompare,resgroup,ref,ent,entname,crmod \cr
 "ammonoidea_fossil"
 
 #' Occurrences of mammal fossils
@@ -149,7 +149,7 @@
 #'   \item{lat}{Latitude of place where occurrence was found. Follows decimal degree format.}
 #' }
 #' @source The Paleobiology Database (downloaded on 2022-03-11). \cr 
-#' Data URL: \url{http://paleobiodb.org/data1.2/occs/list.csv?datainfo&rowcount&base_name=Mammalia&show=full,classext,genus,subgenus,acconly,ident,img,etbasis,strat,lith,env,timebins,timecompare,resgroup,ref,ent,entname,crmod} \cr
+#' Data URL: http://paleobiodb.org/data1.2/occs/list.csv?datainfo&rowcount&base_name=Mammalia&show=full,classext,genus,subgenus,acconly,ident,img,etbasis,strat,lith,env,timebins,timecompare,resgroup,ref,ent,entname,crmod \cr
 "mammals_fossil"
 
 #' Occurrence of dinosaur fossils
@@ -174,7 +174,7 @@
 #'   \item{lat}{Latitude of place where occurrence was found. Follows decimal degree format.}
 #' }
 #' @source The Paleobiology Database (downloaded on 2022-03-11). \cr
-#' Data URL: \url{http://paleobiodb.org/data1.2/occs/list.csv?datainfo&rowcount&base_name=Dinosauria&show=full,classext,genus,subgenus,acconly,ident,img,etbasis,strat,lith,env,timebins,timecompare,resgroup,ref,ent,entname,crmod} \cr
+#' Data URL: http://paleobiodb.org/data1.2/occs/list.csv?datainfo&rowcount&base_name=Dinosauria&show=full,classext,genus,subgenus,acconly,ident,img,etbasis,strat,lith,env,timebins,timecompare,resgroup,ref,ent,entname,crmod \cr
 "dinos_fossil"
 
 #' Occurrence of trilobite fossils
@@ -202,7 +202,7 @@
 #'   \item{lat}{Latitude of place where occurrence was found. Follows decimal degree format.}
 #' }
 #' @source The Paleobiology Database (downloaded on 2022-03-11). \cr 
-#' Data URL: \url{http://paleobiodb.org/data1.2/occs/list.csv?datainfo&rowcount&base_name=Trilobita&show=full,classext,genus,subgenus,acconly,ident,img,etbasis,strat,lith,env,timebins,timecompare,resgroup,ref,ent,entname,crmod} \cr
+#' Data URL: http://paleobiodb.org/data1.2/occs/list.csv?datainfo&rowcount&base_name=Trilobita&show=full,classext,genus,subgenus,acconly,ident,img,etbasis,strat,lith,env,timebins,timecompare,resgroup,ref,ent,entname,crmod \cr
 "trilob_fossil"
 
 #' Fossil Time series
