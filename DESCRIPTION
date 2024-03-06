@@ -1,6 +1,6 @@
 Package: evolved
 Title: Simple Simulation and Data Analysis Code to Teach Evolutionary Processes and Macroevolution
-Version: 0.0.0.5000
+Version: 1.0.0
 Authors@R: 
     c(person("Matheus", "Januario", email="januarioml.eco@gmail.com", role = c("aut", "cph"),
            comment = c(ORCID = "0000-0002-6480-7095")),
