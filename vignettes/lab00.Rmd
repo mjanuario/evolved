@@ -34,9 +34,9 @@ Most of the output that R will show you is included in this file along with the 
 
 The ">" symbol in the bottom of the console means that R is waiting for you to send it a command. However, while R is calculating, or doing some other operation, you will see the last line completely blank.
 
-If R thinks that you have not finished typing, it will change the ">" to a "+", indicating that it is waiting for you to finish the command in order to run it. If this occurs unintentionally, it probably means you forgot to close a parenthesis ( = _( )_), a quotation mark ( = _" "_), or a lopp bracket ( = _{ }_). 
+If R thinks that you have not finished typing, it will change the ">" to a "+", indicating that it is waiting for you to finish the command in order to run it. If this occurs unintentionally, it probably means you forgot to close a parenthesis ( = _( )_), a quotation mark ( = _" "_), or a curly bracket ( = _{ }_). 
 
-Let's start by sending R a classic command, a message to be printed by the console. Copy and paste the line of code below (the monospaced text within the light grey box below) into your console, then click Enter or Ctrl/Command + Enter. This action of sending commands to the console (whether by copy-pasting or directly typing) is called "running" code. 
+Let's start by sending R a classic command, a message to be printed by the console. Copy and paste the line of code below (the monospaced text within the light gray box below) into your console, then click Enter or Ctrl/Command + Enter. This action of sending commands to the console (whether by copy-pasting or directly typing) is called "running" code. 
 
 The following command prints a message to your console:
 
@@ -537,7 +537,7 @@ Your computer is organized as a series of directories (sometimes known as "folde
 getwd() #no argument is needed here - a small number of functions work like that
 ```
 
-The line above asks R what the current working directory is. This means the directory in your computer that R will use for any file importing or exporting that you do within the R session. In other words, it is the path sufix R will use if you do not type the absolute (i.e. full) path for a file. More information on the working directory is in the "Working Routine in R" PDF posted on Canvas.
+The line above asks R what the current working directory is. This means the directory in your computer that R will use for any file importing or exporting that you do within the R session. In other words, it is the path suffix R will use if you do not type the absolute (i.e. full) path for a file. More information on the working directory is in the "Working Routine in R" PDF posted on Canvas.
 
 You can make a new folder using the function `makedir()`:
 
