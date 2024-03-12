@@ -92,11 +92,13 @@ Functions use examples are provided in the vignettes.
 
 ## Vignettes
 
-[Phylogenies and diversification](doc/phylogenies_and_diversification.html)
+To view the vignettes, run the following code:
 
-[Population Genetics](doc/population_genetics.html)
+- Phylogenies and diversification:  `vignette("phylogenies_and_diversification", package = "evolved")`
 
-[Rocks and Clocks](doc/rocks_and_clocks.html)
+- Population Genetics: `vignette("population_genetics", package = "evolved")`
+
+- Rocks and Clocks: `vignette("rocks_and_clocks", package = "evolved")`
 
 ## References
 
