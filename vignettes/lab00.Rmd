@@ -539,7 +539,7 @@ getwd() #no argument is needed here - a small number of functions work like that
 
 The line above asks R what the current working directory is. This means the directory in your computer that R will use for any file importing or exporting that you do within the R session. In other words, it is the path suffix R will use if you do not type the absolute (i.e. full) path for a file. More information on the working directory is in the "Working Routine in R" PDF posted on Canvas.
 
-You can make a new folder using the function `makedir()`:
+You can make a new folder using the function `dir.create()`:
 
 ```{r}
 # the relative path:
