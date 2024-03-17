@@ -1,6 +1,6 @@
 ---
 title: "Tools for population genetics"
-author: "Matheus Januario"
+author: "Matheus Januario and Jennifer Auler"
 date: "Oct/2023"
 output: rmarkdown::html_vignette
 vignette: >

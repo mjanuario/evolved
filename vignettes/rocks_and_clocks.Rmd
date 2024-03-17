@@ -1,6 +1,6 @@
 ---
 title: "Clocks and Rocks"
-author: "Matheus Januario"
+author: "Matheus Januario and Jennifer Auler"
 date: "Dec/2023"
 output: rmarkdown::html_vignette
 vignette: >

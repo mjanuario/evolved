@@ -1,6 +1,6 @@
 ---
 title: "Phylogenies and diversification"
-author: "Matheus Januario"
+author: "Matheus Januario and Jennifer Auler"
 date: "Dec/2023"
 output: rmarkdown::html_vignette
 vignette: >
@@ -22,16 +22,16 @@ Using data on molecular variation of multiple species, we can build and date a m
 data("whale_phylo")
 ```
 
-We can check the "plain" phylogeny:
+We could check the "plain" phylogeny with the following code:
 
-```{r,fig.height=15, fig.width=6, fig.align='center'}
+```{r,fig.height=12, fig.width=6, fig.align='center', eval=FALSE}
 plot(whale_phylo, cex = 0.6)
 axisPhylo()
 ```
 
-But for this particular phylogeny, we can also visualize some subclades:
+But for this particular phylogeny, we have a build-in function that help visualize some subclades:
 
-```{r fig.height=15, fig.width=6, fig.align='center'}
+```{r fig.height=12, fig.width=6, fig.align='center'}
 plotPaintedWhales(knitr = TRUE)
 ```
 
