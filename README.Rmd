@@ -15,7 +15,7 @@ knitr::opts_chunk$set(
 )
 ```
 
-The package involves both simple and complex functions and consequently is adequate for inquiries that assume different levels of student independence (e.g., as categorized by Banchi & Bell, 2008 - see examples that follow their nomenclature in Table 2), and add up to other options of software where students can handle, organize, and visualize biological data. 
+The package involves both simple and complex functions and consequently is adequate for inquiries that assume different levels of student independence (e.g., as categorized by Banchi & Bell, 2008), and add up to other options of software where students can handle, organize, and visualize biological data. 
 evolved is heavily oriented towards providing tools for inquiry-based learning - where students follow scientific practices to actively construct knowledge (Pedaste et al, 2015) - and thus most of its computer functions rely either on (A) simulating data from simple models that can usually be derived from first principles (see Table 1) or in (B) analyzing (measuring, testing, visualizing) datasets with characteristics that are common to many fields related to evolutionary biology.
 
 
