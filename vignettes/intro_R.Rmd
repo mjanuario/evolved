@@ -4,7 +4,7 @@ author: "Matheus Januario, Andressa Viol, and Daniel Rabosky"
 date: "Jan 2024"
 output: rmarkdown::html_vignette
 vignette: >
-  %\VignetteIndexEntry{Introduction to R}
+  %\VignetteIndexEntry{intro_r}
   %\VignetteEngine{knitr::rmarkdown}
   %\VignetteEncoding{UTF-8}
 ---

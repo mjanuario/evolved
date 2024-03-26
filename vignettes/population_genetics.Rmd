@@ -4,7 +4,7 @@ author: "Matheus Januario and Jennifer Auler"
 date: "Oct/2023"
 output: rmarkdown::html_vignette
 vignette: >
-  %\VignetteIndexEntry{population_genetics}
+  %\VignetteIndexEntry{popgen_old}
   %\VignetteEngine{knitr::rmarkdown}
   %\VignetteEncoding{UTF-8}
 ---
