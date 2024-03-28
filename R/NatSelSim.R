@@ -56,16 +56,16 @@ NULL
 #' # Continuing a simulation for extra time:
 #' # Run the first simulation
 #' sim1=NatSelSim(w11 = .4, w12 = .5, w22 = .4, p0 = 0.35, 
-#' n.gen = 5, plot.type = "static", print.data = TRUE, knitr = T)
+#' n.gen = 5, plot.type = "static", print.data = TRUE, knitr = TRUE)
 #' 
 #' # Then take the allelic frequency form the first sim:
 #' new_p0 <- (sim1$AA[nrow(sim1)] + sim1$Aa[nrow(sim1)]*1/2) 
 #' # and use as p0 for a second one:
 #' 
-#' NatSelSim(w11 = .4, w12 = .5, w22 = .4, p0 = new_p0, n.gen = 5, plot.type = "static", knitr = T)
+#' NatSelSim(w11 = .4, w12 = .5, w22 = .4, p0 = new_p0, n.gen = 5, plot.type = "static", knitr = TRUE)
 #' 
 #' 
-NatSelSim <- function(w11=1, w12=1, w22=0.9, p0=0.5, n.gen=10, plot.type = "animateall", print.data=FALSE, knitr = TRUE){
+NatSelSim <- function(w11=1, w12=1, w22=0.9, p0=0.5, n.gen=10, plot.type = "animateall", print.data=FALSE, knitr = FALSE){
   
   #checking input:
   if(length(plot.type)!=1 | !inherits(x = plot.type, what = "character") | any(!plot.type %in% c("animateall", "static", "animate1", "animate3", "animate4")))

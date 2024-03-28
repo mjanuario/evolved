@@ -17,7 +17,7 @@
 #' 
 #' @examples
 #' data(cytOxidase)
-#' plotProteinSeq(cytOxidase, c("human", "chimpanzee", "cnidaria"), knitr = T)
+#' plotProteinSeq(cytOxidase, c("human", "chimpanzee", "cnidaria"), knitr = TRUE)
 #' 
 plotProteinSeq=function(x, taxon.to.plot, knitr = FALSE){
   # A species list:

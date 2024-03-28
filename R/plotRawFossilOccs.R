@@ -43,8 +43,8 @@ NULL
 #' 
 #' data("ammonoidea_fossil")
 #' par(mfrow=c(1,2))
-#' plotRawFossilOccs(ammonoidea_fossil, tax.lvl = "species", knitr = T)
-#' plotRawFossilOccs(ammonoidea_fossil, tax.lvl = "genus", knitr = T)
+#' plotRawFossilOccs(ammonoidea_fossil, tax.lvl = "species", knitr = TRUE)
+#' plotRawFossilOccs(ammonoidea_fossil, tax.lvl = "genus", knitr = TRUE)
 #' 
 plotRawFossilOccs <- function(data, tax.lvl=NULL, sort=TRUE, use.midpoint=TRUE, return.ranges=FALSE, knitr = FALSE){
   
