@@ -239,7 +239,7 @@ Hint: Try to simulate Buri's experiment with the function 'WFDriftSim' using Bur
 \end{minipage}}
 
 ```{r, echo=F}
-knitr::include_graphics('~/Dropbox (University of Michigan)/devel/2024-labs/L02/Buri_1956_fig6_wout_axes.png')
+knitr::include_graphics('~/evolved/images_for_vignettes/Buri_1956_fig6_wout_axes.png')
 ```
 
 ***

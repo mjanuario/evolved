@@ -151,7 +151,7 @@ There are many ways to try to reconstruct ages or temporal ranges of species fro
 Problems associated with the midpoint technique can be gleaned from comparing panels I and II in figure 1.
 
 \begin{figure}[H]
-  \includegraphics{~/Dropbox (University of Michigan)/devel/2024-labs/L06/example_fossil_occs_V2.png}
+  \includegraphics{~/evolved/images_for_vignettes/example_fossil_occs_V2.png}
   \caption{Fossil occurrences and the many ways of reading them. Panels show (I) the empirically unknown true taxon durations (lines) and sampling times (black dots), (II) how we can reconstruct (with error) stratigraphic ranges by connecting midpoint of fossil stages (note that as species C was not observed in stage C, we are unaware of a big part of its true stratigraphic range), and (III) how diversity curves are calculated from fossil occurrences (more on this below).}
 \end{figure}
 
@@ -426,7 +426,7 @@ Now, using the decay constant $k$ obtained above, we can apply equation (1) to d
 Know, we can come back to equation (1), solve for $t$, and get to the equation that allow you to estimate the age of a rock layer, given you measured certain amounts of  $W_U$ and $W_{Pb}$.
 
 ```{r, echo=F, fig.cap="Example on how fossil layers can be dated using zircon crystals. Note that percentages represent atomic fractions, not percentages by mass."}
-knitr::include_graphics('~/Dropbox (University of Michigan)/devel/2024-labs/L06/zircon_dating.png')
+knitr::include_graphics('~/evolved/images_for_vignettes/zircon_dating.png')
 ```
 
 
