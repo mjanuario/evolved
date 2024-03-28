@@ -24,7 +24,7 @@ NULL
 #' @author Matheus Januario, Jennifer Auler
 #' 
 #' @examples
-#' plotPaintedWhales()
+#' plotPaintedWhales(knitr = T)
 #' 
 plotPaintedWhales<-function(show.legend=TRUE, direction="rightwards", knitr=FALSE, ...){
   

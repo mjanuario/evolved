@@ -35,8 +35,8 @@
 #' E <- 0
 #' set.seed(1)
 #' phy <- simulateTree(pars = c(S, E), max.taxa = 20, max.t = 5)
-#' lttPlot(phy)
-#' lttPlot(phy, plot = FALSE)
+#' lttPlot(phy, knitr = T)
+#' lttPlot(phy, plot = FALSE, knitr = T)
 #' 
 lttPlot <- function(phy, lwd=1, col="red", plot = T, rel.time = F, add = F, knitr = FALSE){
   

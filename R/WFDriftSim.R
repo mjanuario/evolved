@@ -57,23 +57,23 @@ NULL
 #' 
 #' @examples
 #' #Default values:
-#' WFDriftSim(Ne = 5, n.gen = 30)
+#' WFDriftSim(Ne = 5, n.gen = 30, knitr = T)
 #' 
 #' #A population which has already fixed one of the alleles:
-#' WFDriftSim(Ne = 5, n.gen = 30, p0=1)
+#' WFDriftSim(Ne = 5, n.gen = 30, p0=1, knitr = T)
 #' 
 #' #Many populations::
-#' WFDriftSim(Ne = 5, n.gen = 30, p0=0.2, n.sim=10)
+#' WFDriftSim(Ne = 5, n.gen = 30, p0=0.2, n.sim=10, knitr = T)
 #' 
 #' ######## continuing a previous simulation:
 #' n.gen_1stsim <- 10 # number of gens in the 1st sim:
 #' sim1 <- WFDriftSim(Ne = 5, n.gen = n.gen_1stsim, p0=.2, n.sim=10, 
-#' plot.type = "none", print.data = TRUE)
+#' plot.type = "none", print.data = TRUE, knitr = T)
 
 #' n.gen_2ndsim <-15 # number of gens in the 2nd sim:
 #' # now, note how we assigned p0:
 #' sim2 <- WFDriftSim(Ne = 5, n.gen = n.gen_2ndsim, p0=sim1[,ncol(sim1)], 
-#' plot.type = "static", n.sim=10, print.data = TRUE)
+#' plot.type = "static", n.sim=10, print.data = TRUE, knitr = T)
 #' 
 #' # if we want to merge both simulations, then we have to:
 #' # remove first column of 2nd sim (because it repeats
