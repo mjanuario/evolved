@@ -58,8 +58,8 @@ associated with each taxa in a dataset.
 
 data("ammonoidea_fossil")
 par(mfrow=c(1,2))
-plotRawFossilOccs(ammonoidea_fossil, tax.lvl = "species")
-plotRawFossilOccs(ammonoidea_fossil, tax.lvl = "genus")
+plotRawFossilOccs(ammonoidea_fossil, tax.lvl = "species", knitr = TRUE)
+plotRawFossilOccs(ammonoidea_fossil, tax.lvl = "genus", knitr = TRUE)
 
 }
 \author{

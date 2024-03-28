@@ -320,7 +320,7 @@ For the purposes of this lab, we will look to a bear population in Canada.
 Hedrick & Ritland (2012) studied a population of  _Ursus americanus_ where a "single nucleotide change from G to A, resulting in the replacement of Tyr to Cys at codon 298 in the melanocortin 1 receptor gene (mc1r)" created a whole new phenotype related to color: the "Spirit bear" variety (see figure 1, from Hedrick & Ritland (2012)).
 
 ```{r, fig.cap='A white mother Spirit bear and a black cub offspring; the father must have been black and the cub is a heterozygote for the coat color polymorphism (photo mod. from Hedrick and Ritland (2012)', fig.width=2.5, fig.height=2, echo = F}
-knitr::include_graphics('~/evolved/images_for_vignettes/spirit_bear.png')
+knitr::include_graphics('~/evolved/vignettes/spirit_bear.png')
 ```
 
 In a previous study (Ritland _et al_, 2001), the following frequencies of genotypes were observed: 42 individuals with the dominant homozygote phenotype, 24 heterozygotes, and 21 recessive genotypes. Hedrick & Ritland (2012) asks: are the Spirit bear frequencies a result of neutral processes? This is equivalent of asking _is this genotype frequency a simple reflex of Hardy-Weinberg Equilibrium (HWE)?_

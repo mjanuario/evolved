@@ -49,8 +49,8 @@ S <- 1
 E <- 0
 set.seed(1)
 phy <- simulateTree(pars = c(S, E), max.taxa = 20, max.t = 5)
-lttPlot(phy)
-lttPlot(phy, plot = FALSE)
+lttPlot(phy, knitr = TRUE)
+lttPlot(phy, plot = FALSE, knitr = TRUE)
 
 }
 \references{

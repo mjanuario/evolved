@@ -24,7 +24,7 @@ similar banding patterns.
 }
 \examples{
 data(cytOxidase)
-plotProteinSeq(cytOxidase, c("human", "chimpanzee", "cnidaria"))
+plotProteinSeq(cytOxidase, c("human", "chimpanzee", "cnidaria"), knitr = TRUE)
 
 }
 \author{

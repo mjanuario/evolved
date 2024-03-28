@@ -29,7 +29,7 @@ whale taxonomic group.
 \code{plotPaintedWhales} plots the phylogeny from Steeman et al (2011), coloring the Dolphins (Delphinidae), porpoises (Phocoenidae), the Mysticetes, the baleen whales (Balaenopteridae), and the Beaked whales (Ziphiidae).
 }
 \examples{
-plotPaintedWhales()
+plotPaintedWhales(knitr = TRUE)
 
 }
 \references{

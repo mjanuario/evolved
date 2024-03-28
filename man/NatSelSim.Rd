@@ -12,7 +12,7 @@ NatSelSim(
   n.gen = 10,
   plot.type = "animateall",
   print.data = FALSE,
-  knitr = TRUE
+  knitr = FALSE
 )
 }
 \arguments{
@@ -69,13 +69,13 @@ and values are re-normalized.
 # Continuing a simulation for extra time:
 # Run the first simulation
 sim1=NatSelSim(w11 = .4, w12 = .5, w22 = .4, p0 = 0.35, 
-n.gen = 5, plot.type = "static", print.data = TRUE)
+n.gen = 5, plot.type = "static", print.data = TRUE, knitr = TRUE)
 
 # Then take the allelic frequency form the first sim:
 new_p0 <- (sim1$AA[nrow(sim1)] + sim1$Aa[nrow(sim1)]*1/2) 
 # and use as p0 for a second one:
 
-NatSelSim(w11 = .4, w12 = .5, w22 = .4, p0 = new_p0, n.gen = 5, plot.type = "static")
+NatSelSim(w11 = .4, w12 = .5, w22 = .4, p0 = new_p0, n.gen = 5, plot.type = "static", knitr = TRUE)
 
 
 }
