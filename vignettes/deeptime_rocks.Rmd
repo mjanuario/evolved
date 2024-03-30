@@ -27,13 +27,14 @@ Thus far, we've been tipically dealing with evolutionary processes that occur ov
 
 For this tutorial, you must install the `palebioDB` R package.
 
-```
+```{r eval=FALSE}
 install.packages("paleobioDB")
 ```
 
 Then, load all packages required into your workspace:
 
 ```{r}
+library(evolved)
 library(paleobioDB)
 ```
 

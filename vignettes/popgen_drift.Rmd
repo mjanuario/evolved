@@ -30,9 +30,10 @@ For this tutorial, you must install the `plot3D` R package.
 install.packages("plot3D")
 ```
 
-Then, you must load it:
+Then, you must load it, as well as our package:
 
 ```{r}
+library(evolved)
 library(plot3D)
 ```
 
