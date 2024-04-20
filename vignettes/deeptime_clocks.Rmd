@@ -45,7 +45,7 @@ Why is it important to make sure that the compared sequences are homologous?
 
 We have assembled a set of protein sequences from the cytochrome oxidase 1 gene. This gene, often known as CO1 ("see-oh-one"), is a mitochondrial gene that plays a key role in cellular respiration (e.g., the primary aerobic pathway to energy or ATP generation). CO1 contains approximately 513 amino acids and has been used in many studies to construct phylogenetic trees and estimate divergence times between taxa.
 
-We manually downloaded full-length genes of a number of focal taxa from the public database [GenBank](https://www.ncbi.nlm.nih.gov/genbank/) (more general info  about GenBank can be found in Benson et al., 2012). We then *aligned* the sequences using [CLUSTAL](https://www.ebi.ac.uk/Tools/msa/clustalo/) (more info in Sievers et al., 2011), a widely-used sequence alignment tool.
+We manually downloaded full-length genes of a number of focal taxa from the public database [GenBank](https://www.ncbi.nlm.nih.gov/genbank/) (more general info  about GenBank can be found in Benson et al., 2012). We then *aligned* the sequences using [CLUSTAL](https://www.ebi.ac.uk/jdispatcher/msa/clustalo) (more info in Sievers et al., 2011), a widely-used sequence alignment tool.
 
 Because this dataset is included in our R package, we can access it by simply typing: 
 

@@ -72,7 +72,7 @@ In our data, we see columns for:
 
 **`phylum`**, **`class`**, **`order`**, **`family`**, **`genus`**, **`species`** = The taxon associated with that occurrence for that hierarchical level.
 
-**`early_interval`**, **`late_interval`** = The name of the early (furthest from present) and the name of the late (closest to present) intervals associated with that occurrence. Some of those intervals appear in the [GSA geologic timescale (link **here**)](https://www.geosociety.org/GSA/Education_Careers/Geologic_Time_Scale/GSA/timescale/home.aspx). 
+**`early_interval`**, **`late_interval`** = The name of the early (furthest from present) and the name of the late (closest to present) intervals associated with that occurrence. Some of those intervals appear in the GSA geologic timescale [(link **here**)](https://www.geosociety.org/GSA/GSA/timescale/home.aspx). 
 
 **`min_ma`**, **`max_ma`**  = The maximum (oldest; farthest in time from the present) and minimum (youngest; closest to present) ages associated with that occurrence. Note that these ages are in units of millions of years ago (abbreviated to "mya"), in absolute time. 
 
