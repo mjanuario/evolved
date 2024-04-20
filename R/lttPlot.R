@@ -79,14 +79,14 @@ lttPlot <- function(phy, lwd=1, col="red", plot = T, rel.time = F, add = F, knit
   
   if (!add){
 
-    #saving par
-    opar = par(no.readonly = TRUE)
     if(!knitr){
       dev.new()
     }
     plot.new()
     par(mar=c(4,4,1,1))
     plot.window(xlim=c(0, xm), ylim=c(0,ym))
+    #saving par
+    opar = par(no.readonly = TRUE)
     lines(x=c(st[1], age), y=range(ll), lwd=1.5, col="gray50")		
     
     axis(1)

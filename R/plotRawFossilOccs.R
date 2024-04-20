@@ -61,7 +61,7 @@ plotRawFossilOccs <- function(data, tax.lvl=NULL, sort=TRUE, use.midpoint=TRUE, 
   # end of checking inputs
   ############################################
   
-  opar = par(no.readonly = TRUE)
+  
   if(!knitr){
     dev.new()
   }
@@ -117,6 +117,8 @@ plotRawFossilOccs <- function(data, tax.lvl=NULL, sort=TRUE, use.midpoint=TRUE, 
        xlim=rev(range(c(data$max_ma, data$min_ma))), frame.plot = F, yaxt="n",
        ylab=ylab_text, xlab="Absolute time (Mya)", main=paste0(title, " level; N = ", nrow(data)," taxa")
   )
+  #saving par
+  opar = par(no.readonly = TRUE)
   
   segments(x0 = data$max_ma, y0 = 1:nrow(data),
            x1 = data$min_ma, y1 = 1:nrow(data))
