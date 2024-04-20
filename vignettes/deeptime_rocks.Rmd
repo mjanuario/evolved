@@ -437,7 +437,7 @@ Challenge (extra question) 6:
 Can you date fossil-bearing sections A, B, and C in the figure 2 (below)? What is the absolute dating of each rock layer?
 \end{minipage}}
 
-As an extra reading, you can find an interesting outreach article about zircon dating [ here](https://knowablemagazine.org/article/physical-world/2021/keeping-time-zircons).
+As an extra reading, you can find an interesting outreach article about zircon dating [ here](https://knowablemagazine.org/content/article/physical-world/2021/keeping-time-zircons).
 
 A last important point is that not all fossiliferous sites have the conditions that allow us to do zircon dating, which means that paleontologists have to use other techniques to date those fossils. This involves a lot of work and usually adds uncertainty on the dating process. If you have 14 minutes of your free time, and want to see how important and yet difficult it is to date a fossil, you could watch [this short video from the youtube channel PBS Eons](https://www.youtube.com/watch?v=LZiHLKAymdM&t=1s).
 
