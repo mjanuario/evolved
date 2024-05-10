@@ -134,7 +134,7 @@ Instead of plotting the early and late boundaries of the stages in which a speci
 Let's re-draw the fossil record of the T-rex, but this time let's only use the midpoints of the fossil occurrences to see if we can get a better idea of the actual duration of this species.
 
 ```{r}
-plotRawFossilOccs(Trex, use.midpoint = F)
+plotRawFossilOccs(Trex, use.midpoint = F, knitr = T)
 segments(x0 = min(Trex$midpoint),
          x1 = max(Trex$midpoint),
          y0 = 35, y1 = 35, lwd=3, col="red"
@@ -251,9 +251,11 @@ Given what you observed about how fossil preservation varies with time, and the 
 
 We can use two simple methods to calculate diversity curves in the fossil record (see fig 1-III):
 
-**The standard method**, which simply sums up taxa that co-occur in the same interval.
+**The standard method**, which simply sums up taxa that occur in the same interval, and thus calculates the diversity within each interval.
 
-**The range-through method**, which only sums up species that are observed before and after a given stratigraphic interval. This method guarantees we are measuring diversity that co-occurs in time. 
+**The range-through method**, which only sums up species that are observed before and after a given stratigraphic interval, and thus calculates the diversity at interval boundaries. This method guarantees we are measuring diversity that co-occurs in time. 
+
+Both methods interpolate (“fill in”) gaps in a species’ fossil record between occurrences, by counting a species as being present in any interval that is between the first and last fossil occurrences (FAD and LAD, respectively). Meaning: an interval that does not have an occurrence, but that is between the first and last intervals containing occurrences, is counted as containing that species; see taxon D in Figure 1 for a visual example.
 
 The function `calcFossilDivTT` do these calculations for you, and you can use the argument `method` to decide which method will be employed.
 
