@@ -1,5 +1,5 @@
 ---
-title: "Birth-death models"
+title: "Birth-death models and molecular phylogenies"
 author: "Matheus Januario, Andressa Viol, and Daniel Rabosky"
 date: "Jan 2024"
 output: rmarkdown::html_vignette
@@ -120,14 +120,15 @@ Now we will visualize lineage-through-time (LTT) plots for these 2 trees, just l
 
 ```{r}
 # plot lineage through time plots:
-lttPlot(tree_pb, col = "blue")
+lttPlot(tree_pb, col = "blue", knitr = T)
 
-lttPlot(tree_highE, col = "red")
+lttPlot(tree_highE, col = "red", knitr = T)
 
-plot.new()
+# or, in a single plot:
+
 plot(x=c(0,1), y = c(log(2), log(100)), lwd=1, col="gray50", type = "l")
-lttPlot(tree_pb, rel.time=T, add=T, col="blue", lwd=1.5)
-lttPlot(tree_highE, rel.time=T, add=T, col="red", lwd=1.5)
+lttPlot(tree_pb, rel.time=T, add=T, col="blue", lwd=1.5, knitr = T)
+lttPlot(tree_highE, rel.time=T, add=T, col="red", lwd=1.5, knitr = T)
 ```
 
 In the plot above, the grey line represents the expected mean of lineages through time in a pure-birth process. As you already know, the birth-death process is a stochastic model, so even though the average number of species tends to follow this line, usually the actual number of species (i.e., the blue line) will vary.
@@ -170,7 +171,7 @@ matrix(c(estimateSpeciation(tree1), estimateSpeciation(tree2), estimateSpeciatio
 Now that you have a sense for the accuracy of our estimator, let's simulate 100 phylogenetic trees with variable speciation rates and apply this simple estimator. We can then ask how correlated those estimates are with the true rates. In other words, how well can we recover the true rates using the simple estimator?
 
 ```{r}
-REPS <- 5000
+REPS <- 1000
 x <- numeric(REPS)
 res <- data.frame(true_S=x, true_E=x, est_S=x)
 
@@ -218,7 +219,7 @@ To explore this, let's simulate a set of phylogenies under high relative extinct
 While you wait for the next chunk of code to run, answer the question just after it:
 
 ```{r}
-REPS <- 5000
+REPS <- 1000
 x <- numeric(REPS)
 res <- data.frame(true_S=x, true_E=x, est_S=x)
 
@@ -284,7 +285,7 @@ Let's repeat our simulation procedure, but this time we will fit a model where e
 NOTE: if you see the message `Error in simulateTree(pars = c(sim_S, sim_E), max.taxa = 50) : Too many trees going extinct` just run the chunk code again.
 
 ```{r}
-REPS <- 5000
+REPS <- 1000
 x <- numeric(REPS)
 res <- data.frame(true_S=x, true_E=x, est_S=x, est_E=x)
 
@@ -375,7 +376,7 @@ Note that many different types of whales are included here:
 
 ```{r, fig.height=10, fig.width=6}
 par(cex=0.6)
-plotPaintedWhales()
+plotPaintedWhales(knitr = T)
 ```
 
 One might argue that species with high dispersal capacity will be less likely to speciate, because they can maintain population connectivity (i.e., high gene flow) over larger geographic areas (similarly to what is disucssed in Kisel and Barraclough 2010). In general, body size correlates with dispersal distance across vertebrates, so we might expect large-bodied whales to have higher dispersal capacity than small-bodied whales. Thus, we might predict an association between body size and speciation rate across whales, given significant variation in whale body size.
@@ -402,12 +403,12 @@ head(data_whales)
 Let's make a simple scatterplot, coloring points by clade. After that, we will add a simple linear model of body mass on speciation rate.
 
 ```{r}
-plot(x=data_whales$log_mass, data_whales$S, pch = 18,
+plot(x=data_whales$log_mass, data_whales$S, pch = 16,
      xlab="Mass (log(g))", ylab="Speciation rate", col=data_whales$color)
 legend(x="topright",legend=c("other odontocetes","Baleen whales",
       "Beaked whales","Belugas and narwhals",
       "Dolphins","Other mysticetes","Porpoises"),
-    pch=21,pt.cex=1.5,pt.bg=c("black",
+    pch=16,pt.cex=1.5,pt.bg=c("black",
 "#DF536B","#61D04F","#2297E6","#28E2E5",
 "#CD0BBC","#F5C710"),bty="n")
 
@@ -440,7 +441,7 @@ x <- getEventData(whales, events.whales, burnin = 0.1)
 
 par(mfrow=c(1,2)) #making a panel
 
-plotPaintedWhales(ftype="off", direction="rightwards", mar=c(5.1,0,2.1,2.1), show.legend = TRUE)
+plotPaintedWhales(ftype="off", direction="rightwards", mar=c(5.1,0,2.1,2.1), show.legend = TRUE, knitr = T)
 plot.bammdata(x, lwd = 3, mar=c(5.1,0,2.1,2.1), direction = "leftwards")
 ```
 
