@@ -1,5 +1,5 @@
 ---
-title: "EEB 391/516 Lab 08: Birth-death models"
+title: "Birth-death models and deep time"
 author: "Matheus Januario, Andressa Viol, and Daniel Rabosky"
 date: "Jan 2024"
 output: rmarkdown::html_vignette
