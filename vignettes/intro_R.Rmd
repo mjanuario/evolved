@@ -12,6 +12,7 @@ vignette: >
 ```{r setup, include=FALSE}
 library(evolved)
 library(LSD)
+options(rmarkdown.html_vignette.check_title = FALSE)
 ```
 
 ## Learning objectives

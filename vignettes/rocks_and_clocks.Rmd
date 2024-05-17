@@ -4,10 +4,15 @@ author: "Matheus Januario and Jennifer Auler"
 date: "Dec/2023"
 output: rmarkdown::html_vignette
 vignette: >
-  %\VignetteIndexEntry{Clocks and Rocks}
+  %\VignetteIndexEntry{clocks_and_rocks}
   %\VignetteEngine{knitr::rmarkdown}
   %\VignetteEncoding{UTF-8}
 ---
+
+```{r include=FALSE}
+options(rmarkdown.html_vignette.check_title = FALSE)
+```
+
 
 ```{r}
 library(evolved)

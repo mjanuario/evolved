@@ -9,6 +9,15 @@ vignette: >
   %\VignetteEncoding{UTF-8}
 ---
 
+```{r include=FALSE}
+options(rmarkdown.html_vignette.check_title = FALSE)
+```
+
+
+```{r}
+```
+
+
 ```{r}
 library(evolved)
 library(ape)
