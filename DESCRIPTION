@@ -29,3 +29,5 @@ Depends:
     R (>= 2.10)
 LazyData: true
 VignetteBuilder: knitr
+URL: https://github.com/Auler-J/evolved
+BugReports: https://github.com/Auler-J/evolved/issues
