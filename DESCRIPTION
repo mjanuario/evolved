@@ -8,7 +8,7 @@ Authors@R:
            comment = c(ORCID = "0000-0001-7576-9058")),
       person("Andressa", "Viol", email="aviol@umich.edu", role = c("aut")),
       person("Daniel", "Rabosky", email="drabosky@umich.edu", role = c("aut")))
-Description: "Evolution and Virtual Education" - evolved - provides multiple tools to help educators (especially at the graduate level or in advanced undergraduate level courses) apply inquiry-based learning in general evolution classes. In particular, the tools provided include functions that simulate evolutionary processes (e.g., genetic drift, natural selection within a single locus) or concepts (e.g. Hardy-Weinberg equilibrium, phylogenetic distribution of traits). More than only simulating, the package also provides tools for students to analyze (e.g., measuring, testing, visualizing) datasets with characteristics that are common to many fields related to evolutionary biology. Importantly, the package is heavily oriented towards providing tools for inquiry-based learning - where students follow scientific practices to actively construct knowledge. For additional details, see package's paper (REF TO BE ADDED AFTER ACCEPTANCE).
+Description: "Evolution and Virtual Education" - evolved - provides multiple tools to help educators (especially at the graduate level or in advanced undergraduate level courses) apply inquiry-based learning in general evolution classes. In particular, the tools provided include functions that simulate evolutionary processes (e.g., genetic drift, natural selection within a single locus) or concepts (e.g. Hardy-Weinberg equilibrium, phylogenetic distribution of traits). More than only simulating, the package also provides tools for students to analyze (e.g., measuring, testing, visualizing) datasets with characteristics that are common to many fields related to evolutionary biology. Importantly, the package is heavily oriented towards providing tools for inquiry-based learning - where students follow scientific practices to actively construct knowledge. For additional details, see package's vignettes.
 License: GPL (>= 3)
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
@@ -30,5 +30,5 @@ Depends:
     R (>= 2.10)
 LazyData: true
 VignetteBuilder: knitr
-URL: https://github.com/Auler-J/evolved
-BugReports: https://github.com/Auler-J/evolved/issues
+URL: <https://github.com/Auler-J/evolved>
+BugReports: <https://github.com/Auler-J/evolved/issues>
