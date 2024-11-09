@@ -12,7 +12,7 @@ Description: "Evolution and Virtual Education" - evolved - provides multiple too
 License: GPL (>= 3)
 Encoding: UTF-8
 Roxygen: list(markdown = TRUE)
-RoxygenNote: 7.3.1
+RoxygenNote: 7.3.2
 Imports:
   ape,
   diversitree,
@@ -31,4 +31,4 @@ Depends:
 LazyData: true
 VignetteBuilder: knitr
 URL: <https://github.com/Auler-J/evolved>
-BugReports: <https://github.com/Auler-J/evolved/issues>
+BugReports: https://github.com/Auler-J/evolved/issues
