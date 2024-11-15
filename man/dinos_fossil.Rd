@@ -30,6 +30,11 @@ Data URL: http://paleobiodb.org/data1.2/occs/list.csv?datainfo&rowcount&base_nam
 dinos_fossil
 }
 \description{
-Many dinosaur (including avian species) fossil occurrences from different moments of the geological past. Much information (i.e., extra columns) was removed from the original dataset to make it more compact, but it can be fully accessed by the data URL.
+Many dinosaur (including avian species) fossil occurrences from different
+moments of the geological past. Much information (i.e., extra columns) was
+removed from the original dataset to make it more compact, but it can be
+fully accessed by the data URL. This dataset is part of the package and is
+licensed under the Creative Commons Attribution 4.0 International License
+(CC BY 4.0).
 }
 \keyword{datasets}

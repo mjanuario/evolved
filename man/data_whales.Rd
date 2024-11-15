@@ -20,7 +20,9 @@ Compilation of many primary sources (see details).
 data_whales
 }
 \description{
-Data on the body size of many cetacean species and species-specific speciation rates.
+Data on the body size of many cetacean species and species-specific
+speciation rates. This dataset is part of the package and is licensed
+under the Creative Commons Attribution 4.0 International License (CC BY 4.0).
 }
 \details{
 Species follow taxonomy from Steeman et al (2009).

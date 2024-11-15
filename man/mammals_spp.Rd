@@ -5,7 +5,8 @@
 \alias{mammals_spp}
 \title{Mammals species list}
 \format{
-A \code{vector} containing the names of almost all (i.e., 4099) extant mammal species, following Upham et al (2019) taxonomy.
+A \code{vector} containing the names of almost all (i.e., 4099) extant mammal species, following Upham et al (2019) taxonomy. This dataset is part of the package and is licensed
+under the Creative Commons Attribution 4.0 International License (CC BY 4.0).
 }
 \source{
 Actual file downloaded from \url{https://vertlife.org/data/}

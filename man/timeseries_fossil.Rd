@@ -23,7 +23,9 @@ timeseries_fossil
 }
 \description{
 Values of clade diversity for many clades of organisms (note some clades
-are nested within other clades in the dataset).
+are nested within other clades in the dataset). This dataset is part of the
+package and is licensed =under the Creative Commons Attribution 4.0
+International License (CC BY 4.0).
 }
 \details{
 Legend: \cr
