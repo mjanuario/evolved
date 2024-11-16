@@ -57,20 +57,20 @@ NULL
 #' 
 #' @examples
 #' #Default values:
-#' WFDriftSim(Ne = 5, n.gen = 30, knitr = TRUE)
+#' WFDriftSim(Ne = 5, n.gen = 15, knitr = TRUE)
 #' 
 #' #A population which has already fixed one of the alleles:
-#' WFDriftSim(Ne = 5, n.gen = 30, p0=1, knitr = TRUE)
+#' WFDriftSim(Ne = 5, n.gen = 15, p0=1, knitr = TRUE)
 #' 
 #' #Many populations::
-#' WFDriftSim(Ne = 5, n.gen = 30, p0=0.2, n.sim=10, knitr = TRUE)
+#' WFDriftSim(Ne = 5, n.gen = 15, p0=0.2, n.sim=10, knitr = TRUE)
 #' 
 #' ######## continuing a previous simulation:
 #' n.gen_1stsim <- 10 # number of gens in the 1st sim:
 #' sim1 <- WFDriftSim(Ne = 5, n.gen = n.gen_1stsim, p0=.2, n.sim=10, 
 #' plot.type = "none", print.data = TRUE, knitr = TRUE)
 
-#' n.gen_2ndsim <-15 # number of gens in the 2nd sim:
+#' n.gen_2ndsim <-10 # number of gens in the 2nd sim:
 #' # now, note how we assigned p0:
 #' sim2 <- WFDriftSim(Ne = 5, n.gen = n.gen_2ndsim, p0=sim1[,ncol(sim1)], 
 #' plot.type = "static", n.sim=10, print.data = TRUE, knitr = TRUE)
