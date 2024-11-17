@@ -88,13 +88,15 @@ Run another simulation and plot it again. Then plot some others. Each time you d
 
 As you do this, you may find that the absolute magnitude of branch lengths (the total number of lines) depends on the diversification rate ($S - E$), though tree shape (general structure, or *topology*) does not. Tree shape is, however, highly sensitive to the **relative extinction rate**, or $K = E / S$. 
 
-To get a sense for this, we will simulate a phylogeny with very high relative extinction ($E / S = 0.99$), and a pure-birth tree ($E / S = 0$) for comparison. Note: it doesn't make much sense to specify $E / S >= 1$ because this evolutionary process will almost always go extinct before speciating, thus leaving no tree -- so we will omit this case.
+To get a sense for this, we will simulate a phylogeny with very small relative extinction ($E / S = 0.05$), and a pure-birth tree ($E / S = 0$) for comparison. 
+
+Note: it doesn't make much sense to specify $E / S >= 1$ because this evolutionary process will almost always go extinct before speciating, thus leaving no tree -- so we will omit this case.
 
 To make for easier visualization, we will increase our maximum taxa parameter from 6 to 100 tips.
 
 ```{r}
 # Generating tree with high relative extinction and 100 tips
-tree_highE <- simulateTree(pars=c(1, 0.99), max.taxa=100, max.t = Inf)
+tree_lowE <- simulateTree(pars=c(1, 0.05), max.taxa=100, max.t = Inf)
 
 # And a pure birth tree, holding all arguments the same except with no extinction:
 tree_pb <- simulateTree(pars=c(0.01, 0), max.taxa=100, max.t = Inf)
@@ -107,29 +109,29 @@ plot.new()
 par(mfrow=c(1,2))
 par(mar=c(0,0,0,0))
 plot.phylo(tree_pb, show.tip.label=F)
-plot.phylo(tree_highE, show.tip.label=F)
+plot.phylo(tree_lowE, show.tip.label=F)
 par(mfrow=c(1,1))
 ```
 
 \fbox{\begin{minipage}{48em}
 Question 1:\\
 
-Describe, in a sentence or two, how the overall structure of these two trees appears to differ.
+Describe, in a sentence or two, how the overall structure of these two trees appears to differ. What if you simulate with K = E / S = 0.95?
 \end{minipage}}
 
-Now we will visualize lineage-through-time (LTT) plots for these 2 trees, just like we did a few weeks ago. The LTT plots contain a lot of information about phylogenetic tree structure. Let's see what this can tell us about the *shape* of trees produced by different speciation and extinction rates.
+Now we will visualize lineage-through-time (LTT) plots for these trees, just like we did a few weeks ago. The LTT plots contain a lot of information about phylogenetic tree structure. Let's see what this can tell us about the *shape* of trees produced by different speciation and extinction rates.
 
 ```{r}
 # plot lineage through time plots:
 lttPlot(tree_pb, col = "blue", knitr = T)
 
-lttPlot(tree_highE, col = "red", knitr = T)
+lttPlot(tree_lowE, col = "red", knitr = T)
 
 # or, in a single plot:
 
 plot(x=c(0,1), y = c(log(2), log(100)), lwd=1, col="gray50", type = "l")
 lttPlot(tree_pb, rel.time=T, add=T, col="blue", lwd=1.5, knitr = T)
-lttPlot(tree_highE, rel.time=T, add=T, col="red", lwd=1.5, knitr = T)
+lttPlot(tree_lowE, rel.time=T, add=T, col="red", lwd=1.5, knitr = T)
 ```
 
 In the plot above, the grey line represents the expected mean of lineages through time in a pure-birth process. As you already know, the birth-death process is a stochastic model, so even though the average number of species tends to follow this line, usually the actual number of species (i.e., the blue line) will vary.
@@ -139,10 +141,10 @@ Question 2:\\
 
 What is different about the LTT plots for these two trees? 
 
-Hint: Remember, in the code above, red is the high E/S tree, and blue is the curve for the low E/S tree.
+Hint: Remember, in the code above, red is the low E/S tree, and blue is the curve for the tree without any extinction. What if you simulate with K = E / S = 0.95?
 \end{minipage}}
 
-Are you surprised? Think about what you've just seen: you compared two phylogenies, both of which have zero extinct species shown... and yet, it appears that something seems different about the trees! Is this what you would have expected? The fact that trees of only extant species might have information about **extinction**, even though there is no observed extinction in the tree, is potentially very useful!
+Are you surprised? Think about what you've just seen: you compared two (or three) phylogenies, all of which have zero extinct species shown... and yet, it appears that something seems different about the trees! Is this what you would have expected? The fact that trees of only extant species might have information about **extinction**, even though there is no observed extinction in the tree, is potentially very useful!
 
 As an extra exercise for you to build intuition, check LTT plots with `S = 0.001`, `0.01`, `0.1`, and `1.0`.
 
@@ -215,7 +217,7 @@ Remember these phylogenies were created through a pure-birth process, thus we do
 
 Now you might ask: what if extinction really is not zero? How bad would our speciation estimates be?
 
-To explore this, let's simulate a set of phylogenies under high relative extinction (E / S = 0.95) and do the same thing we did previously, again estimating speciation under the simple (pure birth) estimator.
+To explore this, let's simulate a set of phylogenies under low and high relative extinction (E / S = 0.05 and E / S = 0.95) and do the same thing we did previously, again estimating speciation under the simple (pure birth) estimator.
 
 While you wait for the next chunk of code to run, answer the question just after it:
 
@@ -229,8 +231,8 @@ for(i in 1:REPS){
   # Pick a speciation rate with any value between 0 and 2:
 	sim_S <- runif(1, min = 0, max = 2)
  
-  # Now we will change the extinction fraction to always equal 0.95
-	sim_E <- sim_S * 0.95
+  # Now we will change the extinction fraction to always equal 0.05
+	sim_E <- sim_S * 0.05
 	
 	# simulate tree:	
 	tree_sim <- simulateTree(pars=c(sim_S, sim_E), 
@@ -249,12 +251,12 @@ for(i in 1:REPS){
 \fbox{\begin{minipage}{48em}
 Question 3:\\
 
-State a single-line hypothesis about why these simulations need more time to be completed, in comparison with the pure-birth simulations.
+State a single-line hypothesis about why simulations with high relative extinction need more time to be completed, in comparison with the pure-birth simulations.
 
 Hint: Look at all the parameters we used when we set up our simulation.
 \end{minipage}}
 
-Let's check our estimates for the $E/S = 0.95$ case.
+Let's check our estimates for the $E/S = 0.05$ case.
 
 For speciation rates:
 
@@ -266,10 +268,11 @@ heatscatter(res$true_S, res$est_S,
 #Then,we add the 1:1 line  (i.e. a perfect estimation)
 abline(a = 0, b = 1, lwd=2)
 ```
+
 \fbox{\begin{minipage}{48em}
 Question 4:\\
 
-Were you still able to estimate the speciation rate using this model? If the estimates are biased, how so?
+Now repeat the simulations above, but set 0.95 as your relative extinction. Could you still estimate the speciation rate using this combination of diversification rates? If the estimates are biased, how so?
 \end{minipage}}
 
 Now, we will use a more complex estimation procedure. We will estimate parameters by using a more sophisticated estimator that allows extinction and speciation rates to be nonzero. The mathematics of this are beyond the scope of this vignette, but we have provided a handy function that does the model-fitting for you, assuming rates are constant (through time and species): `fitCRBD()`. For example:
@@ -281,11 +284,11 @@ tree <- simulateTree(c(1, 0.95), max.taxa = 50, max.t = Inf)
 fitCRBD(tree)
 ```
 
-Let's repeat our simulation procedure, but this time we will fit a model where extinction can be nonzero.
+Let's repeat our simulation procedure, but this time we will fit a model where extinction can be nonzero. We won't display the plots here, but feel free to copy and paste the code into your R console to see the results yourself!
 
-NOTE: if you see the message `Error in simulateTree(pars = c(sim_S, sim_E), max.taxa = 50) : Too many trees going extinct` just run the chunk code again.
+NOTE: if you see the message `Error in simulateTree(pars = c(sim_S, sim_E), max.taxa = 50) : Too many trees going extinct` just run the chunk code again. 
 
-```{r}
+```{r, eval = FALSE}
 REPS <- 1000
 x <- numeric(REPS)
 res <- data.frame(true_S=x, true_E=x, est_S=x, est_E=x)
@@ -296,14 +299,14 @@ for(i in 1:REPS){
 	sim_S <- runif(1, min = 0, max = 2)
  
   # pick a relative extinction rate:
-	rel_ex <- runif(1  , 0, 0.99)
+	rel_ex <- runif(1  , 0, 0.95)
  
   # calculate E from that extinction fraction
 	sim_E <- sim_S * rel_ex 
 	
 	# simulate tree:	
 	tree_sim <- simulateTree(pars=c(sim_S, sim_E), 
-	                         max.taxa=50, max.t = Inf)
+	                         max.taxa=50, max.t = 1000)
  
 	# fitting the model:
 	fit <- fitCRBD(tree_sim)
@@ -316,9 +319,9 @@ for(i in 1:REPS){
 }
 ```
 
-Now, let's check our estimates for the speciation rate:
+Don't forget to check our estimates for the speciation rate:
 
-```{r}
+```{r, eval = FALSE}
 heatscatter(res$true_S, res$est_S, 
             xlab = "Simulated speciation rate",
             ylab="Estimated speciation rate")
@@ -335,9 +338,9 @@ summary(S_lm)$r.squared
 
 And for the extinction-speciation ratio:
 
-**Note:** It is not adequate to directly correlate simulated and estimated extinction rates. This happens because we can only generate phylogenies when $E < S$, and thus we do not allow extinction to vary n a way that is completely independent from speciation. However, when we correlate simulated and estimate $K = E/S$, we ameliorate this particular issue enough (for this vignette).
+**Note:** It is not adequate to directly correlate simulated and estimated extinction rates. This happens because we can only generate phylogenies when $E < S$, and thus we do not allow extinction to vary in a way that is completely independent from speciation. However, when we correlate simulated and estimate $K = E/S$, we ameliorate this particular issue enough (for this vignette).
 
-```{r}
+```{r, eval = FALSE}
 sim_K = res$true_E/res$true_S
 est_K = res$est_E/res$est_S
 
