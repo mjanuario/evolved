@@ -56,21 +56,22 @@ NULL
 #' @author Matheus Januario, Dan Rabosky, Jennifer Auler
 #' 
 #' @examples
+#' \donttest{
 #' #Default values:
-#' WFDriftSim(Ne = 5, n.gen = 15, knitr = TRUE)
+#' WFDriftSim(Ne = 5, n.gen = 10, knitr = TRUE)
 #' 
 #' #A population which has already fixed one of the alleles:
-#' WFDriftSim(Ne = 5, n.gen = 15, p0=1, knitr = TRUE)
+#' WFDriftSim(Ne = 5, n.gen = 10, p0=1, knitr = TRUE)
 #' 
 #' #Many populations::
-#' WFDriftSim(Ne = 5, n.gen = 15, p0=0.2, n.sim=10, knitr = TRUE)
+#' WFDriftSim(Ne = 5, n.gen = 10, p0=0.2, n.sim=10, knitr = TRUE)
 #' 
 #' ######## continuing a previous simulation:
 #' n.gen_1stsim <- 10 # number of gens in the 1st sim:
 #' sim1 <- WFDriftSim(Ne = 5, n.gen = n.gen_1stsim, p0=.2, n.sim=10, 
 #' plot.type = "none", print.data = TRUE, knitr = TRUE)
 
-#' n.gen_2ndsim <-10 # number of gens in the 2nd sim:
+#' n.gen_2ndsim <-7 # number of gens in the 2nd sim:
 #' # now, note how we assigned p0:
 #' sim2 <- WFDriftSim(Ne = 5, n.gen = n.gen_2ndsim, p0=sim1[,ncol(sim1)], 
 #' plot.type = "static", n.sim=10, print.data = TRUE, knitr = TRUE)
@@ -86,6 +87,7 @@ NULL
 #' #finally, merging both rounds of simulations:
 #' all_sims <- cbind(sim1, sim2)
 #' head(all_sims)
+#' }
 #' 
 WFDriftSim=function(Ne, n.gen, p0=0.5, n.sim=1, plot.type="animate", print.data=FALSE, knitr = FALSE){
   
