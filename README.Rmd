@@ -336,7 +336,7 @@ The configurations you see in the screenshot above are used by Matheus -- feel f
 
 If RStudio keeps changing the directory _after you have done the steps above_, reach out to your GSI. Other ways to try to solve any problem you may encounter is to look it up on Google, as R and RStudio have a very big, helpful, and kind online community that usually helps with all kinds of problems -- all of us regularly troubleshoot things by looking them up online.
 
-## What is RMarkdown and how can I install it (optional)?
+# What is RMarkdown and how can I install it (optional)?
 
 RMarkdown is a programming language and environment that generates reporting documents. It makes it easy to mix a decently formatted document (and nice-looking equations) with R code, and this is why you want to use RMarkdown when studying ecology and evolutionary biology.
 
