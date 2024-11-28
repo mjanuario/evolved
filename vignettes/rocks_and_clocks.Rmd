@@ -23,8 +23,8 @@ library(evolved)
 Here we will use data on fossilized organism, which we call "fossil occurrences". the data was originally obtained from the Paleobiology database, a free-to-use resource that is the standard repository for such data and which has been used by hundreds or thousands of scientific research articles to study the history and dynamics of biodiversity in Deep Time.
 
 ```{r}
-data("mammals_fossil")
-head(mammals_fossil)
+data("dinos_fossil")
+head(dinos_fossil)
 ```
 
 Students can use functions in the package to calculate the diversity of a certain taxonomic rank, and plot it through time. 
@@ -32,9 +32,9 @@ Students can use functions in the package to calculate the diversity of a certai
 To make it more fun, we will compare tow different taxonomic levels, and will plot them in a relative, log scale:
 
 ```{r,fig.height=5, fig.width=6, , fig.align='center'}
-spDTT = calcFossilDivTT(mammals_fossil, tax.lvl = "species")
-genusDTT = calcFossilDivTT(mammals_fossil, tax.lvl = "genus")
-famDTT = calcFossilDivTT(mammals_fossil, tax.lvl = "family")
+spDTT = calcFossilDivTT(dinos_fossil, tax.lvl = "species")
+genusDTT = calcFossilDivTT(dinos_fossil, tax.lvl = "genus")
+famDTT = calcFossilDivTT(dinos_fossil, tax.lvl = "family")
 
 # And to allow comparisons, we will use relative richness:
 plot(x=genusDTT$age, xlim = rev(range(genusDTT$age)),
@@ -56,33 +56,33 @@ We can also visualize fossil records by running:
 
 ```{r,fig.height=5, fig.width=6, , fig.align='center'}
 # Family-level:
-plotRawFossilOccs(mammals_fossil, tax.lvl = "family", knitr = TRUE)
+plotRawFossilOccs(dinos_fossil, tax.lvl = "family", knitr = TRUE)
 
 # Genus level:
-plotRawFossilOccs(mammals_fossil, tax.lvl = "genus", knitr = TRUE)
+plotRawFossilOccs(dinos_fossil, tax.lvl = "genus", knitr = TRUE)
 
 # Species level:
-plotRawFossilOccs(mammals_fossil, tax.lvl = "species", knitr = TRUE)
+plotRawFossilOccs(dinos_fossil, tax.lvl = "species", knitr = TRUE)
 ```
 
 Are they different? how could we test? Hint: look at the column names of the fossil object:
 
 ```{r}
-colnames(mammals_fossil)
+colnames(dinos_fossil)
 ```
 
 Now, how complete is the record? We can use another dataset to explored this:
 
 ```{r}
-data("mammals_spp")
+data("birds_spp")
 ```
 
 And see the proportion of living species with a fossil occurrence.
 
 ```{r}
-sum_w_fossil = sum(mammals_spp %in% mammals_fossil$species)
+sum_w_fossil = sum(birds_spp %in% dinos_fossil$species)
 
-sum_w_fossil / length(mammals_spp)
+sum_w_fossil / length(birds_spp)
 ```
 
 Students can for instance explore how this varies across different mammal groups, and which type of factors (e.g. biological, geological factors) seem to be influencing this the most.
