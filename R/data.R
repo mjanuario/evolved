@@ -89,79 +89,6 @@
 #' Jetz, W., Thomas, G. H., Joy, J. B., Hartmann, K., & Mooers, A. O. (2012). The global diversity of birds in space and time. Nature, 491(7424), 444-448.
 "birds_spp"
 
-#' Mammals species list
-#'
-#' @format
-#' A \code{vector} containing the names of almost all (i.e., 4099) extant mammal species, following Upham et al (2019) taxonomy. This dataset is part of the package and is licensed 
-#' under the Creative Commons Attribution 4.0 International License (CC BY 4.0).
-#' 
-#' @source Actual file downloaded from \url{https://vertlife.org/data/}
-#' 
-#' @references 
-#' Upham, N. S., Esselstyn, J. A., & Jetz, W. (2019). Inferring the mammal tree: species-level sets of phylogenies for questions in ecology, evolution, and conservation. PLoS biology, 17(12), e3000494.
-"mammals_spp"
-
-########################################################
-
-#' Occurrences of ammonoid fossils
-#' 
-#' Many ammonoid (Cephalopoda, Mollusca) fossil occurrences from different moments 
-#' of the geological past. Much information (i.e., extra columns) was removed from 
-#' the original dataset to make it more compact, but it can be fully accessed by 
-#' the data URL. This dataset is part of the package and is licensed 
-#' under the Creative Commons Attribution 4.0 International License (CC BY 4.0).
-#'
-#' @format
-#' A \code{data.frame} with 58111 rows and 13 columns.
-#' \describe{
-#'   \item{phylum}{Organism phylum}
-#'   \item{class}{Organism taxonomic class}
-#'   \item{order}{Organism taxonomic order}
-#'   \item{family}{Organism taxonomic family}
-#'   \item{genus}{Organism genus}
-#'   \item{species}{Organism specific name}
-#'   \item{early_interval}{Earlier known geological period of occurrence}
-#'   \item{late_interval}{Later known geological period of occurrence}
-#'   \item{max_ma}{Occurrence's oldest time boundary in million years}
-#'   \item{min_ma}{Occurrence's newest time boundary in million years}
-#'   \item{midpoint}{Midpoint between max_ma and min_ma}
-#'   \item{lng}{Longitude of place where occurrence was found. Follows decimal degree format.}
-#'   \item{lat}{Latitude of place where occurrence was found. Follows decimal degree format.}
-#' }
-#' 
-#' @source The Paleobiology Database (downloaded on 2022-03-11). \cr 
-#' Data URL: http://paleobiodb.org/data1.2/occs/list.csv?datainfo&rowcount&base_name=Ammonoidea&show=full,classext,genus,subgenus,acconly,ident,img,etbasis,strat,lith,env,timebins,timecompare,resgroup,ref,ent,entname,crmod \cr
-"ammonoidea_fossil"
-
-#' Occurrences of mammal fossils
-#'
-#' Many mammal fossil occurrences from different moments of the geological
-#' past. Much information (i.e., extra columns) was removed from the original 
-#' dataset to make it more compact, but it can be fully accessed by the data URL.
-#' This dataset is part of the package and is licensed under the Creative 
-#' Commons Attribution 4.0 International License (CC BY 4.0).
-#'
-#' @format
-#' A \code{data.frame} containing 69463 rows and 13 columns
-#' \describe{
-#'   \item{phylum}{Organism phylum}
-#'   \item{class}{Organism taxonomic class}
-#'   \item{order}{Organism taxonomic order}
-#'   \item{family}{Organism taxonomic family}
-#'   \item{genus}{Organism genus}
-#'   \item{species}{Organism specific name}
-#'   \item{early_interval}{Earlier known geological period of occurrence}
-#'   \item{late_interval}{Later known geological period of occurrence}
-#'   \item{max_ma}{Occurrence's oldest time boundary in million years}
-#'   \item{min_ma}{Occurrence's newest time boundary in million years}
-#'   \item{midpoint}{Midpoint between max_ma and min_ma}
-#'   \item{lng}{Longitude of place where occurrence was found. Follows decimal degree format.}
-#'   \item{lat}{Latitude of place where occurrence was found. Follows decimal degree format.}
-#' }
-#' @source The Paleobiology Database (downloaded on 2022-03-11). \cr 
-#' Data URL: http://paleobiodb.org/data1.2/occs/list.csv?datainfo&rowcount&base_name=Mammalia&show=full,classext,genus,subgenus,acconly,ident,img,etbasis,strat,lith,env,timebins,timecompare,resgroup,ref,ent,entname,crmod \cr
-"mammals_fossil"
-
 #' Occurrence of dinosaur fossils
 #'
 #' Many dinosaur (including avian species) fossil occurrences from different 
@@ -192,34 +119,6 @@
 #' Data URL: http://paleobiodb.org/data1.2/occs/list.csv?datainfo&rowcount&base_name=Dinosauria&show=full,classext,genus,subgenus,acconly,ident,img,etbasis,strat,lith,env,timebins,timecompare,resgroup,ref,ent,entname,crmod \cr
 "dinos_fossil"
 
-#' Occurrence of trilobite fossils
-#'
-#' Many trilobite fossil occurrences from different moments of the geological
-#' past. Much information (i.e., extra columns) was removed from the original
-#' dataset to make it more compact, but it can be fully accessed by the data 
-#' URL. This dataset is part of the package and is licensed 
-#' under the Creative Commons Attribution 4.0 International License (CC BY 4.0).
-#'
-#' @format
-#' A \code{data.frame} containing 24965 rows and 13 columns
-#' \describe{
-#'   \item{phylum}{Organism phylum}
-#'   \item{class}{Organism taxonomic class}
-#'   \item{order}{Organism taxonomic order}
-#'   \item{family}{Organism taxonomic family}
-#'   \item{genus}{Organism genus}
-#'   \item{species}{Organism specific name}
-#'   \item{early_interval}{Earlier known geological period of occurrence}
-#'   \item{late_interval}{Later known geological period of occurrence}
-#'   \item{max_ma}{Occurrence's oldest time boundary in million years}
-#'   \item{min_ma}{Occurrence's newest time boundary in million years}
-#'   \item{midpoint}{Midpoint between max_ma and min_ma}
-#'   \item{lng}{Longitude of place where occurrence was found. Follows decimal degree format.}
-#'   \item{lat}{Latitude of place where occurrence was found. Follows decimal degree format.}
-#' }
-#' @source The Paleobiology Database (downloaded on 2022-03-11). \cr 
-#' Data URL: http://paleobiodb.org/data1.2/occs/list.csv?datainfo&rowcount&base_name=Trilobita&show=full,classext,genus,subgenus,acconly,ident,img,etbasis,strat,lith,env,timebins,timecompare,resgroup,ref,ent,entname,crmod \cr
-"trilob_fossil"
 
 #' Fossil Time series
 #'
