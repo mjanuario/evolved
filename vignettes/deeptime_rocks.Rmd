@@ -43,7 +43,7 @@ library(paleobioDB)
 
 # Exploring fossil occurrences
 
-We've downloaded 4 fossil datasets for you to work with today, including mammals (`mammals_fossil`), dinosaurs (`dinos_fossil`), ammonites (`ammonoidea_fossil`), and trilobites (`trilob_fossil`). All occurrence data were originally obtained from the Paleobiology database, a free-to-use resource that is the standard repository for such data and which has been used by hundreds or thousands of researchers to study the history and dynamics of biodiversity in deep time. 
+We've downloaded a fossil dataset for you to work with today (`dinos_fossil`). All occurrence data were originally obtained from the Paleobiology database, a free-to-use resource that is the standard repository for such data and which has been used by hundreds or thousands of researchers to study the history and dynamics of biodiversity in deep time. 
 
 We kept as many occurrences as possible from the original datasets, but removed some extraneous data (e.g. notes on preservation, notes on the paleoenvironment, the original reference for the data, etc.) to make them easier to use. We also removed occurrences with poor _time resolution_ (i.e., the timespan between the maximum and minimum ages of the strata associated with that fossil), and we removed all fossil occurrences not identified to the species level.
 

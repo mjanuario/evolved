@@ -29,6 +29,10 @@ library(LSD)
 library(ape)
 library(BAMMtools)
 library(evolved)
+
+# Let's also store our par() configs so 
+# we can restore them whenever we change it in this tutorial
+oldpar <- par(no.readonly = TRUE)  
 ```
 
 # Simulating phylogenetic trees
@@ -106,11 +110,12 @@ Let's plot both trees side by side.
 
 ```{r}
 plot.new()
-par(mfrow=c(1,2))
-par(mar=c(0,0,0,0))
+par(mfrow=c(1,2), mar=c(0,0,0,0))
 plot.phylo(tree_pb, show.tip.label=F)
 plot.phylo(tree_lowE, show.tip.label=F)
-par(mfrow=c(1,1))
+
+# Restoring old par() configs:
+par(oldpar)
 ```
 
 \fbox{\begin{minipage}{48em}
@@ -381,6 +386,9 @@ Note that many different types of whales are included here:
 ```{r, fig.height=10, fig.width=6}
 par(cex=0.6)
 plotPaintedWhales(knitr = T)
+
+# Restoring old par() configs:
+par(oldpar)
 ```
 
 One might argue that species with high dispersal capacity will be less likely to speciate, because they can maintain population connectivity (i.e., high gene flow) over larger geographic areas (similarly to what is disucssed in Kisel and Barraclough 2010). In general, body size correlates with dispersal distance across vertebrates, so we might expect large-bodied whales to have higher dispersal capacity than small-bodied whales. Thus, we might predict an association between body size and speciation rate across whales, given significant variation in whale body size.
@@ -447,6 +455,9 @@ par(mfrow=c(1,2)) #making a panel
 
 plotPaintedWhales(ftype="off", direction="rightwards", mar=c(5.1,0,2.1,2.1), show.legend = TRUE, knitr = T)
 plot.bammdata(x, lwd = 3, mar=c(5.1,0,2.1,2.1), direction = "leftwards")
+
+# Restoring old par() configs:
+par(oldpar)
 ```
 
 \fbox{\begin{minipage}{48em}

@@ -41,10 +41,12 @@ NULL
 #' 
 #' @examples
 #' 
-#' data("ammonoidea_fossil")
+#' data("dinos_fossil")
+#' oldpar <- par(no.readonly = TRUE) 
 #' par(mfrow=c(1,2))
-#' plotRawFossilOccs(ammonoidea_fossil, tax.lvl = "species", knitr = TRUE)
-#' plotRawFossilOccs(ammonoidea_fossil, tax.lvl = "genus", knitr = TRUE)
+#' plotRawFossilOccs(dinos_fossil, tax.lvl = "species", knitr = TRUE)
+#' plotRawFossilOccs(dinos_fossil, tax.lvl = "genus", knitr = TRUE)
+#' par(oldpar)
 #' 
 plotRawFossilOccs <- function(data, tax.lvl=NULL, sort=TRUE, use.midpoint=TRUE, return.ranges=FALSE, knitr = FALSE){
   
@@ -117,8 +119,6 @@ plotRawFossilOccs <- function(data, tax.lvl=NULL, sort=TRUE, use.midpoint=TRUE, 
        xlim=rev(range(c(data$max_ma, data$min_ma))), frame.plot = F, yaxt="n",
        ylab=ylab_text, xlab="Absolute time (Mya)", main=paste0(title, " level; N = ", nrow(data)," taxa")
   )
-  #saving par
-  opar = par(no.readonly = TRUE)
   
   segments(x0 = data$max_ma, y0 = 1:nrow(data),
            x1 = data$min_ma, y1 = 1:nrow(data))
@@ -129,5 +129,5 @@ plotRawFossilOccs <- function(data, tax.lvl=NULL, sort=TRUE, use.midpoint=TRUE, 
     }
     return(data)
   }
-  par(opar)
+
 }

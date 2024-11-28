@@ -36,6 +36,12 @@ plotProteinSeq=function(x, taxon.to.plot, knitr = FALSE){
   AAs = c("-", "R", "W", "I", "F", "S", "T", "N", "H", "K", "D", "G", "L", "Y", "V", "M", "A", "E", "P", "Q", "C", "X", "B")
   
   # ploting:
+  ############################################
+  # Be sure to not change user's par() configs:
+  oldpar <- par(no.readonly = TRUE) 
+  on.exit(par(oldpar)) 
+  ############################################
+  
   par(mar = c(5.1, 4.1, 4.1, .5))
   if(!knitr){
     dev.new()

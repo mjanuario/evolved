@@ -38,7 +38,7 @@
 #' lttPlot(phy, knitr = TRUE)
 #' lttPlot(phy, plot = FALSE, knitr = TRUE)
 #' 
-lttPlot <- function(phy, lwd=1, col="red", plot = T, rel.time = F, add = F, knitr = FALSE){
+lttPlot <- function(phy, lwd=1, col="red", plot = TRUE, rel.time = FALSE, add = FALSE, knitr = FALSE){
   
   ############################################
   # check the classes of inputs and stop if any was inputted wrongly:
@@ -83,10 +83,16 @@ lttPlot <- function(phy, lwd=1, col="red", plot = T, rel.time = F, add = F, knit
       dev.new()
     }
     plot.new()
+    
+    ############################################
+    # Be sure to not change user's par() configs:
+    oldpar <- par(no.readonly = TRUE) 
+    on.exit(par(oldpar)) 
+    ############################################
+    
     par(mar=c(4,4,1,1))
     plot.window(xlim=c(0, xm), ylim=c(0,ym))
     #saving par
-    opar = par(no.readonly = TRUE)
     lines(x=c(st[1], age), y=range(ll), lwd=1.5, col="gray50")		
     
     axis(1)
@@ -98,6 +104,6 @@ lttPlot <- function(phy, lwd=1, col="red", plot = T, rel.time = F, add = F, knit
   segments(x0=st, x1 = c(st[-1], age), y0 = ll, y1=ll, lwd=lwd, col=col)
   segments(x0=st[-1], x1 = st[-1], y0=ll[-length(ll)], y1=ll[-1], lwd=lwd, col=col)
   if (!add){
-    par(opar)
+    par(oldpar)
   }
 }

@@ -48,11 +48,11 @@ different methods.
 \examples{
 
 # Loading data
-data("trilob_fossil")
+data("dinos_fossil")
 
 # Using function:
-div1 <- calcFossilDivTT(trilob_fossil, method = "stdmethod")
-div2 <- calcFossilDivTT(trilob_fossil, method = "stdmethod", bin.reso = 10)
+div1 <- calcFossilDivTT(dinos_fossil, method = "stdmethod")
+div2 <- calcFossilDivTT(dinos_fossil, method = "stdmethod", bin.reso = 10)
 
 # Comparing different bins sizes in the standard method
 plot(x=div1$age, y=div1$div, type="l", 
@@ -61,7 +61,7 @@ plot(x=div1$age, y=div1$div, type="l",
 lines(x=div2$age, y=div2$div, col="blue")
 
 # Comparing different methods:
-div3 <- calcFossilDivTT(trilob_fossil, method = "rangethrough")
+div3 <- calcFossilDivTT(dinos_fossil, method = "rangethrough")
 plot(x=div1$age, y=div1$div, type="l", 
      xlab = "Time (Mya)", ylab = "Richness", 
      xlim=rev(range(div1$age)), col="red") 

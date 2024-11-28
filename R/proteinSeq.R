@@ -27,6 +27,9 @@ NULL
 #' the others) and their relative positions should match (i.e., the object must 
 #' contain _alligned_ Amino acide sequences).
 #' 
+#' @return A logical indicating if object \code{x} is of 
+#' class \code{ProteinSeq}
+#' 
 #' @export
 #' 
 is.ProteinSeq=function(x){
@@ -58,8 +61,8 @@ is.ProteinSeq=function(x){
 #' @param x an object of the class \code{ProteinSeq}
 #' @param ... arguments to be passed to or from other methods.
 #' 
-#' @details \code{print.ProteinSeq} Prints a brief summary of a 
-#' \code{print.ProteinSeq}. Particularly,  it prints the number of sequences and 
+#' @return \code{print.ProteinSeq} Prints a brief summary of a 
+#' \code{print.ProteinSeq} containing the number of sequences and 
 #' the length of the alignment. See more details of the format in 
 #' \code{??ProteinSeq}.
 #' 
@@ -78,7 +81,7 @@ print.ProteinSeq=function(x, ...){
 #' 
 #' @param object an object of the class \code{ProteinSeq}
 #' 
-#' @details Same as \code{print.ProteinSeq}.
+#' @return Same as \code{print.ProteinSeq}.
 #' 
 #' @export
 
@@ -92,7 +95,8 @@ summary.ProteinSeq=function(object, ...){
 #' @param n number of aminoacids to be shown
 #' @param ... arguments to be passed to or from other methods.
 #' 
-#' @details Shows the first \code{n} elements of a \code{ProteinSeq} object.
+#' @return Shows the first \code{n} elements of a \code{ProteinSeq} object.
+#' 
 #' 
 #' @export
 
@@ -121,7 +125,7 @@ head.ProteinSeq=function(x, n=20, ...){
 #' @param n number of aminoacids to be shown
 #' @param ... arguments to be passed to or from other methods.
 #' 
-#' @details Shows the last \code{n} elements of a \code{ProteinSeq} object.
+#' #' @return Shows the last \code{n} elements of a \code{ProteinSeq} object.
 #' 
 #' @export
 tail.ProteinSeq=function(x, n=20, ...){

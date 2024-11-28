@@ -28,7 +28,7 @@ bi-allelic loci.
 \examples{
 
 #using the default values (n.ind = 50, p = 0.5, n.sim = 100):
-#OneGenHWSim()
+OneGenHWSim()
 
 #Simulating with a already fixed allele:
 OneGenHWSim(n.ind = 50, p = 1)

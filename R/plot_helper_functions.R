@@ -25,7 +25,12 @@ plotWFDrift = function(p.through.time, plot.type = plot, knitr = FALSE){
   time = 1:((nGen)+1)
   cols=grDevices::rainbow(nSim)
   
-  opar =  par(no.readonly = TRUE)
+  ############################################
+  # Be sure to not change user's par() configs:
+  oldpar <- par(no.readonly = TRUE) 
+  on.exit(par(oldpar)) 
+  ############################################
+
   if(!knitr){
     dev.new()
   }
@@ -70,7 +75,6 @@ plotWFDrift = function(p.through.time, plot.type = plot, knitr = FALSE){
     auxhist = hist(p.through.time[,nGen+1], breaks = seq(0,1, by=0.05), plot = FALSE)
     barplot(auxhist$counts, axes = TRUE, space = 0, horiz=TRUE, xlab= "Counts", ylab=NULL, border = NA, col = "black")
   }
-  par(opar)
 }
 
 ####################################
@@ -139,7 +143,12 @@ plotNatSel = function(gen.HW = gen.HW, p.t = p.t, w.t = w.t, t = t, W.gntp = c(w
   ######################
   #Plotting all panels##
   ######################
-  opar = par(no.readonly = TRUE)
+  ############################################
+  # Be sure to not change user's par() configs:
+  oldpar <- par(no.readonly = TRUE) 
+  on.exit(par(oldpar)) 
+  ############################################
+  
   if(!knitr){
     dev.new()
   }
@@ -261,6 +270,6 @@ plotNatSel = function(gen.HW = gen.HW, p.t = p.t, w.t = w.t, t = t, W.gntp = c(w
     abline(h=c(1,0), lty=3, cex=0.55)
     mtext(text = c("A1A1", "A1A2", "A2A2"), side = 4, at = gen.HW[nrow(gen.HW),], col = c("black", "grey60", "grey80"), adj = 0, cex = 0.8)
   }
-  par(opar)
+  
 }
 

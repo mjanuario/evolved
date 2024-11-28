@@ -22,11 +22,26 @@ is.ProteinSeq(x)
 \arguments{
 \item{x}{an object of the class \code{ProteinSeq}}
 
-\item{...}{arguments to be passed to or from other methods.}
+\item{...}{arguments to be passed to or from other methods.
+
+#' @return Shows the last \code{n} elements of a \code{ProteinSeq} object.}
 
 \item{object}{an object of the class \code{ProteinSeq}}
 
 \item{n}{number of aminoacids to be shown}
+}
+\value{
+A logical indicating if object \code{x} is of
+class \code{ProteinSeq}
+
+\code{print.ProteinSeq} Prints a brief summary of a
+\code{print.ProteinSeq} containing the number of sequences and
+the length of the alignment. See more details of the format in
+\code{??ProteinSeq}.
+
+Same as \code{print.ProteinSeq}.
+
+Shows the first \code{n} elements of a \code{ProteinSeq} object.
 }
 \description{
 The \code{ProteinSeq} class is an input for the functions \code{countSeqDiffs} and \code{is.ProteinSeq}. It consists of a character vector. Each entry in this vector represents the aminoacid (the protein components coded by a gene) sequence, for a given aligned protein sequence. The object must be a character, named vector, with the names typically corresponding to the species (name could be scientific or common name) from which every sequence came. The characters within the vector must correspond to valid aminoacid symbols (i.e. capitalized letters or deletion "_" symbols). Particularly, the following symbols relate to amino acids: \code{"A", "C", "D", "E", "F", "G", "H", "I", "K", "L", "M", "N", "P", "Q", "R", "S", "T", "V", "W", "Y"}.
@@ -39,17 +54,6 @@ multiple vectors made of characters (usually letters that code to Amino Acids,
 deletions, etc). All of these must have the correct length (i.e. same as all
 the others) and their relative positions should match (i.e., the object must
 contain \emph{alligned} Amino acide sequences).
-
-\code{print.ProteinSeq} Prints a brief summary of a
-\code{print.ProteinSeq}. Particularly,  it prints the number of sequences and
-the length of the alignment. See more details of the format in
-\code{??ProteinSeq}.
-
-Same as \code{print.ProteinSeq}.
-
-Shows the first \code{n} elements of a \code{ProteinSeq} object.
-
-Shows the last \code{n} elements of a \code{ProteinSeq} object.
 }
 \author{
 Daniel Rabosky, Matheus Januario, Jennifer Auler

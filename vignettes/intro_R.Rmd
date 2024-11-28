@@ -534,7 +534,7 @@ if("subfolder_absolute" %in% list.files()){
 
 Your computer is organized as a series of directories (sometimes known as "folders") within directories. You can have a small glance at this organization by typing in R:
 
-```{r}
+```
 getwd() #no argument is needed here - a small number of functions work like that
 ```
 
@@ -542,7 +542,7 @@ The line above asks R what the current working directory is. This means the dire
 
 You can make a new folder using the function `dir.create()`:
 
-```{r}
+```
 # the relative path:
 dir.create("subfolder_relative") 
 # This is a directory that is being created 

@@ -56,10 +56,12 @@ associated with each taxa in a dataset.
 }
 \examples{
 
-data("ammonoidea_fossil")
+data("dinos_fossil")
+oldpar <- par(no.readonly = TRUE) 
 par(mfrow=c(1,2))
-plotRawFossilOccs(ammonoidea_fossil, tax.lvl = "species", knitr = TRUE)
-plotRawFossilOccs(ammonoidea_fossil, tax.lvl = "genus", knitr = TRUE)
+plotRawFossilOccs(dinos_fossil, tax.lvl = "species", knitr = TRUE)
+plotRawFossilOccs(dinos_fossil, tax.lvl = "genus", knitr = TRUE)
+par(oldpar)
 
 }
 \author{

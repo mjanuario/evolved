@@ -8,9 +8,9 @@ lttPlot(
   phy,
   lwd = 1,
   col = "red",
-  plot = T,
-  rel.time = F,
-  add = F,
+  plot = TRUE,
+  rel.time = FALSE,
+  add = FALSE,
   knitr = FALSE
 )
 }

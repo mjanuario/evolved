@@ -36,6 +36,10 @@ Then, you must load it, as well as our package:
 ```{r}
 library(evolved)
 library(plot3D)
+
+# Let's also store our par() configs so 
+# we can restore them whenever we change it in this tutorial
+oldpar <- par(no.readonly = TRUE)  
 ```
 
 # Introduction
@@ -527,9 +531,7 @@ plot3D::persp3D(x = c(0, probvec), z=freqmat, theta=45, phi=20, contour =F,
 # Plotting selected generations:
 ########## 
 plot.new()
-par(oma=c(1,1,1,1))
-par(mfrow=c(2,2))
-par(mar=c(2,2,2,0))
+par(oma=c(1,1,1,1), mfrow=c(2,2), mar=c(2,2,2,0))
 
 pfx <- function(gen){
 	plot.new()
@@ -556,6 +558,8 @@ points(x=0:32, y=freqmat[,10], pch=21, bg="red", cex=1.5)
 pfx(15)
 points(x=0:32, y=freqmat[,15], pch=21, bg="red", cex=1.5)
 
+# Restoring old par() configs:
+par(oldpar)
 ```
 
 The above visually resembles figure 6 in Buri (1956) -- but please remember this is an _analytical expectation_.

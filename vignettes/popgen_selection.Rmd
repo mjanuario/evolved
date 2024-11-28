@@ -154,7 +154,7 @@ For a long time, melanic individuals of _Biston betularia_ (the peppered moth) w
 At the time many hypotheses were drawn to explain this phenomenon (Cook & Turner, 2020), but a very good hypothesis is that light-colored morphs were able to camouflage easier in lichenous tree barks (see figure 1), while the dark morph was easily seen by birds on this background. However, after the industrial revolution, many of the lichen died, exposing the darker tree bark underneath and supposedly changing which morph was most visible to birds.
 
 ```{r, echo=F, fig.cap="Light and carbonaria morphs of the peppered moth on the same lichenous tree. Image from wikicommons.", out.width=500}
-knitr::include_graphics('2_morphs.jpeg')
+knitr::include_graphics('2_morphs.png')
 ```
 
 Almost a century ago, J. B. S. Haldane performed some calculations on peppered moth morphs to estimate the selection coefficient ($s$) that natural populations face (Haldane, 1924). Below, you will use a similar approach to also estimate $s$, departing from the same data and assumptions that Haldane used.
