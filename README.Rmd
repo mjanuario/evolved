@@ -384,21 +384,15 @@ Download and open the .Rmd file which has the same name as this PDF (posted on [
 
 The effective population size when there is time-varying population size (i.e., bottlenecks and expansions) is: 
 
-\begin{equation}
-N_e = \frac{1}{\frac{1}{t}\sum_{i=1}^{t} \frac{1}{N_i}}
-\end{equation}
+$N_e = \frac{1}{\frac{1}{t}\sum_{i=1}^{t} \frac{1}{N_i}}$
 
 The probability of identity-by-descent of two alleles is:
 
-\begin{equation}
-f_t = \frac{1}{2N} + (1-\frac{1}{2N})f_{t-1}
-\end{equation}
+$f_t = \frac{1}{2N} + (1-\frac{1}{2N})f_{t-1}$
 
 And the rate of heterozygosity loss is:
 
-\begin{equation}
-\frac{H_t}{H_0} = (e^{-\frac{1}{2N}})^t
-\end{equation}
+$\frac{H_t}{H_0} = (e^{-\frac{1}{2N}})^t$
 
 Which is also equal to $e^{-\frac{t}{2N}}$. Of course, this assumes a diploid organism, so the census size of this population is $N$.
 
