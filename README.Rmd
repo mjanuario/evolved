@@ -45,6 +45,14 @@ install.packages("devtools")
 devtools::install_github("mjanuario/evolved")
 ```
 
+#### Features in the development version that are absent in the stable version:
+
+* Datasets:
+  * `mammals_spp` (Extant species list of mammals)
+  * `ammonoidea_fossil` (Fossil occurrences of ammonoids
+  * `mammals_fossil` (Fossil occurrences of mammals)
+  * `trilob_fossil` (Fossil occurrences of trilobites)
+
 ## Vignettes (Tutorials)
 
 To view the vignettes, run the following code:
