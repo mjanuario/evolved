@@ -37,26 +37,23 @@ The EvolVEd package is available in two versions:
 
 ### Stable Version:
 
-The stable version can be downloaded directly from the [The
-Comprehensive R Archive
-Network](https://cran.r-project.org/web/packages/evolved/index.html). To
-install it, simply run the following command in your R terminal:
+The stable version represents the "error-proof" version of the package. It may have reduced features due to CRAN's constraints (e.g., dataset size). The stable version can be downloaded directly from the [The Comprehensive R Archive Network](https://cran.r-project.org/web/packages/evolved/index.html). A simpler way to install this version is to run the following command in your R terminal:
 
-    install.packages("evolved")
+```
+install.packages("evolved")
+```
 
 ### Development Version:
 
-The development version is hosted on
-[GitHub](https://github.com/mjanuario/evolved) and requires the
-`devtools` package for installation. If `devtools` is not already
-installed, you can install it first by uncommenting the line in the code
-below:
+The development version is the most complete and updated version of the package. It may contain datasets, functions, or documentation slightly out of CRAN's standards. The development version is hosted on [GitHub](https://github.com/mjanuario/evolved) and requires the `devtools` package for installation. If `devtools` is not already installed, you can install it first by uncommenting the line in the code below:
 
-    # Install devtools 
-    install.packages("devtools")
+```
+# Install devtools 
+install.packages("devtools")
 
-    # Install the development version of EvolVEd
-    devtools::install_github("mjanuario/evolved")
+# Then, install the development version of EvolVEd:
+devtools::install_github("mjanuario/evolved")
+```
 
 ## Vignettes (Tutorials)
 
