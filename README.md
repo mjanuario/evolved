@@ -1,10 +1,10 @@
-Instructions on EvolVEd, R, RStudio, RMarkdown
+Instructions on evolved, R, RStudio, RMarkdown
 ================
 Matheus Januario, Jenniefer Auler, Andressa Viol, and Daniel Rabosky
 Nov/2024
 
-- [EvolVEd](#evolved)
-  - [Installing EvolVEd](#installing-evolved)
+- [evolved](#evolved)
+  - [Installing evolved](#installing-evolved)
   - [Vignettes (Tutorials)](#vignettes-tutorials)
 - [If you never used R before…](#if-you-never-used-r-before)
   - [What is R and how can I install
@@ -16,7 +16,7 @@ Nov/2024
     (optional)?](#what-is-rmarkdown-and-how-can-i-install-it-optional)
   - [Working Routine in R](#working-routine-in-r)
 
-# EvolVEd
+# evolved
 
 `evolved` (EVOLutionary Virtual EDucation) is an open-source R package
 designed for graduate or advanced undergraduate courses in evolutionary
@@ -31,9 +31,9 @@ biology using simulations, or ($ii$) analyzing (parameter estimation,
 hypothesis testing, visualization) datasets associated with key
 questions in evolutionary biology.
 
-## Installing EvolVEd
+## Installing evolved
 
-The EvolVEd package is available in two versions:
+The evolved package is available in two versions:
 
 ### Stable Version:
 
@@ -51,7 +51,7 @@ The development version is the most complete and updated version of the package.
 # Install devtools 
 install.packages("devtools")
 
-# Then, install the development version of EvolVEd:
+# Then, install the development version of evolved:
 devtools::install_github("mjanuario/evolved")
 ```
 
