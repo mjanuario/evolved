@@ -31,4 +31,4 @@ Depends:
 LazyData: true
 VignetteBuilder: knitr
 URL: <https://github.com/Auler-J/evolved>
-BugReports: https://github.com/Auler-J/evolved/issues
+BugReports: https://github.com/mjanuario/evolved/issues
