@@ -13,6 +13,9 @@
 #' 
 #' @return A \code{data.frame} containing the number of individuals for each 
 #' genotype.
+#'
+#' @concept microevo
+#' @family microevolution
 #' 
 #' @export OneGenHWSim
 #' 

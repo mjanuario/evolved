@@ -35,4 +35,5 @@ The object of class "ProteinSeq" is structured as a named
 \code{vector} of 17 different animal species, with each individual component
 being a sequence of 513 aminoacids.
 }
+\concept{data}
 \keyword{datasets}

@@ -10,6 +10,9 @@ NULL
 #' 
 #' @return A \code{numeric} with the estimated speciation rate.
 #' 
+#' @concept macroevo
+#' @family macroevolution
+#' 
 #' @export estimateSpeciation
 #' 
 #' @references Yule G.U. 1925. A mathematical theory of evolution, based on the conclusions of Dr. JC Willis, FRS. Philosophical Transactions of the Royal Society of London. Series B, Containing Papers of a Biological Character. 213:21–87.

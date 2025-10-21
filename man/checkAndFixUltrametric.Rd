@@ -38,6 +38,21 @@ Popescu, A. A., Huber, K. T., & Paradis, E. (2012). ape 3.0: New tools for
 distance-based phylogenetics and evolutionary analysis in R. Bioinformatics,
 28(11), 1536-1537.
 }
+\seealso{
+Other macroevolution: 
+\code{\link{calcFossilDivTT}()},
+\code{\link{countSeqDiffs}()},
+\code{\link{estimateSpeciation}()},
+\code{\link{fitCRBD}()},
+\code{\link{lttPlot}()},
+\code{\link{plotPaintedWhales}()},
+\code{\link{plotProteinSeq}()},
+\code{\link{plotRawFossilOccs}()},
+\code{\link{simulateBirthDeathRich}()},
+\code{\link{simulateTree}()}
+}
 \author{
 Daniel Rabosky, Matheus Januario, Jennifer Auler
 }
+\concept{macroevo}
+\concept{macroevolution}

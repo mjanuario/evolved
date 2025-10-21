@@ -59,6 +59,15 @@ Benchmark papers in genetics, Volume 8: Evolutionary genetics (pp.
 Mayo, O. (2008). A century of Hardy–Weinberg equilibrium. Twin Research
 and Human Genetics, 11(3), 249-256.
 }
+\seealso{
+Other microevolution: 
+\code{\link{NatSelSim}()},
+\code{\link{WFDriftSim}()},
+\code{\link{plotNatSel}()},
+\code{\link{plotWFDrift}()}
+}
 \author{
 Matheus Januario, Dan Rabosky, Jennifer Auler
 }
+\concept{microevo}
+\concept{microevolution}

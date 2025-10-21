@@ -30,5 +30,5 @@ Depends:
     R (>= 2.10)
 LazyData: true
 VignetteBuilder: knitr
-URL: <https://github.com/mjanuario/evolved>
+URL: https://github.com/mjanuario/evolved, https://mjanuario.github.io/evolved
 BugReports: https://github.com/mjanuario/evolved/issues

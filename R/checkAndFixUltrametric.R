@@ -12,6 +12,9 @@ NULL
 #' 
 #' @return A check and fixed \code{phylo} object.
 #' 
+#' @concept macroevo
+#' @family macroevolution
+#' 
 #' @export checkAndFixUltrametric
 #' 
 #' @references 

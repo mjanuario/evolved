@@ -23,3 +23,12 @@ Plot WFDriftSim output
 store_p = WFDriftSim(Ne = 5, n.gen = 10, p0=.2, n.sim=5, plot = "none", print.data = TRUE)
 plotWFDrift(store_p, "static")
 }
+\seealso{
+Other microevolution: 
+\code{\link{NatSelSim}()},
+\code{\link{OneGenHWSim}()},
+\code{\link{WFDriftSim}()},
+\code{\link{plotNatSel}()}
+}
+\concept{microevo}
+\concept{microevolution}

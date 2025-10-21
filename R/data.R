@@ -19,6 +19,9 @@
 #' Species-specific speciation rates from Rabosky 2014 & Rabosky 
 #' et al, 2014. Mass data from PanTHERIA (Jones et al, 2009).
 #' 
+#' @concept data
+#' @keywords datasets
+#' 
 #' @references 
 #'  Jones, K. E., Bielby, J., Cardillo, M., Fritz, S. A., O'Dell, J., Orme, C. D. L., ... & Purvis, A. (2009). PanTHERIA: a species‐level database of life history, ecology, and geography of extant and recently extinct mammals: Ecological Archives E090‐184. Ecology, 90(9), 2648-2648.
 #'  
@@ -37,6 +40,9 @@
 #'
 #' @format
 #' An ultrametric \code{phylo} object with 87 tips
+#' 
+#' @concept data
+#' @keywords datasets
 #' 
 #' @source Original phylogeny generation by Steeman et al (2001). 
 #' File obtained from Rabosky et al, 2014. 
@@ -71,6 +77,9 @@
 #'   \item{sequence}{Aminoacid sequence of length 513}
 #' }
 #' 
+#' @concept data
+#' @keywords datasets
+#' 
 #' @source Amino acid sequences were originally downloaded from genebank and later 
 #' curated and aligned by Daniel L. Rabosky.
 "cytOxidase"
@@ -85,6 +94,9 @@
 #' 
 #' @source Actual file downloaded from \url{https://vertlife.org/data/}
 #' 
+#' @concept data
+#' @keywords datasets
+#' 
 #' @references 
 #' Jetz, W., Thomas, G. H., Joy, J. B., Hartmann, K., & Mooers, A. O. (2012). The global diversity of birds in space and time. Nature, 491(7424), 444-448.
 "birds_spp"
@@ -94,6 +106,9 @@
 #' @format
 #' A \code{vector} containing the names of almost all (i.e., 4099) extant mammal species, following Upham et al (2019) taxonomy. This dataset is part of the package and is licensed 
 #' under the Creative Commons Attribution 4.0 International License (CC BY 4.0).
+#' 
+#' @concept data
+#' @keywords datasets
 #' 
 #' @source Actual file downloaded from \url{https://vertlife.org/data/}
 #' 
@@ -129,6 +144,9 @@
 #'   \item{lat}{Latitude of place where occurrence was found. Follows decimal degree format.}
 #' }
 #' 
+#' @concept data
+#' @keywords datasets
+#' 
 #' @source The Paleobiology Database (downloaded on 2022-03-11). \cr 
 #' Data URL: http://paleobiodb.org/data1.2/occs/list.csv?datainfo&rowcount&base_name=Ammonoidea&show=full,classext,genus,subgenus,acconly,ident,img,etbasis,strat,lith,env,timebins,timecompare,resgroup,ref,ent,entname,crmod \cr
 "ammonoidea_fossil"
@@ -158,6 +176,10 @@
 #'   \item{lng}{Longitude of place where occurrence was found. Follows decimal degree format.}
 #'   \item{lat}{Latitude of place where occurrence was found. Follows decimal degree format.}
 #' }
+#' 
+#' @concept data
+#' @keywords datasets
+#' 
 #' @source The Paleobiology Database (downloaded on 2022-03-11). \cr 
 #' Data URL: http://paleobiodb.org/data1.2/occs/list.csv?datainfo&rowcount&base_name=Mammalia&show=full,classext,genus,subgenus,acconly,ident,img,etbasis,strat,lith,env,timebins,timecompare,resgroup,ref,ent,entname,crmod \cr
 "mammals_fossil"
@@ -188,6 +210,10 @@
 #'   \item{lng}{Longitude of place where occurrence was found. Follows decimal degree format.}
 #'   \item{lat}{Latitude of place where occurrence was found. Follows decimal degree format.}
 #' }
+#' 
+#' @concept data
+#' @keywords datasets
+#' 
 #' @source The Paleobiology Database (downloaded on 2022-03-11). \cr
 #' Data URL: http://paleobiodb.org/data1.2/occs/list.csv?datainfo&rowcount&base_name=Dinosauria&show=full,classext,genus,subgenus,acconly,ident,img,etbasis,strat,lith,env,timebins,timecompare,resgroup,ref,ent,entname,crmod \cr
 "dinos_fossil"
@@ -217,6 +243,10 @@
 #'   \item{lng}{Longitude of place where occurrence was found. Follows decimal degree format.}
 #'   \item{lat}{Latitude of place where occurrence was found. Follows decimal degree format.}
 #' }
+#' 
+#' @concept data
+#' @keywords datasets
+#' 
 #' @source The Paleobiology Database (downloaded on 2022-03-11). \cr 
 #' Data URL: http://paleobiodb.org/data1.2/occs/list.csv?datainfo&rowcount&base_name=Trilobita&show=full,classext,genus,subgenus,acconly,ident,img,etbasis,strat,lith,env,timebins,timecompare,resgroup,ref,ent,entname,crmod \cr
 "trilob_fossil"
@@ -256,6 +286,8 @@
 #' ostr = Ostracoda (Crustacea, Arthropoda); \cr 
 #' tril = Trilobita (Arthropoda). \cr
 #' 
+#' @concept data
+#' @keywords datasets
 #' 
 #' @source Data originally compiled from many primary sources. Organized, curated by, and downloaded from, Rabosky & Benson (2021).
 #' 

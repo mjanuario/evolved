@@ -64,6 +64,21 @@ plotRawFossilOccs(dinos_fossil, tax.lvl = "genus", knitr = TRUE)
 par(oldpar)
 
 }
+\seealso{
+Other macroevolution: 
+\code{\link{calcFossilDivTT}()},
+\code{\link{checkAndFixUltrametric}()},
+\code{\link{countSeqDiffs}()},
+\code{\link{estimateSpeciation}()},
+\code{\link{fitCRBD}()},
+\code{\link{lttPlot}()},
+\code{\link{plotPaintedWhales}()},
+\code{\link{plotProteinSeq}()},
+\code{\link{simulateBirthDeathRich}()},
+\code{\link{simulateTree}()}
+}
 \author{
 Matheus Januario, Jennifer Auler
 }
+\concept{macroevo}
+\concept{macroevolution}

@@ -21,6 +21,9 @@ NULL
 #' @return A \code{numeric} with the best estimates of speciation \code{S} 
 #' and extinction \code{E} rates.
 #' 
+#' @concept macroevo
+#' @family macroevolution
+#' 
 #' @export fitCRBD
 #' 
 #' @references 

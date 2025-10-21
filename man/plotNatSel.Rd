@@ -37,3 +37,12 @@ details).
 \description{
 Plot NatSelSim output
 }
+\seealso{
+Other microevolution: 
+\code{\link{NatSelSim}()},
+\code{\link{OneGenHWSim}()},
+\code{\link{WFDriftSim}()},
+\code{\link{plotWFDrift}()}
+}
+\concept{microevo}
+\concept{microevolution}

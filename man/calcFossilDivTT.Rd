@@ -72,6 +72,21 @@ lines(x=div3$age, y=div3$div, col="blue")
 Foote, M., Miller, A. I., Raup, D. M., & Stanley, S. M. (2007). Principles
 of paleontology. Macmillan.
 }
+\seealso{
+Other macroevolution: 
+\code{\link{checkAndFixUltrametric}()},
+\code{\link{countSeqDiffs}()},
+\code{\link{estimateSpeciation}()},
+\code{\link{fitCRBD}()},
+\code{\link{lttPlot}()},
+\code{\link{plotPaintedWhales}()},
+\code{\link{plotProteinSeq}()},
+\code{\link{plotRawFossilOccs}()},
+\code{\link{simulateBirthDeathRich}()},
+\code{\link{simulateTree}()}
+}
 \author{
 Matheus Januario, Jennifer Auler
 }
+\concept{macroevo}
+\concept{macroevolution}

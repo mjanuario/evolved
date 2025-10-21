@@ -22,6 +22,9 @@
 #' 
 #' @return A \code{phylo} object
 #' 
+#' @concept macroevo
+#' @family macroevolution
+#' 
 #' @export simulateTree
 #' 
 #' @references 

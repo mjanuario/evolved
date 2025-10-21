@@ -20,6 +20,9 @@
 #' line as a reference of expectation under pure birth. If \code{plot = FALSE}, 
 #' a list the richness of each point in time, and \code{phy}'s crown age.
 #' 
+#' @concept macroevo
+#' @family macroevolution
+#' 
 #' @export lttPlot
 #' 
 #' @references 

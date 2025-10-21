@@ -30,6 +30,9 @@ NULL
 #' length equal to \code{bin.reso}, starting at the earliest bound in the 
 #' dataset.
 #' 
+#' @concept macroevo
+#' @family macroevolution
+#' 
 #' @export calcFossilDivTT
 #' 
 #' @references 

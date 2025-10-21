@@ -22,6 +22,9 @@ NULL
 #'  
 #' @return The number of simulated species (i.e., the richness).
 #' 
+#' @concept macroevo
+#' @family macroevolution
+#' 
 #' @export simulateBirthDeathRich
 #' 
 #' @references 

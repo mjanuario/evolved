@@ -11,6 +11,9 @@
 #' @return A draw of the protein sequence(s) provided. Colors refer to 
 #' specific amino acids ("R", "W", "I", "F", "S", "T", "N", "H", "K", "D", "G", "L", "Y", "V", "M", "A", "E", "P", "Q", "C")", "gaps/space in the sequence ("-"), ambiguous amino acid ("B" - often representing either asparagine ("N") or aspartic acid ("D")), or another marker for  ambiguous amino acid ("X").
 #' 
+#' @concept macroevo
+#' @family macroevolution
+#' 
 #' @export plotProteinSeq
 #' 
 #' @author Matheus Januario, Jennifer Auler

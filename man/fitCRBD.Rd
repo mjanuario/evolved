@@ -55,7 +55,21 @@ diversification in R. Methods in Ecology and Evolution, 3(6), 1084-1092.
 \seealso{
 see help page from \code{diversitree::make.bd} and
 \code{stats::optim}
+
+Other macroevolution: 
+\code{\link{calcFossilDivTT}()},
+\code{\link{checkAndFixUltrametric}()},
+\code{\link{countSeqDiffs}()},
+\code{\link{estimateSpeciation}()},
+\code{\link{lttPlot}()},
+\code{\link{plotPaintedWhales}()},
+\code{\link{plotProteinSeq}()},
+\code{\link{plotRawFossilOccs}()},
+\code{\link{simulateBirthDeathRich}()},
+\code{\link{simulateTree}()}
 }
 \author{
 Daniel Rabosky, Matheus Januario, Jennifer Auler
 }
+\concept{macroevo}
+\concept{macroevolution}
