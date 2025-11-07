@@ -124,11 +124,6 @@ covers the following topics, organized from basic to advanced:
   models
 - Factors influencing speciation and extinction
 
-## Community guidelines and suggesting changes
-
-Questions and support requests should be sent to Matheus Januario's email (januarioml.eco [at] gmail.com). 
-Bug & issue reports, suggestions, improvements, or code additions should be pushed through the same GitHub repository. Emailing Matheus Januario is also ok.
-
 # If you never used R before…
 
 If you’re new to R, this “pre-vignette” tutorial serves as an
