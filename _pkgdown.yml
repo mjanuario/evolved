@@ -50,6 +50,7 @@ reference:
 articles:
   - title: "Intro & workflow"
     contents:
+      - install_r
       - intro_r                   # ajuste para o basename real do arquivo .Rmd
   - title: "Population genetics"
     contents:
