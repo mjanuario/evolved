@@ -1,0 +1,20 @@
+pandoc: '3.2'
+pkgdown: 2.1.1
+pkgdown_sha: ~
+articles:
+  birthdeath_deeptime: birthdeath_deeptime.html
+  birthdeath_phylogenies: birthdeath_phylogenies.html
+  deeptime_clocks: deeptime_clocks.html
+  deeptime_rocks: deeptime_rocks.html
+  install_r: install_r.html
+  intro_r: intro_r.html
+  phylogenies_and_diversification: phylogenies_and_diversification.html
+  popgen_drift: popgen_drift.html
+  popgen_intro: popgen_intro.html
+  popgen_selection: popgen_selection.html
+  population_genetics: population_genetics.html
+  rocks_and_clocks: rocks_and_clocks.html
+last_built: 2025-11-28T20:45Z
+urls:
+  reference: https://mjanuario.github.io/evolved/reference
+  article: https://mjanuario.github.io/evolved/articles
