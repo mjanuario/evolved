@@ -3,10 +3,27 @@
 
 url: https://mjanuario.github.io/evolved
 
+# Logo do pacote (aparece na navbar e na home)
+#logo: man/figures/logo.jpg
+
 template:
   bootstrap: 5
+  bootswatch: sandstone
   bslib:
+    # altura da navbar
     pkgdown-nav-height: 60px
+
+    # cores extraídas do logo
+    primary:   "#87c8c7"   # cinza-azulado escuro (bordas / traços)
+    secondary: "#F3D561"   # amarelo suave
+    info:      "#9DCFCD"   # azul esverdeado das curvas
+    body-bg:   "#FDFCF6"   # bege clarinho de fundo
+    # ajustes finos para combinar com o logo
+    navbar-bg:              "#87c8c7"
+    navbar-brand-color:     "#505C64"
+    navbar-brand-hover-color: "#505C64"
+    link-color:             "#4e6582"
+    heading-color:          "#E0EEEE"
 
 home:
   title: "evolved"
@@ -17,14 +34,22 @@ navbar:
     left:  [home, reference, articles, news]
     right: [search, github]
   components:
+    home:
+      icon: fa-home
+      text: "Home"
+      href: index.html
     reference:
       icon: fa-book
       text: "Reference"
-      href: reference/index.html   
+      href: reference/index.html
     articles:
       icon: fa-book-open
       text: "Vignettes & Tutorials"
       href: articles/index.html
+    news:
+      icon: fa-newspaper
+      text: "News"
+      href: news/index.html
     github:
       icon: fa-github
       aria-label: "GitHub repository"
@@ -45,26 +70,28 @@ reference:
 
   - title: "Generics & Methods"
     contents:
-      - has_concept("generics")   # mantenha só se realmente usar @concept generics
+      - has_concept("generics")
 
 articles:
   - title: "Intro & workflow"
     contents:
       - install_r
-      - intro_r                   # ajuste para o basename real do arquivo .Rmd
+      - intro_r
   - title: "Population genetics"
     contents:
       - popgen_intro
-      - population_genetics
       - popgen_drift
       - popgen_selection
   - title: "Deep time"
     contents:
-      - rocks_and_clocks
       - deeptime_clocks
       - deeptime_rocks
       - birthdeath_deeptime
       - birthdeath_phylogenies
+  - title: "For Teachers: More In-Class Activities and Applications"
+    contents:
+      - population_genetics
+      - rocks_and_clocks
       - phylogenies_and_diversification
 
 news:
