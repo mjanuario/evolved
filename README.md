@@ -6,6 +6,8 @@ Nov/2024
 - [EvolVEd](#evolved)
   - [Installing EvolVEd](#installing-evolved)
   - [Vignettes (Tutorials)](#vignettes-tutorials)
+  - [Community guidelines and suggesting
+    changes](#community-guidelines-and-suggesting-changes)
 
 # EvolVEd
 
@@ -130,3 +132,10 @@ covers the following topics, organized from basic to advanced:
 - Estimating diversification rates under pure birth and birth-death
   models
 - Factors influencing speciation and extinction
+
+## Community guidelines and suggesting changes
+
+Questions and support requests should be sent to Matheus Januario’s
+email (januarioml.eco \[at\] gmail.com). Bug & issue reports,
+suggestions, improvements, or code additions should be pushed through
+the same GitHub repository. Emailing Matheus Januario is also ok.
