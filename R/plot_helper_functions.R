@@ -8,6 +8,10 @@ NULL
 #' @param knitr Logical indicating if plot is intended to show up in RMarkdown files made by the \code{Knitr} R package.
 #'
 #' @return A static or animated plot of populations under genetic drift through time
+#' 
+#' @concept microevo
+#' @family microevolution
+#' 
 #' @export plotWFDrift
 #'
 #' @examples
@@ -93,6 +97,10 @@ plotWFDrift = function(p.through.time, plot.type = plot, knitr = FALSE){
 #'
 #' @return Plot of NatSelSim's output (see \code{NatSelSim}'s help page for 
 #' details).
+#' 
+#' @concept microevo
+#' @family microevolution
+#' 
 #' @export plotNatSel
 plotNatSel = function(gen.HW = gen.HW, p.t = p.t, w.t = w.t, t = t, W.gntp = c(w11, w12, w22), plot.type = "animateall", knitr = FALSE){
   

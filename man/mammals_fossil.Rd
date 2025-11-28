@@ -36,4 +36,5 @@ dataset to make it more compact, but it can be fully accessed by the data URL.
 This dataset is part of the package and is licensed under the Creative
 Commons Attribution 4.0 International License (CC BY 4.0).
 }
+\concept{data}
 \keyword{datasets}

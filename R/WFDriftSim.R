@@ -35,6 +35,9 @@ NULL
 #' @details The effective population size (\code{Ne}) is strongly connected 
 #' with the rate of genetic drift (for details, see Waples, 2022).
 #' 
+#' @concept microevo
+#' @family microevolution
+#' 
 #' @export WFDriftSim
 #' 
 #' @references 

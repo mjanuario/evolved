@@ -103,6 +103,15 @@ Waples, R. S. (2022). What is Ne, anyway?. Journal of Heredity.
 
 Wright S (1931) Evolution in Mendelian populations. Genetics 16:97–159
 }
+\seealso{
+Other microevolution: 
+\code{\link{NatSelSim}()},
+\code{\link{OneGenHWSim}()},
+\code{\link{plotNatSel}()},
+\code{\link{plotWFDrift}()}
+}
 \author{
 Matheus Januario, Dan Rabosky, Jennifer Auler
 }
+\concept{microevo}
+\concept{microevolution}

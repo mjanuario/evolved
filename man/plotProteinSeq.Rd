@@ -27,6 +27,21 @@ data(cytOxidase)
 plotProteinSeq(cytOxidase, c("human", "chimpanzee", "cnidaria"), knitr = TRUE)
 
 }
+\seealso{
+Other macroevolution: 
+\code{\link{calcFossilDivTT}()},
+\code{\link{checkAndFixUltrametric}()},
+\code{\link{countSeqDiffs}()},
+\code{\link{estimateSpeciation}()},
+\code{\link{fitCRBD}()},
+\code{\link{lttPlot}()},
+\code{\link{plotPaintedWhales}()},
+\code{\link{plotRawFossilOccs}()},
+\code{\link{simulateBirthDeathRich}()},
+\code{\link{simulateTree}()}
+}
 \author{
 Matheus Januario, Jennifer Auler
 }
+\concept{macroevo}
+\concept{macroevolution}

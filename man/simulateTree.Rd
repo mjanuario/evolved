@@ -72,6 +72,21 @@ R Packag. ver, 9-2.
 FitzJohn, R. G. (2012). Diversitree: comparative phylogenetic analyses of
 diversification in R. Methods in Ecology and Evolution, 3(6), 1084-1092.
 }
+\seealso{
+Other macroevolution: 
+\code{\link{calcFossilDivTT}()},
+\code{\link{checkAndFixUltrametric}()},
+\code{\link{countSeqDiffs}()},
+\code{\link{estimateSpeciation}()},
+\code{\link{fitCRBD}()},
+\code{\link{lttPlot}()},
+\code{\link{plotPaintedWhales}()},
+\code{\link{plotProteinSeq}()},
+\code{\link{plotRawFossilOccs}()},
+\code{\link{simulateBirthDeathRich}()}
+}
 \author{
 Daniel Rabosky, Matheus Januario, Jennifer Auler
 }
+\concept{macroevo}
+\concept{macroevolution}

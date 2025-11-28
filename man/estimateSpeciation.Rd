@@ -28,6 +28,21 @@ estimateSpeciation(phy)
 \references{
 Yule G.U. 1925. A mathematical theory of evolution, based on the conclusions of Dr. JC Willis, FRS. Philosophical Transactions of the Royal Society of London. Series B, Containing Papers of a Biological Character. 213:21–87.
 }
+\seealso{
+Other macroevolution: 
+\code{\link{calcFossilDivTT}()},
+\code{\link{checkAndFixUltrametric}()},
+\code{\link{countSeqDiffs}()},
+\code{\link{fitCRBD}()},
+\code{\link{lttPlot}()},
+\code{\link{plotPaintedWhales}()},
+\code{\link{plotProteinSeq}()},
+\code{\link{plotRawFossilOccs}()},
+\code{\link{simulateBirthDeathRich}()},
+\code{\link{simulateTree}()}
+}
 \author{
 Daniel Rabosky, Matheus Januario, Jennifer Auler
 }
+\concept{macroevo}
+\concept{macroevolution}

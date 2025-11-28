@@ -20,4 +20,5 @@ Mammals species list
 \references{
 Upham, N. S., Esselstyn, J. A., & Jetz, W. (2019). Inferring the mammal tree: species-level sets of phylogenies for questions in ecology, evolution, and conservation. PLoS biology, 17(12), e3000494.
 }
+\concept{data}
 \keyword{datasets}

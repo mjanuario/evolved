@@ -54,6 +54,21 @@ plot(table(res)/length(res),
 Raup, D. M. (1985). Mathematical models of cladogenesis.
 Paleobiology, 11(1), 42-52.
 }
+\seealso{
+Other macroevolution: 
+\code{\link{calcFossilDivTT}()},
+\code{\link{checkAndFixUltrametric}()},
+\code{\link{countSeqDiffs}()},
+\code{\link{estimateSpeciation}()},
+\code{\link{fitCRBD}()},
+\code{\link{lttPlot}()},
+\code{\link{plotPaintedWhales}()},
+\code{\link{plotProteinSeq}()},
+\code{\link{plotRawFossilOccs}()},
+\code{\link{simulateTree}()}
+}
 \author{
 Matheus Januario, Daniel Rabosky, Jennifer Auler
 }
+\concept{macroevo}
+\concept{macroevolution}

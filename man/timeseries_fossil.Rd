@@ -48,4 +48,5 @@ tril = Trilobita (Arthropoda). \cr
 \references{
 Rabosky, D. L., & Benson, R. B. (2021). Ecological and biogeographic drivers of biodiversity cannot be resolved using clade age-richness data. Nature Communications, 12(1), 2945.
 }
+\concept{data}
 \keyword{datasets}

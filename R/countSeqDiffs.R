@@ -12,6 +12,9 @@
 #' @return A integer giving the number of protein differences between 
 #' \code{taxon1} and \code{taxon2}.
 #' 
+#' @concept macroevo
+#' @family macroevolution
+#' 
 #' @export countSeqDiffs
 #' 
 #' @author Matheus Januario, Dan Rabosky, Jennifer Auler

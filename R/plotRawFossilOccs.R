@@ -35,6 +35,9 @@ NULL
 #' \code{return.ranges = TRUE}, it returns a \code{data.frame} containing the 
 #' diversity (column \code{div}) of the chosen taxonomic level, through time.
 #' 
+#' @concept macroevo
+#' @family macroevolution
+#' 
 #' @export plotRawFossilOccs
 #' 
 #' @author Matheus Januario, Jennifer Auler

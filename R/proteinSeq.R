@@ -10,6 +10,8 @@
 #' 
 #' @author Daniel Rabosky, Matheus Januario, Jennifer Auler
 #' 
+#' @concept generics
+#' 
 #' @name ProteinSeq
 #' 
 #' @importFrom graphics plot par
@@ -27,8 +29,10 @@ NULL
 #' the others) and their relative positions should match (i.e., the object must 
 #' contain _alligned_ Amino acide sequences).
 #' 
-#' @return A logical indicating if object \code{x} is of 
+#' @return A logical indicating if object \code{x} is of
 #' class \code{ProteinSeq}
+#' 
+#' @concept generics
 #' 
 #' @export
 #' 
@@ -65,6 +69,8 @@ is.ProteinSeq=function(x){
 #' \code{print.ProteinSeq} containing the number of sequences and 
 #' the length of the alignment. See more details of the format in 
 #' \code{??ProteinSeq}.
+#' 
+#' @concept generics
 #' 
 #' @export
 
@@ -126,6 +132,8 @@ head.ProteinSeq=function(x, n=20, ...){
 #' @param ... arguments to be passed to or from other methods.
 #' 
 #' #' @return Shows the last \code{n} elements of a \code{ProteinSeq} object.
+#' 
+#' @concept generics
 #' 
 #' @export
 tail.ProteinSeq=function(x, n=20, ...){

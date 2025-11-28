@@ -31,6 +31,21 @@ countSeqDiffs(cytOxidase, "human", "cnidaria")
 countSeqDiffs(cytOxidase, "chimpanzee", "cnidaria")
 
 }
+\seealso{
+Other macroevolution: 
+\code{\link{calcFossilDivTT}()},
+\code{\link{checkAndFixUltrametric}()},
+\code{\link{estimateSpeciation}()},
+\code{\link{fitCRBD}()},
+\code{\link{lttPlot}()},
+\code{\link{plotPaintedWhales}()},
+\code{\link{plotProteinSeq}()},
+\code{\link{plotRawFossilOccs}()},
+\code{\link{simulateBirthDeathRich}()},
+\code{\link{simulateTree}()}
+}
 \author{
 Matheus Januario, Dan Rabosky, Jennifer Auler
 }
+\concept{macroevo}
+\concept{macroevolution}

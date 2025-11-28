@@ -14,6 +14,9 @@ NULL
 #' @return The whale phylogeny, with branch lengths being colored by a major 
 #' whale taxonomic group.
 #' 
+#' @concept macroevo
+#' @family macroevolution
+#' 
 #' @export plotPaintedWhales
 #' 
 #' @references 

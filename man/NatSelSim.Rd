@@ -84,6 +84,15 @@ Fisher, R. A. (1930). The Fundamental Theorem of Natural Selection. In: The gene
 
 Plutynski, A. (2006). What was Fisher’s fundamental theorem of natural selection and what was it for?. Studies in History and Philosophy of Science Part C: Studies in History and Philosophy of Biological and Biomedical Sciences, 37(1), 59-82.
 }
+\seealso{
+Other microevolution: 
+\code{\link{OneGenHWSim}()},
+\code{\link{WFDriftSim}()},
+\code{\link{plotNatSel}()},
+\code{\link{plotWFDrift}()}
+}
 \author{
 Matheus Januario, Jennifer Auler, Dan Rabosky
 }
+\concept{microevo}
+\concept{microevolution}

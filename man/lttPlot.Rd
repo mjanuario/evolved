@@ -57,6 +57,21 @@ lttPlot(phy, plot = FALSE, knitr = TRUE)
 Paradis, E. (2012). Analysis of Phylogenetics and Evolution with R (Vol. 2).
 New York: Springer.
 }
+\seealso{
+Other macroevolution: 
+\code{\link{calcFossilDivTT}()},
+\code{\link{checkAndFixUltrametric}()},
+\code{\link{countSeqDiffs}()},
+\code{\link{estimateSpeciation}()},
+\code{\link{fitCRBD}()},
+\code{\link{plotPaintedWhales}()},
+\code{\link{plotProteinSeq}()},
+\code{\link{plotRawFossilOccs}()},
+\code{\link{simulateBirthDeathRich}()},
+\code{\link{simulateTree}()}
+}
 \author{
 Daniel Rabosky, Matheus Januario, Jennifer Auler
 }
+\concept{macroevo}
+\concept{macroevolution}

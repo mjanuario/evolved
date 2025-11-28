@@ -34,6 +34,9 @@ NULL
 #' so can't be animated), (3) Time series of mean population fitness, 
 #' and (4) Time series of genotypic population frequencies. 
 #' 
+#' @concept microevo
+#' @family microevolution
+#' 
 #' @export NatSelSim
 #' 
 #' @details If any value of fitness (i.e., \code{w11}, \code{w12}, 
