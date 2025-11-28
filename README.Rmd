@@ -63,12 +63,19 @@ vignette("vignette_name", package = "evolved")
 
 With `"vignette_name"` being one of the names below. Each vignette covers the following topics, organized from basic to advanced:
 
-#### 1. Intro to R (name: `intro_r`)
+#### 1. If you never used R before... (name: `install_r`)
+* Introduces R and guides complete beginners through installation.
+* Explains RStudio’s interface and recommended configurations.
+* Teaches essential workflow: directories, saving, knitting, sourcing, loading data.
+* Troubleshoots common R/RMarkdown issues for new users.
+* Presents RMarkdown basics and why it’s useful for scientific work.
+
+#### 2. Intro to R (name: `intro_r`)
 * Basic R syntax and coding (objects, vector calculations, etc.)
 * Plotting and annotation functions
 * Overview of key object classes used in the vignettes
 
-#### 2. Introduction to Population Genetics (name: `popgen_intro`)
+#### 3. Introduction to Population Genetics (name: `popgen_intro`)
 * Simple mathematical notation
 * Probability of independent events and random number generation
 * Malthusian growth and Mendelian genetics
@@ -76,32 +83,32 @@ With `"vignette_name"` being one of the names below. Each vignette covers the fo
 * Heterozygosity, deleterious alleles, and mutation
 * Genetics at multiple loci and DNA variation
 
-#### 3. Genetic Drift (name: `popgen_drift`)
+#### 4. Genetic Drift (name: `popgen_drift`)
 * Intuition and qualitative expectations of genetic drift
 * Variability in outcomes and heterozygosity decay
 * Effective population size and historical context
 
-#### 4. Selection in Population Genetics (name: `popgen_selection`)
+#### 5. Selection in Population Genetics (name: `popgen_selection`)
 * Breeding effective population size
 * Mutation-drift equilibrium and selection
 * Case studies (e.g., the peppered moths)
 
-#### 5. Deep-Time Molecular Clocks (name: `deeptime_clocks`)
+#### 6. Deep-Time Molecular Clocks (name: `deeptime_clocks`)
 * Sequence data and genetic distance
 * Poisson correction and Jukes-Cantor models
 * Molecular clocks and their uncertainty
 * Inferences about deep time
 
-#### 6. Fossils and Deep-Time Patterns (name: `deeptime_rocks`)
+#### 7. Fossils and Deep-Time Patterns (name: `deeptime_rocks`)
 * Exploring fossil occurrences and diversity patterns
 * Spatial distribution and conclusions from fossil records
 * Dating fossils in absolute time (technical notes)
 
-#### 7. Birth-Death Models in Deep Time (name: `birthdeath_deeptime`)
+#### 8. Birth-Death Models in Deep Time (name: `birthdeath_deeptime`)
 * Deterministic expectations and stochastic processes
 * Effects of variation on diversification rates
 * Age-richness models and extinction dynamics
 
-#### 8. Phylogenies and Birth-Death Models (name: `birthdeath_phylogenies`)
+#### 9. Phylogenies and Birth-Death Models (name: `birthdeath_phylogenies`)
 * Estimating diversification rates under pure birth and birth-death models
 * Factors influencing speciation and extinction
