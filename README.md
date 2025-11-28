@@ -1,22 +1,24 @@
-Instructions on evolved, R, RStudio, RMarkdown
+Instructions on EvolVEd, R, RStudio, RMarkdown
 ================
 Matheus Januario, Jenniefer Auler, Andressa Viol, and Daniel Rabosky
 Nov/2024
 
-- [evolved](#evolved)
-  - [Installing evolved](#installing-evolved)
+- [EvolVEd](#evolved)
+  - [Installing EvolVEd](#installing-evolved)
   - [Vignettes (Tutorials)](#vignettes-tutorials)
+  - [Community guidelines and suggesting
+    changes](#community-guidelines-and-suggesting-changes)
 - [If you never used R before…](#if-you-never-used-r-before)
   - [What is R and how can I install
     it?](#what-is-r-and-how-can-i-install-it)
   - [What is RStudio and how can I install
     it?](#what-is-rstudio-and-how-can-i-install-it)
   - [Starting R and RStudio:](#starting-r-and-rstudio)
-  - [What is RMarkdown and how can I install it
-    (optional)?](#what-is-rmarkdown-and-how-can-i-install-it-optional)
   - [Working Routine in R](#working-routine-in-r)
+- [What is RMarkdown and how can I install it
+  (optional)?](#what-is-rmarkdown-and-how-can-i-install-it-optional)
 
-# evolved
+# EvolVEd
 
 `evolved` (EVOLutionary Virtual EDucation) is an open-source R package
 designed for graduate or advanced undergraduate courses in evolutionary
@@ -31,37 +33,44 @@ biology using simulations, or ($ii$) analyzing (parameter estimation,
 hypothesis testing, visualization) datasets associated with key
 questions in evolutionary biology.
 
-## Installing evolved
+## Installing EvolVEd
 
-The evolved package is available in two versions:
+The EvolVEd package is available in two versions:
 
 ### Stable Version:
 
-The stable version represents the "error-proof" version of the package. It may have reduced features due to CRAN's constraints (e.g., dataset size). The stable version can be downloaded directly from the [The Comprehensive R Archive Network](https://cran.r-project.org/web/packages/evolved/index.html). A simpler way to install this version is to run the following command in your R terminal:
+The stable version represents the “error-proof” version of the package.
+It may have reduced features due to CRAN’s constraints (e.g., dataset
+size). The stable version can be downloaded directly from the [The
+Comprehensive R Archive
+Network](https://cran.r-project.org/web/packages/evolved/index.html). A
+simpler way to install this version is to run the following command in
+your R terminal:
 
-```
-install.packages("evolved")
-```
+    install.packages("evolved")
 
 ### Development Version:
 
-The development version is the most complete and updated version of the package. It may contain datasets, functions, or documentation slightly out of CRAN's standards. The development version is hosted on [GitHub](https://github.com/mjanuario/evolved) and requires the `devtools` package for installation. If `devtools` is not already installed, you can install it first by running the code lines below:
+The development version is the most complete and updated version of the
+package. It may contain datasets, functions, or documentation slightly
+out of CRAN’s standards. The development version is hosted on
+[GitHub](https://github.com/mjanuario/evolved) and requires the
+`devtools` package for installation. If `devtools` is not already
+installed, you can install it first by running the code lines below:
 
-```
-# Install devtools 
-install.packages("devtools")
+    # Install devtools 
+    install.packages("devtools")
 
-# Then, install the development version of evolved:
-devtools::install_github("mjanuario/evolved")
-```
+    # Then, install the development version of EvolVEd:
+    devtools::install_github("mjanuario/evolved")
 
 #### Features in the development version that are absent in the stable version:
 
-* Datasets:
-  * `mammals_spp` (Extant species list of mammals)
-  * `ammonoidea_fossil` (Fossil occurrences of ammonoids
-  * `mammals_fossil` (Fossil occurrences of mammals)
-  * `trilob_fossil` (Fossil occurrences of trilobites)
+- Datasets:
+  - `mammals_spp` (Extant species list of mammals)
+  - `ammonoidea_fossil` (Fossil occurrences of ammonoids
+  - `mammals_fossil` (Fossil occurrences of mammals)
+  - `trilob_fossil` (Fossil occurrences of trilobites)
 
 ## Vignettes (Tutorials)
 
@@ -123,6 +132,13 @@ covers the following topics, organized from basic to advanced:
 - Estimating diversification rates under pure birth and birth-death
   models
 - Factors influencing speciation and extinction
+
+## Community guidelines and suggesting changes
+
+Questions and support requests should be sent to Matheus Januario’s
+email (januarioml.eco \[at\] gmail.com). Bug & issue reports,
+suggestions, improvements, or code additions should be pushed through
+the same GitHub repository. Emailing Matheus Januario is also ok.
 
 # If you never used R before…
 
@@ -284,152 +300,6 @@ might be helpful during our classes: (link:
 <https://www.r-bloggers.com/2019/05/my-rstudio-configuration/>)
 
 Use your time to get used to all this new software.
-
-## What is RMarkdown and how can I install it (optional)?
-
-RMarkdown is a programming language and environment that generates
-reporting documents. It makes it easy to mix a decently formatted
-document (and nice-looking equations) with R code, and this is why you
-want to use RMarkdown when studying ecology and evolutionary biology.
-
-If you know LaTeX, you should be familiar with RMarkdown’s syntax (i.e.,
-the way functions are written and used in a programming language) as
-they resemble each other. If you don’t know what LaTeX means, no problem
-– you will have time to familiarize yourself with this kind of tool.
-
-Downloading RStudio automatically downloads RMarkdown too. Otherwise,
-you can download RMarkdown directly from the R console, by typing.
-
-``` r
-install.packages('rmarkdown')
-# Using the code above, you will install RMarkdown from The Comprehensive R 
-# Archive Network (a.k.a. CRAN).
-```
-
-Please check that you have the `knitr` package installed in your
-computer, as RMarkdown needs it.
-
-You can create a new RMarkdown file in RStudio by going to the upper
-tabs, then clicking on *File \> New \> R Markdown*.
-
-You can create .html files from code by clicking on the “Knit” button
-just above the script window (not shown in figure 2, since the file open
-there is a script file, .R, not an RMarkdown file, .Rmd).
-
-### More on RMarkdown
-
-RMarkdown is the result of a philosophy called “literate programming”,
-first idealized by Donald Knuth during the ’70s. Doctor Knuth believed
-that programmers should think of programs not only as lists of commands,
-but also as works of literature. One of his quotes about this approach
-to coding is *“Instead of imagining that our main task is to instruct a
-computer what to do, let us concentrate rather on explaining to human
-beings what we want a computer to do”*. This has very clear and positive
-consequences both for teaching and for science, so those who feel
-comfortable with RMarkdown should follow Dr. Knuth’s ideas when studying
-using `evolved`, and use RMarkdown as an intrinsic part of your learning
-process generally.
-
-Our experience is that it is worthwhile to use RMarkdown to create notes
-for your scientific practices, such as data analyses, model
-making/testing, etc. We understand, however, that the learning curve of
-R (and maybe RStudio) + RMarkdown might be a little to steep. And this
-is why you can also just give yourself a little time to learn each tool.
-
-This is our recommended routine to work with `evolved`:
-
-1.  Each lab tutorial is available as vignette in `evovled`. We
-    recommend skimming the text before starting the tutorial.
-
-2.  The rest of your studies will be reading the tutorial and answering
-    the questions in it. We highly recommend everyone to read the
-    vignette completely *before starting to answer the questions*.
-
-3.  You can use RMarkdown to knit your own answers as PDF files (and
-    this will, with time, prove to be very useful for you in science),
-    but depending on your operational system this might be a bit of a
-    headache. You can also use Microsoft Word or Google Docs, as long as
-    it is usful to you.
-
-### RMarkdown advantages
-
-In addition to plotting and integrating comments with code, RMarkdown
-also allows you to easily write equations with beautiful notation.
-Below, we will write down some of the equations we will see in
-`evolved`. No need to understand what they mean (biologically speaking)
-now – I just want to show you the RMarkdown equation-writing feature.
-
-You are likely reading a PDF/html file, but a major point is that this
-file is built so you can visualize both “sides” of writing a PDF from a
-RMarkdown file: the “public-facing” side is the PDF file you are
-currently reading, but the “internal” side is the code that generates
-the PDF. The .Rmd file that generated this PDF document is posted on
-[MJ’s github]() so that you can see how each of those two files
-communicate (and how Markdown works “under the hood”).
-
-The point of the following text example is for you to have an idea of
-how nicely-written equations, code, and text can be merged into a
-single, organized document through RMarkdown.
-
-Download and open the .Rmd file which has the same name as this PDF
-(posted on [MJ’s github]() to learn the syntax associated with
-everything we are doing below.
-
-### An example of why RMarkdown is so neat:
-
-The effective population size when there is time-varying population size
-(i.e., bottlenecks and expansions) is:
-
-The probability of identity-by-descent of two alleles is:
-
-And the rate of heterozygosity loss is:
-
-Which is also equal to $e^{-\frac{t}{2N}}$. Of course, this assumes a
-diploid organism, so the census size of this population is $N$.
-
-RMarkdown can also very easily merge R plots and text. For instance if
-we want to graph equation 3, we could simply write:
-
-``` r
-#create a numeric vector representing time:
-t=seq(from=0, to=200, by=0.001)
-
-#insert population size:
-N=20
-
-Ht_Ho=exp(-1/(2*N))^t
-
-plot(x=t, y=Ht_Ho, type="l", lwd=4, 
-     ylab="Rate of heterozygosity loss",
-     xlab="Time", main="Plot of equation (3)")
-```
-
-![](README_files/figure-gfm/unnamed-chunk-4-1.png)<!-- -->
-
-### RMarkdown practice (part I)
-
-Please take a look of the RMarkdown used to make this file (in [MJ’s
-github]() and try to locate the code responsible for each part of what
-you have just read, putting special attention to codes, plots, and
-equations.
-
-### RMarkdown practice (part II)
-
-Now let’s do something which is more hands-on. Create a brand new .Rmd
-file and then insert text in it by pasting some of the contents of this
-tutorial to the new file. To run a “test” of one piece of your pasted
-code, click on a line of your R code in the document and then choose
-Code \> Run Selected Line(s) to run that line in the R console.
-Alternatively, you can also click the Run button in the top left pane,
-but the quickest way to do this is the Command+Return on a Mac keyboard,
-or Control+Return on a Windows keyboard. Test what works best on Linux,
-if you use it.
-
-Select Run Region \> Run Current Chunk to run an entire “chunk” of R
-code. Save your changes in your .Rmd, and knit to HTML. In the future,
-note that RStudio automatically saves your .Rmd file whenever you knit
-it to an HTML or PDF file - but recall that for the purposes of this
-class we will only accept PDF submissions.
 
 ## Working Routine in R
 
@@ -667,3 +537,155 @@ you may encounter is to look it up on Google, as R and RStudio have a
 very big, helpful, and kind online community that usually helps with all
 kinds of problems – all of us regularly troubleshoot things by looking
 them up online.
+
+# What is RMarkdown and how can I install it (optional)?
+
+RMarkdown is a programming language and environment that generates
+reporting documents. It makes it easy to mix a decently formatted
+document (and nice-looking equations) with R code, and this is why you
+want to use RMarkdown when studying ecology and evolutionary biology.
+
+If you know LaTeX, you should be familiar with RMarkdown’s syntax (i.e.,
+the way functions are written and used in a programming language) as
+they resemble each other. If you don’t know what LaTeX means, no problem
+– you will have time to familiarize yourself with this kind of tool.
+
+Downloading RStudio automatically downloads RMarkdown too. Otherwise,
+you can download RMarkdown directly from the R console, by typing.
+
+``` r
+install.packages('rmarkdown')
+# Using the code above, you will install RMarkdown from The Comprehensive R 
+# Archive Network (a.k.a. CRAN).
+```
+
+Please check that you have the `knitr` package installed in your
+computer, as RMarkdown needs it.
+
+You can create a new RMarkdown file in RStudio by going to the upper
+tabs, then clicking on *File \> New \> R Markdown*.
+
+You can create .html files from code by clicking on the “Knit” button
+just above the script window (not shown in figure 2, since the file open
+there is a script file, .R, not an RMarkdown file, .Rmd).
+
+### More on RMarkdown
+
+RMarkdown is the result of a philosophy called “literate programming”,
+first idealized by Donald Knuth during the ’70s. Doctor Knuth believed
+that programmers should think of programs not only as lists of commands,
+but also as works of literature. One of his quotes about this approach
+to coding is *“Instead of imagining that our main task is to instruct a
+computer what to do, let us concentrate rather on explaining to human
+beings what we want a computer to do”*. This has very clear and positive
+consequences both for teaching and for science, so those who feel
+comfortable with RMarkdown should follow Dr. Knuth’s ideas when studying
+using `evolved`, and use RMarkdown as an intrinsic part of your learning
+process generally.
+
+Our experience is that it is worthwhile to use RMarkdown to create notes
+for your scientific practices, such as data analyses, model
+making/testing, etc. We understand, however, that the learning curve of
+R (and maybe RStudio) + RMarkdown might be a little to steep. And this
+is why you can also just give yourself a little time to learn each tool.
+
+This is our recommended routine to work with `evolved`:
+
+1.  Each lab tutorial is available as vignette in `evovled`. We
+    recommend skimming the text before starting the tutorial.
+
+2.  The rest of your studies will be reading the tutorial and answering
+    the questions in it. We highly recommend everyone to read the
+    vignette completely *before starting to answer the questions*.
+
+3.  You can use RMarkdown to knit your own answers as PDF files (and
+    this will, with time, prove to be very useful for you in science),
+    but depending on your operational system this might be a bit of a
+    headache. You can also use Microsoft Word or Google Docs, as long as
+    it is usful to you.
+
+### RMarkdown advantages
+
+In addition to plotting and integrating comments with code, RMarkdown
+also allows you to easily write equations with beautiful notation.
+Below, we will write down some of the equations we will see in
+`evolved`. No need to understand what they mean (biologically speaking)
+now – I just want to show you the RMarkdown equation-writing feature.
+
+You are likely reading a PDF/html file, but a major point is that this
+file is built so you can visualize both “sides” of writing a PDF from a
+RMarkdown file: the “public-facing” side is the PDF file you are
+currently reading, but the “internal” side is the code that generates
+the PDF. The .Rmd file that generated this PDF document is posted on
+[MJ’s github]() so that you can see how each of those two files
+communicate (and how Markdown works “under the hood”).
+
+The point of the following text example is for you to have an idea of
+how nicely-written equations, code, and text can be merged into a
+single, organized document through RMarkdown.
+
+Download and open the .Rmd file which has the same name as this PDF
+(posted on [MJ’s github]() to learn the syntax associated with
+everything we are doing below.
+
+### An example of why RMarkdown is so neat:
+
+The effective population size when there is time-varying population size
+(i.e., bottlenecks and expansions) is:
+
+$N_e = \frac{1}{\frac{1}{t}\sum_{i=1}^{t} \frac{1}{N_i}}$
+
+The probability of identity-by-descent of two alleles is:
+
+$f_t = \frac{1}{2N} + (1-\frac{1}{2N})f_{t-1}$
+
+And the rate of heterozygosity loss is:
+
+$\frac{H_t}{H_0} = (e^{-\frac{1}{2N}})^t$
+
+Which is also equal to $e^{-\frac{t}{2N}}$. Of course, this assumes a
+diploid organism, so the census size of this population is $N$.
+
+RMarkdown can also very easily merge R plots and text. For instance if
+we want to graph equation 3, we could simply write:
+
+``` r
+#create a numeric vector representing time:
+t=seq(from=0, to=200, by=0.001)
+
+#insert population size:
+N=20
+
+Ht_Ho=exp(-1/(2*N))^t
+
+plot(x=t, y=Ht_Ho, type="l", lwd=4, 
+     ylab="Rate of heterozygosity loss",
+     xlab="Time", main="Plot of equation (3)")
+```
+
+![](README_files/figure-gfm/unnamed-chunk-13-1.png)<!-- -->
+
+### RMarkdown practice (part I)
+
+Please take a look of the RMarkdown used to make this file (in [MJ’s
+github]() and try to locate the code responsible for each part of what
+you have just read, putting special attention to codes, plots, and
+equations.
+
+### RMarkdown practice (part II)
+
+Now let’s do something which is more hands-on. Create a brand new .Rmd
+file and then insert text in it by pasting some of the contents of this
+tutorial to the new file. To run a “test” of one piece of your pasted
+code, click on a line of your R code in the document and then choose
+Code \> Run Selected Line(s) to run that line in the R console.
+Alternatively, you can also click the Run button in the top left pane,
+but the quickest way to do this is the Command+Return on a Mac keyboard,
+or Control+Return on a Windows keyboard. Test what works best on Linux,
+if you use it.
+
+Select Run Region \> Run Current Chunk to run an entire “chunk” of R
+code. Save your changes in your .Rmd, and knit to HTML. In the future,
+note that RStudio automatically saves your .Rmd file whenever you knit
+it to an HTML or PDF file - but recall that for the purposes of this
+class we will only accept PDF submissions.
