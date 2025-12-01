@@ -6,8 +6,8 @@
 
 ## Reporting Issues or Problems using github
 
-* To report issues, bugs, or problems with either the material, the functions, or the wbesite please [open an issue on our github page](https://github.com/mjanuario/evolved/issues/new) and we'll be happy to address it.
-* ALternatively, send an email to Matheus Januario (januarioml.eco [at] gmail.com).
+* To report issues, bugs, or problems with either the material, the functions, or the wbesite please [open an issue on our github page](https://github.com/mjanuario/evolved/issues/new) and we will be happy to address it.
+* Alternatively, send an email to Matheus Januario (januarioml.eco [at] gmail.com).
 
 
 ## Support
