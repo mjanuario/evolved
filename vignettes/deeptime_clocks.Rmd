@@ -1,5 +1,5 @@
 ---
-title: "Allele frequency change and selection"
+title: "DNA sequence evolution"
 author: "Matheus Januario, Andressa Viol, and Daniel Rabosky"
 date: "Jan 2024"
 output: rmarkdown::html_vignette
