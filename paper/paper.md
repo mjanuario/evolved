@@ -13,6 +13,7 @@ authors:
     orcid: 0000-0001-7576-9058
     affiliation: 3
   - name: Andressa L. Viol
+    orcid: 0009-0004-2558-8389
     affiliation: "1, 2"
   - name: Daniel L. Rabosky
     orcid: 0000-0002-7499-8251
