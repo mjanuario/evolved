@@ -19,6 +19,10 @@ knitr::opts_chunk$set(echo = TRUE)
 
 # EvolVEd
 
+<!-- badges: start -->
+[![R-CMD-check](https://github.com/mjanuario/evolved/actions/workflows/R-CMD-check.yaml/badge.svg)](https://github.com/mjanuario/evolved/actions/workflows/R-CMD-check.yaml)
+<!-- badges: end -->
+
 `evolved` (EVOLutionary Virtual EDucation) is an open-source R package designed for graduate or advanced undergraduate courses in evolutionary biology. It emphasizes tools for inquiry-based learning, where students engage in scientific practices to actively build knowledge (Pedaste et al., 2015). The package includes `vignettes` (tutorials) to facilitate classroom investigations. They can be accessed online at [https://mjanuario.github.io/evolved/](https://mjanuario.github.io/evolved/) However, educators are encouraged to develop their own content modules depending on class context and/or learning objectives. Most of evolved‘s core functions are oriented towards either ($i$) developing student intuition for classic models in evolutionary biology using simulations, or ($ii$) analyzing (parameter estimation, hypothesis testing, visualization) datasets associated with key questions in evolutionary biology.
 
 ## Installing EvolVEd
