@@ -145,7 +145,7 @@ MJ and DLR designed most of the code, internal functions, and educational compon
 
 # Acknowledgements
 
-We thank Theodore Matel, Tristan Schramer, and Yu Kai Tanfor their suggestions.
+We thank Theodore Matel, Tristan Schramer, and Yu Kai Tan for their suggestions.
 
 # References
 
