@@ -16,13 +16,14 @@ designed for graduate or advanced undergraduate courses in evolutionary
 biology. It emphasizes tools for inquiry-based learning, where students
 engage in scientific practices to actively build knowledge (Pedaste et
 al., 2015). The package includes `vignettes` (tutorials) to facilitate
-classroom investigations. However, educators are encouraged to develop
-their own content modules depending on class context and/or learning
-objectives. Most of evolved‘s core functions are oriented towards either
-($i$) developing student intuition for classic models in evolutionary
-biology using simulations, or ($ii$) analyzing (parameter estimation,
-hypothesis testing, visualization) datasets associated with key
-questions in evolutionary biology.
+classroom investigations. They can be accessed online at
+<https://mjanuario.github.io/evolved/> However, educators are encouraged
+to develop their own content modules depending on class context and/or
+learning objectives. Most of evolved‘s core functions are oriented
+towards either ($i$) developing student intuition for classic models in
+evolutionary biology using simulations, or ($ii$) analyzing (parameter
+estimation, hypothesis testing, visualization) datasets associated with
+key questions in evolutionary biology.
 
 ## Installing EvolVEd
 
@@ -72,7 +73,7 @@ To view the vignettes, run the following code:
 With `"vignette_name"` being one of the names below. Each vignette
 covers the following topics, organized from basic to advanced:
 
-#### 1. If you never used R before… (name: `install_r`)
+#### 1. If you never used R before… (name: [`install_r`](https://mjanuario.github.io/evolved/articles/install_r.html))
 
 - Introduces R and guides complete beginners through installation.
 - Explains RStudio’s interface and recommended configurations.
@@ -81,13 +82,13 @@ covers the following topics, organized from basic to advanced:
 - Troubleshoots common R/RMarkdown issues for new users.
 - Presents RMarkdown basics and why it’s useful for scientific work.
 
-#### 2. Intro to R (name: `intro_r`)
+#### 2. Intro to R (name: [`intro_r`](https://mjanuario.github.io/evolved/articles/intro_r.html))
 
 - Basic R syntax and coding (objects, vector calculations, etc.)
 - Plotting and annotation functions
 - Overview of key object classes used in the vignettes
 
-#### 3. Introduction to Population Genetics (name: `popgen_intro`)
+#### 3. Introduction to Population Genetics (name: [`popgen_intro`](https://mjanuario.github.io/evolved/articles/popgen_intro.html))
 
 - Simple mathematical notation
 - Probability of independent events and random number generation
@@ -96,38 +97,38 @@ covers the following topics, organized from basic to advanced:
 - Heterozygosity, deleterious alleles, and mutation
 - Genetics at multiple loci and DNA variation
 
-#### 4. Genetic Drift (name: `popgen_drift`)
+#### 4. Genetic Drift (name: [`popgen_drift`](https://mjanuario.github.io/evolved/articles/popgen_drift.html))
 
 - Intuition and qualitative expectations of genetic drift
 - Variability in outcomes and heterozygosity decay
 - Effective population size and historical context
 
-#### 5. Selection in Population Genetics (name: `popgen_selection`)
+#### 5. Selection in Population Genetics (name: [`popgen_selection`](https://mjanuario.github.io/evolved/articles/popgen_selection.html))
 
 - Breeding effective population size
 - Mutation-drift equilibrium and selection
 - Case studies (e.g., the peppered moths)
 
-#### 6. Deep-Time Molecular Clocks (name: `deeptime_clocks`)
+#### 6. Deep-Time Molecular Clocks (name: [`deeptime_clocks`](https://mjanuario.github.io/evolved/articles/deeptime_clocks.html))
 
 - Sequence data and genetic distance
 - Poisson correction and Jukes-Cantor models
 - Molecular clocks and their uncertainty
 - Inferences about deep time
 
-#### 7. Fossils and Deep-Time Patterns (name: `deeptime_rocks`)
+#### 7. Fossils and Deep-Time Patterns (name: [`deeptime_rocks`](https://mjanuario.github.io/evolved/articles/deeptime_rocks.html))
 
 - Exploring fossil occurrences and diversity patterns
 - Spatial distribution and conclusions from fossil records
 - Dating fossils in absolute time (technical notes)
 
-#### 8. Birth-Death Models in Deep Time (name: `birthdeath_deeptime`)
+#### 8. Birth-Death Models in Deep Time (name: [`birthdeath_deeptime`](https://mjanuario.github.io/evolved/articles/birthdeath_deeptime.html))
 
 - Deterministic expectations and stochastic processes
 - Effects of variation on diversification rates
 - Age-richness models and extinction dynamics
 
-#### 9. Phylogenies and Birth-Death Models (name: `birthdeath_phylogenies`)
+#### 9. Phylogenies and Birth-Death Models (name: [`birthdeath_phylogenies`](https://mjanuario.github.io/evolved/articles/birthdeath_phylogenies.html))
 
 - Estimating diversification rates under pure birth and birth-death
   models
