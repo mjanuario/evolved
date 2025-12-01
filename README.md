@@ -140,3 +140,5 @@ Questions and support requests should be sent to Matheus Januario’s
 email (januarioml.eco \[at\] gmail.com). Bug & issue reports,
 suggestions, improvements, or code additions should be pushed through
 the same GitHub repository. Emailing Matheus Januario is also ok.
+Additional info can be found
+[here](https://github.com/mjanuario/evolved/blob/main/CONTRIBUTING.md).

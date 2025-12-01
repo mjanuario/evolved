@@ -116,4 +116,4 @@ With `"vignette_name"` being one of the names below. Each vignette covers the fo
 ## Community guidelines and suggesting changes
 
 Questions and support requests should be sent to Matheus Januario's email (januarioml.eco [at] gmail.com). 
-Bug & issue reports, suggestions, improvements, or code additions should be pushed through the same GitHub repository. Emailing Matheus Januario is also ok.
+Bug & issue reports, suggestions, improvements, or code additions should be pushed through the same GitHub repository. Emailing Matheus Januario is also ok. Additional info can be found [here](https://github.com/mjanuario/evolved/blob/main/CONTRIBUTING.md).
