@@ -259,9 +259,9 @@ to see how well they correspond.</p>
 <span><span class="fu"><a href="https://rdrr.io/r/base/matrix.html" class="external-link">matrix</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fu"><a href="../reference/estimateSpeciation.html">estimateSpeciation</a></span><span class="op">(</span><span class="va">tree1</span><span class="op">)</span>, <span class="fu"><a href="../reference/estimateSpeciation.html">estimateSpeciation</a></span><span class="op">(</span><span class="va">tree2</span><span class="op">)</span>, <span class="fu"><a href="../reference/estimateSpeciation.html">estimateSpeciation</a></span><span class="op">(</span><span class="va">tree3</span><span class="op">)</span>,</span>
 <span>         <span class="fl">0.5</span>, <span class="fl">1</span>, <span class="fl">5</span><span class="op">)</span>, ncol <span class="op">=</span> <span class="fl">2</span>, dimnames <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html" class="external-link">list</a></span><span class="op">(</span><span class="cn">NULL</span>, <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"Estimated"</span>, <span class="st">"True"</span><span class="op">)</span><span class="op">)</span><span class="op">)</span></span></code></pre></div>
 <pre><code><span><span class="co">##      Estimated True</span></span>
-<span><span class="co">## [1,] 0.4738662  0.5</span></span>
-<span><span class="co">## [2,] 1.0293577  1.0</span></span>
-<span><span class="co">## [3,] 4.0895913  5.0</span></span></code></pre>
+<span><span class="co">## [1,] 0.4417601  0.5</span></span>
+<span><span class="co">## [2,] 0.7734291  1.0</span></span>
+<span><span class="co">## [3,] 5.6807683  5.0</span></span></code></pre>
 <p>Now that you have a sense for the accuracy of our estimator, let’s
 simulate 100 phylogenetic trees with variable speciation rates and apply
 this simple estimator. We can then ask how correlated those estimates
@@ -363,7 +363,7 @@ example:</p>
 <span><span class="co"># estimating:</span></span>
 <span><span class="fu"><a href="../reference/fitCRBD.html">fitCRBD</a></span><span class="op">(</span><span class="va">tree</span><span class="op">)</span></span></code></pre></div>
 <pre><code><span><span class="co">##        S        E </span></span>
-<span><span class="co">## 1.570938 1.486291</span></span></code></pre>
+<span><span class="co">## 1.771473 1.666067</span></span></code></pre>
 <p>Let’s repeat our simulation procedure, but this time we will fit a
 model where extinction can be nonzero. We won’t display the plots here,
 but feel free to copy and paste the code into your R console to see the
