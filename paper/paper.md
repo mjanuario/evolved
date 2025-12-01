@@ -96,7 +96,7 @@ bibliography: paper.bib
   functionalities as they see fit. 
 
   To access a vignette, type `vignette("vignette_name")` 
-  in R, replacing "`vignette_name`" with the vignette name (see **Table 2**). 
+  in R, replacing "`vignette_name`" with the vignette name (see **Table 2**). Vignettes can also be acessed in [https://mjanuario.github.io/evolved/](https://mjanuario.github.io/evolved/).
   The development version, more detailed information on the package/vignettes, and instructions for 
   installing and using R/RStudio/RMarkdown are provided at 
   [https://github.com/mjanuario/evolved](https://github.com/mjanuario/evolved). Questions should be sent to 
