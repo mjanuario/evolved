@@ -97,11 +97,12 @@ bibliography: paper.bib
   functionalities as they see fit. 
 
   To access a vignette, type `vignette("vignette_name")` 
-  in R, replacing "`vignette_name`" with the vignette name (see **Table 2**). Vignettes can also be acessed in [https://mjanuario.github.io/evolved/](https://mjanuario.github.io/evolved/).
+  in R, replacing "`vignette_name`" with the vignette name (see **Table 2**). 
   The development version, more detailed information on the package/vignettes, and instructions for 
   installing and using R/RStudio/RMarkdown are provided at 
-  [https://github.com/mjanuario/evolved](https://github.com/mjanuario/evolved). Questions should be sent to 
-  MJ (correspondence author).
+  [https://github.com/mjanuario/evolved](https://github.com/mjanuario/evolved). This information as well 
+  as the vignettes can also be acessed in [https://mjanuario.github.io/evolved/](https://mjanuario.github.io/evolved/). 
+  Questions should be sent to MJ (correspondence author).
 
 \small
 **Table 1.** Selected functions illustrating the range of topics covered, with notes on their level (low = intended to be opened by students, high = wrapper function). A full list and descriptions of all functions, including helper and plotting functions, are available in the package manual [@Januario:2024]. 
