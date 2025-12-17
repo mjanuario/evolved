@@ -31,7 +31,7 @@
       <ul class="navbar-nav me-auto">
 <li class="nav-item"><a class="nav-link" href="../index.html"><span class="fa fa-home"></span> Home</a></li>
 <li class="nav-item"><a class="nav-link" href="../reference/index.html"><span class="fa fa-book"></span> Reference</a></li>
-<li class="nav-item"><a class="nav-link" href="../articles/index.html"><span class="fa fa-book-open"></span> Vignettes &amp; Tutorials</a></li>
+<li class="active nav-item"><a class="nav-link" href="../articles/index.html"><span class="fa fa-book-open"></span> Vignettes &amp; Tutorials</a></li>
 <li class="nav-item"><a class="nav-link" href="../news/index.html"><span class="fa fa-newspaper"></span> News</a></li>
       </ul>
 <ul class="navbar-nav">
@@ -58,7 +58,7 @@ Januario</h4>
             
             <h4 data-toc-skip class="date">Nov 2025</h4>
       
-      <small class="dont-index">Source: <a href="https://github.com/mjanuario/evolved/blob/HEAD/vignettes/install_r.Rmd" class="external-link"><code>vignettes/install_r.Rmd</code></a></small>
+      <small class="dont-index">Source: <a href="https://github.com/mjanuario/evolved/blob/main/vignettes/install_r.Rmd" class="external-link"><code>vignettes/install_r.Rmd</code></a></small>
       <div class="d-none name"><code>install_r.Rmd</code></div>
     </div>
 
@@ -106,7 +106,7 @@ When you open R, you should see something close to Figure 1.</p>
 <p>Please download and install R before progressing to install
 RStudio.</p>
 <div class="figure" style="text-align: center">
-<img src="install_r_images%2FR_screenshot.png" alt="Example of recently-opened R on an Apple computer. The interface looks slightly different on a Windows computer, but the main features are the same. Note that depending on the details, you may or may not see the same warnings and errors as the screenshot." width="100%"><p class="caption">
+<img src="install_r_images/R_screenshot.png" class="r-plt" alt="Example of recently-opened R on an Apple computer. The interface looks slightly different on a Windows computer, but the main features are the same. Note that depending on the details, you may or may not see the same warnings and errors as the screenshot." width="100%"><p class="caption">
 Example of recently-opened R on an Apple computer. The interface looks
 slightly different on a Windows computer, but the main features are the
 same. Note that depending on the details, you may or may not see the
@@ -152,7 +152,7 @@ tutorial.</p>
 start RStudio instead, it will open R inside of the RStudio environment,
 and should look like figure 2.</p>
 <div class="figure" style="text-align: center">
-<img src="install_r_images%2FRStudio_screenshot.png" alt="Example of recently-opened Rstudio. Note that the appearance of RStudio is customizable, so your interface might not look the same as the RStudio your instructors or your fellow students have" width="100%"><p class="caption">
+<img src="install_r_images/RStudio_screenshot.png" class="r-plt" alt="Example of recently-opened Rstudio. Note that the appearance of RStudio is customizable, so your interface might not look the same as the RStudio your instructors or your fellow students have" width="100%"><p class="caption">
 Example of recently-opened Rstudio. Note that the appearance of RStudio
 is customizable, so your interface might not look the same as the
 RStudio your instructors or your fellow students have
@@ -224,7 +224,7 @@ Steps 5 and 6 will be needed depending on the lab.</p>
 standard folder most computer operating systems (i.e., Windows, MacOS,
 Linux…) have. It is the first “place” your computer puts you in when you
 turn it on, seen in the screen shot below, which is my Desktop:</p>
-<p><img src="install_r_images%2Fset_dir_fig00.png" width="100%"></p>
+<p><img src="install_r_images/set_dir_fig00.png" class="r-plt" width="100%"></p>
 <p><br></p>
 <p>If you are not comfortable with coding or R, we suggest you create a
 folder for storing all our classwork in the “Desktop” of your computer,
@@ -242,11 +242,11 @@ Directory</em> as in the figure below (notice that my .Rmd file is on
 the left panel and my R console, different from the RStudio default, is
 on the right – notice also that I minimized all other panels in my
 RStudio):</p>
-<p><img src="install_r_images%2Fset_dir_fig0.png" width="100%"></p>
+<p><img src="install_r_images/set_dir_fig0.png" class="r-plt" width="100%"></p>
 <p><br></p>
 <p>After clicking on <em>Choose Directory</em>, you should see something
 like the screenshot below:</p>
-<p><img src="install_r_images%2Fset_dir_fig1.png" width="100%"></p>
+<p><img src="install_r_images/set_dir_fig1.png" class="r-plt" width="100%"></p>
 <p>Once there, you can navigate to the folder where you are storing
 files for this class, or a subfolder of that folder, to set it as your
 working directory. It’s important to keep your working folders for each
@@ -256,7 +256,7 @@ including both R scripts (<code>.R</code> files) and data files (e.g.,
 downloaded the files <code>cyt-oxidase1-mt-aligned.txt</code> and
 <code>R_functions.R</code> and added them to your working directory
 folder, it would look like this:</p>
-<p><img src="install_r_images%2Fset_dir_fig2.png" width="100%"></p>
+<p><img src="install_r_images/set_dir_fig2.png" class="r-plt" width="100%"></p>
 <p>After following the above steps, you will have set the directory in
 which you will be working for the current R “session”. This is the
 folder R will use as a reference, from now until you close R or change
@@ -293,7 +293,7 @@ working directory is set, run <code><a href="https://rdrr.io/r/base/getwd.html" 
 into the <code><a href="https://rdrr.io/r/base/getwd.html" class="external-link">setwd()</a></code> function. Insert that line in your “setup”
 code chunk. This will help RMarkdown to compile more smoothly. It will
 look more or less like the following screenshot:</p>
-<p><img src="install_r_images%2Fset_dir_fig3.png" width="100%"></p>
+<p><img src="install_r_images/set_dir_fig3.png" class="r-plt" width="100%"></p>
 <p>Another strange behavior that RMarkdown might do is to automatically
 change your folder after every chunk of code you run. This is extremely
 counterproductive, and in the end (step 7) we provide a guide on a
@@ -341,7 +341,7 @@ workspace.</p>
 important to not lose your work if R crashes, class time ends, or you
 have to stop for any other reason. Go to the upper bar and click on
 <em>File &gt; Save As</em> as in the figure below.</p>
-<p><img src="install_r_images%2Fset_dir_fig5.png" width="100%"></p>
+<p><img src="install_r_images/set_dir_fig5.png" class="r-plt" width="100%"></p>
 <p>A window will pop up in the folder you are working in. You can save
 your .Rmd file there, as you would do with any other file.</p>
 <p>Now, if you run <code><a href="https://rdrr.io/r/base/list.files.html" class="external-link">dir()</a></code> again, you should see your saved
@@ -357,7 +357,7 @@ I got:</p>
 <p>Now is the time to make sure that your RMarkdown compiles. You can
 compile it by clicking just above the script window in RStudio on
 <code>Knit</code>:</p>
-<p><img src="install_r_images%2Fset_dir_fig6.png" width="100%"></p>
+<p><img src="install_r_images/set_dir_fig6.png" class="r-plt" width="100%"></p>
 <p>Now, if you run <code><a href="https://rdrr.io/r/base/list.files.html" class="external-link">dir()</a></code> again, you should see your new
 compiled <code>.html</code> document in the working folder:</p>
 <pre><code>[1] "cyt-oxidase1-mt-aligned.txt"
@@ -408,10 +408,10 @@ your working directory folder after every chunk of code you run. This is
 extremely counterproductive, but you can fix it by going to the upper
 bar and clicking <em>Tools &gt; Global Options</em> as in the figure
 below:</p>
-<p><img src="install_r_images%2Fset_dir_fig4.png" width="100%"></p>
+<p><img src="install_r_images/set_dir_fig4.png" class="r-plt" width="100%"></p>
 <p>Then go to <em>RMarkdown &gt; Evaluate chunks in directory</em> and
 set the option to “Document”, as in the figure below:</p>
-<p><img src="install_r_images%2Fset_dir_fig4.5.png" width="100%"></p>
+<p><img src="install_r_images/set_dir_fig4.5.png" class="r-plt" width="100%"></p>
 <p>The configurations you see in the screenshot above are used by
 Matheus – feel free to try them as well if you want.</p>
 <p>If RStudio keeps changing the directory <em>after you have done the
@@ -517,9 +517,9 @@ size (i.e., bottlenecks and expansions) is:</p>
 <p>The probability of identity-by-descent of two alleles is:</p>
 <p><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>f</mi><mi>t</mi></msub><mo>=</mo><mfrac><mn>1</mn><mrow><mn>2</mn><mi>N</mi></mrow></mfrac><mo>+</mo><mrow><mo stretchy="true" form="prefix">(</mo><mn>1</mn><mo>−</mo><mfrac><mn>1</mn><mrow><mn>2</mn><mi>N</mi></mrow></mfrac><mo stretchy="true" form="postfix">)</mo></mrow><msub><mi>f</mi><mrow><mi>t</mi><mo>−</mo><mn>1</mn></mrow></msub></mrow><annotation encoding="application/x-tex">f_t = \frac{1}{2N} + (1-\frac{1}{2N})f_{t-1}</annotation></semantics></math></p>
 <p>And the rate of heterozygosity loss is:</p>
-<p><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><msub><mi>H</mi><mi>t</mi></msub><msub><mi>H</mi><mn>0</mn></msub></mfrac><mo>=</mo><msup><mrow><mo stretchy="true" form="prefix">(</mo><msup><mi>e</mi><mrow><mi>−</mi><mfrac><mn>1</mn><mrow><mn>2</mn><mi>N</mi></mrow></mfrac></mrow></msup><mo stretchy="true" form="postfix">)</mo></mrow><mi>t</mi></msup></mrow><annotation encoding="application/x-tex">\frac{H_t}{H_0} = (e^{-\frac{1}{2N}})^t</annotation></semantics></math></p>
+<p><math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><mfrac><msub><mi>H</mi><mi>t</mi></msub><msub><mi>H</mi><mn>0</mn></msub></mfrac><mo>=</mo><msup><mrow><mo stretchy="true" form="prefix">(</mo><msup><mi>e</mi><mrow><mo>−</mo><mfrac><mn>1</mn><mrow><mn>2</mn><mi>N</mi></mrow></mfrac></mrow></msup><mo stretchy="true" form="postfix">)</mo></mrow><mi>t</mi></msup></mrow><annotation encoding="application/x-tex">\frac{H_t}{H_0} = (e^{-\frac{1}{2N}})^t</annotation></semantics></math></p>
 <p>Which is also equal to
-<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi>e</mi><mrow><mi>−</mi><mfrac><mi>t</mi><mrow><mn>2</mn><mi>N</mi></mrow></mfrac></mrow></msup><annotation encoding="application/x-tex">e^{-\frac{t}{2N}}</annotation></semantics></math>.
+<math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msup><mi>e</mi><mrow><mo>−</mo><mfrac><mi>t</mi><mrow><mn>2</mn><mi>N</mi></mrow></mfrac></mrow></msup><annotation encoding="application/x-tex">e^{-\frac{t}{2N}}</annotation></semantics></math>.
 Of course, this assumes a diploid organism, so the census size of this
 population is
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mi>N</mi><annotation encoding="application/x-tex">N</annotation></semantics></math>.</p>
@@ -537,7 +537,7 @@ if we want to graph equation 3, we could simply write:</p>
 <span><span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html" class="external-link">plot</a></span><span class="op">(</span>x<span class="op">=</span><span class="va">t</span>, y<span class="op">=</span><span class="va">Ht_Ho</span>, type<span class="op">=</span><span class="st">"l"</span>, lwd<span class="op">=</span><span class="fl">4</span>, </span>
 <span>     ylab<span class="op">=</span><span class="st">"Rate of heterozygosity loss"</span>,</span>
 <span>     xlab<span class="op">=</span><span class="st">"Time"</span>, main<span class="op">=</span><span class="st">"Plot of equation (3)"</span><span class="op">)</span></span></code></pre></div>
-<p><img src="install_r_files/figure-html/unnamed-chunk-13-1.png" width="700"></p>
+<p><img src="install_r_files/figure-html/unnamed-chunk-13-1.png" class="r-plt" width="700"></p>
 </div>
 <div class="section level4">
 <h4 id="rmarkdown-practice-part-i">RMarkdown practice (part I)<a class="anchor" aria-label="anchor" href="#rmarkdown-practice-part-i"></a>
@@ -576,7 +576,7 @@ class we will only accept PDF submissions.</p>
 </div>
 
 <div class="pkgdown-footer-right">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.1.1.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.2.0.</p>
 </div>
 
     </footer>

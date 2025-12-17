@@ -1,5 +1,5 @@
-pandoc: '3.2'
-pkgdown: 2.1.1
+pandoc: 3.1.11
+pkgdown: 2.2.0
 pkgdown_sha: ~
 articles:
   birthdeath_deeptime: birthdeath_deeptime.html
@@ -14,7 +14,7 @@ articles:
   popgen_selection: popgen_selection.html
   population_genetics: population_genetics.html
   rocks_and_clocks: rocks_and_clocks.html
-last_built: 2025-12-17T16:13Z
+last_built: 2025-12-17T16:18Z
 urls:
   reference: https://mjanuario.github.io/evolved/reference
   article: https://mjanuario.github.io/evolved/articles

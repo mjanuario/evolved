@@ -31,7 +31,7 @@
       <ul class="navbar-nav me-auto">
 <li class="nav-item"><a class="nav-link" href="../index.html"><span class="fa fa-home"></span> Home</a></li>
 <li class="nav-item"><a class="nav-link" href="../reference/index.html"><span class="fa fa-book"></span> Reference</a></li>
-<li class="nav-item"><a class="nav-link" href="../articles/index.html"><span class="fa fa-book-open"></span> Vignettes &amp; Tutorials</a></li>
+<li class="active nav-item"><a class="nav-link" href="../articles/index.html"><span class="fa fa-book-open"></span> Vignettes &amp; Tutorials</a></li>
 <li class="nav-item"><a class="nav-link" href="../news/index.html"><span class="fa fa-newspaper"></span> News</a></li>
       </ul>
 <ul class="navbar-nav">
@@ -58,7 +58,7 @@ Januario, Andressa Viol, and Daniel Rabosky</h4>
             
             <h4 data-toc-skip class="date">Jan 2024</h4>
       
-      <small class="dont-index">Source: <a href="https://github.com/mjanuario/evolved/blob/HEAD/vignettes/birthdeath_phylogenies.Rmd" class="external-link"><code>vignettes/birthdeath_phylogenies.Rmd</code></a></small>
+      <small class="dont-index">Source: <a href="https://github.com/mjanuario/evolved/blob/main/vignettes/birthdeath_phylogenies.Rmd" class="external-link"><code>vignettes/birthdeath_phylogenies.Rmd</code></a></small>
       <div class="d-none name"><code>birthdeath_phylogenies.Rmd</code></div>
     </div>
 
@@ -160,7 +160,7 @@ simulated:</p>
 <span></span>
 <span><span class="co"># Add a timescale (in Mya, and zero is the time the simulation stopped):</span></span>
 <span><span class="fu"><a href="https://rdrr.io/pkg/ape/man/axisPhylo.html" class="external-link">axisPhylo</a></span><span class="op">(</span><span class="op">)</span></span></code></pre></div>
-<p><img src="birthdeath_phylogenies_files/figure-html/unnamed-chunk-4-1.png" width="700"></p>
+<p><img src="birthdeath_phylogenies_files/figure-html/unnamed-chunk-4-1.png" class="r-plt" width="700"></p>
 <p>Run another simulation and plot it again. Then plot some others. Each
 time you do this, vary the values you insert for speciation and
 extinction rates (the vector you pass into the <code>pars</code>
@@ -197,7 +197,7 @@ parameter from 6 to 100 tips.</p>
 <span><span class="fu"><a href="https://rdrr.io/r/graphics/par.html" class="external-link">par</a></span><span class="op">(</span>mfrow<span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">1</span>,<span class="fl">2</span><span class="op">)</span>, mar<span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">0</span>,<span class="fl">0</span>,<span class="fl">0</span>,<span class="fl">0</span><span class="op">)</span><span class="op">)</span></span>
 <span><span class="fu"><a href="https://rdrr.io/pkg/ape/man/plot.phylo.html" class="external-link">plot.phylo</a></span><span class="op">(</span><span class="va">tree_pb</span>, show.tip.label<span class="op">=</span><span class="cn">F</span><span class="op">)</span></span>
 <span><span class="fu"><a href="https://rdrr.io/pkg/ape/man/plot.phylo.html" class="external-link">plot.phylo</a></span><span class="op">(</span><span class="va">tree_lowE</span>, show.tip.label<span class="op">=</span><span class="cn">F</span><span class="op">)</span></span></code></pre></div>
-<p><img src="birthdeath_phylogenies_files/figure-html/unnamed-chunk-6-1.png" width="700"></p>
+<p><img src="birthdeath_phylogenies_files/figure-html/unnamed-chunk-6-1.png" class="r-plt" width="700"></p>
 <div class="sourceCode" id="cb8"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co"># Restoring old par() configs:</span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/graphics/par.html" class="external-link">par</a></span><span class="op">(</span><span class="va">oldpar</span><span class="op">)</span></span></code></pre></div>
@@ -209,17 +209,17 @@ speciation and extinction rates.</p>
 <div class="sourceCode" id="cb9"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co"># plot lineage through time plots:</span></span>
 <span><span class="fu"><a href="../reference/lttPlot.html">lttPlot</a></span><span class="op">(</span><span class="va">tree_pb</span>, col <span class="op">=</span> <span class="st">"blue"</span>, knitr <span class="op">=</span> <span class="cn">T</span><span class="op">)</span></span></code></pre></div>
-<p><img src="birthdeath_phylogenies_files/figure-html/unnamed-chunk-7-1.png" width="700"></p>
+<p><img src="birthdeath_phylogenies_files/figure-html/unnamed-chunk-7-1.png" class="r-plt" width="700"></p>
 <div class="sourceCode" id="cb10"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="../reference/lttPlot.html">lttPlot</a></span><span class="op">(</span><span class="va">tree_lowE</span>, col <span class="op">=</span> <span class="st">"red"</span>, knitr <span class="op">=</span> <span class="cn">T</span><span class="op">)</span></span></code></pre></div>
-<p><img src="birthdeath_phylogenies_files/figure-html/unnamed-chunk-7-2.png" width="700"></p>
+<p><img src="birthdeath_phylogenies_files/figure-html/unnamed-chunk-7-2.png" class="r-plt" width="700"></p>
 <div class="sourceCode" id="cb11"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co"># or, in a single plot:</span></span>
 <span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html" class="external-link">plot</a></span><span class="op">(</span>x<span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">0</span>,<span class="fl">1</span><span class="op">)</span>, y <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/Log.html" class="external-link">log</a></span><span class="op">(</span><span class="fl">2</span><span class="op">)</span>, <span class="fu"><a href="https://rdrr.io/r/base/Log.html" class="external-link">log</a></span><span class="op">(</span><span class="fl">100</span><span class="op">)</span><span class="op">)</span>, lwd<span class="op">=</span><span class="fl">1</span>, col<span class="op">=</span><span class="st">"gray50"</span>, type <span class="op">=</span> <span class="st">"l"</span><span class="op">)</span></span>
 <span><span class="fu"><a href="../reference/lttPlot.html">lttPlot</a></span><span class="op">(</span><span class="va">tree_pb</span>, rel.time<span class="op">=</span><span class="cn">T</span>, add<span class="op">=</span><span class="cn">T</span>, col<span class="op">=</span><span class="st">"blue"</span>, lwd<span class="op">=</span><span class="fl">1.5</span>, knitr <span class="op">=</span> <span class="cn">T</span><span class="op">)</span></span>
 <span><span class="fu"><a href="../reference/lttPlot.html">lttPlot</a></span><span class="op">(</span><span class="va">tree_lowE</span>, rel.time<span class="op">=</span><span class="cn">T</span>, add<span class="op">=</span><span class="cn">T</span>, col<span class="op">=</span><span class="st">"red"</span>, lwd<span class="op">=</span><span class="fl">1.5</span>, knitr <span class="op">=</span> <span class="cn">T</span><span class="op">)</span></span></code></pre></div>
-<p><img src="birthdeath_phylogenies_files/figure-html/unnamed-chunk-7-3.png" width="700"></p>
+<p><img src="birthdeath_phylogenies_files/figure-html/unnamed-chunk-7-3.png" class="r-plt" width="700"></p>
 <p>In the plot above, the grey line represents the expected mean of
 lineages through time in a pure-birth process. As you already know, the
 birth-death process is a stochastic model, so even though the average
@@ -259,9 +259,9 @@ to see how well they correspond.</p>
 <span><span class="fu"><a href="https://rdrr.io/r/base/matrix.html" class="external-link">matrix</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fu"><a href="../reference/estimateSpeciation.html">estimateSpeciation</a></span><span class="op">(</span><span class="va">tree1</span><span class="op">)</span>, <span class="fu"><a href="../reference/estimateSpeciation.html">estimateSpeciation</a></span><span class="op">(</span><span class="va">tree2</span><span class="op">)</span>, <span class="fu"><a href="../reference/estimateSpeciation.html">estimateSpeciation</a></span><span class="op">(</span><span class="va">tree3</span><span class="op">)</span>,</span>
 <span>         <span class="fl">0.5</span>, <span class="fl">1</span>, <span class="fl">5</span><span class="op">)</span>, ncol <span class="op">=</span> <span class="fl">2</span>, dimnames <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html" class="external-link">list</a></span><span class="op">(</span><span class="cn">NULL</span>, <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"Estimated"</span>, <span class="st">"True"</span><span class="op">)</span><span class="op">)</span><span class="op">)</span></span></code></pre></div>
 <pre><code><span><span class="co">##      Estimated True</span></span>
-<span><span class="co">## [1,] 0.4401598  0.5</span></span>
-<span><span class="co">## [2,] 1.1162812  1.0</span></span>
-<span><span class="co">## [3,] 3.7061327  5.0</span></span></code></pre>
+<span><span class="co">## [1,]  0.533297  0.5</span></span>
+<span><span class="co">## [2,]  0.774391  1.0</span></span>
+<span><span class="co">## [3,]  4.445254  5.0</span></span></code></pre>
 <p>Now that you have a sense for the accuracy of our estimator, let’s
 simulate 100 phylogenetic trees with variable speciation rates and apply
 this simple estimator. We can then ask how correlated those estimates
@@ -302,7 +302,7 @@ aggregated):</p>
 <span></span>
 <span><span class="co"># Then,we add the 1:1 line  (i.e. a perfect estimation)</span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/graphics/abline.html" class="external-link">abline</a></span><span class="op">(</span>a <span class="op">=</span> <span class="fl">0</span>, b <span class="op">=</span> <span class="fl">1</span>, lwd<span class="op">=</span><span class="fl">2</span><span class="op">)</span></span></code></pre></div>
-<p><img src="birthdeath_phylogenies_files/figure-html/unnamed-chunk-10-1.png" width="700"></p>
+<p><img src="birthdeath_phylogenies_files/figure-html/unnamed-chunk-10-1.png" class="r-plt" width="700"></p>
 <p>Remember these phylogenies were created through a pure-birth process,
 thus we do not need to estimate extinction rates.</p>
 <p>Now you might ask: what if extinction really is not zero? How bad
@@ -349,7 +349,7 @@ case.</p>
 <span></span>
 <span><span class="co">#Then,we add the 1:1 line  (i.e. a perfect estimation)</span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/graphics/abline.html" class="external-link">abline</a></span><span class="op">(</span>a <span class="op">=</span> <span class="fl">0</span>, b <span class="op">=</span> <span class="fl">1</span>, lwd<span class="op">=</span><span class="fl">2</span><span class="op">)</span></span></code></pre></div>
-<p><img src="birthdeath_phylogenies_files/figure-html/unnamed-chunk-12-1.png" width="700"></p>
+<p><img src="birthdeath_phylogenies_files/figure-html/unnamed-chunk-12-1.png" class="r-plt" width="700"></p>
 <p>Now, we will use a more complex estimation procedure. We will
 estimate parameters by using a more sophisticated estimator that allows
 extinction and speciation rates to be nonzero. The mathematics of this
@@ -363,7 +363,7 @@ example:</p>
 <span><span class="co"># estimating:</span></span>
 <span><span class="fu"><a href="../reference/fitCRBD.html">fitCRBD</a></span><span class="op">(</span><span class="va">tree</span><span class="op">)</span></span></code></pre></div>
 <pre><code><span><span class="co">##        S        E </span></span>
-<span><span class="co">## 1.749413 1.659989</span></span></code></pre>
+<span><span class="co">## 1.318936 1.300098</span></span></code></pre>
 <p>Let’s repeat our simulation procedure, but this time we will fit a
 model where extinction can be nonzero. We won’t display the plots here,
 but feel free to copy and paste the code into your R console to see the
@@ -474,7 +474,7 @@ whales, already included as a dataset in the package
 <span><span class="co">##            "#2297E6"            "#28E2E5"            "#CD0BBC" </span></span>
 <span><span class="co">##            Porpoises </span></span>
 <span><span class="co">##            "#F5C710"</span></span></code></pre>
-<p><img src="birthdeath_phylogenies_files/figure-html/unnamed-chunk-18-1.png" width="576"></p>
+<p><img src="birthdeath_phylogenies_files/figure-html/unnamed-chunk-18-1.png" class="r-plt" width="576"></p>
 <div class="sourceCode" id="cb26"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co"># Restoring old par() configs:</span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/graphics/par.html" class="external-link">par</a></span><span class="op">(</span><span class="va">oldpar</span><span class="op">)</span></span></code></pre></div>
@@ -541,7 +541,7 @@ rate.</p>
 <span><span class="co">## F-statistic: 45.11 on 1 and 73 DF,  p-value: 3.483e-09</span></span></code></pre>
 <div class="sourceCode" id="cb31"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/graphics/abline.html" class="external-link">abline</a></span><span class="op">(</span><span class="va">whales_lm</span>, col<span class="op">=</span><span class="st">"red"</span><span class="op">)</span></span></code></pre></div>
-<p><img src="birthdeath_phylogenies_files/figure-html/unnamed-chunk-20-1.png" width="700"></p>
+<p><img src="birthdeath_phylogenies_files/figure-html/unnamed-chunk-20-1.png" class="r-plt" width="700"></p>
 <p>What do you think? Does this relationship support our hypothesis that
 size influences speciation rate?</p>
 <p>Before you answer, let’s plot the data with the phylogeny.</p>
@@ -581,13 +581,13 @@ is merely color-coded by clade.</p>
 <span><span class="co">##            "#2297E6"            "#28E2E5"            "#CD0BBC" </span></span>
 <span><span class="co">##            Porpoises </span></span>
 <span><span class="co">##            "#F5C710"</span></span></code></pre>
-<p><img src="birthdeath_phylogenies_files/figure-html/unnamed-chunk-22-1.png" width="672"></p>
+<p><img src="birthdeath_phylogenies_files/figure-html/unnamed-chunk-22-1.png" class="r-plt" width="672"></p>
 <div class="sourceCode" id="cb37"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/pkg/BAMMtools/man/plot.html" class="external-link">plot.bammdata</a></span><span class="op">(</span><span class="va">x</span>, lwd <span class="op">=</span> <span class="fl">3</span>, mar<span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">5.1</span>,<span class="fl">0</span>,<span class="fl">2.1</span>,<span class="fl">2.1</span><span class="op">)</span>, direction <span class="op">=</span> <span class="st">"leftwards"</span><span class="op">)</span></span>
 <span></span>
 <span><span class="co"># Restoring old par() configs:</span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/graphics/par.html" class="external-link">par</a></span><span class="op">(</span><span class="va">oldpar</span><span class="op">)</span></span></code></pre></div>
-<p><img src="birthdeath_phylogenies_files/figure-html/unnamed-chunk-22-2.png" width="672"></p>
+<p><img src="birthdeath_phylogenies_files/figure-html/unnamed-chunk-22-2.png" class="r-plt" width="672"></p>
 </div>
 </div>
 <div class="section level2">
@@ -616,7 +616,7 @@ e89543.</p>
 </div>
 
 <div class="pkgdown-footer-right">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.1.1.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.2.0.</p>
 </div>
 
     </footer>

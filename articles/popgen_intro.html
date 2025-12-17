@@ -31,7 +31,7 @@
       <ul class="navbar-nav me-auto">
 <li class="nav-item"><a class="nav-link" href="../index.html"><span class="fa fa-home"></span> Home</a></li>
 <li class="nav-item"><a class="nav-link" href="../reference/index.html"><span class="fa fa-book"></span> Reference</a></li>
-<li class="nav-item"><a class="nav-link" href="../articles/index.html"><span class="fa fa-book-open"></span> Vignettes &amp; Tutorials</a></li>
+<li class="active nav-item"><a class="nav-link" href="../articles/index.html"><span class="fa fa-book-open"></span> Vignettes &amp; Tutorials</a></li>
 <li class="nav-item"><a class="nav-link" href="../news/index.html"><span class="fa fa-newspaper"></span> News</a></li>
       </ul>
 <ul class="navbar-nav">
@@ -58,7 +58,7 @@ Januario, Andressa Viol, and Daniel Rabosky</h4>
             
             <h4 data-toc-skip class="date">Jan 2024</h4>
       
-      <small class="dont-index">Source: <a href="https://github.com/mjanuario/evolved/blob/HEAD/vignettes/popgen_intro.Rmd" class="external-link"><code>vignettes/popgen_intro.Rmd</code></a></small>
+      <small class="dont-index">Source: <a href="https://github.com/mjanuario/evolved/blob/main/vignettes/popgen_intro.Rmd" class="external-link"><code>vignettes/popgen_intro.Rmd</code></a></small>
       <div class="d-none name"><code>popgen_intro.Rmd</code></div>
     </div>
 
@@ -278,7 +278,7 @@ we just made:</p>
 <code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html" class="external-link">plot</a></span><span class="op">(</span></span>
 <span>  <span class="fu"><a href="https://rdrr.io/r/base/table.html" class="external-link">table</a></span><span class="op">(</span><span class="va">binom_nbrs</span><span class="op">)</span>,</span>
 <span>  ylab<span class="op">=</span><span class="st">"Frequency"</span>, xlab<span class="op">=</span><span class="st">"Number of successes"</span><span class="op">)</span></span></code></pre></div>
-<p><img src="popgen_intro_files/figure-html/unnamed-chunk-6-1.png" width="700"></p>
+<p><img src="popgen_intro_files/figure-html/unnamed-chunk-6-1.png" class="r-plt" width="700"></p>
 <p>Above are the random numbers we generated – i.e., the stochastic
 realizations of the process that follows the distribution we chose. Each
 number represents the summation of the number of successes per sample.
@@ -337,7 +337,7 @@ it?</p>
 <span><span class="co"># Finally, we can mark the probability we are interested in</span></span>
 <span><span class="co"># by using a red dot in our plot:</span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/graphics/points.html" class="external-link">points</a></span><span class="op">(</span>x <span class="op">=</span> <span class="fl">3</span>, y <span class="op">=</span> <span class="va">P_x3_s10_p0.5</span>, col <span class="op">=</span> <span class="st">"red"</span>, cex <span class="op">=</span> <span class="fl">2</span><span class="op">)</span></span></code></pre></div>
-<p><img src="popgen_intro_files/figure-html/unnamed-chunk-9-1.png" width="700"></p>
+<p><img src="popgen_intro_files/figure-html/unnamed-chunk-9-1.png" class="r-plt" width="700"></p>
 </div>
 <div class="section level3">
 <h3 id="malthusian-growth">Malthusian growth<a class="anchor" aria-label="anchor" href="#malthusian-growth"></a>
@@ -424,7 +424,7 @@ line describing the size of the population over time.</p>
 <span>     xlab<span class="op">=</span><span class="st">"time"</span>, ylab<span class="op">=</span><span class="st">"Population size"</span>,</span>
 <span>     main<span class="op">=</span><span class="st">"Malthusian growth"</span><span class="op">)</span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/graphics/lines.html" class="external-link">lines</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">time</span>, y <span class="op">=</span> <span class="va">popsize</span>, col <span class="op">=</span> <span class="st">"blue"</span>, lwd <span class="op">=</span> <span class="fl">3</span><span class="op">)</span></span></code></pre></div>
-<p><img src="popgen_intro_files/figure-html/unnamed-chunk-16-1.png" width="700"></p>
+<p><img src="popgen_intro_files/figure-html/unnamed-chunk-16-1.png" class="r-plt" width="700"></p>
 <p>Try to change the numbers inside the arguments <code>xlim</code> and
 <code>ylim</code>. How does this change the plot?</p>
 <p>Now, make a plot of exponential growth in four populations: one where
@@ -468,12 +468,11 @@ in the replacement of Tyr to Cys at codon 298 in the melanocortin 1
 receptor gene (mc1r)” created a whole new phenotype related to color:
 the “Spirit bear” variety (see figure 1, from Hedrick &amp; Ritland
 (2012)).</p>
-<div class="figure">
-<img src="spirit_bear.png" alt="A white mother Spirit bear and a black cub offspring; the father must have been black and the cub is a heterozygote for the coat color polymorphism (photo mod. from Hedrick and Ritland (2012)" width="521"><p class="caption">
-A white mother Spirit bear and a black cub offspring; the father must
-have been black and the cub is a heterozygote for the coat color
-polymorphism (photo mod. from Hedrick and Ritland (2012)
-</p>
+<div class="float">
+<img src="spirit_bear.png" alt="A white mother Spirit bear and a black cub offspring; the father must have been black and the cub is a heterozygote for the coat color polymorphism (photo mod. from Hedrick and Ritland (2012)"><div class="figcaption">A white mother Spirit bear and a black cub
+offspring; the father must have been black and the cub is a heterozygote
+for the coat color polymorphism (photo mod. from Hedrick and Ritland
+(2012)</div>
 </div>
 <p>In a previous study (Ritland <em>et al</em>, 2001), the following
 frequencies of genotypes were observed: 42 individuals with the dominant
@@ -749,7 +748,7 @@ Benchmark papers in genetics, Volume 8: Evolutionary genetics
 </div>
 
 <div class="pkgdown-footer-right">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.1.1.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.2.0.</p>
 </div>
 
     </footer>
