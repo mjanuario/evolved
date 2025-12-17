@@ -33,13 +33,23 @@ install.packages("plot3D")
 
 Then, you must load it, as well as our package:
 
-```{r}
+```
 library(evolved)
 library(plot3D)
 
 # Let's also store our par() configs so 
 # we can restore them whenever we change it in this tutorial
 oldpar <- par(no.readonly = TRUE)  
+```
+
+```{r, echo=FALSE}
+library(evolved)
+oldpar <- par(no.readonly = TRUE)  
+
+if (interactive()) {
+  library(plot3D)
+  # 3D plots here
+}
 ```
 
 # Introduction
