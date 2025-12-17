@@ -31,7 +31,7 @@
       <ul class="navbar-nav me-auto">
 <li class="nav-item"><a class="nav-link" href="../index.html"><span class="fa fa-home"></span> Home</a></li>
 <li class="nav-item"><a class="nav-link" href="../reference/index.html"><span class="fa fa-book"></span> Reference</a></li>
-<li class="nav-item"><a class="nav-link" href="../articles/index.html"><span class="fa fa-book-open"></span> Vignettes &amp; Tutorials</a></li>
+<li class="active nav-item"><a class="nav-link" href="../articles/index.html"><span class="fa fa-book-open"></span> Vignettes &amp; Tutorials</a></li>
 <li class="nav-item"><a class="nav-link" href="../news/index.html"><span class="fa fa-newspaper"></span> News</a></li>
       </ul>
 <ul class="navbar-nav">
@@ -58,7 +58,7 @@ Januario and Jennifer Auler</h4>
             
             <h4 data-toc-skip class="date">Dec/2023</h4>
       
-      <small class="dont-index">Source: <a href="https://github.com/mjanuario/evolved/blob/HEAD/vignettes/rocks_and_clocks.Rmd" class="external-link"><code>vignettes/rocks_and_clocks.Rmd</code></a></small>
+      <small class="dont-index">Source: <a href="https://github.com/mjanuario/evolved/blob/main/vignettes/rocks_and_clocks.Rmd" class="external-link"><code>vignettes/rocks_and_clocks.Rmd</code></a></small>
       <div class="d-none name"><code>rocks_and_clocks.Rmd</code></div>
     </div>
 
@@ -126,20 +126,20 @@ and will plot them in a relative, log scale:</p>
 <span><span class="fu"><a href="https://rdrr.io/r/graphics/lines.html" class="external-link">lines</a></span><span class="op">(</span>x<span class="op">=</span><span class="va">spDTT</span><span class="op">$</span><span class="va">age</span>,</span>
 <span>     y<span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/Log.html" class="external-link">log</a></span><span class="op">(</span><span class="va">spDTT</span><span class="op">$</span><span class="va">div</span><span class="op">)</span><span class="op">-</span><span class="fu"><a href="https://rdrr.io/r/base/Log.html" class="external-link">log</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/Extremes.html" class="external-link">max</a></span><span class="op">(</span><span class="va">spDTT</span><span class="op">$</span><span class="va">div</span><span class="op">)</span><span class="op">)</span>, </span>
 <span>     col<span class="op">=</span><span class="st">"black"</span><span class="op">)</span></span></code></pre></div>
-<p><img src="rocks_and_clocks_files/figure-html/unnamed-chunk-4-1.png" width="576" style="display: block; margin: auto;"></p>
+<p><img src="rocks_and_clocks_files/figure-html/unnamed-chunk-4-1.png" class="r-plt" width="576" style="display: block; margin: auto;"></p>
 <p>We can also visualize fossil records by running:</p>
 <div class="sourceCode" id="cb5"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co"># Family-level:</span></span>
 <span><span class="fu"><a href="../reference/plotRawFossilOccs.html">plotRawFossilOccs</a></span><span class="op">(</span><span class="va">dinos_fossil</span>, tax.lvl <span class="op">=</span> <span class="st">"family"</span>, knitr <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span></code></pre></div>
-<p><img src="rocks_and_clocks_files/figure-html/unnamed-chunk-5-1.png" width="576" style="display: block; margin: auto;"></p>
+<p><img src="rocks_and_clocks_files/figure-html/unnamed-chunk-5-1.png" class="r-plt" width="576" style="display: block; margin: auto;"></p>
 <div class="sourceCode" id="cb6"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co"># Genus level:</span></span>
 <span><span class="fu"><a href="../reference/plotRawFossilOccs.html">plotRawFossilOccs</a></span><span class="op">(</span><span class="va">dinos_fossil</span>, tax.lvl <span class="op">=</span> <span class="st">"genus"</span>, knitr <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span></code></pre></div>
-<p><img src="rocks_and_clocks_files/figure-html/unnamed-chunk-5-2.png" width="576" style="display: block; margin: auto;"></p>
+<p><img src="rocks_and_clocks_files/figure-html/unnamed-chunk-5-2.png" class="r-plt" width="576" style="display: block; margin: auto;"></p>
 <div class="sourceCode" id="cb7"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co"># Species level:</span></span>
 <span><span class="fu"><a href="../reference/plotRawFossilOccs.html">plotRawFossilOccs</a></span><span class="op">(</span><span class="va">dinos_fossil</span>, tax.lvl <span class="op">=</span> <span class="st">"species"</span>, knitr <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span></code></pre></div>
-<p><img src="rocks_and_clocks_files/figure-html/unnamed-chunk-5-3.png" width="576" style="display: block; margin: auto;"></p>
+<p><img src="rocks_and_clocks_files/figure-html/unnamed-chunk-5-3.png" class="r-plt" width="576" style="display: block; margin: auto;"></p>
 <p>Are they different? how could we test? Hint: look at the column names
 of the fossil object:</p>
 <div class="sourceCode" id="cb8"><pre class="downlit sourceCode r">
@@ -193,7 +193,7 @@ of them</p>
 <span>       xlab<span class="op">=</span><span class="st">"Time (Mya)"</span>, ylab<span class="op">=</span><span class="st">"Log richness"</span>,</span>
 <span>       xlim<span class="op">=</span><span class="fu"><a href="https://rdrr.io/r/base/rev.html" class="external-link">rev</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/range.html" class="external-link">range</a></span><span class="op">(</span><span class="va">aux</span><span class="op">$</span><span class="va">time_ma</span><span class="op">)</span><span class="op">)</span><span class="op">)</span></span>
 <span><span class="op">}</span></span></code></pre></div>
-<p><img src="rocks_and_clocks_files/figure-html/unnamed-chunk-10-1.png" width="576" style="display: block; margin: auto;"></p>
+<p><img src="rocks_and_clocks_files/figure-html/unnamed-chunk-10-1.png" class="r-plt" width="576" style="display: block; margin: auto;"></p>
 <div class="sourceCode" id="cb16"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co"># Restoring old par() configs:</span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/graphics/par.html" class="external-link">par</a></span><span class="op">(</span><span class="va">oldpar</span><span class="op">)</span></span></code></pre></div>
@@ -292,7 +292,7 @@ bird, we type:</p>
 elements in this object:</p>
 <div class="sourceCode" id="cb25"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="../reference/plotProteinSeq.html">plotProteinSeq</a></span><span class="op">(</span><span class="va">cytOxidase</span>, <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"snake"</span>, <span class="st">"bird"</span>, <span class="st">"cnidaria"</span><span class="op">)</span>, knitr <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span></code></pre></div>
-<p><img src="rocks_and_clocks_files/figure-html/unnamed-chunk-14-1.png" width="576" style="display: block; margin: auto;"></p>
+<p><img src="rocks_and_clocks_files/figure-html/unnamed-chunk-14-1.png" class="r-plt" width="576" style="display: block; margin: auto;"></p>
 <p>And using patterns of molecular divergence, as well as fossil
 occurrences, we can build and, specially, date, molecular
 phylogenies.</p>
@@ -308,7 +308,7 @@ phylogenies.</p>
 </div>
 
 <div class="pkgdown-footer-right">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.1.1.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.2.0.</p>
 </div>
 
     </footer>
