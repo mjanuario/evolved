@@ -35,7 +35,7 @@ generations."></head><body>
   <main id="main" class="col-md-9"><div class="page-header">
 
       <h1>Simulating generations of genetic drift in a Wright–Fisher (WF) population</h1>
-      <small class="dont-index">Source: <a href="https://github.com/mjanuario/evolved/blob/main/R/WFDriftSim.R" class="external-link"><code>R/WFDriftSim.R</code></a></small>
+      <small class="dont-index">Source: <a href="https://github.com/mjanuario/evolved/blob/HEAD/R/WFDriftSim.R" class="external-link"><code>R/WFDriftSim.R</code></a></small>
       <div class="d-none name"><code>WFDriftSim.Rd</code></div>
     </div>
 
@@ -127,10 +127,10 @@ math can be challenging]</p>
     <div class="section level2">
     <h2 id="see-also">See also<a class="anchor" aria-label="anchor" href="#see-also"></a></h2>
     <div class="dont-index"><p>Other microevolution:
-<code><a href="NatSelSim.html">NatSelSim()</a></code>,
-<code><a href="OneGenHWSim.html">OneGenHWSim()</a></code>,
-<code><a href="plotNatSel.html">plotNatSel()</a></code>,
-<code><a href="plotWFDrift.html">plotWFDrift()</a></code></p></div>
+<code><a href="NatSelSim.html">NatSelSim</a>()</code>,
+<code><a href="OneGenHWSim.html">OneGenHWSim</a>()</code>,
+<code><a href="plotNatSel.html">plotNatSel</a>()</code>,
+<code><a href="plotWFDrift.html">plotWFDrift</a>()</code></p></div>
     </div>
     <div class="section level2">
     <h2 id="author">Author<a class="anchor" aria-label="anchor" href="#author"></a></h2>
@@ -173,20 +173,20 @@ math can be challenging]</p>
 <span class="r-in"><span><span class="co">#finally, merging both rounds of simulations:</span></span></span>
 <span class="r-in"><span><span class="va">all_sims</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/cbind.html" class="external-link">cbind</a></span><span class="op">(</span><span class="va">sim1</span>, <span class="va">sim2</span><span class="op">)</span></span></span>
 <span class="r-in"><span><span class="fu"><a href="https://rdrr.io/r/utils/head.html" class="external-link">head</a></span><span class="op">(</span><span class="va">all_sims</span><span class="op">)</span></span></span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>      gen0 gen1 gen2 gen3 gen4 gen5 gen6 gen7 gen8 gen9 gen10 gen11 gen12 gen13</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> sim1  0.2  0.4  0.3  0.4  0.2  0.2  0.4  0.4  0.2  0.1   0.3   0.4   0.5   0.5</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> sim2  0.2  0.2  0.2  0.3  0.3  0.5  0.4  0.6  0.5  0.2   0.2   0.2   0.2   0.1</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> sim3  0.2  0.2  0.2  0.1  0.1  0.1  0.1  0.0  0.0  0.0   0.0   0.0   0.0   0.0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> sim4  0.2  0.2  0.3  0.3  0.1  0.1  0.1  0.1  0.1  0.1   0.1   0.1   0.2   0.1</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> sim5  0.2  0.0  0.0  0.0  0.0  0.0  0.0  0.0  0.0  0.0   0.0   0.0   0.0   0.0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> sim6  0.2  0.1  0.0  0.0  0.0  0.0  0.0  0.0  0.0  0.0   0.0   0.0   0.0   0.0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span>      gen14 gen15 gen16 gen17</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> sim1   0.6   0.5   0.5   0.4</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> sim2   0.1   0.1   0.1   0.0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> sim3   0.0   0.0   0.0   0.0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> sim4   0.1   0.1   0.1   0.1</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> sim5   0.0   0.0   0.0   0.0</span>
-<span class="r-out co"><span class="r-pr">#&gt;</span> sim6   0.0   0.0   0.0   0.0</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>      gen0 gen1 gen2 gen3 gen4 gen5 gen6 gen7 gen8 gen9 gen10 gen11 gen12 gen13 gen14</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> sim1  0.2  0.4  0.3  0.4  0.2  0.2  0.4  0.4  0.2  0.1   0.3   0.4   0.5   0.5   0.6</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> sim2  0.2  0.2  0.2  0.3  0.3  0.5  0.4  0.6  0.5  0.2   0.2   0.2   0.2   0.1   0.1</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> sim3  0.2  0.2  0.2  0.1  0.1  0.1  0.1  0.0  0.0  0.0   0.0   0.0   0.0   0.0   0.0</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> sim4  0.2  0.2  0.3  0.3  0.1  0.1  0.1  0.1  0.1  0.1   0.1   0.1   0.2   0.1   0.1</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> sim5  0.2  0.0  0.0  0.0  0.0  0.0  0.0  0.0  0.0  0.0   0.0   0.0   0.0   0.0   0.0</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> sim6  0.2  0.1  0.0  0.0  0.0  0.0  0.0  0.0  0.0  0.0   0.0   0.0   0.0   0.0   0.0</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span>      gen15 gen16 gen17</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> sim1   0.5   0.5   0.4</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> sim2   0.1   0.1   0.0</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> sim3   0.0   0.0   0.0</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> sim4   0.1   0.1   0.1</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> sim5   0.0   0.0   0.0</span>
+<span class="r-out co"><span class="r-pr">#&gt;</span> sim6   0.0   0.0   0.0</span>
 <span class="r-in"><span><span class="co"># }</span></span></span>
 <span class="r-in"><span></span></span>
 </code></pre></div>
@@ -200,7 +200,7 @@ math can be challenging]</p>
 </div>
 
 <div class="pkgdown-footer-right">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.2.0.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.1.1.</p>
 </div>
 
     </footer></div>

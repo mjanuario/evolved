@@ -31,7 +31,7 @@
       <ul class="navbar-nav me-auto">
 <li class="nav-item"><a class="nav-link" href="../index.html"><span class="fa fa-home"></span> Home</a></li>
 <li class="nav-item"><a class="nav-link" href="../reference/index.html"><span class="fa fa-book"></span> Reference</a></li>
-<li class="active nav-item"><a class="nav-link" href="../articles/index.html"><span class="fa fa-book-open"></span> Vignettes &amp; Tutorials</a></li>
+<li class="nav-item"><a class="nav-link" href="../articles/index.html"><span class="fa fa-book-open"></span> Vignettes &amp; Tutorials</a></li>
 <li class="nav-item"><a class="nav-link" href="../news/index.html"><span class="fa fa-newspaper"></span> News</a></li>
       </ul>
 <ul class="navbar-nav">
@@ -58,7 +58,7 @@ Januario, Andressa Viol, and Daniel Rabosky</h4>
             
             <h4 data-toc-skip class="date">Jan 2024</h4>
       
-      <small class="dont-index">Source: <a href="https://github.com/mjanuario/evolved/blob/main/vignettes/intro_r.Rmd" class="external-link"><code>vignettes/intro_r.Rmd</code></a></small>
+      <small class="dont-index">Source: <a href="https://github.com/mjanuario/evolved/blob/HEAD/vignettes/intro_r.Rmd" class="external-link"><code>vignettes/intro_r.Rmd</code></a></small>
       <div class="d-none name"><code>intro_r.Rmd</code></div>
     </div>
 
@@ -864,18 +864,18 @@ followed by a shortened name for the desired probability distribution
 <div class="sourceCode" id="cb130"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">normalNumbers</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/stats/Normal.html" class="external-link">rnorm</a></span><span class="op">(</span>n <span class="op">=</span> <span class="fl">10000</span>, mean <span class="op">=</span> <span class="fl">0</span>, sd <span class="op">=</span> <span class="fl">1</span><span class="op">)</span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/graphics/hist.html" class="external-link">hist</a></span><span class="op">(</span><span class="va">normalNumbers</span><span class="op">)</span></span></code></pre></div>
-<p><img src="intro_r_files/figure-html/unnamed-chunk-41-1.png" class="r-plt" width="700"></p>
+<p><img src="intro_r_files/figure-html/unnamed-chunk-41-1.png" width="700"></p>
 <p>We can create scatterplots:</p>
 <div class="sourceCode" id="cb131"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">anotherNormalNumbers</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/stats/Normal.html" class="external-link">rnorm</a></span><span class="op">(</span>n <span class="op">=</span> <span class="fl">10000</span>, mean <span class="op">=</span> <span class="fl">3</span>, sd <span class="op">=</span> <span class="fl">1</span><span class="op">)</span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html" class="external-link">plot</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">normalNumbers</span>, y <span class="op">=</span> <span class="va">anotherNormalNumbers</span><span class="op">)</span></span></code></pre></div>
-<p><img src="intro_r_files/figure-html/unnamed-chunk-42-1.png" class="r-plt" width="700"></p>
+<p><img src="intro_r_files/figure-html/unnamed-chunk-42-1.png" width="700"></p>
 <p>We can also draw fancier plots as needed. For instance, if you have
 the “Lots of Superior Depictions” (LSD) package installed, you could
 use:</p>
 <div class="sourceCode" id="cb132"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu">LSD</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/LSD/man/heatscatter.html" class="external-link">heatscatter</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">normalNumbers</span>, y <span class="op">=</span> <span class="va">anotherNormalNumbers</span><span class="op">)</span> </span></code></pre></div>
-<p><img src="intro_r_files/figure-html/unnamed-chunk-43-1.png" class="r-plt" width="700"></p>
+<p><img src="intro_r_files/figure-html/unnamed-chunk-43-1.png" width="700"></p>
 <p>The <code>::</code> specifies what package that function should be
 drawn from, without the need to load the package using the
 <code><a href="https://rdrr.io/r/base/library.html" class="external-link">library()</a></code> function we used above – just showing you
@@ -884,7 +884,7 @@ something you might see in other tutorials.</p>
 <div class="sourceCode" id="cb133"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">dt</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/cbind.html" class="external-link">cbind</a></span><span class="op">(</span><span class="va">normalNumbers</span>, <span class="va">anotherNormalNumbers</span><span class="op">)</span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/graphics/boxplot.html" class="external-link">boxplot</a></span><span class="op">(</span><span class="va">dt</span><span class="op">)</span></span></code></pre></div>
-<p><img src="intro_r_files/figure-html/unnamed-chunk-44-1.png" class="r-plt" width="700"></p>
+<p><img src="intro_r_files/figure-html/unnamed-chunk-44-1.png" width="700"></p>
 <p>We can also draw mathematical functions using R. For instance, we can
 draw a squared function:</p>
 <div class="sourceCode" id="cb134"><pre class="downlit sourceCode r">
@@ -895,7 +895,7 @@ draw a squared function:</p>
 <span><span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html" class="external-link">plot</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">xx</span>, y <span class="op">=</span> <span class="va">xx</span> <span class="op">^</span> <span class="fl">2</span>, type <span class="op">=</span> <span class="st">"l"</span>, </span>
 <span>     main <span class="op">=</span> <span class="st">"Simple function drawing"</span>, </span>
 <span>     ylab <span class="op">=</span> <span class="st">"Squared value"</span>, xlab <span class="op">=</span> <span class="st">"value"</span><span class="op">)</span> </span></code></pre></div>
-<p><img src="intro_r_files/figure-html/unnamed-chunk-45-1.png" class="r-plt" width="700"></p>
+<p><img src="intro_r_files/figure-html/unnamed-chunk-45-1.png" width="700"></p>
 <div class="sourceCode" id="cb135"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co"># The "type" argument specifies that I want to connect the points </span></span>
 <span><span class="co"># with a line. The "ylab", "xlab", and "main" arguments provide the labels</span></span></code></pre></div>
@@ -923,7 +923,7 @@ dependent on the value/category of that point).</p>
 <span><span class="co"># Then, with all this information, we can draw a new plot, with the colors </span></span>
 <span><span class="co"># specifying something we are interested in visualizing:</span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html" class="external-link">plot</a></span><span class="op">(</span><span class="va">normalNumbers</span>, col <span class="op">=</span> <span class="va">cols</span><span class="op">)</span></span></code></pre></div>
-<p><img src="intro_r_files/figure-html/unnamed-chunk-46-1.png" class="r-plt" width="700"></p>
+<p><img src="intro_r_files/figure-html/unnamed-chunk-46-1.png" width="700"></p>
 <div class="sourceCode" id="cb137"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co"># Note that the points are added in the order of their position in the</span></span>
 <span><span class="co"># vector - which creates the "grainy" look around y=1</span></span></code></pre></div>
@@ -939,7 +939,7 @@ dependent on the value/category of that point).</p>
 <span><span class="co"># order of the commands) separating the points at each half of the </span></span>
 <span><span class="co"># "normalNumbers" object</span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/graphics/abline.html" class="external-link">abline</a></span><span class="op">(</span>v <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/length.html" class="external-link">length</a></span><span class="op">(</span><span class="va">normalNumbers</span><span class="op">)</span><span class="op">/</span><span class="fl">2</span>, col <span class="op">=</span> <span class="st">"blue"</span>, lwd <span class="op">=</span> <span class="fl">3</span><span class="op">)</span> </span></code></pre></div>
-<p><img src="intro_r_files/figure-html/unnamed-chunk-47-1.png" class="r-plt" width="700"></p>
+<p><img src="intro_r_files/figure-html/unnamed-chunk-47-1.png" width="700"></p>
 </div>
 <div class="section level3">
 <h3 id="loops">Loops<a class="anchor" aria-label="anchor" href="#loops"></a>
@@ -1011,7 +1011,7 @@ Bioinformatics, 28(11), 1536-1537.</p>
 </div>
 
 <div class="pkgdown-footer-right">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.2.0.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.1.1.</p>
 </div>
 
     </footer>

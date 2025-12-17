@@ -31,7 +31,7 @@
       <ul class="navbar-nav me-auto">
 <li class="nav-item"><a class="nav-link" href="../index.html"><span class="fa fa-home"></span> Home</a></li>
 <li class="nav-item"><a class="nav-link" href="../reference/index.html"><span class="fa fa-book"></span> Reference</a></li>
-<li class="active nav-item"><a class="nav-link" href="../articles/index.html"><span class="fa fa-book-open"></span> Vignettes &amp; Tutorials</a></li>
+<li class="nav-item"><a class="nav-link" href="../articles/index.html"><span class="fa fa-book-open"></span> Vignettes &amp; Tutorials</a></li>
 <li class="nav-item"><a class="nav-link" href="../news/index.html"><span class="fa fa-newspaper"></span> News</a></li>
       </ul>
 <ul class="navbar-nav">
@@ -58,7 +58,7 @@ Januario and Jennifer Auler</h4>
             
             <h4 data-toc-skip class="date">Dec/2023</h4>
       
-      <small class="dont-index">Source: <a href="https://github.com/mjanuario/evolved/blob/main/vignettes/phylogenies_and_diversification.Rmd" class="external-link"><code>vignettes/phylogenies_and_diversification.Rmd</code></a></small>
+      <small class="dont-index">Source: <a href="https://github.com/mjanuario/evolved/blob/HEAD/vignettes/phylogenies_and_diversification.Rmd" class="external-link"><code>vignettes/phylogenies_and_diversification.Rmd</code></a></small>
       <div class="d-none name"><code>phylogenies_and_diversification.Rmd</code></div>
     </div>
 
@@ -90,7 +90,7 @@ help visualize some subclades:</p>
 <span><span class="co">##            "#2297E6"            "#28E2E5"            "#CD0BBC" </span></span>
 <span><span class="co">##            Porpoises </span></span>
 <span><span class="co">##            "#F5C710"</span></span></code></pre>
-<p><img src="phylogenies_and_diversification_files/figure-html/unnamed-chunk-6-1.png" class="r-plt" width="576" style="display: block; margin: auto;"></p>
+<p><img src="phylogenies_and_diversification_files/figure-html/unnamed-chunk-6-1.png" width="576" style="display: block; margin: auto;"></p>
 <p>Now we will visualize lineage-through-time (LTT) plots for this
 phylogenetic tree. The LTT plots contain a lot of information about
 phylogenetic tree structure, for instance they tell a lot about the
@@ -98,7 +98,7 @@ shape of trees produced by different speciation and extinction
 rates.</p>
 <div class="sourceCode" id="cb6"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="../reference/lttPlot.html">lttPlot</a></span><span class="op">(</span><span class="va">whale_phylo</span>, knitr <span class="op">=</span> <span class="cn">T</span><span class="op">)</span></span></code></pre></div>
-<p><img src="phylogenies_and_diversification_files/figure-html/unnamed-chunk-7-1.png" class="r-plt" width="576" style="display: block; margin: auto;"></p>
+<p><img src="phylogenies_and_diversification_files/figure-html/unnamed-chunk-7-1.png" width="576" style="display: block; margin: auto;"></p>
 <p>Ok, but how does this plot stores info about the phylogeny?</p>
 </div>
 <div class="section level2">
@@ -121,7 +121,7 @@ parameters we estimated:</p>
 <span><span class="op">}</span></span>
 <span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/graphics/hist.html" class="external-link">hist</a></span><span class="op">(</span><span class="va">sims</span>, breaks <span class="op">=</span> <span class="fl">100</span><span class="op">)</span></span></code></pre></div>
-<p><img src="phylogenies_and_diversification_files/figure-html/unnamed-chunk-9-1.png" class="r-plt" width="576" style="display: block; margin: auto;"></p>
+<p><img src="phylogenies_and_diversification_files/figure-html/unnamed-chunk-9-1.png" width="576" style="display: block; margin: auto;"></p>
 <p>Now we know that the Yule model can generate many species. Let’s
 check the LTT’s that this model can generate:</p>
 <div class="sourceCode" id="cb9"><pre class="downlit sourceCode r">
@@ -135,7 +135,7 @@ check the LTT’s that this model can generate:</p>
 <span></span>
 <span><span class="co">#Now, we add the actual whale phylogeny:</span></span>
 <span><span class="fu">ape</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/ape/man/ltt.plot.html" class="external-link">ltt.lines</a></span><span class="op">(</span><span class="va">whale_phylo</span>, col<span class="op">=</span><span class="st">"black"</span><span class="op">)</span></span></code></pre></div>
-<p><img src="phylogenies_and_diversification_files/figure-html/unnamed-chunk-10-1.png" class="r-plt" width="576" style="display: block; margin: auto;"></p>
+<p><img src="phylogenies_and_diversification_files/figure-html/unnamed-chunk-10-1.png" width="576" style="display: block; margin: auto;"></p>
 <p>So the empirical phylogeny is very different from the simulated. What
 hypotheses can students make to explain this discrepancy?</p>
 <p>Maybe is because the Yule model is too simplistic (i.e., model has no
@@ -155,7 +155,7 @@ and then re-do our simulations, with an extra layer of complexity.</p>
 </div>
 
 <div class="pkgdown-footer-right">
-  <p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.2.0.</p>
+  <p>Site built with <a href="https://pkgdown.r-lib.org/" class="external-link">pkgdown</a> 2.1.1.</p>
 </div>
 
     </footer>
