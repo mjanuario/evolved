@@ -25,17 +25,10 @@ options(rmarkdown.html_vignette.check_title = FALSE)
 
 ***
 
-For this tutorial, you must install the `plot3D` R package.
-
-```
-install.packages("plot3D")
-```
-
-Then, you must load it, as well as our package:
+Let's load our package:
 
 ```{r}
 library(evolved)
-library(plot3D)
 
 # Let's also store our par() configs so 
 # we can restore them whenever we change it in this tutorial
@@ -520,16 +513,36 @@ for (ii in 1:ngen){
 	# store it:
 	freqmat[,ii] <- curr_pop
 }
+```
 
+Finally, we plot what we did:
 
+```{r, fig.width=7, fig.height=5, dev="png"}
+# setting the axes of our plot:
+x <- c(0, probvec)
+y <- seq_len(ncol(freqmat))
+z <- freqmat
 
-plot3D::persp3D(x = c(0, probvec), z=freqmat, theta=45, phi=20, contour =F,
-                xlab="Allele frequency", zlab="Number of populations",
-                ylab="Generations")
- 
+# apply a colorscale:
+cols <- colorRampPalette(c("blue", "yellow", "red"))(100)
+# averaging facet for coloring
+zfacet <- (z[-1, -1] + z[-1, -ncol(z)] + z[-nrow(z), -1] + z[-nrow(z), -ncol(z)]) / 4
+facetcol <- cols[cut(zfacet, 100)]
+
+persp(
+  x, y, z,
+  theta = 45, phi = 20,
+  col = facetcol,
+  border = NA,
+  xlab = "Allele frequency",
+  ylab = "Generations",
+  zlab = "Number of populations"
+)
+
+##########
+##########
 
 # Plotting selected generations:
-########## 
 plot.new()
 par(oma=c(1,1,1,1), mfrow=c(2,2), mar=c(2,2,2,0))
 
