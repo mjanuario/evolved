@@ -11,18 +11,15 @@
 
 ------------------------------------------------------------------------
 
-For this tutorial, you must install the `plot3D` R package.
+Let’s load our package:
 
-    install.packages("plot3D")
+``` r
+library(evolved)
 
-Then, you must load it, as well as our package:
-
-    library(evolved)
-    library(plot3D)
-
-    # Let's also store our par() configs so 
-    # we can restore them whenever we change it in this tutorial
-    oldpar <- par(no.readonly = TRUE)  
+# Let's also store our par() configs so 
+# we can restore them whenever we change it in this tutorial
+oldpar <- par(no.readonly = TRUE)  
+```
 
 ## Introduction
 
@@ -539,21 +536,40 @@ for (ii in 1:ngen){
     # store it:
     freqmat[,ii] <- curr_pop
 }
-
-
-
-plot3D::persp3D(x = c(0, probvec), z=freqmat, theta=45, phi=20, contour =F,
-                xlab="Allele frequency", zlab="Number of populations",
-                ylab="Generations")
 ```
 
-    ## Warning: no DISPLAY variable so Tk is not available
-
-![](popgen_drift_files/figure-html/unnamed-chunk-17-1.png)
+Finally, we plot what we did:
 
 ``` r
+# setting the axes of our plot:
+x <- c(0, probvec)
+y <- seq_len(ncol(freqmat))
+z <- freqmat
+
+# apply a colorscale:
+cols <- colorRampPalette(c("blue", "yellow", "red"))(100)
+# averaging facet for coloring
+zfacet <- (z[-1, -1] + z[-1, -ncol(z)] + z[-nrow(z), -1] + z[-nrow(z), -ncol(z)]) / 4
+facetcol <- cols[cut(zfacet, 100)]
+
+persp(
+  x, y, z,
+  theta = 45, phi = 20,
+  col = facetcol,
+  border = NA,
+  xlab = "Allele frequency",
+  ylab = "Generations",
+  zlab = "Number of populations"
+)
+```
+
+![](popgen_drift_files/figure-html/unnamed-chunk-18-1.png)
+
+``` r
+##########
+##########
+
 # Plotting selected generations:
-########## 
 plot.new()
 par(oma=c(1,1,1,1), mfrow=c(2,2), mar=c(2,2,2,0))
 
@@ -583,7 +599,7 @@ pfx(15)
 points(x=0:32, y=freqmat[,15], pch=21, bg="red", cex=1.5)
 ```
 
-![](popgen_drift_files/figure-html/unnamed-chunk-17-2.png)
+![](popgen_drift_files/figure-html/unnamed-chunk-18-2.png)
 
 ``` r
 # Restoring old par() configs:
