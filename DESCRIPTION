@@ -26,8 +26,7 @@ Suggests:
     testthat (>= 3.0.0),
     LSD,
     paleobioDB,
-    BAMMtools,
-    plot3D
+    BAMMtools
 Config/testthat/edition: 3
 Depends: 
     R (>= 2.10)
