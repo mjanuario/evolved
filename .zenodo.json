@@ -3,17 +3,9 @@
   "upload_type": "software",
   "version": "1.0.1",
   "creators": [
-    {
-      "name": "Januario, Matheus"
-    },
-    {
-      "name": "Auler, Jennifer P."
-    },
-    {
-      "name": "Viol, Andressa L."
-    },
-    {
-      "name": "Rabosky, Daniel L."
-    }
+    { "name": "Januario, Matheus" },
+    { "name": "Auler, Jennifer P." },
+    { "name": "Viol, Andressa L." },
+    { "name": "Rabosky, Daniel L." }
   ]
 }
