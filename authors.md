@@ -14,7 +14,7 @@
 ## Citation
 
 Source:
-[`DESCRIPTION`](https://github.com/mjanuario/evolved/blob/v1.0.13/DESCRIPTION)
+[`DESCRIPTION`](https://github.com/mjanuario/evolved/blob/main/DESCRIPTION)
 
 Januario M, Auler J, Viol A, Rabosky D (2026). *evolved: Open Software
 for Teaching Evolutionary Biology at Multiple Scales Through Virtual
