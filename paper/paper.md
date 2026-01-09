@@ -1,5 +1,5 @@
 ---
-title: 'evolved: open software for teaching Evolutionary biology through virtual inquiries'
+title: 'evolved: open software for teaching evolutionary biology through virtual inquiries'
 tags:
   - R
   - Ecology
@@ -46,7 +46,7 @@ bibliography: paper.bib
   evolutionary biology (**Tables 1** & **2**).  Importantly, these datasets correspond 
   structurally (e.g., organization and data types) to real datasets used by 
   scientists, and they are compatible with widely-used software for evolutionary 
-  analysis (e.g., `ape` - [@Paradis:2019]). 
+  analysis (e.g., `ape` [@Paradis:2019]). 
 
   `evolved`'s functions can be loosely classified into "high level" and "low level"
   (**Table 1**), thus providing tools for inquiries that assume different levels 
@@ -65,7 +65,7 @@ bibliography: paper.bib
   simulation parameters and outcomes.
 
   The package is designed to reduce barriers to data- and simulation-driven inquiries 
-  and one vignette (`intro_R`) aims to introduce students/educators to R and its 
+  and one vignette (`intro_r`) aims to introduce students/educators to R and its 
   pedagogical capabilities. We do not provide answers to the investigation prompts 
   in the vignettes, but educators can request answer keys from the corresponding 
   author (MJ). 
