@@ -16,7 +16,7 @@
 Source:
 [`DESCRIPTION`](https://github.com/mjanuario/evolved/blob/main/DESCRIPTION)
 
-Januario M, Auler J, Viol A, Rabosky D (2025). *evolved: Open Software
+Januario M, Auler J, Viol A, Rabosky D (2026). *evolved: Open Software
 for Teaching Evolutionary Biology at Multiple Scales Through Virtual
 Inquiries*. R package version 1.0.0,
 <https://github.com/mjanuario/evolved>.
@@ -24,7 +24,7 @@ Inquiries*. R package version 1.0.0,
     @Manual{,
       title = {evolved: Open Software for Teaching Evolutionary Biology at Multiple Scales Through Virtual Inquiries},
       author = {Matheus Januario and Jennifer Auler and Andressa Viol and Daniel Rabosky},
-      year = {2025},
+      year = {2026},
       note = {R package version 1.0.0},
       url = {https://github.com/mjanuario/evolved},
     }

@@ -208,7 +208,7 @@ here.</p>
 <span><span class="va">p_through_time</span> <span class="op">&lt;-</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="va">p_gen0</span>, <span class="va">p_gen1</span>, <span class="va">p_gen2</span>, <span class="va">p_gen3</span>, <span class="va">p_gen4</span>, <span class="va">p_gen5</span><span class="op">)</span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html" class="external-link">plot</a></span><span class="op">(</span><span class="va">generations</span>, <span class="va">p_through_time</span>, type<span class="op">=</span><span class="st">"l"</span>, lwd <span class="op">=</span> <span class="fl">2</span>, col <span class="op">=</span> <span class="st">"darkorchid3"</span>,</span>
 <span>     ylab <span class="op">=</span> <span class="st">"p"</span>, xlab <span class="op">=</span> <span class="st">"generations"</span>, las <span class="op">=</span> <span class="fl">1</span><span class="op">)</span></span></code></pre></div>
-<p><img src="popgen_drift_files/figure-html/unnamed-chunk-7-1.png" class="r-plt" width="700"></p>
+<p><img src="popgen_drift_files/figure-html/unnamed-chunk-7-1.png" class="r-plt" alt="" width="700"></p>
 <p>Repeat the above lines of code a few times to get a feeling for what
 is happening. Do all simulations behave the same way? Can you identify
 different “archetypes” of dynamics?</p>
@@ -295,7 +295,7 @@ heterozygosity decay over time due to drift.</p>
 <span><span class="kw">for</span> <span class="op">(</span><span class="va">i</span> <span class="kw">in</span> <span class="fl">1</span><span class="op">:</span><span class="fu"><a href="https://rdrr.io/r/base/nrow.html" class="external-link">nrow</a></span><span class="op">(</span><span class="va">subset_data</span><span class="op">)</span><span class="op">)</span> <span class="op">{</span></span>
 <span>  <span class="fu"><a href="https://rdrr.io/r/graphics/lines.html" class="external-link">lines</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">gens</span> <span class="op">-</span> <span class="fl">1</span>, y <span class="op">=</span> <span class="va">subset_data</span><span class="op">[</span><span class="va">i</span>,<span class="op">]</span>, col <span class="op">=</span> <span class="va">cols</span><span class="op">[</span><span class="va">i</span><span class="op">]</span><span class="op">)</span></span>
 <span><span class="op">}</span></span></code></pre></div>
-<p><img src="popgen_drift_files/figure-html/unnamed-chunk-13-1.png" class="r-plt" width="700"></p>
+<p><img src="popgen_drift_files/figure-html/unnamed-chunk-13-1.png" class="r-plt" alt="" width="700"></p>
 <p>Notice that the actual generation number does not match the column
 numbers!</p>
 <hr>
@@ -308,7 +308,7 @@ from the effective population size.</p>
 <p><math display="block" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><mrow><msub><mi>N</mi><mi>e</mi></msub><mo>=</mo><mfrac><mn>1</mn><mrow><mfrac><mn>1</mn><mi>t</mi></mfrac><munderover><mo>∑</mo><mrow><mi>i</mi><mo>=</mo><mn>1</mn></mrow><mi>t</mi></munderover><mfrac><mn>1</mn><msub><mi>N</mi><mi>i</mi></msub></mfrac></mrow></mfrac></mrow><annotation encoding="application/x-tex">\begin{equation}
 N_e = \frac{1}{\frac{1}{t}\sum_{i=1}^t \frac{1}{N_i}}
 \end{equation}</annotation></semantics></math></p>
-<p><img src="popgen_drift_files/figure-html/unnamed-chunk-14-1.png" class="r-plt" width="700"></p>
+<p><img src="popgen_drift_files/figure-html/unnamed-chunk-14-1.png" class="r-plt" alt="" width="700"></p>
 <div class="section level3">
 <h3 id="some-food-for-thought">Some food for thought:<a class="anchor" aria-label="anchor" href="#some-food-for-thought"></a>
 </h3>
@@ -687,7 +687,7 @@ Buri’s <em>Drosophila</em> study as a guide.</p>
 <span>  ylab <span class="op">=</span> <span class="st">"Generations"</span>,</span>
 <span>  zlab <span class="op">=</span> <span class="st">"Number of populations"</span></span>
 <span><span class="op">)</span></span></code></pre></div>
-<p><img src="popgen_drift_files/figure-html/unnamed-chunk-18-1.png" class="r-plt" width="672"></p>
+<p><img src="popgen_drift_files/figure-html/unnamed-chunk-18-1.png" class="r-plt" alt="" width="672"></p>
 <div class="sourceCode" id="cb30"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co">##########</span></span>
 <span><span class="co">##########</span></span>
@@ -720,7 +720,7 @@ Buri’s <em>Drosophila</em> study as a guide.</p>
 <span><span class="co"># Expectation after 15 generations of drift</span></span>
 <span><span class="fu">pfx</span><span class="op">(</span><span class="fl">15</span><span class="op">)</span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/graphics/points.html" class="external-link">points</a></span><span class="op">(</span>x<span class="op">=</span><span class="fl">0</span><span class="op">:</span><span class="fl">32</span>, y<span class="op">=</span><span class="va">freqmat</span><span class="op">[</span>,<span class="fl">15</span><span class="op">]</span>, pch<span class="op">=</span><span class="fl">21</span>, bg<span class="op">=</span><span class="st">"red"</span>, cex<span class="op">=</span><span class="fl">1.5</span><span class="op">)</span></span></code></pre></div>
-<p><img src="popgen_drift_files/figure-html/unnamed-chunk-18-2.png" class="r-plt" width="672"></p>
+<p><img src="popgen_drift_files/figure-html/unnamed-chunk-18-2.png" class="r-plt" alt="" width="672"></p>
 <div class="sourceCode" id="cb31"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co"># Restoring old par() configs:</span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/graphics/par.html" class="external-link">par</a></span><span class="op">(</span><span class="va">oldpar</span><span class="op">)</span></span></code></pre></div>

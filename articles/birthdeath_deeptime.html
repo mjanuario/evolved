@@ -321,7 +321,7 @@ data.</p>
 <span><span class="co"># highlighting the point we will pick:</span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/graphics/points.html" class="external-link">points</a></span><span class="op">(</span>x<span class="op">=</span><span class="va">t_obs</span>, y<span class="op">=</span><span class="va">rich_early_J</span>, col<span class="op">=</span><span class="st">"red"</span>, pch<span class="op">=</span><span class="fl">16</span><span class="op">)</span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/graphics/abline.html" class="external-link">abline</a></span><span class="op">(</span>v<span class="op">=</span><span class="va">t_obs</span>, col<span class="op">=</span><span class="st">"red"</span><span class="op">)</span></span></code></pre></div>
-<p><img src="birthdeath_deeptime_files/figure-html/unnamed-chunk-7-1.png" class="r-plt" width="700"></p>
+<p><img src="birthdeath_deeptime_files/figure-html/unnamed-chunk-7-1.png" class="r-plt" alt="" width="700"></p>
 <p><strong>Step 3:</strong> Estimate R using the methods above.</p>
 <p>As we saw above, to estimate R, we need to know
 <math display="inline" xmlns="http://www.w3.org/1998/Math/MathML"><semantics><msub><mi>N</mi><mi>t</mi></msub><annotation encoding="application/x-tex">N_t</annotation></semantics></math>,
@@ -378,7 +378,7 @@ and calculate values for these terms.</p>
 <span>         y0 <span class="op">=</span> <span class="va">dino_rich</span><span class="op">$</span><span class="va">richness</span>,</span>
 <span>         y1 <span class="op">=</span> <span class="va">projected_rich</span>,</span>
 <span>         col<span class="op">=</span><span class="st">"red"</span><span class="op">)</span></span></code></pre></div>
-<p><img src="birthdeath_deeptime_files/figure-html/unnamed-chunk-8-1.png" class="r-plt" width="700"></p>
+<p><img src="birthdeath_deeptime_files/figure-html/unnamed-chunk-8-1.png" class="r-plt" alt="" width="700"></p>
 <p>The current axis scale does not allow us to properly visualize the
 discrepancy between our prediction and the data. So let’s plot again,
 re-scaling the y-axis:</p>
@@ -411,7 +411,7 @@ re-scaling the y-axis:</p>
 <span>         y0 <span class="op">=</span> <span class="va">dino_rich</span><span class="op">$</span><span class="va">richness</span>,</span>
 <span>         y1 <span class="op">=</span> <span class="va">projected_rich</span>,</span>
 <span>         col<span class="op">=</span><span class="st">"red"</span><span class="op">)</span></span></code></pre></div>
-<p><img src="birthdeath_deeptime_files/figure-html/unnamed-chunk-9-1.png" class="r-plt" width="700"></p>
+<p><img src="birthdeath_deeptime_files/figure-html/unnamed-chunk-9-1.png" class="r-plt" alt="" width="700"></p>
 <p>What do you think? Does this model fit our data well?</p>
 <p>Now, let’s divide the error of our estimates by the actual data to
 determine what the scale of our error is, in terms of a percentage.</p>
@@ -425,7 +425,7 @@ determine what the scale of our error is, in terms of a percentage.</p>
 <pre><code><span><span class="co">## [1] 32746816</span></span></code></pre>
 <div class="sourceCode" id="cb24"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/graphics/hist.html" class="external-link">hist</a></span><span class="op">(</span><span class="va">perc_error</span>, xlab <span class="op">=</span> <span class="st">"Error as a percentage of the data"</span><span class="op">)</span></span></code></pre></div>
-<p><img src="birthdeath_deeptime_files/figure-html/unnamed-chunk-10-1.png" class="r-plt" width="700"></p>
+<p><img src="birthdeath_deeptime_files/figure-html/unnamed-chunk-10-1.png" class="r-plt" alt="" width="700"></p>
 </div>
 <div class="section level2">
 <h2 id="some-food-for-thought">Some food for thought:<a class="anchor" aria-label="anchor" href="#some-food-for-thought"></a>

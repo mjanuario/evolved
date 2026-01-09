@@ -278,7 +278,7 @@ we just made:</p>
 <code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html" class="external-link">plot</a></span><span class="op">(</span></span>
 <span>  <span class="fu"><a href="https://rdrr.io/r/base/table.html" class="external-link">table</a></span><span class="op">(</span><span class="va">binom_nbrs</span><span class="op">)</span>,</span>
 <span>  ylab<span class="op">=</span><span class="st">"Frequency"</span>, xlab<span class="op">=</span><span class="st">"Number of successes"</span><span class="op">)</span></span></code></pre></div>
-<p><img src="popgen_intro_files/figure-html/unnamed-chunk-6-1.png" class="r-plt" width="700"></p>
+<p><img src="popgen_intro_files/figure-html/unnamed-chunk-6-1.png" class="r-plt" alt="" width="700"></p>
 <p>Above are the random numbers we generated – i.e., the stochastic
 realizations of the process that follows the distribution we chose. Each
 number represents the summation of the number of successes per sample.
@@ -337,7 +337,7 @@ it?</p>
 <span><span class="co"># Finally, we can mark the probability we are interested in</span></span>
 <span><span class="co"># by using a red dot in our plot:</span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/graphics/points.html" class="external-link">points</a></span><span class="op">(</span>x <span class="op">=</span> <span class="fl">3</span>, y <span class="op">=</span> <span class="va">P_x3_s10_p0.5</span>, col <span class="op">=</span> <span class="st">"red"</span>, cex <span class="op">=</span> <span class="fl">2</span><span class="op">)</span></span></code></pre></div>
-<p><img src="popgen_intro_files/figure-html/unnamed-chunk-9-1.png" class="r-plt" width="700"></p>
+<p><img src="popgen_intro_files/figure-html/unnamed-chunk-9-1.png" class="r-plt" alt="" width="700"></p>
 </div>
 <div class="section level3">
 <h3 id="malthusian-growth">Malthusian growth<a class="anchor" aria-label="anchor" href="#malthusian-growth"></a>
@@ -424,7 +424,7 @@ line describing the size of the population over time.</p>
 <span>     xlab<span class="op">=</span><span class="st">"time"</span>, ylab<span class="op">=</span><span class="st">"Population size"</span>,</span>
 <span>     main<span class="op">=</span><span class="st">"Malthusian growth"</span><span class="op">)</span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/graphics/lines.html" class="external-link">lines</a></span><span class="op">(</span>x <span class="op">=</span> <span class="va">time</span>, y <span class="op">=</span> <span class="va">popsize</span>, col <span class="op">=</span> <span class="st">"blue"</span>, lwd <span class="op">=</span> <span class="fl">3</span><span class="op">)</span></span></code></pre></div>
-<p><img src="popgen_intro_files/figure-html/unnamed-chunk-16-1.png" class="r-plt" width="700"></p>
+<p><img src="popgen_intro_files/figure-html/unnamed-chunk-16-1.png" class="r-plt" alt="" width="700"></p>
 <p>Try to change the numbers inside the arguments <code>xlim</code> and
 <code>ylim</code>. How does this change the plot?</p>
 <p>Now, make a plot of exponential growth in four populations: one where
