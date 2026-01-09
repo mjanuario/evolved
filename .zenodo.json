@@ -1,0 +1,69 @@
+{
+  "title": "evolved: Open Software for Teaching Evolutionary Biology at Multiple Scales Through Virtual Inquiries",
+  "upload_type": "software",
+  "version": "1.0.1",
+  "license": "GPL-3.0",
+  "language": "eng",
+  "keywords": [
+    "phylogenetics",
+    "population genetics",
+    "paleobiology",
+    "comparative methods",
+    "evolutionary biology",
+    "macroevolution",
+    "science education",
+    "biodiversity science",
+    "simulation-based learning",
+    "inquiry-based learning",
+    "data-driven education"
+  ],
+  "creators": [
+    {
+      "name": "Januario, Matheus",
+      "orcid": "0000-0002-6480-7095",
+      "affiliation": "Museum of Zoology, University of Michigan; Department of Ecology and Evolutionary Biology, University of Michigan, Ann Arbor, MI, USA"
+    },
+    {
+      "name": "Auler, Jennifer P.",
+      "orcid": "0000-0001-7576-9058",
+      "affiliation": "Programa de Pós-Graduação em Ecologia, Universidade de São Paulo, São Paulo, SP, Brazil"
+    },
+    {
+      "name": "Viol, Andressa L.",
+      "orcid": "0009-0004-2558-8389",
+      "affiliation": "Museum of Zoology, University of Michigan; Department of Ecology and Evolutionary Biology, University of Michigan, Ann Arbor, MI, USA"
+    },
+    {
+      "name": "Rabosky, Daniel L.",
+      "orcid": "0000-0002-7499-8251",
+      "affiliation": "Museum of Zoology, University of Michigan; Department of Ecology and Evolutionary Biology, University of Michigan, Ann Arbor, MI, USA"
+    }
+  ],
+  "related_identifiers": [
+    {
+      "identifier": "https://cran.r-project.org/package=evolved",
+      "relation": "isPublishedIn",
+      "resource_type": "software"
+    },
+    {
+      "identifier": "https://github.com/mjanuario/evolved",
+      "relation": "isSupplementTo",
+      "resource_type": "software"
+    }
+  ],
+  "grants": [
+    {
+      "id": "NSF-1754398",
+      "title": "National Science Foundation Grant 1754398",
+      "funder": {
+        "name": "National Science Foundation"
+      }
+    },
+    {
+      "title": "Rackham Predoctoral Fellowship",
+      "funder": {
+        "name": "University of Michigan"
+      }
+    }
+  ]
+}
