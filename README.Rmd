@@ -10,6 +10,8 @@ citecolor: blue
 urlcolor: blue
 ---
 
+[![DOI](https://zenodo.org/badge/530684084.svg)](https://doi.org/10.5281/zenodo.18203397)
+
 ```{r setup, include=FALSE}
 #this chunk of code is purposedly not included in the PDF (note the header of 
 # the code chunk)
