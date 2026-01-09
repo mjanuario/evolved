@@ -145,7 +145,7 @@ MJ and DLR designed most of the code, internal functions, and educational compon
 
 # Acknowledgements
 
-We thank Theodore Matel, Tristan Schramer, and Yu Kai Tan for their suggestions.
+We thank Theodore Matel, Tristan Schramer, and Yu Kai Tan for their suggestions. Matheus Januario and his work related to this publication are supported by the National Science Foundation under Grant No. 1754398 and the Rackham Predoctoral Fellowship from the University of Michigan. 
 
 # References
 
