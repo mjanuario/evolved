@@ -1,32 +1,9 @@
-cff-version: 1.2.0
+cff-version: 1.1.0
 message: "If you use this software, please cite it as below."
-
-title: "evolved: Open Software for Teaching Evolutionary Biology"
-
-type: software
-
 authors:
-  - family-names: Januario
-    given-names: Matheus
-
-  - family-names: Auler
-    given-names: Jennifer P.
-
-  - family-names: Viol
-    given-names: Andressa L.
-
-  - family-names: Rabosky
-    given-names: Daniel L.
-
-version: 1.0.1
-
-license: GPL-3.0
-
-repository-code: https://github.com/mjanuario/evolved
-url: https://github.com/mjanuario/evolved
-
-funding:
-  - name: National Science Foundation
-    grant-number: 1754398
-
-  - name: Rackham Predoctoral Fellowship
+- family-names: Janaurio
+  given-names: Matheus
+orcid: https://orcid.org/0000-0002-6480-7095
+title:
+version: v1.0.1
+date-released: 2026-01-09
