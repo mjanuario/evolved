@@ -21,30 +21,25 @@
     {
       "name": "Januario, Matheus",
       "orcid": "0000-0002-6480-7095",
-      "affiliation": "Museum of Zoology, University of Michigan; Department of Ecology and Evolutionary Biology, University of Michigan, Ann Arbor, MI, USA"
+      "affiliation": "Museum of Zoology and Department of Ecology and Evolutionary Biology, University of Michigan, Ann Arbor, MI, USA"
     },
     {
       "name": "Auler, Jennifer P.",
       "orcid": "0000-0001-7576-9058",
-      "affiliation": "Programa de Pós-Graduação em Ecologia, Universidade de São Paulo, São Paulo, SP, Brazil"
+      "affiliation": "Programa de Pos-Graduacao em Ecologia, Universidade de Sao Paulo, Sao Paulo, SP, Brazil"
     },
     {
       "name": "Viol, Andressa L.",
       "orcid": "0009-0004-2558-8389",
-      "affiliation": "Museum of Zoology, University of Michigan; Department of Ecology and Evolutionary Biology, University of Michigan, Ann Arbor, MI, USA"
+      "affiliation": "Museum of Zoology and Department of Ecology and Evolutionary Biology, University of Michigan, Ann Arbor, MI, USA"
     },
     {
       "name": "Rabosky, Daniel L.",
       "orcid": "0000-0002-7499-8251",
-      "affiliation": "Museum of Zoology, University of Michigan; Department of Ecology and Evolutionary Biology, University of Michigan, Ann Arbor, MI, USA"
+      "affiliation": "Museum of Zoology and Department of Ecology and Evolutionary Biology, University of Michigan, Ann Arbor, MI, USA"
     }
   ],
   "related_identifiers": [
-    {
-      "identifier": "https://cran.r-project.org/package=evolved",
-      "relation": "isPublishedIn",
-      "resource_type": "software"
-    },
     {
       "identifier": "https://github.com/mjanuario/evolved",
       "relation": "isSupplementTo",
