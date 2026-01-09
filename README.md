@@ -3,6 +3,8 @@ Instructions on EvolVEd, R, RStudio, RMarkdown
 Matheus Januario, Jenniefer Auler, Andressa Viol, and Daniel Rabosky
 Nov/2024
 
+[![DOI](https://zenodo.org/badge/530684084.svg)](https://doi.org/10.5281/zenodo.18203397)
+
 - [EvolVEd](#evolved)
   - [Installing EvolVEd](#installing-evolved)
   - [Vignettes (Tutorials)](#vignettes-tutorials)
