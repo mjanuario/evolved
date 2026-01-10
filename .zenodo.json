@@ -23,5 +23,25 @@
       "orcid": "0000-0002-7499-8251",
       "affiliation": "Museum of Zoology, University of Michigan"
     }
+  ],
+  "grants": [
+    {
+      "name": "National Science Foundation",
+      "grant_number": "1754398"
+    },
+    {
+      "name": "Rackham Predoctoral Fellowship"
+    }
+  ],
+  "keywords": [
+    "evolutionary biology",
+    "phylogenetics",
+    "population genetics",
+    "paleobiology",
+    "macroevolution",
+    "inquiry-based learning",
+    "science education",
+    "simulation",
+    "R"
   ]
 }
