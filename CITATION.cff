@@ -28,17 +28,6 @@ authors:
 
 license: GPL-3.0
 
-keywords:
-  - evolutionary biology
-  - phylogenetics
-  - population genetics
-  - paleobiology
-  - macroevolution
-  - inquiry-based learning
-  - science education
-  - simulation
-  - R
-
 funding:
   - name: National Science Foundation
     identifier: https://www.nsf.gov
