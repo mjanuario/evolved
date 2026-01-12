@@ -1,27 +1,15 @@
 {
-  "title": "evolved: open software for teaching evolutionary biology",
+  "title": "evolved: Open Software for Teaching Evolutionary Biology",
   "upload_type": "software",
   "version": "1.0.23",
   "creators": [
-    {
-      "name": "Januario, Matheus",
-      "orcid": "0000-0002-6480-7095",
-      "affiliation": "Museum of Zoology, University of Michigan"
-    },
-    {
-      "name": "Auler, Jennifer P.",
-      "orcid": "0000-0001-7576-9058",
-      "affiliation": "Programa de Pos-Graduacao em Ecologia, Universidade de Sao Paulo"
-    },
-    {
-      "name": "Viol, Andressa L.",
-      "orcid": "0009-0004-2558-8389",
-      "affiliation": "Museum of Zoology, University of Michigan"
-    },
-    {
-      "name": "Rabosky, Daniel L.",
-      "orcid": "0000-0002-7499-8251",
-      "affiliation": "Museum of Zoology, University of Michigan"
-    }
+    { "name": "Januario, Matheus",
+      "orcid": "0000-0002-6480-7095" },
+    { "name": "Auler, Jennifer P.",
+      "orcid": "0000-0001-7576-9058" },
+    { "name": "Viol, Andressa L.",
+      "orcid": "0009-0004-2558-8389" },
+    { "name": "Rabosky, Daniel L.",
+      "orcid": "0000-0002-7499-8251" }
   ]
 }
