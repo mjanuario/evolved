@@ -2,14 +2,23 @@
   "title": "evolved: Open Software for Teaching Evolutionary Biology",
   "upload_type": "software",
   "version": "1.0.23",
+  "description": "Open-source software for teaching concepts in evolutionary biology.",
   "creators": [
-    { "name": "Januario, Matheus",
-      "orcid": "0000-0002-6480-7095" },
-    { "name": "Auler, Jennifer P.",
-      "orcid": "0000-0001-7576-9058" },
-    { "name": "Viol, Andressa L.",
-      "orcid": "0009-0004-2558-8389" },
-    { "name": "Rabosky, Daniel L.",
-      "orcid": "0000-0002-7499-8251" }
+    {
+      "name": "Januario, Matheus",
+      "orcid": "0000-0002-6480-7095"
+    },
+    {
+      "name": "Auler, Jennifer P.",
+      "orcid": "0000-0001-7576-9058"
+    },
+    {
+      "name": "Viol, Andressa L.",
+      "orcid": "0009-0004-2558-8389"
+    },
+    {
+      "name": "Rabosky, Daniel L.",
+      "orcid": "0000-0002-7499-8251"
+    }
   ]
 }
