@@ -26,8 +26,6 @@ authors:
     orcid: https://orcid.org/0000-0002-7499-8251
     affiliation: Museum of Zoology and Department of Ecology and Evolutionary Biology, University of Michigan, Ann Arbor, MI, USA
 
-version: 1.0.1
-
 license: GPL-3.0
 
 keywords:
@@ -40,11 +38,6 @@ keywords:
   - science education
   - simulation
   - R
-
-repository-code: https://github.com/mjanuario/evolved
-url: https://cran.r-project.org/package=evolved
-
-date-released: 2024-12-19
 
 funding:
   - name: National Science Foundation
