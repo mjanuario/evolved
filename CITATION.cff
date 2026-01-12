@@ -1,10 +1,6 @@
 cff-version: 1.2.0
-message: "If you use this software, please cite it as below."
-
 title: "evolved: open software for teaching evolutionary biology at multiple scales through virtual inquiries"
-
 type: software
-
 authors:
   - family-names: Januario
     given-names: Matheus
