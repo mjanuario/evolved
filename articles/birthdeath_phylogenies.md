@@ -230,9 +230,9 @@ matrix(c(estimateSpeciation(tree1), estimateSpeciation(tree2), estimateSpeciatio
 ```
 
     ##      Estimated True
-    ## [1,] 0.5151949  0.5
-    ## [2,] 0.9099975  1.0
-    ## [3,] 5.6846979  5.0
+    ## [1,] 0.4588719  0.5
+    ## [2,] 1.0034324  1.0
+    ## [3,] 5.4543126  5.0
 
 Now that you have a sense for the accuracy of our estimator, let’s
 simulate 100 phylogenetic trees with variable speciation rates and apply
@@ -356,7 +356,7 @@ fitCRBD(tree)
 ```
 
     ##        S        E 
-    ## 1.634997 1.595090
+    ## 1.407263 1.375524
 
 Let’s repeat our simulation procedure, but this time we will fit a model
 where extinction can be nonzero. We won’t display the plots here, but
