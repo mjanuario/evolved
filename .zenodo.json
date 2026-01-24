@@ -1,27 +1,53 @@
 {
-  "title": "evolved: Open Software for Teaching Evolutionary Biology",
-  "upload_type": "software",
+  "title": "evolved: open software for teaching evolutionary biology"",
   "version": "1.0.23",
-  "creators": [
+  "license": "GPL-3.0",
+  "upload_type": "software",
+  "description": "<p>evolved (evolutionary virtual education) is an open-source R package designed for graduate or advanced undergraduate courses in evolutionary biology.<\/p>",
+  "keywords": [
+    "phylogenetics",
+    "population-genetics",
+    "paleobiology",
+    "comparative-methods",
+    "evolutionary-biology",
+    "macroevolution",
+    "science-education",
+    "biodiversity-science",
+    "simulation-based-learning",
+    "inquiry-based-learning",
+    "data-driven-education"
+  ],
+  "access_right": "open",
+  "language": "eng",
+  "contributors": [
     {
       "name": "Januario, Matheus",
       "orcid": "0000-0002-6480-7095",
-      "affiliation": "Museum of Zoology, University of Michigan"
+      "affiliation": "Museum of Zoology and dept of ecology adn evolutionary biology, University of Michigan"
     },
     {
       "name": "Auler, Jennifer P.",
       "orcid": "0000-0001-7576-9058",
       "affiliation": "Programa de Pos-Graduacao em Ecologia, Universidade de Sao Paulo"
+      "type": "projectmember"
     },
     {
       "name": "Viol, Andressa L.",
       "orcid": "0009-0004-2558-8389",
-      "affiliation": "Museum of Zoology, University of Michigan"
+      "affiliation": "Museum of Zoology and dept of ecology adn evolutionary biology, University of Michigan"
+      "type": "projectmember"
     },
     {
       "name": "Rabosky, Daniel L.",
       "orcid": "0000-0002-7499-8251",
-      "affiliation": "Museum of Zoology, University of Michigan"
+      "affiliation": "Museum of Zoology and dept of ecology adn evolutionary biology, University of Michigan"
+    }
+  ],
+  "creators": [
+    {
+      "name": "Januario, Matheus",
+      "affiliation": "Museum of Zoology and dept of ecology adn evolutionary biology, University of Michigan",
+      "orcid": "0000-0002-6480-7095",
     }
   ]
 }
