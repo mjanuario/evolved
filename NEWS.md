@@ -1,5 +1,8 @@
 # What's New
 
+## Version: 1.0.23
+Evolved has been accepted for publication at the Journal of Open Source education and it is curently in press stage! More news very soon!
+
 ## Version: 1.0.0
 Date: Mar/2024
 
