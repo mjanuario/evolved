@@ -63,8 +63,8 @@ Matheus Januario, Dan Rabosky, Jennifer Auler
 #using the default values (n.ind = 50, p = 0.5, n.sim = 100):
 OneGenHWSim()
 #>         A1A1 A1A2 A2A2
-#> sim_1     13   24   13
-#> sim_2     13   24   13
+#> sim_1     12   26   12
+#> sim_2     17   16   17
 #> sim_3     10   30   10
 #> sim_4     12   26   12
 #> sim_5     12   26   12

@@ -75,7 +75,7 @@ SS <- 0.40
 EE <- 0.09
 tt <- 10 #in Mya
 simulateBirthDeathRich(t = tt, S = SS, E = EE)
-#> [1] 23
+#> [1] 74
 
 #running many simulations and graphing results:
 nSim <- 1000
