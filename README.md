@@ -1,6 +1,6 @@
 Instructions on EvolVEd, R, RStudio, RMarkdown
 ================
-Matheus Januario, Jenniefer Auler, Andressa Viol, and Daniel Rabosky
+Matheus Januario, Jennifer Auler, Andressa Viol, and Daniel Rabosky
 Nov/2024
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.18203397.svg)](https://doi.org/10.5281/zenodo.18203397)
