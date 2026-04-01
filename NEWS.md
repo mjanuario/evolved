@@ -1,5 +1,9 @@
 # What's New
 
+## evolved paper at JOSE 
+The paper describing our package is now published in the Journla of Open Source Education!
+DOI: https://doi.org/10.21105/jose.00300[https://doi.org/10.21105/jose.00300]
+
 ## Version: 1.0.23
 Evolved has been accepted for publication at the Journal of Open Source education and it is curently in press stage! More news very soon!
 
